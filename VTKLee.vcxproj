@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <ExternalIncludePath>E:\VS\VTKLee\core\vtkkwiml;E:\VS\VTKLee\core\vtknlohmannjson;E:\VS\VTKLee\core;E:\VS\VTKLee\core\pugixml;E:\VS\VTKLee\core\vtkpegtl;E:\VS\VTKLee\core\vtksys;$(ExternalIncludePath)</ExternalIncludePath>
+    <ExternalIncludePath>core\vtkkwiml;core\vtknlohmannjson;core;core\pugixml;core\vtkpegtl;core\vtksys;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

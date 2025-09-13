@@ -1,4 +1,434 @@
 ﻿D:\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: Two or more files with the name of vtkSMPToolsImpl.cxx will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are core\SMP\Sequential\vtkSMPToolsImpl.cxx, core\SMP\STDThread\vtkSMPToolsImpl.cxx.
+  DICOMAppHelper.cxx
+  DICOMFile.cxx
+  DICOMParser.cxx
+  vtkSMPToolsImpl.cxx
+F:\ToGithub\Learning-VTK\core\SMP\Sequential\vtkSMPToolsImpl.cxx(16): warning C4661: 'void vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::Initialize(int)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(50): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::Initialize'
+F:\ToGithub\Learning-VTK\core\SMP\Sequential\vtkSMPToolsImpl.cxx(16): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(53): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Sequential\vtkSMPToolsImpl.cxx(16): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedDefaultNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(56): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedDefaultNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Sequential\vtkSMPToolsImpl.cxx(16): warning C4661: 'bool vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetSingleThread(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(68): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetSingleThread'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'void vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::Initialize(int)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(50): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::Initialize'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(53): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedDefaultNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(56): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetEstimatedDefaultNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'bool vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetSingleThread(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(68): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::STDThread>::GetSingleThread'
+  vtkSMPThreadLocalBackend.cxx
+  vtkSMPThreadPool.cxx
+  vtkSMPToolsImpl.cxx
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'void vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize(int)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(50): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize'
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(53): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(56): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'bool vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(68): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'void vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize(int)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(50): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(53): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(56): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'bool vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(68): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread'
+  vtkAbstractArray.cxx
+  vtkAbstractCellArray.cxx
+  vtkAbstractCellLinks.cxx
+  vtkAbstractCellLocator.cxx
+  vtkAbstractElectronicData.cxx
+  vtkAbstractPointLocator.cxx
+  vtkAbstractTransform.cxx
+  vtkAlgorithm.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkAlgorithmOutput.cxx
+  vtkAMRBox.cxx
+  vtkAMRDataInternals.cxx
+  vtkAMRInformation.cxx
+  vtkArrayCoordinates.cxx
+  Generating Code...
+  Compiling...
+  vtkArrayIteratorTemplateInstantiate.cxx
+  vtkArrayRange.cxx
+  vtkBitArray.cxx
+  vtkBitArrayIterator.cxx
+  vtkBoundingBox.cxx
+  vtkBox.cxx
+  vtkBoxMuellerRandomSequence.cxx
+  vtkByteSwap.cxx
+  vtkCallbackCommand.cxx
+  vtkCell.cxx
+  vtkCellArray.cxx
+  vtkCellArrayIterator.cxx
+  vtkCellAttribute.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellAttributeCalculator.cxx
+  vtkCellData.cxx
+  vtkCellGrid.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkCellGridBoundsQuery.cxx
+  vtkCellGridCopyQuery.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellGridQuery.cxx
+  vtkCellGridRangeQuery.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  Generating Code...
+  Compiling...
+  vtkCellGridResponders.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkCellGridSidesCache.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridSidesCache.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellIterator.cxx
+  vtkCellLinks.cxx
+  vtkCellMetadata.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellTreeLocator.cxx
+  vtkCellTypes.cxx
+  vtkCharArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkCharArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkCharArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkCharArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkCollection.cxx
+  vtkCollectionIterator.cxx
+  vtkCommand.cxx
+  vtkCommonInformationKeyManager.cxx
+  vtkCompositeDataIterator.cxx
+  vtkCompositeDataPipeline.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkCompositeDataSet.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkDataArray_CopyComponent.cxx
+  vtkDataArray_DeepCopy.cxx
+  vtkDataArray_FiniteScalarRange.cxx
+  vtkDataArray_FiniteVectorRange.cxx
+  vtkDataArray_GetTuples_ids.cxx
+  Generating Code...
+  Compiling...
+  vtkDataArray_GetTuples_range.cxx
+  vtkDataArray_InsertTuples_array_idlist.cxx
+  vtkDataArray_InsertTuples_array_idlist_range.cxx
+  vtkDataArray_InsertTuples_array_range.cxx
+  vtkDataArray_InterpolateTuple_time.cxx
+  vtkDataArray_InterpolateTuple_weights.cxx
+  vtkDataArray_ScalarRange.cxx
+  vtkDataArray_SetTuple_array.cxx
+  vtkDataArray_VectorRange.cxx
+  vtkDataAssembly.cxx
+  vtkDataObject.cxx
+  vtkDataObjectTree.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkDataObjectTreeIterator.cxx
+  vtkDataObjectTypes.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkDataSet.cxx
+  vtkDataSetAttributes.cxx
+  vtkDataSetAttributesFieldList.cxx
+  vtkDataSetCellIterator.cxx
+  vtkDataSetCollection.cxx
+  vtkDebugLeaks.cxx
+  Generating Code...
+  Compiling...
+  vtkDebugLeaksManager.cxx
+  vtkDemandDrivenPipeline.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkDICOMImageReader.cxx
+  vtkDirectory.cxx
+  vtkDoubleArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkDoubleArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDoubleArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDoubleArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkDynamicLoader.cxx
+  vtkEmptyCell.cxx
+  vtkErrorCode.cxx
+  vtkExecutionAggregator.cxx
+  vtkExecutionRange.cxx
+  vtkExecutive.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkExplicitStructuredGrid.cxx
+  vtkExtentTranslator.cxx
+  vtkFieldData.cxx
+  vtkFilteringInformationKeyManager.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkFloatArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkFloatArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkFloatArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkFloatArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkFunctionSet.cxx
+  vtkGarbageCollector.cxx
+  vtkGarbageCollectorManager.cxx
+  vtkGaussianRandomSequence.cxx
+  Generating Code...
+  Compiling...
+  vtkGenericCell.cxx
+  vtkGenericCellIterator.cxx
+  vtkGenericDataArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.cxx(9,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkGenericEdgeTable.cxx
+  vtkGenericPointIterator.cxx
+  vtkHomogeneousTransform.cxx
+  vtkIdList.cxx
+  vtkIdTypeArray.cxx
+  vtkImageAlgorithm.cxx
+  vtkImageData.cxx
+  vtkImageReader2.cxx
+  vtkImplicitFunction.cxx
+  vtkIncrementalPointLocator.cxx
+  vtkIndent.cxx
+  vtkInformation.cxx
+  vtkInformationDataObjectKey.cxx
+  vtkInformationDoubleKey.cxx
+  vtkInformationDoubleVectorKey.cxx
+  vtkInformationExecutivePortKey.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkInformationExecutivePortVectorKey.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  Generating Code...
+  Compiling...
+  vtkInformationIdTypeKey.cxx
+  vtkInformationInformationKey.cxx
+  vtkInformationInformationVectorKey.cxx
+  vtkInformationIntegerKey.cxx
+  vtkInformationIntegerPointerKey.cxx
+  vtkInformationIntegerRequestKey.cxx
+  vtkInformationIntegerVectorKey.cxx
+  vtkInformationIterator.cxx
+  vtkInformationKey.cxx
+  vtkInformationKeyLookup.cxx
+  vtkInformationKeyVectorKey.cxx
+  vtkInformationObjectBaseKey.cxx
+  vtkInformationObjectBaseVectorKey.cxx
+  vtkInformationRequestKey.cxx
+  vtkInformationStringKey.cxx
+  vtkInformationStringVectorKey.cxx
+  vtkInformationUnsignedLongKey.cxx
+  vtkInformationVariantKey.cxx
+  vtkInformationVariantVectorKey.cxx
+  vtkInformationVector.cxx
+  Generating Code...
+  Compiling...
+  vtkIntArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkIntArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkIntArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkIntArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkLargeInteger.cxx
+  vtkLine.cxx
+  vtkLinearTransform.cxx
+  vtkLocator.cxx
+  vtkLogger.cxx
+  vtkLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkLongLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkLongLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkLookupTable.cxx
+  vtkMath.cxx
+  vtkMatrix3x3.cxx
+  vtkMatrix4x4.cxx
+  vtkMergePoints.cxx
+  vtkMinimalStandardRandomSequence.cxx
+  vtkMultiBlockDataSet.cxx
+  vtkMultiBlockDataSetSerDesHelper.cxx
+  vtkMultiPieceDataSet.cxx
+  vtkMultiThreader.cxx
+  vtkNonLinearCell.cxx
+  vtkNonOverlappingAMR.cxx
+  Generating Code...
+  Compiling...
+  vtkObject.cxx
+  vtkObjectBase.cxx
+  vtkObjectFactory.cxx
+  vtkObjectFactoryCollection.cxx
+  vtkOStreamWrapper.cxx
+  vtkOStrStreamWrapper.cxx
+  vtkOutputWindow.cxx
+  vtkOverrideInformation.cxx
+  vtkOverrideInformationCollection.cxx
+  vtkPartitionedDataSet.cxx
+  vtkPartitionedDataSetCollection.cxx
+  vtkPiecewiseFunction.cxx
+  vtkPlane.cxx
+  vtkPlaneCollection.cxx
+  vtkPlanes.cxx
+  vtkPlanesIntersection.cxx
+  vtkPointData.cxx
+  vtkPointLocator.cxx
+  vtkPoints.cxx
+  vtkPoints2D.cxx
+  Generating Code...
+  Compiling...
+  vtkPointSet.cxx
+  vtkPointSetCellIterator.cxx
+  vtkPointsProjectedHull.cxx
+  vtkPolyData.cxx
+  vtkPolygon.cxx
+  vtkPriorityQueue.cxx
+  vtkProgressObserver.cxx
+  vtkQuad.cxx
+  vtkQuadraticEdge.cxx
+  vtkRandomSequence.cxx
+  vtkRectilinearGrid.cxx
+  vtkScalarsToColors.cxx
+  vtkShortArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkShortArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkShortArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkShortArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkSignedCharArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkSignedCharArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSignedCharArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSignedCharArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkSmartPointerBase.cxx
+  vtkSMPTools.cxx
+  vtkSortDataArray.cxx
+  vtkStaticCellLinks.cxx
+  vtkStaticCellLocator.cxx
+  vtkStaticPointLocator.cxx
+  Generating Code...
+  Compiling...
+  vtkStdString.cxx
+  vtkStreamingDemandDrivenPipeline.cxx
+  vtkStringArray.cxx
+  vtkStringToken.cxx
+  vtkStructuredCellArray.cxx
+  vtkStructuredData.cxx
+  vtkStructuredExtent.cxx
+  vtkStructuredPoints.cxx
+  CommandLineArguments.cxx
+  Directory.cxx
+  DynamicLoader.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\DynamicLoader.cxx(4,1): warning C4005: 'NOMINMAX': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtksys\DynamicLoader.cxx : message : see previous definition of 'NOMINMAX'
+  EncodingCXX.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\EncodingCXX.cxx(69,22): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\EncodingCXX.cxx(96,39): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\EncodingCXX.cxx(111,41): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  Glob.cxx
+  RegularExpression.cxx
+  Status.cxx
+  SystemInformation.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\SystemInformation.cxx(4,1): warning C4005: 'NOMINMAX': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtksys\SystemInformation.cxx : message : see previous definition of 'NOMINMAX'
+  SystemTools.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(200,22): warning C4273: '__p__environ': inconsistent dll linkage
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdlib.h(1158,29): message : see previous definition of '__p__environ'
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(1065,16): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(4443,26): warning C4996: '_umask': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _umask. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(4444,5): warning C4996: '_umask': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _umask. See online help for details.
+  vtkTimeStamp.cxx
+  vtkTransform.cxx
+  vtkTreeAlgorithm.cxx
+  Generating Code...
+  Compiling...
+  vtkTriangle.cxx
+  vtkTrivialConsumer.cxx
+  vtkTrivialProducer.cxx
+  vtkTypeFloat32Array.cxx
+  vtkTypeFloat64Array.cxx
+  vtkTypeInt16Array.cxx
+  vtkTypeInt32Array.cxx
+  vtkTypeInt64Array.cxx
+  vtkTypeInt8Array.cxx
+  vtkTypeUInt16Array.cxx
+  vtkTypeUInt32Array.cxx
+  vtkTypeUInt64Array.cxx
+  vtkTypeUInt8Array.cxx
+  vtkUniformGrid.cxx
+  vtkUniformGridAMR.cxx
+  vtkUniformGridAMRDataIterator.cxx
+  vtkUnsignedCharArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedCharArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedCharArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedCharArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkUnsignedIntArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedIntArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedIntArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedIntArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkUnsignedLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkUnsignedLongLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  Generating Code...
+  Compiling...
+  vtkUnsignedShortArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedShortArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedShortArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedShortArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+  vtkUnstructuredGrid.cxx
+  vtkUnstructuredGridBase.cxx
+  vtkUnstructuredGridCellIterator.cxx
+  vtkValueFromString.cxx
+  vtkVariant.cxx
+  vtkVariantArray.cxx
+  vtkVersion.cxx
+  vtkWeakPointerBase.cxx
+  vtkWin32OutputWindow.cxx
+  main.cpp
+  Generating Code...
+  vtkDataArray.cxx
 x64\Debug\vtkSMPToolsImpl.obj : warning LNK4042: object specified more than once; extras ignored
 vtkUnsignedIntArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
 vtkUnsignedLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
@@ -193,107 +623,15 @@ vtkBoundingBox.obj : error LNK2001: unresolved external symbol "public: enum vtk
 vtkCellArray.obj : error LNK2001: unresolved external symbol "public: enum vtk::detail::smp::BackendType __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetBackendType(void)" (?GetBackendType@vtkSMPToolsAPI@smp@detail@vtk@@QEAA?AW4BackendType@234@XZ)
 vtkCharArray.obj : error LNK2001: unresolved external symbol "public: enum vtk::detail::smp::BackendType __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetBackendType(void)" (?GetBackendType@vtkSMPToolsAPI@smp@detail@vtk@@QEAA?AW4BackendType@234@XZ)
 vtkDataSet.obj : error LNK2001: unresolved external symbol "public: enum vtk::detail::smp::BackendType __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetBackendType(void)" (?GetBackendType@vtkSMPToolsAPI@smp@detail@vtk@@QEAA?AW4BackendType@234@XZ)
-vtkUnsignedLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkUnsignedLongLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkUnsignedShortArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkStaticCellLocator.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkStaticPointLocator.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkUnsignedCharArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkUnsignedIntArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkPlane.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkPolyData.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkShortArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkSignedCharArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkGenericDataArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkIntArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkLongLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkDataSetAttributes.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkDoubleArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkFieldData.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkFloatArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkBoundingBox.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkCellArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkCharArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkDataSet.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::ThreadSpecific(unsigned int)" (??0ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@I@Z)
-vtkUnsignedLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkUnsignedLongLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkUnsignedShortArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkStaticCellLocator.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkStaticPointLocator.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkUnsignedCharArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkUnsignedIntArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkPlane.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkPolyData.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkShortArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkSignedCharArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkGenericDataArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkIntArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkLongLongArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkDataSetAttributes.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkDoubleArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkFieldData.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkFloatArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkBoundingBox.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkCellArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkCharArray.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkDataSet.obj : error LNK2001: unresolved external symbol "public: __cdecl vtk::detail::smp::STDThread::ThreadSpecific::~ThreadSpecific(void)" (??1ThreadSpecific@STDThread@smp@detail@vtk@@QEAA@XZ)
-vtkUnsignedLongArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkUnsignedLongLongArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkUnsignedShortArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkStaticCellLocator.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkStaticPointLocator.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkUnsignedCharArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkUnsignedIntArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkPlane.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkPolyData.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkShortArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkSignedCharArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkGenericDataArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkIntArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkLongArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkLongLongArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkDataSetAttributes.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkDoubleArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkFieldData.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkFloatArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkBoundingBox.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkCellArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkCharArray.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkDataSet.obj : error LNK2001: unresolved external symbol "public: void * & __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetStorage(void)" (?GetStorage@ThreadSpecific@STDThread@smp@detail@vtk@@QEAAAEAPEAXXZ)
-vtkUnsignedLongArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkUnsignedLongLongArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkUnsignedShortArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkStaticCellLocator.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkStaticPointLocator.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkUnsignedCharArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkUnsignedIntArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkPlane.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkPolyData.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkShortArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkSignedCharArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkGenericDataArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkIntArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkLongArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkLongLongArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkDataSetAttributes.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkDoubleArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkFieldData.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkFloatArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkBoundingBox.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkCellArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkCharArray.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
-vtkDataSet.obj : error LNK2001: unresolved external symbol "public: unsigned __int64 __cdecl vtk::detail::smp::STDThread::ThreadSpecific::GetSize(void)const " (?GetSize@ThreadSpecific@STDThread@smp@detail@vtk@@QEBA_KXZ)
 vtkCellArray.obj : error LNK2019: unresolved external symbol "bool __cdecl vtkDataArrayPrivate::DoComputeScalarRange<class vtkAOSDataArrayTemplate<__int64>,__int64,struct vtkDataArrayPrivate::AllValues>(class vtkAOSDataArrayTemplate<__int64> *,__int64 *,struct vtkDataArrayPrivate::AllValues,unsigned char const *,unsigned char)" (??$DoComputeScalarRange@V?$vtkAOSDataArrayTemplate@_J@@_JUAllValues@vtkDataArrayPrivate@@@vtkDataArrayPrivate@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@PEA_JUAllValues@0@PEBEE@Z) referenced in function "bool __cdecl vtk_GDA_detail::ComputeScalarValueRangeImpl<class vtkAOSDataArrayTemplate<__int64>,__int64,struct vtkDataArrayPrivate::AllValues>(class vtkAOSDataArrayTemplate<__int64> *,__int64 *,struct vtkDataArrayPrivate::AllValues,struct std::integral_constant<bool,1>,unsigned char const *,unsigned char)" (??$ComputeScalarValueRangeImpl@V?$vtkAOSDataArrayTemplate@_J@@_JUAllValues@vtkDataArrayPrivate@@@vtk_GDA_detail@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@PEA_JUAllValues@vtkDataArrayPrivate@@U?$integral_constant@_N$00@std@@PEBEE@Z)
 vtkCellArray.obj : error LNK2019: unresolved external symbol "bool __cdecl vtkDataArrayPrivate::DoComputeVectorRange<class vtkAOSDataArrayTemplate<__int64>,__int64>(class vtkAOSDataArrayTemplate<__int64> *,__int64 * const,struct vtkDataArrayPrivate::AllValues,unsigned char const *,unsigned char)" (??$DoComputeVectorRange@V?$vtkAOSDataArrayTemplate@_J@@_J@vtkDataArrayPrivate@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@QEA_JUAllValues@0@PEBEE@Z) referenced in function "bool __cdecl vtk_GDA_detail::ComputeVectorValueRangeImpl<class vtkAOSDataArrayTemplate<__int64>,__int64,struct vtkDataArrayPrivate::AllValues>(class vtkAOSDataArrayTemplate<__int64> *,__int64 * const,struct vtkDataArrayPrivate::AllValues,struct std::integral_constant<bool,1>,unsigned char const *,unsigned char)" (??$ComputeVectorValueRangeImpl@V?$vtkAOSDataArrayTemplate@_J@@_JUAllValues@vtkDataArrayPrivate@@@vtk_GDA_detail@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@QEA_JUAllValues@vtkDataArrayPrivate@@U?$integral_constant@_N$00@std@@PEBEE@Z)
 vtkCellMetadata.obj : error LNK2019: unresolved external symbol "public: __cdecl vtktoken::Token::Token(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (??0Token@vtktoken@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "public: unsigned int __cdecl vtktoken::TypeContainer::keyId<class std::unordered_map<class vtkStringToken,class std::function<class vtkSmartPointer<class vtkCellMetadata> __cdecl(class vtkCellGrid *)>,struct std::hash<class vtkStringToken>,struct std::equal_to<class vtkStringToken>,class std::allocator<struct std::pair<class vtkStringToken const ,class std::function<class vtkSmartPointer<class vtkCellMetadata> __cdecl(class vtkCellGrid *)> > > > >(void)const " (??$keyId@V?$unordered_map@VvtkStringToken@@V?$function@$$A6A?AV?$vtkSmartPointer@VvtkCellMetadata@@@@PEAVvtkCellGrid@@@Z@std@@U?$hash@VvtkStringToken@@@3@U?$equal_to@VvtkStringToken@@@3@V?$allocator@U?$pair@$$CBVvtkStringToken@@V?$function@$$A6A?AV?$vtkSmartPointer@VvtkCellMetadata@@@@PEAVvtkCellGrid@@@Z@std@@@std@@@3@@std@@@TypeContainer@vtktoken@@QEBAIXZ)
 vtkCellMetadata.obj : error LNK2019: unresolved external symbol "class vtktoken::TypeContainer & __cdecl vtktoken::singletons(void)" (?singletons@vtktoken@@YAAEAVTypeContainer@1@XZ) referenced in function "public: static void __cdecl vtkCellMetadata::ClearResponders(void)" (?ClearResponders@vtkCellMetadata@@SAXXZ)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xml_attribute::operator void (__cdecl*)(class vtkpugixml::xml_attribute * * *)(void)const " (??Bxml_attribute@vtkpugixml@@QEBAP6AXPEAPEAPEAV01@@ZXZ) referenced in function "public: bool __cdecl vtkDataAssembly::GetAttribute(int,char const *,int &)const " (?GetAttribute@vtkDataAssembly@@QEBA_NHPEBDAEAH@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_attribute::operator!(void)const " (??7xml_attribute@vtkpugixml@@QEBA_NXZ) referenced in function "public: void __cdecl vtkDataAssembly::SetAttribute(int,char const *,char const *)" (?SetAttribute@vtkDataAssembly@@QEAAXHPEBD0@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: char const * __cdecl vtkpugixml::xml_attribute::value(void)const " (?value@xml_attribute@vtkpugixml@@QEBAPEBDXZ) referenced in function "public: virtual bool __cdecl `anonymous namespace'::ValidationAndInitializationWalker::for_each(class vtkpugixml::xml_node &)" (?for_each@ValidationAndInitializationWalker@?A0xca0a826b@@UEAA_NAEAVxml_node@vtkpugixml@@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: char const * __cdecl vtkpugixml::xml_attribute::value(void)const " (?value@xml_attribute@vtkpugixml@@QEBAPEBDXZ) referenced in function "public: virtual bool __cdecl `anonymous namespace'::ValidationAndInitializationWalker::for_each(class vtkpugixml::xml_node &)" (?for_each@ValidationAndInitializationWalker@?A0x78175863@@UEAA_NAEAVxml_node@vtkpugixml@@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: char const * __cdecl vtkpugixml::xml_attribute::as_string(char const *)const " (?as_string@xml_attribute@vtkpugixml@@QEBAPEBDPEBD@Z) referenced in function "public: bool __cdecl vtkDataAssembly::GetAttribute(int,char const *,char const * &)const " (?GetAttribute@vtkDataAssembly@@QEBA_NHPEBDAEAPEBD@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtkpugixml::xml_attribute::as_int(int)const " (?as_int@xml_attribute@vtkpugixml@@QEBAHH@Z) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtkpugixml::xml_attribute::as_int(int)const " (?as_int@xml_attribute@vtkpugixml@@QEBAHH@Z) referenced in function "public: __cdecl <lambda_1c0c8fdd1044ba65c9546c87655f6294>::operator()(class vtkpugixml::xml_node const &)const " (??R<lambda_1c0c8fdd1044ba65c9546c87655f6294>@@QEBA@AEBVxml_node@vtkpugixml@@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: unsigned int __cdecl vtkpugixml::xml_attribute::as_uint(unsigned int)const " (?as_uint@xml_attribute@vtkpugixml@@QEBAII@Z) referenced in function "public: bool __cdecl vtkDataAssembly::GetAttribute(int,char const *,unsigned int &)const " (?GetAttribute@vtkDataAssembly@@QEBA_NHPEBDAEAI@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: float __cdecl vtkpugixml::xml_attribute::as_float(float)const " (?as_float@xml_attribute@vtkpugixml@@QEBAMM@Z) referenced in function "public: bool __cdecl vtkDataAssembly::vtkInternals::ParseDocument(class vtkDataAssembly *)" (?ParseDocument@vtkInternals@vtkDataAssembly@@QEAA_NPEAV2@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __int64 __cdecl vtkpugixml::xml_attribute::as_llong(__int64)const " (?as_llong@xml_attribute@vtkpugixml@@QEBA_J_J@Z) referenced in function "public: bool __cdecl vtkDataAssembly::GetAttribute(int,char const *,__int64 &)const " (?GetAttribute@vtkDataAssembly@@QEBA_NHPEBDAEA_J@Z)
@@ -304,36 +642,36 @@ vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class v
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xml_node::xml_node(void)" (??0xml_node@vtkpugixml@@QEAA@XZ) referenced in function "public: __cdecl std::pair<int const ,class vtkpugixml::xml_node>::pair<int const ,class vtkpugixml::xml_node><class std::tuple<int &&>,class std::tuple<>,0>(class std::tuple<int &&> &,class std::tuple<> &,struct std::integer_sequence<unsigned __int64,0>,struct std::integer_sequence<unsigned __int64>)" (??$?0V?$tuple@$$QEAH@std@@V?$tuple@$$V@1@$0A@$$Z$S@?$pair@$$CBHVxml_node@vtkpugixml@@@std@@QEAA@AEAV?$tuple@$$QEAH@1@AEAV?$tuple@$$V@1@U?$integer_sequence@_K$0A@@1@U?$integer_sequence@_K$S@1@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xml_node::operator void (__cdecl*)(class vtkpugixml::xml_node * * *)(void)const " (??Bxml_node@vtkpugixml@@QEBAP6AXPEAPEAPEAV01@@ZXZ) referenced in function "public: int __cdecl vtkDataAssembly::GetFirstNodeByPath(char const *)const " (?GetFirstNodeByPath@vtkDataAssembly@@QEBAHPEBD@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node::operator!(void)const " (??7xml_node@vtkpugixml@@QEBA_NXZ) referenced in function "public: bool __cdecl vtkDataAssembly::AddDataSetIndex(int,unsigned int)" (?AddDataSetIndex@vtkDataAssembly@@QEAA_NHI@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node::operator==(class vtkpugixml::xml_node const &)const " (??8xml_node@vtkpugixml@@QEBA_NAEBV01@@Z) referenced in function "public: __cdecl <lambda_c72aed06fda079d7cd9412e0cd57a8d3>::operator()(class std::unordered_set<int,struct std::hash<int>,struct std::equal_to<int>,class std::allocator<int> > *,class vtkpugixml::xpath_node const &)const " (??R<lambda_c72aed06fda079d7cd9412e0cd57a8d3>@@QEBA@PEAV?$unordered_set@HU?$hash@H@std@@U?$equal_to@H@2@V?$allocator@H@2@@std@@AEBVxpath_node@vtkpugixml@@@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: char const * __cdecl vtkpugixml::xml_node::name(void)const " (?name@xml_node@vtkpugixml@@QEBAPEBDXZ) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node::operator==(class vtkpugixml::xml_node const &)const " (??8xml_node@vtkpugixml@@QEBA_NAEBV01@@Z) referenced in function "public: __cdecl <lambda_685988b0da59720b7086d5ba471d3447>::operator()(class std::unordered_set<int,struct std::hash<int>,struct std::equal_to<int>,class std::allocator<int> > *,class vtkpugixml::xpath_node const &)const " (??R<lambda_685988b0da59720b7086d5ba471d3447>@@QEBA@PEAV?$unordered_set@HU?$hash@H@std@@U?$equal_to@H@2@V?$allocator@H@2@@std@@AEBVxpath_node@vtkpugixml@@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: char const * __cdecl vtkpugixml::xml_node::name(void)const " (?name@xml_node@vtkpugixml@@QEBAPEBDXZ) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xml_node::first_child(void)const " (?first_child@xml_node@vtkpugixml@@QEBA?AV12@XZ) referenced in function "public: bool __cdecl vtkDataAssembly::vtkInternals::ParseDocument(class vtkDataAssembly *)" (?ParseDocument@vtkInternals@vtkDataAssembly@@QEAA_NPEAV2@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xml_node::parent(void)const " (?parent@xml_node@vtkpugixml@@QEBA?AV12@XZ) referenced in function "public: int __cdecl vtkDataAssembly::GetParent(int)const " (?GetParent@vtkDataAssembly@@QEBAHH@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute __cdecl vtkpugixml::xml_node::attribute(char const *)const " (?attribute@xml_node@vtkpugixml@@QEBA?AVxml_attribute@2@PEBD@Z) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute __cdecl vtkpugixml::xml_node::attribute(char const *)const " (?attribute@xml_node@vtkpugixml@@QEBA?AVxml_attribute@2@PEBD@Z) referenced in function "public: __cdecl <lambda_1c0c8fdd1044ba65c9546c87655f6294>::operator()(class vtkpugixml::xml_node const &)const " (??R<lambda_1c0c8fdd1044ba65c9546c87655f6294>@@QEBA@AEBVxml_node@vtkpugixml@@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node::set_name(char const *)" (?set_name@xml_node@vtkpugixml@@QEAA_NPEBD@Z) referenced in function "public: void __cdecl vtkDataAssembly::SetNodeName(int,char const *)" (?SetNodeName@vtkDataAssembly@@QEAAXHPEBD@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute __cdecl vtkpugixml::xml_node::append_attribute(char const *)" (?append_attribute@xml_node@vtkpugixml@@QEAA?AVxml_attribute@2@PEBD@Z) referenced in function "public: bool __cdecl vtkDataAssembly::AddDataSetIndex(int,unsigned int)" (?AddDataSetIndex@vtkDataAssembly@@QEAA_NHI@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute __cdecl vtkpugixml::xml_node::append_copy(class vtkpugixml::xml_attribute const &)" (?append_copy@xml_node@vtkpugixml@@QEAA?AVxml_attribute@2@AEBV32@@Z) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xml_node::append_child(char const *)" (?append_child@xml_node@vtkpugixml@@QEAA?AV12@PEBD@Z) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xml_node::append_copy(class vtkpugixml::xml_node const &)" (?append_copy@xml_node@vtkpugixml@@QEAA?AV12@AEBV12@@Z) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute __cdecl vtkpugixml::xml_node::append_copy(class vtkpugixml::xml_attribute const &)" (?append_copy@xml_node@vtkpugixml@@QEAA?AVxml_attribute@2@AEBV32@@Z) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xml_node::append_child(char const *)" (?append_child@xml_node@vtkpugixml@@QEAA?AV12@PEBD@Z) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xml_node::append_copy(class vtkpugixml::xml_node const &)" (?append_copy@xml_node@vtkpugixml@@QEAA?AV12@AEBV12@@Z) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node::remove_attribute(class vtkpugixml::xml_attribute const &)" (?remove_attribute@xml_node@vtkpugixml@@QEAA_NAEBVxml_attribute@2@@Z) referenced in function "public: int __cdecl vtkDataAssembly::AddSubtree(int,class vtkDataAssembly *,int)" (?AddSubtree@vtkDataAssembly@@QEAAHHPEAV1@H@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node::remove_child(class vtkpugixml::xml_node const &)" (?remove_child@xml_node@vtkpugixml@@QEAA_NAEBV12@@Z) referenced in function "public: bool __cdecl vtkDataAssembly::RemapDataSetIndices(class std::map<unsigned int,unsigned int,struct std::less<unsigned int>,class std::allocator<struct std::pair<unsigned int const ,unsigned int> > > const &,bool)" (?RemapDataSetIndices@vtkDataAssembly@@QEAA_NAEBV?$map@IIU?$less@I@std@@V?$allocator@U?$pair@$$CBII@std@@@2@@std@@_N@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl vtkpugixml::xml_node::path(char)const " (?path@xml_node@vtkpugixml@@QEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@D@Z) referenced in function "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl vtkDataAssembly::GetNodePath(int)const " (?GetNodePath@vtkDataAssembly@@QEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xml_node::first_element_by_path(char const *,char)const " (?first_element_by_path@xml_node@vtkpugixml@@QEBA?AV12@PEBDD@Z) referenced in function "public: int __cdecl vtkDataAssembly::GetFirstNodeByPath(char const *)const " (?GetFirstNodeByPath@vtkDataAssembly@@QEBAHPEBD@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node::traverse(class vtkpugixml::xml_tree_walker &)" (?traverse@xml_node@vtkpugixml@@QEAA_NAEAVxml_tree_walker@2@@Z) referenced in function "public: int __cdecl vtkDataAssembly::AddSubtree(int,class vtkDataAssembly *,int)" (?AddSubtree@vtkDataAssembly@@QEAAHHPEAV1@H@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xpath_node_set __cdecl vtkpugixml::xml_node::select_nodes(char const *,class vtkpugixml::xpath_variable_set *)const " (?select_nodes@xml_node@vtkpugixml@@QEBA?AVxpath_node_set@2@PEBDPEAVxpath_variable_set@2@@Z) referenced in function "public: bool __cdecl vtkDataAssembly::RemapDataSetIndices(class std::map<unsigned int,unsigned int,struct std::less<unsigned int>,class std::allocator<struct std::pair<unsigned int const ,unsigned int> > > const &,bool)" (?RemapDataSetIndices@vtkDataAssembly@@QEAA_NAEBV?$map@IIU?$less@I@std@@V?$allocator@U?$pair@$$CBII@std@@@2@@std@@_N@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_object_range<class vtkpugixml::xml_node_iterator> __cdecl vtkpugixml::xml_node::children(void)const " (?children@xml_node@vtkpugixml@@QEBA?AV?$xml_object_range@Vxml_node_iterator@vtkpugixml@@@2@XZ) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_object_range<class vtkpugixml::xml_node_iterator> __cdecl vtkpugixml::xml_node::children(void)const " (?children@xml_node@vtkpugixml@@QEBA?AV?$xml_object_range@Vxml_node_iterator@vtkpugixml@@@2@XZ) referenced in function "public: __cdecl <lambda_1c0c8fdd1044ba65c9546c87655f6294>::operator()(class vtkpugixml::xml_node const &)const " (??R<lambda_1c0c8fdd1044ba65c9546c87655f6294>@@QEBA@AEBVxml_node@vtkpugixml@@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_object_range<class vtkpugixml::xml_named_node_iterator> __cdecl vtkpugixml::xml_node::children(char const *)const " (?children@xml_node@vtkpugixml@@QEBA?AV?$xml_object_range@Vxml_named_node_iterator@vtkpugixml@@@2@PEBD@Z) referenced in function "protected: class std::vector<unsigned int,class std::allocator<unsigned int> > __cdecl vtkDataAssemblyVisitor::GetCurrentDataSetIndices(void)const " (?GetCurrentDataSetIndices@vtkDataAssemblyVisitor@@IEBA?AV?$vector@IV?$allocator@I@std@@@std@@XZ)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_object_range<class vtkpugixml::xml_attribute_iterator> __cdecl vtkpugixml::xml_node::attributes(void)const " (?attributes@xml_node@vtkpugixml@@QEBA?AV?$xml_object_range@Vxml_attribute_iterator@vtkpugixml@@@2@XZ) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_object_range<class vtkpugixml::xml_attribute_iterator> __cdecl vtkpugixml::xml_node::attributes(void)const " (?attributes@xml_node@vtkpugixml@@QEBA?AV?$xml_object_range@Vxml_attribute_iterator@vtkpugixml@@@2@XZ) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_node_iterator::operator!=(class vtkpugixml::xml_node_iterator const &)const " (??9xml_node_iterator@vtkpugixml@@QEBA_NAEBV01@@Z) referenced in function "__int64 __cdecl std::count_if<class vtkpugixml::xml_node_iterator,bool (__cdecl*)(class vtkpugixml::xml_node const &)>(class vtkpugixml::xml_node_iterator,class vtkpugixml::xml_node_iterator,bool (__cdecl*)(class vtkpugixml::xml_node const &))" (??$count_if@Vxml_node_iterator@vtkpugixml@@P6A_NAEBVxml_node@2@@Z@std@@YA_JVxml_node_iterator@vtkpugixml@@0P6A_NAEBVxml_node@2@@Z@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node & __cdecl vtkpugixml::xml_node_iterator::operator*(void)const " (??Dxml_node_iterator@vtkpugixml@@QEBAAEAVxml_node@1@XZ) referenced in function "__int64 __cdecl std::count_if<class vtkpugixml::xml_node_iterator,bool (__cdecl*)(class vtkpugixml::xml_node const &)>(class vtkpugixml::xml_node_iterator,class vtkpugixml::xml_node_iterator,bool (__cdecl*)(class vtkpugixml::xml_node const &))" (??$count_if@Vxml_node_iterator@vtkpugixml@@P6A_NAEBVxml_node@2@@Z@std@@YA_JVxml_node_iterator@vtkpugixml@@0P6A_NAEBVxml_node@2@@Z@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node_iterator const & __cdecl vtkpugixml::xml_node_iterator::operator++(void)" (??Exml_node_iterator@vtkpugixml@@QEAAAEBV01@XZ) referenced in function "__int64 __cdecl std::count_if<class vtkpugixml::xml_node_iterator,bool (__cdecl*)(class vtkpugixml::xml_node const &)>(class vtkpugixml::xml_node_iterator,class vtkpugixml::xml_node_iterator,bool (__cdecl*)(class vtkpugixml::xml_node const &))" (??$count_if@Vxml_node_iterator@vtkpugixml@@P6A_NAEBVxml_node@2@@Z@std@@YA_JVxml_node_iterator@vtkpugixml@@0P6A_NAEBVxml_node@2@@Z@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_attribute_iterator::operator!=(class vtkpugixml::xml_attribute_iterator const &)const " (??9xml_attribute_iterator@vtkpugixml@@QEBA_NAEBV01@@Z) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute & __cdecl vtkpugixml::xml_attribute_iterator::operator*(void)const " (??Dxml_attribute_iterator@vtkpugixml@@QEBAAEAVxml_attribute@1@XZ) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute_iterator const & __cdecl vtkpugixml::xml_attribute_iterator::operator++(void)" (??Exml_attribute_iterator@vtkpugixml@@QEAAAEBV01@XZ) referenced in function "public: void __cdecl <lambda_3233c0c3fd891a36c13ae74ff2ad18a5>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_3233c0c3fd891a36c13ae74ff2ad18a5>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_attribute_iterator::operator!=(class vtkpugixml::xml_attribute_iterator const &)const " (??9xml_attribute_iterator@vtkpugixml@@QEBA_NAEBV01@@Z) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute & __cdecl vtkpugixml::xml_attribute_iterator::operator*(void)const " (??Dxml_attribute_iterator@vtkpugixml@@QEBAAEAVxml_attribute@1@XZ) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_attribute_iterator const & __cdecl vtkpugixml::xml_attribute_iterator::operator++(void)" (??Exml_attribute_iterator@vtkpugixml@@QEAAAEBV01@XZ) referenced in function "public: void __cdecl <lambda_82cb8c3d0746292bc6f13a182d78158a>::operator()(class vtkpugixml::xml_node const &,class vtkpugixml::xml_node)const " (??R<lambda_82cb8c3d0746292bc6f13a182d78158a>@@QEBAXAEBVxml_node@vtkpugixml@@V12@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtkpugixml::xml_named_node_iterator::operator!=(class vtkpugixml::xml_named_node_iterator const &)const " (??9xml_named_node_iterator@vtkpugixml@@QEBA_NAEBV01@@Z) referenced in function "protected: class std::vector<unsigned int,class std::allocator<unsigned int> > __cdecl vtkDataAssemblyVisitor::GetCurrentDataSetIndices(void)const " (?GetCurrentDataSetIndices@vtkDataAssemblyVisitor@@IEBA?AV?$vector@IV?$allocator@I@std@@@std@@XZ)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node & __cdecl vtkpugixml::xml_named_node_iterator::operator*(void)const " (??Dxml_named_node_iterator@vtkpugixml@@QEBAAEAVxml_node@1@XZ) referenced in function "protected: class std::vector<unsigned int,class std::allocator<unsigned int> > __cdecl vtkDataAssemblyVisitor::GetCurrentDataSetIndices(void)const " (?GetCurrentDataSetIndices@vtkDataAssemblyVisitor@@IEBA?AV?$vector@IV?$allocator@I@std@@@std@@XZ)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_named_node_iterator const & __cdecl vtkpugixml::xml_named_node_iterator::operator++(void)" (??Exml_named_node_iterator@vtkpugixml@@QEAAAEBV01@XZ) referenced in function "protected: class std::vector<unsigned int,class std::allocator<unsigned int> > __cdecl vtkDataAssemblyVisitor::GetCurrentDataSetIndices(void)const " (?GetCurrentDataSetIndices@vtkDataAssemblyVisitor@@IEBA?AV?$vector@IV?$allocator@I@std@@@std@@XZ)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xml_tree_walker::xml_tree_walker(void)" (??0xml_tree_walker@vtkpugixml@@QEAA@XZ) referenced in function "public: __cdecl `anonymous namespace'::OffsetIdWalker::OffsetIdWalker(int)" (??0OffsetIdWalker@?A0xca0a826b@@QEAA@H@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl vtkpugixml::xml_tree_walker::~xml_tree_walker(void)" (??1xml_tree_walker@vtkpugixml@@UEAA@XZ) referenced in function "public: virtual __cdecl `anonymous namespace'::OffsetIdWalker::~OffsetIdWalker(void)" (??1OffsetIdWalker@?A0xca0a826b@@UEAA@XZ)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xml_tree_walker::xml_tree_walker(void)" (??0xml_tree_walker@vtkpugixml@@QEAA@XZ) referenced in function "public: __cdecl `anonymous namespace'::OffsetIdWalker::OffsetIdWalker(int)" (??0OffsetIdWalker@?A0x78175863@@QEAA@H@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl vtkpugixml::xml_tree_walker::~xml_tree_walker(void)" (??1xml_tree_walker@vtkpugixml@@UEAA@XZ) referenced in function "public: virtual __cdecl `anonymous namespace'::OffsetIdWalker::~OffsetIdWalker(void)" (??1OffsetIdWalker@?A0x78175863@@UEAA@XZ)
 vtkDataAssembly.obj : error LNK2001: unresolved external symbol "public: virtual bool __cdecl vtkpugixml::xml_tree_walker::begin(class vtkpugixml::xml_node &)" (?begin@xml_tree_walker@vtkpugixml@@UEAA_NAEAVxml_node@2@@Z)
 vtkDataAssembly.obj : error LNK2001: unresolved external symbol "public: virtual bool __cdecl vtkpugixml::xml_tree_walker::end(class vtkpugixml::xml_node &)" (?end@xml_tree_walker@vtkpugixml@@UEAA_NAEAVxml_node@2@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xml_parse_result::operator bool(void)const " (??Bxml_parse_result@vtkpugixml@@QEBA_NXZ) referenced in function "public: bool __cdecl vtkDataAssembly::vtkInternals::Parse(char const *,class vtkDataAssembly *)" (?Parse@vtkInternals@vtkDataAssembly@@QEAA_NPEBDPEAV2@@Z)
@@ -342,7 +680,7 @@ vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xml_document::~xml_document(void)" (??1xml_document@vtkpugixml@@QEAA@XZ) referenced in function "int `public: __cdecl vtkDataAssembly::vtkInternals::vtkInternals(void)'::`1'::dtor$0" (?dtor$0@?0???0vtkInternals@vtkDataAssembly@@QEAA@XZ@4HA)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: struct vtkpugixml::xml_parse_result __cdecl vtkpugixml::xml_document::load_string(char const *,unsigned int)" (?load_string@xml_document@vtkpugixml@@QEAA?AUxml_parse_result@2@PEBDI@Z) referenced in function "public: bool __cdecl vtkDataAssembly::vtkInternals::Parse(char const *,class vtkDataAssembly *)" (?Parse@vtkInternals@vtkDataAssembly@@QEAA_NPEBDPEAV2@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtkpugixml::xml_document::save(class std::basic_ostream<char,struct std::char_traits<char> > &,char const *,unsigned int,enum vtkpugixml::xml_encoding)const " (?save@xml_document@vtkpugixml@@QEBAXAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@PEBDIW4xml_encoding@2@@Z) referenced in function "public: void __cdecl vtkDataAssembly::DeepCopy(class vtkDataAssembly *)" (?DeepCopy@vtkDataAssembly@@QEAAXPEAV1@@Z)
-vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xpath_node::node(void)const " (?node@xpath_node@vtkpugixml@@QEBA?AVxml_node@2@XZ) referenced in function "public: __cdecl <lambda_c72aed06fda079d7cd9412e0cd57a8d3>::operator()(class std::unordered_set<int,struct std::hash<int>,struct std::equal_to<int>,class std::allocator<int> > *,class vtkpugixml::xpath_node const &)const " (??R<lambda_c72aed06fda079d7cd9412e0cd57a8d3>@@QEBA@PEAV?$unordered_set@HU?$hash@H@std@@U?$equal_to@H@2@V?$allocator@H@2@@std@@AEBVxpath_node@vtkpugixml@@@Z)
+vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xml_node __cdecl vtkpugixml::xpath_node::node(void)const " (?node@xpath_node@vtkpugixml@@QEBA?AVxml_node@2@XZ) referenced in function "public: __cdecl <lambda_685988b0da59720b7086d5ba471d3447>::operator()(class std::unordered_set<int,struct std::hash<int>,struct std::equal_to<int>,class std::allocator<int> > *,class vtkpugixml::xpath_node const &)const " (??R<lambda_685988b0da59720b7086d5ba471d3447>@@QEBA@PEAV?$unordered_set@HU?$hash@H@std@@U?$equal_to@H@2@V?$allocator@H@2@@std@@AEBVxpath_node@vtkpugixml@@@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: __cdecl vtkpugixml::xpath_node_set::~xpath_node_set(void)" (??1xpath_node_set@vtkpugixml@@QEAA@XZ) referenced in function "public: bool __cdecl vtkDataAssembly::RemapDataSetIndices(class std::map<unsigned int,unsigned int,struct std::less<unsigned int>,class std::allocator<struct std::pair<unsigned int const ,unsigned int> > > const &,bool)" (?RemapDataSetIndices@vtkDataAssembly@@QEAA_NAEBV?$map@IIU?$less@I@std@@V?$allocator@U?$pair@$$CBII@std@@@2@@std@@_N@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xpath_node const * __cdecl vtkpugixml::xpath_node_set::begin(void)const " (?begin@xpath_node_set@vtkpugixml@@QEBAPEBVxpath_node@2@XZ) referenced in function "public: bool __cdecl vtkDataAssembly::RemapDataSetIndices(class std::map<unsigned int,unsigned int,struct std::less<unsigned int>,class std::allocator<struct std::pair<unsigned int const ,unsigned int> > > const &,bool)" (?RemapDataSetIndices@vtkDataAssembly@@QEAA_NAEBV?$map@IIU?$less@I@std@@V?$allocator@U?$pair@$$CBII@std@@@2@@std@@_N@Z)
 vtkDataAssembly.obj : error LNK2019: unresolved external symbol "public: class vtkpugixml::xpath_node const * __cdecl vtkpugixml::xpath_node_set::end(void)const " (?end@xpath_node_set@vtkpugixml@@QEBAPEBVxpath_node@2@XZ) referenced in function "public: bool __cdecl vtkDataAssembly::RemapDataSetIndices(class std::map<unsigned int,unsigned int,struct std::less<unsigned int>,class std::allocator<struct std::pair<unsigned int const ,unsigned int> > > const &,bool)" (?RemapDataSetIndices@vtkDataAssembly@@QEAA_NAEBV?$map@IIU?$less@I@std@@V?$allocator@U?$pair@$$CBII@std@@@2@@std@@_N@Z)
@@ -364,7 +702,7 @@ vtkStringToken.obj : error LNK2019: unresolved external symbol "public: class st
 vtkStringToken.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtktoken::Manager::insert(unsigned int,unsigned int)" (?insert@Manager@vtktoken@@QEAA_NII@Z) referenced in function "public: bool __cdecl vtkStringToken::AddChild(class vtkStringToken)" (?AddChild@vtkStringToken@@QEAA_NV1@@Z)
 vtkStringToken.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtktoken::Manager::remove(unsigned int,unsigned int)" (?remove@Manager@vtktoken@@QEAA_NII@Z) referenced in function "public: bool __cdecl vtkStringToken::RemoveChild(class vtkStringToken)" (?RemoveChild@vtkStringToken@@QEAA_NV1@@Z)
 vtkStringToken.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtktoken::Manager::contains(unsigned int,unsigned int)const " (?contains@Manager@vtktoken@@QEBA_NII@Z) referenced in function "public: bool __cdecl vtktoken::Manager::contains(unsigned int)const " (?contains@Manager@vtktoken@@QEBA_NI@Z)
-vtkStringToken.obj : error LNK2019: unresolved external symbol "public: enum vtktoken::Manager::Visit __cdecl vtktoken::Manager::visitMembers(class std::function<enum vtktoken::Manager::Visit __cdecl(unsigned int)>,unsigned int)const " (?visitMembers@Manager@vtktoken@@QEBA?AW4Visit@12@V?$function@$$A6A?AW4Visit@Manager@vtktoken@@I@Z@std@@I@Z) referenced in function "public: __cdecl <lambda_baab79526a3ca3fca0eecbe195fc3bd8>::operator()(unsigned int)const " (??R<lambda_baab79526a3ca3fca0eecbe195fc3bd8>@@QEBA@I@Z)
+vtkStringToken.obj : error LNK2019: unresolved external symbol "public: enum vtktoken::Manager::Visit __cdecl vtktoken::Manager::visitMembers(class std::function<enum vtktoken::Manager::Visit __cdecl(unsigned int)>,unsigned int)const " (?visitMembers@Manager@vtktoken@@QEBA?AW4Visit@12@V?$function@$$A6A?AW4Visit@Manager@vtktoken@@I@Z@std@@I@Z) referenced in function "public: __cdecl <lambda_5c9f30a32ca8d41b64e0efda22fb585d>::operator()(unsigned int)const " (??R<lambda_5c9f30a32ca8d41b64e0efda22fb585d>@@QEBA@I@Z)
 vtkStringToken.obj : error LNK2019: unresolved external symbol "public: enum vtktoken::Manager::Visit __cdecl vtktoken::Manager::visitSets(class std::function<enum vtktoken::Manager::Visit __cdecl(unsigned int)>)const " (?visitSets@Manager@vtktoken@@QEBA?AW4Visit@12@V?$function@$$A6A?AW4Visit@Manager@vtktoken@@I@Z@std@@@Z) referenced in function "public: static class std::unordered_set<class vtkStringToken,struct std::hash<class vtkStringToken>,struct std::equal_to<class vtkStringToken>,class std::allocator<class vtkStringToken> > __cdecl vtkStringToken::AllGroups(void)" (?AllGroups@vtkStringToken@@SA?AV?$unordered_set@VvtkStringToken@@U?$hash@VvtkStringToken@@@std@@U?$equal_to@VvtkStringToken@@@3@V?$allocator@VvtkStringToken@@@3@@std@@XZ)
 vtkStructuredData.obj : error LNK2019: unresolved external symbol "public: static class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > * __cdecl vtkImplicitArray<struct vtkConstantImplicitBackend<int> >::New(void)" (?New@?$vtkImplicitArray@U?$vtkConstantImplicitBackend@H@@@@SAPEAV1@XZ) referenced in function "public: static class vtkSmartPointer<class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > > __cdecl vtkSmartPointer<class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > >::New(void)" (?New@?$vtkSmartPointer@V?$vtkImplicitArray@U?$vtkConstantImplicitBackend@H@@@@@@SA?AV1@XZ)
 vtkStructuredData.obj : error LNK2019: unresolved external symbol "class vtkSmartPointer<class vtkImplicitArray<class vtkStructuredPointBackend<double> > > __cdecl vtk::CreateStructuredPointArray<double>(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,int,double * const)" (??$CreateStructuredPointArray@N@vtk@@YA?AV?$vtkSmartPointer@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@@PEAVvtkDataArray@@00QEAHHQEAN@Z) referenced in function "public: static class vtkSmartPointer<class vtkPoints> __cdecl vtkStructuredData::GetPoints(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,double * const)" (?GetPoints@vtkStructuredData@@SA?AV?$vtkSmartPointer@VvtkPoints@@@@PEAVvtkDataArray@@00QEAHQEAN@Z)
@@ -390,4 +728,4 @@ SystemInformation.obj : error LNK2019: unresolved external symbol vtksysProcess_
 SystemInformation.obj : error LNK2019: unresolved external symbol __imp_SymGetLineFromAddr64 referenced in function "public: static class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl vtksys::SystemInformationImplementation::GetProgramStack(int,int)" (?GetProgramStack@SystemInformationImplementation@vtksys@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HH@Z)
 SystemInformation.obj : error LNK2019: unresolved external symbol __imp_SymInitialize referenced in function "public: static class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl vtksys::SystemInformationImplementation::GetProgramStack(int,int)" (?GetProgramStack@SystemInformationImplementation@vtksys@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HH@Z)
 SystemInformation.obj : error LNK2019: unresolved external symbol __imp_SymFromAddr referenced in function "public: static class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl vtksys::SystemInformationImplementation::GetProgramStack(int,int)" (?GetProgramStack@SystemInformationImplementation@vtksys@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HH@Z)
-E:\VS\VTKLee\x64\Debug\VTKLee.exe : fatal error LNK1120: 118 unresolved externals
+F:\ToGithub\Learning-VTK\x64\Debug\VTKLee.exe : fatal error LNK1120: 114 unresolved externals
