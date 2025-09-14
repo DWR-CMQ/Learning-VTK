@@ -24,7 +24,7 @@
 #include "core/vtkSmartPointer.h"
 #include "core/vtkDICOMImageReader.h"
 #include "core/vtkImageData.h"
-
+//#include "core/vtkSMPTools.h"
 
 int main(int argc, char* argv[])
 {

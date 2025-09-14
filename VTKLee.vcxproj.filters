@@ -1808,58 +1808,56 @@
     <ClInclude Include="core\SMP\Common\vtkSMPToolsInternal.h">
       <Filter>core</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="core\vtkAOSDataArrayTemplate.txx">
+    <ClInclude Include="core\SMP\STDThread\vtkSMPToolsImpl.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkGenericDataArray.txx">
+    </ClInclude>
+    <ClInclude Include="core\SMP\Sequential\vtkSMPToolsImpl.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkDataArrayPrivate.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkAOSDataArrayTemplate.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkTypedArray.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkArrayDispatch.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkTypedDataArray.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkArrayIteratorTemplate.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkTypeList.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkArrayIteratorTemplateImplicit.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkArrayDispatch.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkCompositeDataSet.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkStructuredPointArray.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkDataArrayPrivate.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkImplicitArray.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkGenericDataArray.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkStructuredPointBackend.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkImplicitArray.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkCompositeDataSet.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkSOADataArrayTemplate.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkSOADataArrayTemplate.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkStaticCellLinksTemplate.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkStaticCellLinksTemplate.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkStructuredPointArray.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkArrayIteratorTemplate.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkStructuredPointBackend.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\vtkArrayIteratorTemplateImplicit.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkTypedArray.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\SMP\STDThread\vtkSMPToolsImpl.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkTypedDataArray.txx">
       <Filter>core</Filter>
-    </None>
-    <None Include="core\SMP\Sequential\vtkSMPToolsImpl.txx">
+    </ClInclude>
+    <ClInclude Include="core\vtkTypeList.txx">
       <Filter>core</Filter>
-    </None>
+    </ClInclude>
   </ItemGroup>
 </Project>

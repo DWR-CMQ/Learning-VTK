@@ -746,23 +746,57 @@
     <ClInclude Include="core\vtk_pegtl.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="core\SMP\Sequential\vtkSMPToolsImpl.txx" />
-    <None Include="core\SMP\STDThread\vtkSMPToolsImpl.txx" />
-    <None Include="core\vtkAOSDataArrayTemplate.txx" />
-    <None Include="core\vtkArrayDispatch.txx" />
-    <None Include="core\vtkArrayIteratorTemplate.txx" />
-    <None Include="core\vtkArrayIteratorTemplateImplicit.txx" />
-    <None Include="core\vtkCompositeDataSet.txx" />
-    <None Include="core\vtkDataArrayPrivate.txx" />
-    <None Include="core\vtkGenericDataArray.txx" />
-    <None Include="core\vtkImplicitArray.txx" />
-    <None Include="core\vtkSOADataArrayTemplate.txx" />
-    <None Include="core\vtkStaticCellLinksTemplate.txx" />
-    <None Include="core\vtkStructuredPointArray.txx" />
-    <None Include="core\vtkStructuredPointBackend.txx" />
-    <None Include="core\vtkTypedArray.txx" />
-    <None Include="core\vtkTypedDataArray.txx" />
-    <None Include="core\vtkTypeList.txx" />
+    <ClInclude Include="core\SMP\Sequential\vtkSMPToolsImpl.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\SMP\STDThread\vtkSMPToolsImpl.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkAOSDataArrayTemplate.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkArrayDispatch.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkArrayIteratorTemplate.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkArrayIteratorTemplateImplicit.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkCompositeDataSet.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkDataArrayPrivate.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkGenericDataArray.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkImplicitArray.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkSOADataArrayTemplate.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkStaticCellLinksTemplate.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkStructuredPointArray.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkStructuredPointBackend.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkTypedArray.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkTypedDataArray.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="core\vtkTypeList.txx">
+      <FileType>Document</FileType>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

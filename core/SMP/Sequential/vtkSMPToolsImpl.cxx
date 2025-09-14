@@ -12,8 +12,6 @@ namespace smp
 {
 VTK_ABI_NAMESPACE_BEGIN
 
-template class vtk::detail::smp::vtkSMPToolsImpl<BackendType::Sequential>;
-template class vtk::detail::smp::vtkSMPToolsImpl<BackendType::STDThread>;
 //------------------------------------------------------------------------------
 template <>
 void vtkSMPToolsImpl<BackendType::Sequential>::Initialize(int)
