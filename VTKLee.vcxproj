@@ -125,7 +125,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>/NODEFAULTLIB:msvcprtd.lib %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -362,6 +362,7 @@
     <ClCompile Include="core\vtksys\DynamicLoader.cxx" />
     <ClCompile Include="core\vtksys\EncodingCXX.cxx" />
     <ClCompile Include="core\vtksys\Glob.cxx" />
+    <ClCompile Include="core\vtksys\ProcessWin32.c" />
     <ClCompile Include="core\vtksys\RegularExpression.cxx" />
     <ClCompile Include="core\vtksys\Status.cxx" />
     <ClCompile Include="core\vtksys\SystemInformation.cxx" />

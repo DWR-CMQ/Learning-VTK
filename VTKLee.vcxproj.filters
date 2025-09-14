@@ -780,6 +780,9 @@
     <ClCompile Include="core\SMP\Common\vtkSMPToolsAPI.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtksys\ProcessWin32.c">
+      <Filter>core\vtksys</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
