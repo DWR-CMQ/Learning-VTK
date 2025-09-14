@@ -148,6 +148,7 @@
     <ClCompile Include="core\DICOMAppHelper.cxx" />
     <ClCompile Include="core\DICOMFile.cxx" />
     <ClCompile Include="core\DICOMParser.cxx" />
+    <ClCompile Include="core\SMP\Common\vtkSMPToolsAPI.cxx" />
     <ClCompile Include="core\SMP\Sequential\vtkSMPToolsImpl.cxx" />
     <ClCompile Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.cxx" />
     <ClCompile Include="core\SMP\STDThread\vtkSMPThreadPool.cxx" />
@@ -408,6 +409,8 @@
     <ClInclude Include="core\DICOMParser.h" />
     <ClInclude Include="core\DICOMParserMap.h" />
     <ClInclude Include="core\DICOMTypes.h" />
+    <ClInclude Include="core\SMP\Common\vtkSMPThreadLocalAPI.h" />
+    <ClInclude Include="core\SMP\Common\vtkSMPToolsAPI.h" />
     <ClInclude Include="core\SMP\Common\vtkSMPToolsInternal.h" />
     <ClInclude Include="core\SMP\Sequential\vtkSMPThreadLocalImpl.h" />
     <ClInclude Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.h" />

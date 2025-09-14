@@ -13,10 +13,10 @@
 
 #include "SMP/Common/vtkSMPToolsImpl.h"
 #if VTK_SMP_ENABLE_SEQUENTIAL
-#include "SMP/Sequential/vtkSMPToolsImpl.cxx"
+#include "SMP/Sequential/vtkSMPToolsImpl.txx"
 #endif
 #if VTK_SMP_ENABLE_STDTHREAD
-#include "SMP/STDThread/vtkSMPToolsImpl.cxx"
+#include "SMP/STDThread/vtkSMPToolsImpl.txx"
 #endif
 #if VTK_SMP_ENABLE_TBB
 //#include "SMP/TBB/vtkSMPToolsImpl.txx"

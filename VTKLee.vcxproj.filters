@@ -777,6 +777,9 @@
     <ClCompile Include="core\SMP\Sequential\vtkSMPToolsImpl.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\SMP\Common\vtkSMPToolsAPI.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -1857,6 +1860,12 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkTypeList.txx">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SMP\Common\vtkSMPToolsAPI.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\SMP\Common\vtkSMPThreadLocalAPI.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
