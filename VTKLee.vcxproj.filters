@@ -19,6 +19,21 @@
     <Filter Include="core\vtksys">
       <UniqueIdentifier>{07b8e5e7-db31-47ea-bc3f-440334c04d62}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\token">
+      <UniqueIdentifier>{25791c89-bb2f-4044-97ad-d8a94d15c5b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\token\json">
+      <UniqueIdentifier>{f3a62944-5d69-439b-acab-e2b0ec6d6601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\pugixml">
+      <UniqueIdentifier>{aeae8f1f-6d60-4a0c-b0b5-8b75c0b10e15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\pugixml\vtkpugixml">
+      <UniqueIdentifier>{2ae827b7-29d7-4ae1-a02d-7206c4de88aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\pugixml\vtkpugixml\src">
+      <UniqueIdentifier>{b0f40866-3099-46eb-9ed0-7c2e9c825d6c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -782,6 +797,36 @@
     </ClCompile>
     <ClCompile Include="core\vtksys\ProcessWin32.c">
       <Filter>core\vtksys</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkExecutableRunner.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkArrayIterator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\token\Manager.cxx">
+      <Filter>core\token</Filter>
+    </ClCompile>
+    <ClCompile Include="core\token\Singletons.cxx">
+      <Filter>core\token</Filter>
+    </ClCompile>
+    <ClCompile Include="core\token\Token.cxx">
+      <Filter>core\token</Filter>
+    </ClCompile>
+    <ClCompile Include="core\token\TypeContainer.cxx">
+      <Filter>core\token</Filter>
+    </ClCompile>
+    <ClCompile Include="core\token\json\jsonManager.cxx">
+      <Filter>core\token\json</Filter>
+    </ClCompile>
+    <ClCompile Include="core\token\json\jsonToken.cxx">
+      <Filter>core\token\json</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtksys\EncodingC.c">
+      <Filter>core\vtksys</Filter>
+    </ClCompile>
+    <ClCompile Include="core\pugixml\vtkpugixml\src\pugixml.cpp">
+      <Filter>core\pugixml\vtkpugixml\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1871,5 +1916,64 @@
     <ClInclude Include="core\SMP\Common\vtkSMPThreadLocalAPI.h">
       <Filter>core</Filter>
     </ClInclude>
+    <ClInclude Include="core\vtkExecutableRunner.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkArrayIterator.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Compiler.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\CxxABIConfigure.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Exports.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Hash.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Manager.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Options.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Singletons.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Token.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\Type.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\TypeContainer.h">
+      <Filter>core\token</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\json\jsonManager.h">
+      <Filter>core\token\json</Filter>
+    </ClInclude>
+    <ClInclude Include="core\token\json\jsonToken.h">
+      <Filter>core\token\json</Filter>
+    </ClInclude>
+    <ClInclude Include="core\pugixml\vtk_pugixml.h">
+      <Filter>core\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="core\pugixml\vtkpugixml\src\pugiconfig.hpp">
+      <Filter>core\pugixml\vtkpugixml\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\pugixml\vtkpugixml\src\pugixml.hpp">
+      <Filter>core\pugixml\vtkpugixml\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\pugixml\vtkpugixml\src\vtk_pugixml_mangle.h">
+      <Filter>core\pugixml\vtkpugixml\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="core\token\CxxABIConfigure.h.in">
+      <Filter>core\token</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -116,7 +116,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <OpenMPSupport>true</OpenMPSupport>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -148,11 +148,18 @@
     <ClCompile Include="core\DICOMAppHelper.cxx" />
     <ClCompile Include="core\DICOMFile.cxx" />
     <ClCompile Include="core\DICOMParser.cxx" />
+    <ClCompile Include="core\pugixml\vtkpugixml\src\pugixml.cpp" />
     <ClCompile Include="core\SMP\Common\vtkSMPToolsAPI.cxx" />
     <ClCompile Include="core\SMP\Sequential\vtkSMPToolsImpl.cxx" />
     <ClCompile Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.cxx" />
     <ClCompile Include="core\SMP\STDThread\vtkSMPThreadPool.cxx" />
     <ClCompile Include="core\SMP\STDThread\vtkSMPToolsImpl.cxx" />
+    <ClCompile Include="core\token\json\jsonManager.cxx" />
+    <ClCompile Include="core\token\json\jsonToken.cxx" />
+    <ClCompile Include="core\token\Manager.cxx" />
+    <ClCompile Include="core\token\Singletons.cxx" />
+    <ClCompile Include="core\token\Token.cxx" />
+    <ClCompile Include="core\token\TypeContainer.cxx" />
     <ClCompile Include="core\vtkAbstractArray.cxx" />
     <ClCompile Include="core\vtkAbstractCellArray.cxx" />
     <ClCompile Include="core\vtkAbstractCellLinks.cxx" />
@@ -166,6 +173,7 @@
     <ClCompile Include="core\vtkAMRDataInternals.cxx" />
     <ClCompile Include="core\vtkAMRInformation.cxx" />
     <ClCompile Include="core\vtkArrayCoordinates.cxx" />
+    <ClCompile Include="core\vtkArrayIterator.cxx" />
     <ClCompile Include="core\vtkArrayIteratorTemplateInstantiate.cxx" />
     <ClCompile Include="core\vtkArrayRange.cxx" />
     <ClCompile Include="core\vtkBitArray.cxx" />
@@ -237,6 +245,7 @@
     <ClCompile Include="core\vtkDynamicLoader.cxx" />
     <ClCompile Include="core\vtkEmptyCell.cxx" />
     <ClCompile Include="core\vtkErrorCode.cxx" />
+    <ClCompile Include="core\vtkExecutableRunner.cxx" />
     <ClCompile Include="core\vtkExecutionAggregator.cxx" />
     <ClCompile Include="core\vtkExecutionRange.cxx" />
     <ClCompile Include="core\vtkExecutive.cxx" />
@@ -360,6 +369,7 @@
     <ClCompile Include="core\vtksys\CommandLineArguments.cxx" />
     <ClCompile Include="core\vtksys\Directory.cxx" />
     <ClCompile Include="core\vtksys\DynamicLoader.cxx" />
+    <ClCompile Include="core\vtksys\EncodingC.c" />
     <ClCompile Include="core\vtksys\EncodingCXX.cxx" />
     <ClCompile Include="core\vtksys\Glob.cxx" />
     <ClCompile Include="core\vtksys\ProcessWin32.c" />
@@ -410,6 +420,10 @@
     <ClInclude Include="core\DICOMParser.h" />
     <ClInclude Include="core\DICOMParserMap.h" />
     <ClInclude Include="core\DICOMTypes.h" />
+    <ClInclude Include="core\pugixml\vtkpugixml\src\pugiconfig.hpp" />
+    <ClInclude Include="core\pugixml\vtkpugixml\src\pugixml.hpp" />
+    <ClInclude Include="core\pugixml\vtkpugixml\src\vtk_pugixml_mangle.h" />
+    <ClInclude Include="core\pugixml\vtk_pugixml.h" />
     <ClInclude Include="core\SMP\Common\vtkSMPThreadLocalAPI.h" />
     <ClInclude Include="core\SMP\Common\vtkSMPToolsAPI.h" />
     <ClInclude Include="core\SMP\Common\vtkSMPToolsInternal.h" />
@@ -417,6 +431,18 @@
     <ClInclude Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.h" />
     <ClInclude Include="core\SMP\STDThread\vtkSMPThreadLocalImpl.h" />
     <ClInclude Include="core\SMP\STDThread\vtkSMPThreadPool.h" />
+    <ClInclude Include="core\token\Compiler.h" />
+    <ClInclude Include="core\token\CxxABIConfigure.h" />
+    <ClInclude Include="core\token\Exports.h" />
+    <ClInclude Include="core\token\Hash.h" />
+    <ClInclude Include="core\token\json\jsonManager.h" />
+    <ClInclude Include="core\token\json\jsonToken.h" />
+    <ClInclude Include="core\token\Manager.h" />
+    <ClInclude Include="core\token\Options.h" />
+    <ClInclude Include="core\token\Singletons.h" />
+    <ClInclude Include="core\token\Token.h" />
+    <ClInclude Include="core\token\Type.h" />
+    <ClInclude Include="core\token\TypeContainer.h" />
     <ClInclude Include="core\vtkABI.h" />
     <ClInclude Include="core\vtkABINamespace.h" />
     <ClInclude Include="core\vtkAbstractArray.h" />
@@ -435,6 +461,7 @@
     <ClInclude Include="core\vtkArrayCoordinates.h" />
     <ClInclude Include="core\vtkArrayDispatch.h" />
     <ClInclude Include="core\vtkArrayDispatchArrayList.h" />
+    <ClInclude Include="core\vtkArrayIterator.h" />
     <ClInclude Include="core\vtkArrayIteratorIncludes.h" />
     <ClInclude Include="core\vtkArrayIteratorTemplate.h" />
     <ClInclude Include="core\vtkArrayRange.h" />
@@ -522,6 +549,7 @@
     <ClInclude Include="core\vtkEmptyCell.h" />
     <ClInclude Include="core\vtkEndian.h" />
     <ClInclude Include="core\vtkErrorCode.h" />
+    <ClInclude Include="core\vtkExecutableRunner.h" />
     <ClInclude Include="core\vtkExecutionAggregator.h" />
     <ClInclude Include="core\vtkExecutionRange.h" />
     <ClInclude Include="core\vtkExecutive.h" />
@@ -801,6 +829,9 @@
     <ClInclude Include="core\vtkTypeList.txx">
       <FileType>Document</FileType>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="core\token\CxxABIConfigure.h.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

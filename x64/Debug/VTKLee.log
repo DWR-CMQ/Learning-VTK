@@ -1,114 +1,51 @@
 ﻿D:\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: Two or more files with the name of vtkSMPToolsImpl.cxx will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are core\SMP\Sequential\vtkSMPToolsImpl.cxx, core\SMP\STDThread\vtkSMPToolsImpl.cxx.
-  ProcessWin32.c
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(86,56): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(86,56): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(87,44): error C2371: 'kwsysProcessPipeData': redefinition; different basic types
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(84): message : see declaration of 'kwsysProcessPipeData'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(87,64): error C2143: syntax error: missing ';' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(87,68): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(89,56): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(89,56): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(90,44): error C2371: 'kwsysProcessPipeData': redefinition; different basic types
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(84): message : see declaration of 'kwsysProcessPipeData'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(90,64): error C2143: syntax error: missing ';' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(90,68): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(91,47): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(91,47): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(91,51): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(92,45): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(92,45): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(92,55): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(93,66): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(94,45): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(94,45): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(94,55): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(94,60): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(99,45): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(99,45): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(99,57): warning C4142: 'DWORD': benign redefinition of type
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(156): message : see declaration of 'DWORD'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(99,51): error C2370: 'DWORD': redefinition; different storage class
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(156): message : see declaration of 'DWORD'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(99,57): error C2146: syntax error: missing ';' before identifier 'error'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(99,62): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(100,55): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(100,55): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(100,59): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(101,51): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(101,51): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(101,63): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(102,68): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(115,61): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(115,61): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(115,71): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(116,56): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(118,56): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(118,56): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(118,60): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(159,3): error C2061: syntax error: identifier 'kwsysProcess'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(177,1): error C2059: syntax error: '}'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(245,24): error C2079: 'Pipe' uses undefined struct 'kwsysProcessPipeData_s'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(314,13): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(319,15): error C2065: 'kwsysProcess': undeclared identifier
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(319,19): error C2297: '*': illegal, right operand has type 'int *'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(334,21): error C2065: 'kwsysProcess': undeclared identifier
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(334,22): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(342,7): error C2223: left of '->PipeSharedSTDIN' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(345,7): error C2223: left of '->State' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(345,42): error C2065: 'kwsysProcess_State_Starting': undeclared identifier
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(372,24): warning C4013: 'kwsysProcess_Delete' undefined; assuming extern returning int
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(377,13): error C2223: left of '->SharedIndexMutex' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(383,13): error C2223: left of '->Full' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(393,9): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(396,9): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(399,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(405,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(411,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(419,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(420,55): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(420,73): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'DWORD *'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(420,67): warning C4024: 'CreateThread': different types for formal and actual parameter 5
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(419,51): error C2198: 'CreateThread': too few arguments for call
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(426,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(432,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(438,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(446,15): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(447,55): error C2223: left of '->Pipe' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(447,73): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'DWORD *'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(447,67): warning C4024: 'CreateThread': different types for formal and actual parameter 5
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(446,50): error C2198: 'CreateThread': too few arguments for call
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(453,9): error C2223: left of '->PipeChildStd' must point to struct/union
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(459,38): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(459,38): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(459,42): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(460,1): error C2054: expected '(' to follow 'cp'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(532,41): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(532,41): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(532,57): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(532,73): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(552,41): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(552,41): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(552,57): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(552,73): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(647,42): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(647,42): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(647,55): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(647,62): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(660,50): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(660,50): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(660,66): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(660,71): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(691,42): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(691,42): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(691,52): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(691,74): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(731,45): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(731,45): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(731,55): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(731,71): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(759,45): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(759,45): error C2143: syntax error: missing '{' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(759,55): error C2059: syntax error: 'type'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(759,78): error C2059: syntax error: ')'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(798,40): error C2143: syntax error: missing ')' before '*'
-F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(798,40): fatal error C1003: error count exceeds 100; stopping compilation
+x64\Debug\vtkSMPToolsImpl.obj : warning LNK4042: object specified more than once; extras ignored
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::Initialize(int)" (?Initialize@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAAXH@Z) referenced in function "private: void __cdecl vtk::detail::smp::vtkSMPToolsAPI::RefreshNumberOfThread(void)" (?RefreshNumberOfThread@vtkSMPToolsAPI@smp@detail@vtk@@AEAAXXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::IsParallelScope(void)" (?IsParallelScope@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAA_NXZ) referenced in function "public: bool __cdecl vtk::detail::smp::vtkSMPToolsAPI::IsParallelScope(void)" (?IsParallelScope@vtkSMPToolsAPI@smp@detail@vtk@@QEAA_NXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::GetSingleThread(void)" (?GetSingleThread@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAA_NXZ) referenced in function "public: bool __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetSingleThread(void)" (?GetSingleThread@vtkSMPToolsAPI@smp@detail@vtk@@QEAA_NXZ)
+vtkUnsignedIntArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkUnsignedLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkUnsignedLongLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkUnsignedShortArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkStaticCellLinks.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkStaticCellLocator.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkStaticPointLocator.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkUnsignedCharArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkPlane.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkPolyData.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkShortArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkSignedCharArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkIntArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkLinearTransform.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkLongLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkGenericDataArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkHomogeneousTransform.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkIdList.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkImplicitFunction.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkDataSetAttributes.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkDoubleArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkFieldData.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkFloatArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkCellLinks.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkCharArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkDataArray_DeepCopy.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkDataSet.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkAbstractCellLocator.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkAbstractTransform.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkBoundingBox.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkCellArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkBoundingBox.obj : error LNK2019: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z) referenced in function "public: class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkArrayDownCast_impl<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >::operator()(class vtkAbstractArray *)" (??R?$vtkArrayDownCast_impl@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@@QEAAPEAV?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@PEAVvtkAbstractArray@@@Z)
+vtkImplicitFunction.obj : error LNK2001: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z)
+vtkPlane.obj : error LNK2001: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z)
+vtkPoints.obj : error LNK2001: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z)
+vtkCellArray.obj : error LNK2019: unresolved external symbol "bool __cdecl vtkDataArrayPrivate::DoComputeScalarRange<class vtkAOSDataArrayTemplate<__int64>,__int64,struct vtkDataArrayPrivate::AllValues>(class vtkAOSDataArrayTemplate<__int64> *,__int64 *,struct vtkDataArrayPrivate::AllValues,unsigned char const *,unsigned char)" (??$DoComputeScalarRange@V?$vtkAOSDataArrayTemplate@_J@@_JUAllValues@vtkDataArrayPrivate@@@vtkDataArrayPrivate@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@PEA_JUAllValues@0@PEBEE@Z) referenced in function "bool __cdecl vtk_GDA_detail::ComputeScalarValueRangeImpl<class vtkAOSDataArrayTemplate<__int64>,__int64,struct vtkDataArrayPrivate::AllValues>(class vtkAOSDataArrayTemplate<__int64> *,__int64 *,struct vtkDataArrayPrivate::AllValues,struct std::integral_constant<bool,1>,unsigned char const *,unsigned char)" (??$ComputeScalarValueRangeImpl@V?$vtkAOSDataArrayTemplate@_J@@_JUAllValues@vtkDataArrayPrivate@@@vtk_GDA_detail@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@PEA_JUAllValues@vtkDataArrayPrivate@@U?$integral_constant@_N$00@std@@PEBEE@Z)
+vtkCellArray.obj : error LNK2019: unresolved external symbol "bool __cdecl vtkDataArrayPrivate::DoComputeVectorRange<class vtkAOSDataArrayTemplate<__int64>,__int64>(class vtkAOSDataArrayTemplate<__int64> *,__int64 * const,struct vtkDataArrayPrivate::AllValues,unsigned char const *,unsigned char)" (??$DoComputeVectorRange@V?$vtkAOSDataArrayTemplate@_J@@_J@vtkDataArrayPrivate@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@QEA_JUAllValues@0@PEBEE@Z) referenced in function "bool __cdecl vtk_GDA_detail::ComputeVectorValueRangeImpl<class vtkAOSDataArrayTemplate<__int64>,__int64,struct vtkDataArrayPrivate::AllValues>(class vtkAOSDataArrayTemplate<__int64> *,__int64 * const,struct vtkDataArrayPrivate::AllValues,struct std::integral_constant<bool,1>,unsigned char const *,unsigned char)" (??$ComputeVectorValueRangeImpl@V?$vtkAOSDataArrayTemplate@_J@@_JUAllValues@vtkDataArrayPrivate@@@vtk_GDA_detail@@YA_NPEAV?$vtkAOSDataArrayTemplate@_J@@QEA_JUAllValues@vtkDataArrayPrivate@@U?$integral_constant@_N$00@std@@PEBEE@Z)
+vtkImplicitFunction.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedComponent(__int64,int,double)" (?SetTypedComponent@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JHN@Z) referenced in function "public: struct vtk::detail::ValueReference<class vtkImplicitArray<class vtkStructuredPointBackend<double> >,1,double> __cdecl vtk::detail::ValueReference<class vtkImplicitArray<class vtkStructuredPointBackend<double> >,1,double>::operator=<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >(double)" (??$?4V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@?$ValueReference@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@$00N@detail@vtk@@QEAA?AU012@N@Z)
+vtkPlane.obj : error LNK2001: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedComponent(__int64,int,double)" (?SetTypedComponent@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JHN@Z)
+vtkPoints.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedTuple(__int64,double const *)" (?SetTypedTuple@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JPEBN@Z) referenced in function "public: void __cdecl vtk::detail::TupleRange<class vtkImplicitArray<class vtkStructuredPointBackend<double> >,3>::SetTuple<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >(__int64,double const *)" (??$SetTuple@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@?$TupleRange@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@$02@detail@vtk@@QEAAX_JPEBN@Z)
+vtkStructuredData.obj : error LNK2019: unresolved external symbol "public: static class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > * __cdecl vtkImplicitArray<struct vtkConstantImplicitBackend<int> >::New(void)" (?New@?$vtkImplicitArray@U?$vtkConstantImplicitBackend@H@@@@SAPEAV1@XZ) referenced in function "public: static class vtkSmartPointer<class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > > __cdecl vtkSmartPointer<class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > >::New(void)" (?New@?$vtkSmartPointer@V?$vtkImplicitArray@U?$vtkConstantImplicitBackend@H@@@@@@SA?AV1@XZ)
+vtkStructuredData.obj : error LNK2019: unresolved external symbol "class vtkSmartPointer<class vtkImplicitArray<class vtkStructuredPointBackend<double> > > __cdecl vtk::CreateStructuredPointArray<double>(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,int,double * const)" (??$CreateStructuredPointArray@N@vtk@@YA?AV?$vtkSmartPointer@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@@PEAVvtkDataArray@@00QEAHHQEAN@Z) referenced in function "public: static class vtkSmartPointer<class vtkPoints> __cdecl vtkStructuredData::GetPoints(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,double * const)" (?GetPoints@vtkStructuredData@@SA?AV?$vtkSmartPointer@VvtkPoints@@@@PEAVvtkDataArray@@00QEAHQEAN@Z)
+F:\ToGithub\Learning-VTK\x64\Debug\VTKLee.exe : fatal error LNK1120: 13 unresolved externals
