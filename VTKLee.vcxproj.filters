@@ -1062,6 +1062,45 @@
     <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_double.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_float.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_signed_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">

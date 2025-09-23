@@ -1,67 +1,67 @@
 ﻿D:\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: Two or more files with the name of vtkSMPToolsImpl.cxx will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are core\SMP\Sequential\vtkSMPToolsImpl.cxx, core\SMP\STDThread\vtkSMPToolsImpl.cxx.
-  vtkStdFunctionArrayInstantiate_char.cxx
+  vtkStructuredPointArrayInstantiate_char.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_double.cxx
+  vtkStructuredPointArrayInstantiate_double.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_double.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_double.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_float.cxx
+  vtkStructuredPointArrayInstantiate_float.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_float.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_float.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_int.cxx
+  vtkStructuredPointArrayInstantiate_int.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_long.cxx
+  vtkStructuredPointArrayInstantiate_long.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_long_long.cxx
+  vtkStructuredPointArrayInstantiate_long_long.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_short.cxx
+  vtkStructuredPointArrayInstantiate_short.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_signed_char.cxx
+  vtkStructuredPointArrayInstantiate_signed_char.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_unsigned_char.cxx
+  vtkStructuredPointArrayInstantiate_unsigned_char.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_unsigned_int.cxx
+  vtkStructuredPointArrayInstantiate_unsigned_int.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_unsigned_long.cxx
+  vtkStructuredPointArrayInstantiate_unsigned_long.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx
+  vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
-  vtkStdFunctionArrayInstantiate_unsigned_short.cxx
+  vtkStructuredPointArrayInstantiate_unsigned_short.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
-F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
   Generating Code...
