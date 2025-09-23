@@ -10,7 +10,7 @@
 // Preprocessor symbols which indicate the availability of backends.
 #define VTK_SMP_ENABLE_OPENMP 0
 #define VTK_SMP_ENABLE_SEQUENTIAL 1
-#define VTK_SMP_ENABLE_STDTHREAD 1
+#define VTK_SMP_ENABLE_STDTHREAD 0
 #define VTK_SMP_ENABLE_TBB 0
 
 // Defines which indicate whether the default is a specific backend.

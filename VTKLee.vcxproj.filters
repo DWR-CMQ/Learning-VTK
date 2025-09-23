@@ -828,6 +828,240 @@
     <ClCompile Include="core\pugixml\vtkpugixml\src\pugixml.cpp">
       <Filter>core\pugixml\vtkpugixml\src</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_double.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_float.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_signed_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_double.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_float.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_signed_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_double.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_float.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_signed_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_double.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_float.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_double.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_float.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_signed_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_double.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_float.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_signed_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_char.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_int.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -1969,6 +2203,9 @@
     </ClInclude>
     <ClInclude Include="core\pugixml\vtkpugixml\src\vtk_pugixml_mangle.h">
       <Filter>core\pugixml\vtkpugixml\src</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkStdFunctionArray.h">
+      <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

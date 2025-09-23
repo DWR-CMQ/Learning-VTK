@@ -116,7 +116,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <OpenMPSupport>true</OpenMPSupport>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -209,6 +209,32 @@
     <ClCompile Include="core\vtkCompositeDataIterator.cxx" />
     <ClCompile Include="core\vtkCompositeDataPipeline.cxx" />
     <ClCompile Include="core\vtkCompositeDataSet.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_char.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_double.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_float.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_int.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_long.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_long_long.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_short.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_signed_char.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_char.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_double.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_float.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_int.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long_long.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_short.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_signed_char.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_short.cxx" />
     <ClCompile Include="core\vtkDataArray.cxx">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -354,10 +380,36 @@
     <ClCompile Include="core\vtkSignedCharArray.cxx" />
     <ClCompile Include="core\vtkSmartPointerBase.cxx" />
     <ClCompile Include="core\vtkSMPTools.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_char.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_double.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_float.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_int.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long_long.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_short.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx" />
     <ClCompile Include="core\vtkSortDataArray.cxx" />
     <ClCompile Include="core\vtkStaticCellLinks.cxx" />
     <ClCompile Include="core\vtkStaticCellLocator.cxx" />
     <ClCompile Include="core\vtkStaticPointLocator.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_char.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_double.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_float.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_int.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long_long.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_short.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_signed_char.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx" />
     <ClCompile Include="core\vtkStdString.cxx" />
     <ClCompile Include="core\vtkStreamingDemandDrivenPipeline.cxx" />
     <ClCompile Include="core\vtkStringArray.cxx" />
@@ -365,6 +417,19 @@
     <ClCompile Include="core\vtkStructuredCellArray.cxx" />
     <ClCompile Include="core\vtkStructuredData.cxx" />
     <ClCompile Include="core\vtkStructuredExtent.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_char.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_double.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_float.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_int.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long_long.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_short.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_signed_char.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_short.cxx" />
     <ClCompile Include="core\vtkStructuredPoints.cxx" />
     <ClCompile Include="core\vtksys\CommandLineArguments.cxx" />
     <ClCompile Include="core\vtksys\Directory.cxx" />
@@ -383,6 +448,19 @@
     <ClCompile Include="core\vtkTriangle.cxx" />
     <ClCompile Include="core\vtkTrivialConsumer.cxx" />
     <ClCompile Include="core\vtkTrivialProducer.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_char.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_double.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_float.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_int.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long_long.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_short.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_signed_char.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_short.cxx" />
     <ClCompile Include="core\vtkTypeFloat32Array.cxx" />
     <ClCompile Include="core\vtkTypeFloat64Array.cxx" />
     <ClCompile Include="core\vtkTypeInt16Array.cxx" />
@@ -689,6 +767,7 @@
     <ClInclude Include="core\vtkStaticCellLinksTemplate.h" />
     <ClInclude Include="core\vtkStaticCellLocator.h" />
     <ClInclude Include="core\vtkStaticPointLocator.h" />
+    <ClInclude Include="core\vtkStdFunctionArray.h" />
     <ClInclude Include="core\vtkStdString.h" />
     <ClInclude Include="core\vtkStreamingDemandDrivenPipeline.h" />
     <ClInclude Include="core\vtkStringArray.h" />

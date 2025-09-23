@@ -1,42 +1,75 @@
 ﻿D:\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: Two or more files with the name of vtkSMPToolsImpl.cxx will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are core\SMP\Sequential\vtkSMPToolsImpl.cxx, core\SMP\STDThread\vtkSMPToolsImpl.cxx.
+  vtkStdFunctionArrayInstantiate_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_double.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_double.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_float.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_float.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_signed_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  Generating Code...
 x64\Debug\vtkSMPToolsImpl.obj : warning LNK4042: object specified more than once; extras ignored
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::Initialize(int)" (?Initialize@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAAXH@Z) referenced in function "private: void __cdecl vtk::detail::smp::vtkSMPToolsAPI::RefreshNumberOfThread(void)" (?RefreshNumberOfThread@vtkSMPToolsAPI@smp@detail@vtk@@AEAAXXZ)
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::IsParallelScope(void)" (?IsParallelScope@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAA_NXZ) referenced in function "public: bool __cdecl vtk::detail::smp::vtkSMPToolsAPI::IsParallelScope(void)" (?IsParallelScope@vtkSMPToolsAPI@smp@detail@vtk@@QEAA_NXZ)
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtk::detail::smp::vtkSMPToolsImpl<1>::GetSingleThread(void)" (?GetSingleThread@?$vtkSMPToolsImpl@$00@smp@detail@vtk@@QEAA_NXZ) referenced in function "public: bool __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetSingleThread(void)" (?GetSingleThread@vtkSMPToolsAPI@smp@detail@vtk@@QEAA_NXZ)
-vtkUnsignedIntArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkUnsignedLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkUnsignedLongLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkUnsignedShortArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkStaticCellLinks.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkStaticCellLocator.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkStaticPointLocator.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkUnsignedCharArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkPlane.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkPolyData.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkShortArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkSignedCharArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkIntArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkLinearTransform.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkLongLongArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkGenericDataArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkHomogeneousTransform.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkIdList.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkImplicitFunction.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkDataSetAttributes.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkDoubleArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkFieldData.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkFloatArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkCellLinks.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkCharArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkDataArray_DeepCopy.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkDataSet.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkAbstractCellLocator.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkAbstractTransform.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkBoundingBox.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
-vtkCellArray.obj : error LNK2001: unresolved external symbol "int __cdecl vtk::detail::smp::GetNumberOfThreadsSTDThread(void)" (?GetNumberOfThreadsSTDThread@smp@detail@vtk@@YAHXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::Initialize(int)" (?Initialize@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAAXH@Z) referenced in function "private: void __cdecl vtk::detail::smp::vtkSMPToolsAPI::RefreshNumberOfThread(void)" (?RefreshNumberOfThread@vtkSMPToolsAPI@smp@detail@vtk@@AEAAXXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
+vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::GetSingleThread(void)" (?GetSingleThread@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAA_NXZ) referenced in function "public: bool __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetSingleThread(void)" (?GetSingleThread@vtkSMPToolsAPI@smp@detail@vtk@@QEAA_NXZ)
 vtkBoundingBox.obj : error LNK2019: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z) referenced in function "public: class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkArrayDownCast_impl<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >::operator()(class vtkAbstractArray *)" (??R?$vtkArrayDownCast_impl@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@@QEAAPEAV?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@PEAVvtkAbstractArray@@@Z)
 vtkImplicitFunction.obj : error LNK2001: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z)
 vtkPlane.obj : error LNK2001: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z)
@@ -46,6 +79,5 @@ vtkCellArray.obj : error LNK2019: unresolved external symbol "bool __cdecl vtkDa
 vtkImplicitFunction.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedComponent(__int64,int,double)" (?SetTypedComponent@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JHN@Z) referenced in function "public: struct vtk::detail::ValueReference<class vtkImplicitArray<class vtkStructuredPointBackend<double> >,1,double> __cdecl vtk::detail::ValueReference<class vtkImplicitArray<class vtkStructuredPointBackend<double> >,1,double>::operator=<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >(double)" (??$?4V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@?$ValueReference@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@$00N@detail@vtk@@QEAA?AU012@N@Z)
 vtkPlane.obj : error LNK2001: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedComponent(__int64,int,double)" (?SetTypedComponent@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JHN@Z)
 vtkPoints.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedTuple(__int64,double const *)" (?SetTypedTuple@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JPEBN@Z) referenced in function "public: void __cdecl vtk::detail::TupleRange<class vtkImplicitArray<class vtkStructuredPointBackend<double> >,3>::SetTuple<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >(__int64,double const *)" (??$SetTuple@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@?$TupleRange@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@$02@detail@vtk@@QEAAX_JPEBN@Z)
-vtkStructuredData.obj : error LNK2019: unresolved external symbol "public: static class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > * __cdecl vtkImplicitArray<struct vtkConstantImplicitBackend<int> >::New(void)" (?New@?$vtkImplicitArray@U?$vtkConstantImplicitBackend@H@@@@SAPEAV1@XZ) referenced in function "public: static class vtkSmartPointer<class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > > __cdecl vtkSmartPointer<class vtkImplicitArray<struct vtkConstantImplicitBackend<int> > >::New(void)" (?New@?$vtkSmartPointer@V?$vtkImplicitArray@U?$vtkConstantImplicitBackend@H@@@@@@SA?AV1@XZ)
 vtkStructuredData.obj : error LNK2019: unresolved external symbol "class vtkSmartPointer<class vtkImplicitArray<class vtkStructuredPointBackend<double> > > __cdecl vtk::CreateStructuredPointArray<double>(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,int,double * const)" (??$CreateStructuredPointArray@N@vtk@@YA?AV?$vtkSmartPointer@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@@PEAVvtkDataArray@@00QEAHHQEAN@Z) referenced in function "public: static class vtkSmartPointer<class vtkPoints> __cdecl vtkStructuredData::GetPoints(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,double * const)" (?GetPoints@vtkStructuredData@@SA?AV?$vtkSmartPointer@VvtkPoints@@@@PEAVvtkDataArray@@00QEAHQEAN@Z)
-F:\ToGithub\Learning-VTK\x64\Debug\VTKLee.exe : fatal error LNK1120: 13 unresolved externals
+F:\ToGithub\Learning-VTK\x64\Debug\VTKLee.exe : fatal error LNK1120: 10 unresolved externals

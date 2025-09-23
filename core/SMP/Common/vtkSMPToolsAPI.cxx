@@ -26,14 +26,14 @@ VTK_ABI_NAMESPACE_BEGIN
 vtkSMPToolsAPI::vtkSMPToolsAPI()
 {
   // XXX(c++14): use std::make_unique
-//#if VTK_SMP_ENABLE_SEQUENTIAL
+#if VTK_SMP_ENABLE_SEQUENTIAL
   this->SequentialBackend = std::unique_ptr<vtkSMPToolsImpl<BackendType::Sequential>>(
     new vtkSMPToolsImpl<BackendType::Sequential>());
-//#endif
-//#if VTK_SMP_ENABLE_STDTHREAD
+#endif
+#if VTK_SMP_ENABLE_STDTHREAD
   this->STDThreadBackend = std::unique_ptr<vtkSMPToolsImpl<BackendType::STDThread>>(
     new vtkSMPToolsImpl<BackendType::STDThread>());
-//#endif
+#endif
 #if VTK_SMP_ENABLE_TBB
   this->TBBBackend =
     std::unique_ptr<vtkSMPToolsImpl<BackendType::TBB>>(new vtkSMPToolsImpl<BackendType::TBB>());
