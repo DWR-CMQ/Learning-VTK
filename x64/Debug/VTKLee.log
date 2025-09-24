@@ -1,4 +1,649 @@
 ﻿D:\VS2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: Two or more files with the name of vtkSMPToolsImpl.cxx will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are core\SMP\Sequential\vtkSMPToolsImpl.cxx, core\SMP\STDThread\vtkSMPToolsImpl.cxx.
+  DICOMAppHelper.cxx
+  DICOMFile.cxx
+  DICOMParser.cxx
+  pugixml.cpp
+  vtkSMPToolsAPI.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsAPI.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSMPToolsImpl.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\SMP\Sequential\vtkSMPToolsImpl.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSMPThreadLocalBackend.cxx
+  vtkSMPThreadPool.cxx
+  vtkSMPToolsImpl.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'void vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize(int)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(50): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize'
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(53): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(56): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\STDThread\vtkSMPToolsImpl.cxx(26): warning C4661: 'bool vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(68): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'void vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize(int)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(50): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::Initialize'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(53): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'int vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(56): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetEstimatedDefaultNumberOfThreads'
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(111): warning C4661: 'bool vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread(void)': no suitable definition provided for explicit template instantiation request
+F:\ToGithub\Learning-VTK\core\SMP\Common\vtkSMPToolsImpl.h(68): message : see declaration of 'vtk::detail::smp::vtkSMPToolsImpl<vtk::detail::smp::BackendType::Sequential>::GetSingleThread'
+  jsonManager.cxx
+  jsonToken.cxx
+  Manager.cxx
+  Singletons.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  Token.cxx
+  TypeContainer.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkAbstractArray.cxx
+  vtkAbstractCellArray.cxx
+  vtkAbstractCellLinks.cxx
+  vtkAbstractCellLocator.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkAbstractCellLocator.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkAbstractElectronicData.cxx
+  Generating Code...
+  Compiling...
+  vtkAbstractPointLocator.cxx
+  vtkAbstractTransform.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkAbstractTransform.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkAlgorithm.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkAlgorithmOutput.cxx
+  vtkAMRBox.cxx
+  vtkAMRDataInternals.cxx
+  vtkAMRInformation.cxx
+  vtkArrayCoordinates.cxx
+  vtkArrayIterator.cxx
+  vtkArrayIteratorTemplateInstantiate.cxx
+  vtkArrayRange.cxx
+  vtkBitArray.cxx
+  vtkBitArrayIterator.cxx
+  vtkBoundingBox.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkBoundingBox.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkBox.cxx
+  vtkBoxMuellerRandomSequence.cxx
+  vtkByteSwap.cxx
+  vtkCallbackCommand.cxx
+  vtkCell.cxx
+  vtkCellArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkCellArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  Generating Code...
+  Compiling...
+  vtkCellArrayIterator.cxx
+  vtkCellAttribute.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellAttributeCalculator.cxx
+  vtkCellData.cxx
+  vtkCellGrid.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkCellGridBoundsQuery.cxx
+  vtkCellGridCopyQuery.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellGridQuery.cxx
+  vtkCellGridRangeQuery.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellGridResponders.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.cxx(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkCellGridSidesCache.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridSidesCache.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellIterator.cxx
+  vtkCellLinks.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkCellLinks.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkCellMetadata.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkCellTreeLocator.cxx
+  vtkCellTypes.cxx
+  vtkCharArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkCharArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkCharArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkCharArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkCharArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkCollection.cxx
+  vtkCollectionIterator.cxx
+  vtkCommand.cxx
+  Generating Code...
+  Compiling...
+  vtkCommonInformationKeyManager.cxx
+  vtkCompositeDataIterator.cxx
+  vtkCompositeDataPipeline.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkCompositeDataSet.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkConstantArrayInstantiate_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_double.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_double.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_float.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_float.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_signed_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_unsigned_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_unsigned_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_unsigned_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_unsigned_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantArrayInstantiate_unsigned_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkConstantArrayInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkConstantImplicitBackendInstantiate_char.cxx
+  vtkConstantImplicitBackendInstantiate_double.cxx
+  vtkConstantImplicitBackendInstantiate_float.cxx
+  Generating Code...
+  Compiling...
+  vtkConstantImplicitBackendInstantiate_int.cxx
+  vtkConstantImplicitBackendInstantiate_long.cxx
+  vtkConstantImplicitBackendInstantiate_long_long.cxx
+  vtkConstantImplicitBackendInstantiate_short.cxx
+  vtkConstantImplicitBackendInstantiate_signed_char.cxx
+  vtkConstantImplicitBackendInstantiate_unsigned_char.cxx
+  vtkConstantImplicitBackendInstantiate_unsigned_int.cxx
+  vtkConstantImplicitBackendInstantiate_unsigned_long.cxx
+  vtkConstantImplicitBackendInstantiate_unsigned_long_long.cxx
+  vtkConstantImplicitBackendInstantiate_unsigned_short.cxx
+  vtkDataArray_CopyComponent.cxx
+  vtkDataArray_DeepCopy.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDataArray_DeepCopy.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkDataArray_FiniteScalarRange.cxx
+  vtkDataArray_FiniteVectorRange.cxx
+  vtkDataArray_GetTuples_ids.cxx
+  vtkDataArray_GetTuples_range.cxx
+  vtkDataArray_InsertTuples_array_idlist.cxx
+  vtkDataArray_InsertTuples_array_idlist_range.cxx
+  vtkDataArray_InsertTuples_array_range.cxx
+  vtkDataArray_InterpolateTuple_time.cxx
+  Generating Code...
+  Compiling...
+  vtkDataArray_InterpolateTuple_weights.cxx
+  vtkDataArray_ScalarRange.cxx
+  vtkDataArray_SetTuple_array.cxx
+  vtkDataArray_VectorRange.cxx
+  vtkDataAssembly.cxx
+  vtkDataObject.cxx
+  vtkDataObjectTree.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkDataObjectTreeIterator.cxx
+  vtkDataObjectTypes.cxx
+F:\ToGithub\Learning-VTK\core\vtkCellGrid.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellGridRangeQuery.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+F:\ToGithub\Learning-VTK\core\vtkCellAttribute.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkDataSet.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDataSet.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkDataSetAttributes.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDataSetAttributes.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkDataSetAttributesFieldList.cxx
+  vtkDataSetCellIterator.cxx
+  vtkDataSetCollection.cxx
+  vtkDebugLeaks.cxx
+  vtkDebugLeaksManager.cxx
+  vtkDemandDrivenPipeline.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkDICOMImageReader.cxx
+  vtkDirectory.cxx
+  vtkDoubleArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkDoubleArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDoubleArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDoubleArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDoubleArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  Generating Code...
+  Compiling...
+  vtkDynamicLoader.cxx
+  vtkEmptyCell.cxx
+  vtkErrorCode.cxx
+  vtkExecutableRunner.cxx
+  vtkExecutionAggregator.cxx
+  vtkExecutionRange.cxx
+  vtkExecutive.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkExplicitStructuredGrid.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkExplicitStructuredGrid.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkExtentTranslator.cxx
+  vtkFieldData.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkFieldData.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkFilteringInformationKeyManager.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+F:\ToGithub\Learning-VTK\core\vtkCellGridResponders.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  vtkFloatArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkFloatArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkFloatArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkFloatArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkFloatArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkFunctionSet.cxx
+  vtkGarbageCollector.cxx
+  vtkGarbageCollectorManager.cxx
+  vtkGaussianRandomSequence.cxx
+  vtkGenericCell.cxx
+  vtkGenericCellIterator.cxx
+  vtkGenericDataArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.cxx(9,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkGenericEdgeTable.cxx
+  Generating Code...
+  Compiling...
+  vtkGenericPointIterator.cxx
+  vtkHomogeneousTransform.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkHomogeneousTransform.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkIdList.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkIdList.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkIdTypeArray.cxx
+  vtkImageAlgorithm.cxx
+  vtkImageData.cxx
+  vtkImageReader2.cxx
+  vtkImplicitFunction.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkImplicitFunction.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkIncrementalPointLocator.cxx
+  vtkIndent.cxx
+  vtkInformation.cxx
+  vtkInformationDataObjectKey.cxx
+  vtkInformationDoubleKey.cxx
+  vtkInformationDoubleVectorKey.cxx
+  vtkInformationExecutivePortKey.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkInformationExecutivePortVectorKey.cxx
+F:\ToGithub\Learning-VTK\core\token\TypeContainer.h(260,1): warning C4267: 'argument': conversion from 'size_t' to 'vtktoken::Hash', possible loss of data
+  vtkInformationIdTypeKey.cxx
+  vtkInformationInformationKey.cxx
+  vtkInformationInformationVectorKey.cxx
+  vtkInformationIntegerKey.cxx
+  Generating Code...
+  Compiling...
+  vtkInformationIntegerPointerKey.cxx
+  vtkInformationIntegerRequestKey.cxx
+  vtkInformationIntegerVectorKey.cxx
+  vtkInformationIterator.cxx
+  vtkInformationKey.cxx
+  vtkInformationKeyLookup.cxx
+  vtkInformationKeyVectorKey.cxx
+  vtkInformationObjectBaseKey.cxx
+  vtkInformationObjectBaseVectorKey.cxx
+  vtkInformationRequestKey.cxx
+  vtkInformationStringKey.cxx
+  vtkInformationStringVectorKey.cxx
+  vtkInformationUnsignedLongKey.cxx
+  vtkInformationVariantKey.cxx
+  vtkInformationVariantVectorKey.cxx
+  vtkInformationVector.cxx
+  vtkIntArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkIntArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkIntArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkIntArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkIntArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkLargeInteger.cxx
+  vtkLine.cxx
+  vtkLinearTransform.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLinearTransform.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  Generating Code...
+  Compiling...
+  vtkLocator.cxx
+  vtkLogger.cxx
+  vtkLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkLongLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkLongLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkLongLongArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkLookupTable.cxx
+  vtkMath.cxx
+  vtkMatrix3x3.cxx
+  vtkMatrix4x4.cxx
+  vtkMergePoints.cxx
+  vtkMinimalStandardRandomSequence.cxx
+  vtkMultiBlockDataSet.cxx
+  vtkMultiBlockDataSetSerDesHelper.cxx
+  vtkMultiPieceDataSet.cxx
+  vtkMultiThreader.cxx
+  vtkNonLinearCell.cxx
+  vtkNonOverlappingAMR.cxx
+  vtkObject.cxx
+  vtkObjectBase.cxx
+  vtkObjectFactory.cxx
+  vtkObjectFactoryCollection.cxx
+  Generating Code...
+  Compiling...
+  vtkOStreamWrapper.cxx
+  vtkOStrStreamWrapper.cxx
+  vtkOutputWindow.cxx
+  vtkOverrideInformation.cxx
+  vtkOverrideInformationCollection.cxx
+  vtkPartitionedDataSet.cxx
+  vtkPartitionedDataSetCollection.cxx
+  vtkPiecewiseFunction.cxx
+  vtkPlane.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkPlane.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkPlaneCollection.cxx
+  vtkPlanes.cxx
+  vtkPlanesIntersection.cxx
+  vtkPointData.cxx
+  vtkPointLocator.cxx
+  vtkPoints.cxx
+  vtkPoints2D.cxx
+  vtkPointSet.cxx
+  vtkPointSetCellIterator.cxx
+  vtkPointsProjectedHull.cxx
+  vtkPolyData.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkPolyData.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  Generating Code...
+  Compiling...
+  vtkPolygon.cxx
+  vtkPriorityQueue.cxx
+  vtkProgressObserver.cxx
+  vtkQuad.cxx
+  vtkQuadraticEdge.cxx
+  vtkRandomSequence.cxx
+  vtkRectilinearGrid.cxx
+  vtkScalarsToColors.cxx
+  vtkShortArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkShortArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkShortArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkShortArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkShortArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSignedCharArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkSignedCharArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSignedCharArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSignedCharArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSignedCharArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSmartPointerBase.cxx
+  vtkSMPTools.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSMPTools.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_char.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_char.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_char.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_double.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_double.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_double.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_double.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_double.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_float.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_float.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_float.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_float.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_float.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_int.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_int.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_int.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long_long.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long_long.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long_long.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_short.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_short.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_short.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_signed_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  Generating Code...
+  Compiling...
+  vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx(8,1): warning C4005: 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkSortDataArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkSortDataArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkStaticCellLinks.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStaticCellLinks.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkStaticCellLocator.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStaticCellLocator.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkStaticPointLocator.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStaticPointLocator.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkStdFunctionArrayInstantiate_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_double.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_double.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_float.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_float.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_signed_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  Generating Code...
+  Compiling...
+  vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdFunctionArrayInstantiate_unsigned_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStdString.cxx
+  vtkStreamingDemandDrivenPipeline.cxx
+  vtkStringArray.cxx
+  vtkStringToken.cxx
+  vtkStructuredCellArray.cxx
+  vtkStructuredData.cxx
+  vtkStructuredExtent.cxx
   vtkStructuredPointArrayInstantiate_char.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
@@ -54,6 +699,8 @@ F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STD
 F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  Generating Code...
+  Compiling...
   vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx
 F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
@@ -64,12 +711,192 @@ F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STD
 F:\ToGithub\Learning-VTK\core\vtkStructuredPointArrayInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
 F:\ToGithub\Learning-VTK\core\vtkImplicitArray.h(540,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
 F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkStructuredPointBackendInstantiate_char.cxx
+  vtkStructuredPointBackendInstantiate_double.cxx
+  vtkStructuredPointBackendInstantiate_float.cxx
+  vtkStructuredPointBackendInstantiate_int.cxx
+  vtkStructuredPointBackendInstantiate_long.cxx
+  vtkStructuredPointBackendInstantiate_long_long.cxx
+  vtkStructuredPointBackendInstantiate_short.cxx
+  vtkStructuredPointBackendInstantiate_signed_char.cxx
+  vtkStructuredPointBackendInstantiate_unsigned_char.cxx
+  vtkStructuredPointBackendInstantiate_unsigned_int.cxx
+  vtkStructuredPointBackendInstantiate_unsigned_long.cxx
+  vtkStructuredPointBackendInstantiate_unsigned_long_long.cxx
+  vtkStructuredPointBackendInstantiate_unsigned_short.cxx
+  vtkStructuredPoints.cxx
+  CommandLineArguments.cxx
+  Directory.cxx
+  DynamicLoader.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\DynamicLoader.cxx(4,1): warning C4005: 'NOMINMAX': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtksys\DynamicLoader.cxx : message : see previous definition of 'NOMINMAX'
+  EncodingCXX.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\EncodingCXX.cxx(69,22): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\EncodingCXX.cxx(96,39): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\EncodingCXX.cxx(111,41): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  Generating Code...
+  Compiling...
+  Glob.cxx
+  RegularExpression.cxx
+  Status.cxx
+  SystemInformation.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\SystemInformation.cxx(4,1): warning C4005: 'NOMINMAX': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtksys\SystemInformation.cxx : message : see previous definition of 'NOMINMAX'
+  SystemTools.cxx
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(200,22): warning C4273: '__p__environ': inconsistent dll linkage
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdlib.h(1158,29): message : see previous definition of '__p__environ'
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(1065,16): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(4443,26): warning C4996: '_umask': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _umask. See online help for details.
+F:\ToGithub\Learning-VTK\core\vtksys\SystemTools.cxx(4444,5): warning C4996: '_umask': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _umask. See online help for details.
+  vtkTimeStamp.cxx
+  vtkTransform.cxx
+  vtkTreeAlgorithm.cxx
+  vtkTriangle.cxx
+  vtkTrivialConsumer.cxx
+  vtkTrivialProducer.cxx
+  vtkTypedDataArrayInstantiate_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_double.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_double.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_float.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_float.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_signed_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_signed_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_unsigned_char.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_unsigned_char.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  Generating Code...
+  Compiling...
+  vtkTypedDataArrayInstantiate_unsigned_int.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_unsigned_int.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_unsigned_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_unsigned_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_unsigned_long_long.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_unsigned_long_long.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypedDataArrayInstantiate_unsigned_short.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArrayInstantiate_unsigned_short.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+F:\ToGithub\Learning-VTK\core\vtkTypedDataArray.h(211,1): warning C4005: 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkGenericDataArray.h(505): message : see previous definition of 'VTK_INSTANTIATE_VALUERANGE_VALUETYPE'
+  vtkTypeFloat32Array.cxx
+  vtkTypeFloat64Array.cxx
+  vtkTypeInt16Array.cxx
+  vtkTypeInt32Array.cxx
+  vtkTypeInt64Array.cxx
+  vtkTypeInt8Array.cxx
+  vtkTypeUInt16Array.cxx
+  vtkTypeUInt32Array.cxx
+  vtkTypeUInt64Array.cxx
+  vtkTypeUInt8Array.cxx
+  vtkUniformGrid.cxx
+  vtkUniformGridAMR.cxx
+  vtkUniformGridAMRDataIterator.cxx
+  vtkUnsignedCharArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedCharArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedCharArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedCharArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedCharArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkUnsignedIntArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedIntArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedIntArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedIntArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedIntArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkUnsignedLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  Generating Code...
+  Compiling...
+  vtkUnsignedLongLongArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongLongArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongLongArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongLongArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedLongLongArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkUnsignedShortArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkUnsignedShortArray.cxx(4,1): warning C4005: 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedShortArray.cxx : message : see previous definition of 'VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING'
+  [DEBUG] 正在执行模板实例化，类型为:
+F:\ToGithub\Learning-VTK\core\vtkAOSDataArrayTemplate.txx(8,1): warning C4005: 'VTK_GDA_VALUERANGE_INSTANTIATING': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedShortArray.cxx : message : see previous definition of 'VTK_GDA_VALUERANGE_INSTANTIATING'
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnsignedShortArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkUnstructuredGrid.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkUnstructuredGrid.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  vtkUnstructuredGridBase.cxx
+  vtkUnstructuredGridCellIterator.cxx
+  vtkValueFromString.cxx
+  vtkVariant.cxx
+  vtkVariantArray.cxx
+  vtkVersion.cxx
+  vtkWeakPointerBase.cxx
+  vtkWin32OutputWindow.cxx
+  main.cpp
+  Generating Code...
+  vtkDataArray.cxx
+F:\ToGithub\Learning-VTK\core\vtkSMP.h(13,1): warning C4005: 'VTK_SMP_ENABLE_STDTHREAD': macro redefinition
+F:\ToGithub\Learning-VTK\core\vtkDataArray.cxx : message : see previous definition of 'VTK_SMP_ENABLE_STDTHREAD'
+  EncodingC.c
+  ProcessWin32.c
+F:\ToGithub\Learning-VTK\core\vtksys\ProcessWin32.c(715,14): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
   Generating Code...
 x64\Debug\vtkSMPToolsImpl.obj : warning LNK4042: object specified more than once; extras ignored
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::Initialize(int)" (?Initialize@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAAXH@Z) referenced in function "private: void __cdecl vtk::detail::smp::vtkSMPToolsAPI::RefreshNumberOfThread(void)" (?RefreshNumberOfThread@vtkSMPToolsAPI@smp@detail@vtk@@AEAAXXZ)
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedNumberOfThreads(void)" (?GetEstimatedNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: int __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAAHXZ) referenced in function "public: int __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetEstimatedDefaultNumberOfThreads(void)" (?GetEstimatedDefaultNumberOfThreads@vtkSMPToolsAPI@smp@detail@vtk@@QEAAHXZ)
-vtkSMPToolsAPI.obj : error LNK2019: unresolved external symbol "public: bool __cdecl vtk::detail::smp::vtkSMPToolsImpl<0>::GetSingleThread(void)" (?GetSingleThread@?$vtkSMPToolsImpl@$0A@@smp@detail@vtk@@QEAA_NXZ) referenced in function "public: bool __cdecl vtk::detail::smp::vtkSMPToolsAPI::GetSingleThread(void)" (?GetSingleThread@vtkSMPToolsAPI@smp@detail@vtk@@QEAA_NXZ)
 vtkBoundingBox.obj : error LNK2019: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z) referenced in function "public: class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkArrayDownCast_impl<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >::operator()(class vtkAbstractArray *)" (??R?$vtkArrayDownCast_impl@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@@QEAAPEAV?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@PEAVvtkAbstractArray@@@Z)
 vtkImplicitFunction.obj : error LNK2001: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z)
 vtkPlane.obj : error LNK2001: unresolved external symbol "public: static class vtkImplicitArray<class vtkStructuredPointBackend<double> > * __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::FastDownCast(class vtkAbstractArray *)" (?FastDownCast@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@SAPEAV1@PEAVvtkAbstractArray@@@Z)
@@ -80,4 +907,4 @@ vtkImplicitFunction.obj : error LNK2019: unresolved external symbol "public: voi
 vtkPlane.obj : error LNK2001: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedComponent(__int64,int,double)" (?SetTypedComponent@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JHN@Z)
 vtkPoints.obj : error LNK2019: unresolved external symbol "public: void __cdecl vtkImplicitArray<class vtkStructuredPointBackend<double> >::SetTypedTuple(__int64,double const *)" (?SetTypedTuple@?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@QEAAX_JPEBN@Z) referenced in function "public: void __cdecl vtk::detail::TupleRange<class vtkImplicitArray<class vtkStructuredPointBackend<double> >,3>::SetTuple<class vtkImplicitArray<class vtkStructuredPointBackend<double> > >(__int64,double const *)" (??$SetTuple@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@?$TupleRange@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@$02@detail@vtk@@QEAAX_JPEBN@Z)
 vtkStructuredData.obj : error LNK2019: unresolved external symbol "class vtkSmartPointer<class vtkImplicitArray<class vtkStructuredPointBackend<double> > > __cdecl vtk::CreateStructuredPointArray<double>(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,int,double * const)" (??$CreateStructuredPointArray@N@vtk@@YA?AV?$vtkSmartPointer@V?$vtkImplicitArray@V?$vtkStructuredPointBackend@N@@@@@@PEAVvtkDataArray@@00QEAHHQEAN@Z) referenced in function "public: static class vtkSmartPointer<class vtkPoints> __cdecl vtkStructuredData::GetPoints(class vtkDataArray *,class vtkDataArray *,class vtkDataArray *,int * const,double * const)" (?GetPoints@vtkStructuredData@@SA?AV?$vtkSmartPointer@VvtkPoints@@@@PEAVvtkDataArray@@00QEAHQEAN@Z)
-F:\ToGithub\Learning-VTK\x64\Debug\VTKLee.exe : fatal error LNK1120: 10 unresolved externals
+F:\ToGithub\Learning-VTK\x64\Debug\VTKLee.exe : fatal error LNK1120: 6 unresolved externals
