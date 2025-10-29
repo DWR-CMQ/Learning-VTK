@@ -1101,6 +1101,18 @@
     <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_short.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_unsigned_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_unsigned_long_long.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">

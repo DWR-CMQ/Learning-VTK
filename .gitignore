@@ -113,6 +113,11 @@ ipch/
 *.VC.db
 *.VC.VC.opendb
 
+x64/Debug
+*.pdb
+*.obj
+*.exe
+
 # Visual Studio profiler
 *.psess
 *.vsp
@@ -397,3 +402,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
