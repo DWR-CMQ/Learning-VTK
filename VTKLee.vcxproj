@@ -202,8 +202,10 @@
     <ClCompile Include="core\vtkCellTreeLocator.cxx" />
     <ClCompile Include="core\vtkCellTypes.cxx" />
     <ClCompile Include="core\vtkCharArray.cxx" />
+    <ClCompile Include="core\vtkCIEDE2000.cxx" />
     <ClCompile Include="core\vtkCollection.cxx" />
     <ClCompile Include="core\vtkCollectionIterator.cxx" />
+    <ClCompile Include="core\vtkColorTransferFunction.cxx" />
     <ClCompile Include="core\vtkCommand.cxx" />
     <ClCompile Include="core\vtkCommonInformationKeyManager.cxx" />
     <ClCompile Include="core\vtkCompositeDataIterator.cxx" />
@@ -592,8 +594,10 @@
     <ClInclude Include="core\vtkCellType.h" />
     <ClInclude Include="core\vtkCellTypes.h" />
     <ClInclude Include="core\vtkCharArray.h" />
+    <ClInclude Include="core\vtkCIEDE2000.h" />
     <ClInclude Include="core\vtkCollection.h" />
     <ClInclude Include="core\vtkCollectionIterator.h" />
+    <ClInclude Include="core\vtkColorTransferFunction.h" />
     <ClInclude Include="core\vtkCommand.h" />
     <ClInclude Include="core\vtkCommonCoreModule.h" />
     <ClInclude Include="core\vtkCommonDataModelModule.h" />

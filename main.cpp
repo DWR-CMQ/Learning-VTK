@@ -21,6 +21,10 @@
 //#include<vtkGPUVolumeRayCastMapper.h>
 //#include<vtkSmartPointer.h>
 
+#include "vtkPiecewiseFunction.h"
+#include "vtkColorTransferFunction.h"
+#include "vtkVolumeProperty.h"
+
 #include "vtkSmartPointer.h"
 #include "vtkDICOMImageReader.h"
 #include "vtkImageData.h"
@@ -90,6 +94,49 @@ int main(int argc, char* argv[])
 	reader->GetOutput()->GetDimensions(imageDims); //need include <vtkimagedata.h>
 	cout << "dimension[] :" << imageDims[0] << " " << imageDims[1] << " " << imageDims[2] << endl;
 
+	// 检查读取器的输出是否有效
+	vtkImageData* imageData = reader->GetOutput();
+	if (!imageData)
+	{
+		std::cerr << "Error: Failed to read DICOM data from " << dicomDirectory << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	// 创建并配置颜色传递函数，用于映射标量值到颜色
+	vtkSmartPointer<vtkColorTransferFunction> colorTransferFunction = vtkSmartPointer<vtkColorTransferFunction>::New();
+	colorTransferFunction->AddRGBPoint(-3024, 0.0, 0.0, 0.0);
+	colorTransferFunction->AddRGBPoint(-77, 0.5, 0.2, 0.2);
+	colorTransferFunction->AddRGBPoint(94, 0.5, 0.5, 0.5);
+	colorTransferFunction->AddRGBPoint(179, 0.9, 0.9, 0.9);
+	colorTransferFunction->AddRGBPoint(260, 1.0, 1.0, 1.0);
+	colorTransferFunction->AddRGBPoint(3071, 0.8, 0.7, 0.6);
+
+	// 创建并配置不透明度传递函数，用于设置体积渲染的不透明度
+	vtkSmartPointer<vtkPiecewiseFunction> opacityTransferFunction = vtkSmartPointer<vtkPiecewiseFunction>::New();
+	opacityTransferFunction->AddPoint(-3024, 0.0);
+	opacityTransferFunction->AddPoint(-77, 0.0);
+	opacityTransferFunction->AddPoint(94, 0.29);
+	opacityTransferFunction->AddPoint(179, 0.55);
+	opacityTransferFunction->AddPoint(260, 0.84);
+	opacityTransferFunction->AddPoint(3071, 0.875);
+
+	// 创建体积属性并设置颜色和不透明度传递函数，以及其他属性
+	vtkSmartPointer<vtkVolumeProperty> volumeProperty = vtkSmartPointer<vtkVolumeProperty>::New();
+	volumeProperty->SetColor(colorTransferFunction);
+	volumeProperty->SetScalarOpacity(opacityTransferFunction);
+	volumeProperty->ShadeOn();
+	volumeProperty->SetInterpolationTypeToLinear();
+
+	// 创建 GPU 体积光线投射映射器并设置输入连接
+	vtkSmartPointer<vtkGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkGPUVolumeRayCastMapper>::New();
+
+	// 检查读取器的输出端口是否有效
+	vtkAlgorithmOutput* outputPort = reader->GetOutputPort();
+	if (!outputPort)
+	{
+		std::cerr << "Error: reader->GetOutputPort() returned null." << std::endl;
+		return EXIT_FAILURE;
+	}
 
 
 	return 0;
