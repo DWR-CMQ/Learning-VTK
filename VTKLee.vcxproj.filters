@@ -1119,6 +1119,228 @@
     <ClCompile Include="core\vtkCIEDE2000.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkAbstractImageInterpolator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAbstractMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAbstractMapper3D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAbstractVolumeMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkCamera.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkContourValues.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGPUInfo.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGPUInfoList.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGPUVolumeRayCastMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGraphicsFactory.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageInterpolator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImagePointDataIterator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageResample.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageReslice.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageStencilData.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkMultiVolume.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkProp.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkProp3D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkProp3DCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkProp3DFollower.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPropAssembly.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPropCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkThreadedImageAlgorithm.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTimerLog.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVolumeMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVolumeProperty.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderer.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRendererCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderTimerLog.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderWindowInteractor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderWindowInteractor3D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStereoCompositor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkViewport.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSelection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSelectionNode.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAbstractPicker.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAbstractPropPicker.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPickingManager.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAssembly.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAssemblyNode.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAssemblyPath.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkAssemblyPaths.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVolume.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVolumeCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkActor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkActor2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkActor2DCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkActorCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkProperty.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkProperty2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkXMLDataElement.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkXMLDataParser.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkXMLParser.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkXMLUtilities.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkDataCompressor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkInputStream.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTexture.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTexturedActor2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkBase64InputStream.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkBase64OutputStream.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkBase64Utilities.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOutputStream.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkCoordinate.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkMapper2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkMapperCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkNamedColors.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkColorSeries.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPerspectiveTransform.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageStencilAlgorithm.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageStencilIterator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageStencilSource.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -2268,6 +2490,261 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkCIEDE2000.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAbstractImageInterpolator.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAbstractMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAbstractMapper3D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAbstractVolumeMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkCamera.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkContourValues.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkGPUInfo.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkGPUInfoList.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkGPUInfoListArray.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkGPUVolumeRayCastMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkGraphicsFactory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageInterpolator.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageInterpolatorInternals.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImagePointDataIterator.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageResample.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageReslice.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageStencilData.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkMultiVolume.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkProp.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkProp3D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkProp3DCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkProp3DFollower.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPropAssembly.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPropCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRect.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkThreadedImageAlgorithm.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTimerLog.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumeMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumeProperty.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRendererCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderTimerLog.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderWindowInteractor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderWindowInteractor3D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkEventData.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkStereoCompositor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingCoreModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkViewport.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSelection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSelectionNode.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAbstractPicker.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAbstractPropPicker.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPickingManager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAssembly.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAssemblyNode.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAssemblyPath.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAssemblyPaths.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolume.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumeCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkActor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkActor2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkActor2DCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkActorCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkProperty.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkProperty2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkXMLDataElement.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkXMLDataHeaderPrivate.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkXMLDataParser.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkXMLParser.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkXMLUtilities.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkIOXMLParserModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDataCompressor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkIOCoreModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInputStream.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTexture.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTexturedActor2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkBase64InputStream.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkBase64OutputStream.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkBase64Utilities.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOutputStream.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkCoordinate.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkMapper2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkMapperCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkNamedColors.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkColorSeries.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkColor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkCommonColorModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPerspectiveTransform.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageStencilAlgorithm.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageStencilIterator.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageStencilSource.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImagingCoreModule.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>

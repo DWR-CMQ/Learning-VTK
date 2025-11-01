@@ -21,9 +21,12 @@
 //#include<vtkGPUVolumeRayCastMapper.h>
 //#include<vtkSmartPointer.h>
 
+#include "vtkVolumeProperty.h"
+#include "vtkVolume.h"
 #include "vtkPiecewiseFunction.h"
 #include "vtkColorTransferFunction.h"
 #include "vtkVolumeProperty.h"
+#include "vtkGPUVolumeRayCastMapper.h"
 
 #include "vtkSmartPointer.h"
 #include "vtkDICOMImageReader.h"
