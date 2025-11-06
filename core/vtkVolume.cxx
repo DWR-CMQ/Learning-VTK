@@ -16,7 +16,6 @@
 #include "vtkTransform.h"
 #include "vtkVolumeCollection.h"
 #include "vtkVolumeProperty.h"
-
 #include <cmath>
 
 VTK_ABI_NAMESPACE_BEGIN

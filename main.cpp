@@ -21,6 +21,7 @@
 //#include<vtkGPUVolumeRayCastMapper.h>
 //#include<vtkSmartPointer.h>
 
+#include "vtkRenderer.h"
 #include "vtkVolumeProperty.h"
 #include "vtkVolume.h"
 #include "vtkPiecewiseFunction.h"
@@ -31,6 +32,7 @@
 #include "vtkSmartPointer.h"
 #include "vtkDICOMImageReader.h"
 #include "vtkImageData.h"
+
 #include <iostream>
 #include <windows.h>
 
@@ -140,6 +142,19 @@ int main(int argc, char* argv[])
 		std::cerr << "Error: reader->GetOutputPort() returned null." << std::endl;
 		return EXIT_FAILURE;
 	}
+
+	// 设置映射器的输入连接
+	volumeMapper->SetInputConnection(outputPort);
+
+	// 创建体积并设置映射器和体积属性
+	vtkSmartPointer<vtkVolume> volume = vtkSmartPointer<vtkVolume>::New();
+	volume->SetMapper(volumeMapper);
+	volume->SetProperty(volumeProperty);
+
+	// 创建渲染器并添加体积，设置背景颜色
+	vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
+	renderer->AddVolume(volume);
+	renderer->SetBackground(0.1, 0.2, 0.3);
 
 
 	return 0;
