@@ -1479,6 +1479,21 @@
     <ClCompile Include="core\vtkImageProperty.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkLODProp3D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkEdgeTable.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkHeap.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVertex.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVoidArray.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -3061,6 +3076,24 @@
     </ClInclude>
     <ClInclude Include="core\vtkImageProperty.h">
       <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkLODProp3D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkEdgeTable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkHeap.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVertex.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVoidArray.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkexpat\lib\expat_config.h">
+      <Filter>core\vtkexpat\lib</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

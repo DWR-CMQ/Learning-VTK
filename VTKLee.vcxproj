@@ -297,6 +297,7 @@
     <ClCompile Include="core\vtkDirectory.cxx" />
     <ClCompile Include="core\vtkDoubleArray.cxx" />
     <ClCompile Include="core\vtkDynamicLoader.cxx" />
+    <ClCompile Include="core\vtkEdgeTable.cxx" />
     <ClCompile Include="core\vtkEmptyCell.cxx" />
     <ClCompile Include="core\vtkErrorCode.cxx" />
     <ClCompile Include="core\vtkEventForwarderCommand.cxx" />
@@ -336,6 +337,7 @@
     <ClCompile Include="core\vtkGraphicsFactory.cxx" />
     <ClCompile Include="core\vtkHardwareSelector.cxx" />
     <ClCompile Include="core\vtkHardwareWindow.cxx" />
+    <ClCompile Include="core\vtkHeap.cxx" />
     <ClCompile Include="core\vtkHomogeneousTransform.cxx" />
     <ClCompile Include="core\vtkIdList.cxx" />
     <ClCompile Include="core\vtkIdTypeArray.cxx" />
@@ -396,6 +398,7 @@
     <ClCompile Include="core\vtkLine.cxx" />
     <ClCompile Include="core\vtkLinearTransform.cxx" />
     <ClCompile Include="core\vtkLocator.cxx" />
+    <ClCompile Include="core\vtkLODProp3D.cxx" />
     <ClCompile Include="core\vtkLogger.cxx" />
     <ClCompile Include="core\vtkLongArray.cxx" />
     <ClCompile Include="core\vtkLongLongArray.cxx" />
@@ -612,7 +615,9 @@
     <ClCompile Include="core\vtkVariant.cxx" />
     <ClCompile Include="core\vtkVariantArray.cxx" />
     <ClCompile Include="core\vtkVersion.cxx" />
+    <ClCompile Include="core\vtkVertex.cxx" />
     <ClCompile Include="core\vtkViewport.cxx" />
+    <ClCompile Include="core\vtkVoidArray.cxx" />
     <ClCompile Include="core\vtkVolume.cxx" />
     <ClCompile Include="core\vtkVolumeCollection.cxx" />
     <ClCompile Include="core\vtkVolumeMapper.cxx" />
@@ -792,6 +797,7 @@
     <ClInclude Include="core\vtkDirectory.h" />
     <ClInclude Include="core\vtkDoubleArray.h" />
     <ClInclude Include="core\vtkDynamicLoader.h" />
+    <ClInclude Include="core\vtkEdgeTable.h" />
     <ClInclude Include="core\vtkEmptyCell.h" />
     <ClInclude Include="core\vtkEndian.h" />
     <ClInclude Include="core\vtkErrorCode.h" />
@@ -804,6 +810,7 @@
     <ClInclude Include="core\vtkexpat\lib\ascii.h" />
     <ClInclude Include="core\vtkexpat\lib\asciitab.h" />
     <ClInclude Include="core\vtkexpat\lib\expat.h" />
+    <ClInclude Include="core\vtkexpat\lib\expat_config.h" />
     <ClInclude Include="core\vtkexpat\lib\expat_external.h" />
     <ClInclude Include="core\vtkexpat\lib\iasciitab.h" />
     <ClInclude Include="core\vtkexpat\lib\internal.h" />
@@ -844,6 +851,7 @@
     <ClInclude Include="core\vtkHardwareSelector.h" />
     <ClInclude Include="core\vtkHardwareWindow.h" />
     <ClInclude Include="core\vtkHashCombiner.h" />
+    <ClInclude Include="core\vtkHeap.h" />
     <ClInclude Include="core\vtkHomogeneousTransform.h" />
     <ClInclude Include="core\vtkIdList.h" />
     <ClInclude Include="core\vtkIdTypeArray.h" />
@@ -915,6 +923,7 @@
     <ClInclude Include="core\vtkLine.h" />
     <ClInclude Include="core\vtkLinearTransform.h" />
     <ClInclude Include="core\vtkLocator.h" />
+    <ClInclude Include="core\vtkLODProp3D.h" />
     <ClInclude Include="core\vtkLogger.h" />
     <ClInclude Include="core\vtkLongArray.h" />
     <ClInclude Include="core\vtkLongLongArray.h" />
@@ -1116,7 +1125,9 @@
     <ClInclude Include="core\vtkVersionFull.h" />
     <ClInclude Include="core\vtkVersionMacros.h" />
     <ClInclude Include="core\vtkVersionQuick.h" />
+    <ClInclude Include="core\vtkVertex.h" />
     <ClInclude Include="core\vtkViewport.h" />
+    <ClInclude Include="core\vtkVoidArray.h" />
     <ClInclude Include="core\vtkVolume.h" />
     <ClInclude Include="core\vtkVolumeCollection.h" />
     <ClInclude Include="core\vtkVolumeMapper.h" />

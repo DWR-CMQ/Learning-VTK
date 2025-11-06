@@ -33,7 +33,7 @@
 //#include "vtkUniformHyperTreeGrid.h"
 #include "vtkVolume.h"
 #include "vtkVolumeProperty.h"
-#include "vtkVoxel.h"
+//#include "vtkVoxel.h"
 
 #include <algorithm>
 
@@ -272,7 +272,7 @@ double vtkCellPicker::IntersectWithLine(const double p1[3], const double p2[3], 
   vtkMapper* mapper = nullptr;
   vtkAbstractVolumeMapper* volumeMapper = nullptr;
   vtkImageMapper3D* imageMapper = nullptr;
-  vtkAbstractHyperTreeGridMapper* htgMapper = nullptr;
+  //vtkAbstractHyperTreeGridMapper* htgMapper = nullptr;
 
   double tMin = VTK_DOUBLE_MAX;
   double t1 = 0.0;
@@ -1240,8 +1240,8 @@ double vtkCellPicker::IntersectVolumeWithLine(const double p1[3], const double p
         {
           // Set the normal from the direction of the gradient
           int* ci = this->CellIJK;
-          double weights[8];
-          vtkVoxel::InterpolationFunctions(this->PCoords, weights);
+          double weights[8] = {0.0};
+          //vtkVoxel::InterpolationFunctions(this->PCoords, weights);
           data->GetVoxelGradient(ci[0], ci[1], ci[2], scalars, this->Gradients);
           double v[3];
           v[0] = v[1] = v[2] = 0.0;
@@ -1783,7 +1783,7 @@ double vtkCellPicker::ComputeVolumeOpacity(const int xi[3], const double pcoords
 
   // Get interpolation weights from the pcoords
   double weights[8];
-  vtkVoxel::InterpolationFunctions(const_cast<double*>(pcoords), weights);
+  //vtkVoxel::InterpolationFunctions(const_cast<double*>(pcoords), weights);
 
   // Get the volume extent to avoid out-of-bounds
   int extent[6];

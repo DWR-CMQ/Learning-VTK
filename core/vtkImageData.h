@@ -35,7 +35,7 @@ class vtkMatrix4x4;
 class vtkPixel;
 class vtkPoints;
 class vtkVertex;
-class vtkVoxel;
+//class vtkVoxel;
 
 class  VTK_MARSHALAUTO vtkImageData : public vtkDataSet
 {
