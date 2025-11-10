@@ -20,7 +20,7 @@
 #include <cassert>
 #include <list>
 
-#include "vtkRenderStepsPass.h"
+//#include "vtkRenderStepsPass.h"
 
 #include "vtkOpenGLHelper.h"
 

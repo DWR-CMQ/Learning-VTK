@@ -28,7 +28,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkUniformInternals;
 class vtkShaderProgram;
 
-class VTKRENDERINGOPENGL2_EXPORT vtkOpenGLUniforms : public vtkUniforms
+class vtkOpenGLUniforms : public vtkUniforms
 {
 public:
   static vtkOpenGLUniforms* New();

@@ -46,7 +46,7 @@
 #include "vtkImplicitFunction.h" // For vtkImplicitFunction
 #include "vtkNew.h"              // Needed for vtkNew
 #include "vtkObject.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkSmartPointer.h"        // Needed for vtkSmartPointer
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 

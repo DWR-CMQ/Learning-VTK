@@ -13,7 +13,7 @@
 #include "vtkStringToken.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTKRENDERINGOPENGL2_EXPORT vtkOpenGLShaderDeclaration
+class vtkOpenGLShaderDeclaration
 {
 public:
   enum class GLSLAttributeType

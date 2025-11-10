@@ -40,6 +40,18 @@
     <Filter Include="core\vtkexpat\lib">
       <UniqueIdentifier>{8abd0548-6e99-41fb-bdf5-e51f2474d352}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\vtkglad">
+      <UniqueIdentifier>{dfec621f-f223-48fe-ada1-e4626748e6b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\vtkglad\include">
+      <UniqueIdentifier>{417e57f5-f33f-46e4-9e7c-689dc9360dfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\vtkglad\include\glad">
+      <UniqueIdentifier>{6517fb9c-0380-4ce7-8f0d-9449b48e02ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\vtkglad\include\KHR">
+      <UniqueIdentifier>{35ec997f-96ea-40d4-b5da-42e64aeaaa61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -1492,6 +1504,159 @@
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkVoidArray.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLGPUVolumeRayCastMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderingVolumeOpenGL2ObjectFactory.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLRenderWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLShaderCache.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLShaderProperty.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkShader.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkShaderProgram.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\raycasterfs.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\raycastervs.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLActor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkDepthPeelingPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkDualDepthPeelingPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLRenderPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLUniforms.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVertexArrayObject.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVertexBufferObject.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVertexBufferObjectCache.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVertexBufferObjectGroup.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLBufferObject.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLState.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkDensifyPolyData.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLCamera.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLFramebufferObject.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLRenderUtilities.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPixelBufferObject.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderbuffer.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTextureObject.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTextureUnitManager.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLHelper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLTexture.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLIndexBufferObject.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLRenderer.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLQuadHelper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPBRIrradianceTexture.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPBRLUTTexture.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPBRPrefilterTexture.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVolumeGradientOpacityTable.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVolumeMaskGradientOpacityTransferFunction2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVolumeMaskTransferFunction2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVolumeOpacityTable.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVolumeRGBTable.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVolumeTransferFunction2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLVolumeLookupTable.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageResize.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageSincInterpolator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVolumeTexture.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVolumeInputHelper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPixel.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPixelExtent.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTessellatedBoxSource.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPixelTransfer.cxx">
       <Filter>core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -3095,12 +3260,225 @@
     <ClInclude Include="core\vtkexpat\lib\expat_config.h">
       <Filter>core\vtkexpat\lib</Filter>
     </ClInclude>
+    <ClInclude Include="core\vtkOpenGLGPUVolumeRayCastMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingVolumeOpenGL2ObjectFactory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingVolumeOpenGL2Module.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingOpenGL2Module.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingVolumeModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingHyperTreeGridModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingUIModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkglad\include\glad\gl.h">
+      <Filter>core\vtkglad\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkglad\include\glad\vtk_gl_mangle.h">
+      <Filter>core\vtkglad\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkglad\include\glad\vtk_wgl_mangle.h">
+      <Filter>core\vtkglad\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkglad\include\glad\wgl.h">
+      <Filter>core\vtkglad\include\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkglad\include\KHR\khrplatform.h">
+      <Filter>core\vtkglad\include\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtk_glad.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumeStateRAII.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLRenderWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLResourceFreeCallback.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLShaderCache.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLShaderDeclaration.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLShaderProperty.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkShader.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkShaderProgram.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\raycasterfs.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\raycastervs.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLActor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDepthPeelingPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDualDepthPeelingPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLRenderPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLUniforms.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVertexArrayObject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVertexBufferObject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVertexBufferObjectCache.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVertexBufferObjectGroup.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLBufferObject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLState.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDensifyPolyData.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkFiltersGeneralModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLCamera.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLError.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLFramebufferObject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLRenderUtilities.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingOpenGLConfigure.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPixelBufferObject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderbuffer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTextureObject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTextureUnitManager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLHelper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLTexture.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLIndexBufferObject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLRenderer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLQuadHelper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPBRIrradianceTexture.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPBRLUTTexture.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPBRPrefilterTexture.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeGradientOpacityTable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeMaskGradientOpacityTransferFunction2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeMaskTransferFunction2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeOpacityTable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeRGBTable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeTransferFunction2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeLookupTable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLVolumeLookupTables.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageResize.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageSincInterpolator.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumeTexture.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkBlockSortHelper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumeInputHelper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPixel.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPixelExtent.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTessellatedBoxSource.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPixelTransfer.h">
+      <Filter>core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="core\token\CxxABIConfigure.h.in">
       <Filter>core\token</Filter>
     </None>
     <None Include="core\vtkQuaternion.txx">
+      <Filter>core</Filter>
+    </None>
+    <None Include="core\vtkOpenGLVolumeLookupTables.txx">
       <Filter>core</Filter>
     </None>
   </ItemGroup>
