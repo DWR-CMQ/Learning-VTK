@@ -267,7 +267,6 @@ private:
 /**
  * Stream insertion operator for formatted output of pixel extents.
  */
-VTKCOMMONDATAMODEL_EXPORT
 std::ostream& operator<<(std::ostream& os, const vtkPixelExtent& ext);
 
 //-----------------------------------------------------------------------------

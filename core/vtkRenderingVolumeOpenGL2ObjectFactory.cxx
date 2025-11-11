@@ -45,7 +45,7 @@ void vtkRenderingVolumeOpenGL2ObjectFactory::PrintSelf(ostream &os, vtkIndent in
 // Registration of object factories.
 static unsigned int vtkRenderingVolumeOpenGL2Count = 0;
 
-VTKRENDERINGVOLUMEOPENGL2_EXPORT void vtkRenderingVolumeOpenGL2_AutoInit_Construct()
+void vtkRenderingVolumeOpenGL2_AutoInit_Construct()
 {
   if(++vtkRenderingVolumeOpenGL2Count == 1)
   {

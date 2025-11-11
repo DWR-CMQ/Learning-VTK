@@ -1659,6 +1659,180 @@
     <ClCompile Include="core\vtkPixelTransfer.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkDepthPeelingPassFinalFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkDepthPeelingPassIntermediateFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLPolyDataMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLPolyDataMapper2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPolyDataMapper2D.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLCellToVTKCellMap.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPolyData2DFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPolyData2DVS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPolyDataWideLineGS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkHiddenLineRemovalPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpaquePass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkDefaultPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLFXAAFilter.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLFXAAPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLRenderTimer.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkFXAAFilterFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageProcessingPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOrderIndependentTranslucentPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOrderIndependentTranslucentPassFinalFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSSAAPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSSAOPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSSAAPassFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkShadowMapBakerPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkShadowMapPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderPassCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkLightingMapPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkLightsPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkClearRGBPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkClearZPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSequencePass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImplicitSum.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImplicitFunctionCollection.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTranslucentPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVolumetricPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTable.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSphericalHarmonics.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPBRFunctions.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPolyDataEdgesGS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPolyDataFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTransformFeedback.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkCameraPass.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkJPEGReader.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLLight.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLProperty.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkPerlinNoise.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkStringOutputWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkWin32OpenGLRenderWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkGenericOpenGLRenderWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkWin32RenderWindowInteractor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkMarchingSquaresLineCases.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTextureObjectFS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkTextureObjectVS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOSOpenGLRenderWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\BlueNoiseTexture64x64.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkFixedPointRayCastImage.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLRayCastImageDisplayHelper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRayCastImageDisplayHelper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkVisibilitySort.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -3468,6 +3642,189 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkPixelTransfer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDepthPeelingPassFinalFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDepthPeelingPassIntermediateFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLPolyDataMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLPolyDataMapper2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPolyDataMapper2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkStateStorage.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLCellToVTKCellMap.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPolyData2DFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPolyData2DVS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPolyDataWideLineGS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumeShaderComposer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkHiddenLineRemovalPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpaquePass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDefaultPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLFXAAFilter.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLFXAAPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLRenderTimer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkFXAAFilterFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageProcessingPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOrderIndependentTranslucentPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOrderIndependentTranslucentPassFinalFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSSAAPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSSAOPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSSAAPassFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkShadowMapBakerPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkShadowMapPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderPassCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkLightingMapPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkLightsPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkClearRGBPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkClearZPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSequencePass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImplicitSum.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImplicitFunctionCollection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTranslucentPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVolumetricPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSphericalHarmonics.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPBRFunctions.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPolyDataEdgesGS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPolyDataFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTransformFeedback.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkCameraPass.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkJPEGReader.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtk_jpeg.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLLight.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLProperty.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPerlinNoise.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkStringOutputWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkWin32OpenGLRenderWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkGenericOpenGLRenderWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkWin32RenderWindowInteractor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkMarchingSquaresLineCases.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTextureObjectFS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkTextureObjectVS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOSOpenGLRenderWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\BlueNoiseTexture64x64.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkFixedPointRayCastImage.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLRayCastImageDisplayHelper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRayCastImageDisplayHelper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkVisibilitySort.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>

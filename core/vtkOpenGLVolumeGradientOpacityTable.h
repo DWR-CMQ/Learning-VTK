@@ -12,8 +12,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderWindow;
 
 //----------------------------------------------------------------------------
-class VTKRENDERINGVOLUMEOPENGL2_EXPORT vtkOpenGLVolumeGradientOpacityTable
-  : public vtkOpenGLVolumeLookupTable
+class vtkOpenGLVolumeGradientOpacityTable : public vtkOpenGLVolumeLookupTable
 {
 public:
   vtkTypeMacro(vtkOpenGLVolumeGradientOpacityTable, vtkOpenGLVolumeLookupTable);
