@@ -22,13 +22,15 @@
 //#include<vtkSmartPointer.h>
 
 #include "vtkRenderer.h"
+#include "vtkRenderWindow.h"
+#include "vtkRenderWindowInteractor.h"
 #include "vtkVolumeProperty.h"
 #include "vtkVolume.h"
 #include "vtkPiecewiseFunction.h"
 #include "vtkColorTransferFunction.h"
 #include "vtkVolumeProperty.h"
 #include "vtkGPUVolumeRayCastMapper.h"
-
+#include "vtkInteractorStyleTrackballCamera.h"
 #include "vtkSmartPointer.h"
 #include "vtkDICOMImageReader.h"
 #include "vtkImageData.h"
@@ -156,6 +158,17 @@ int main(int argc, char* argv[])
 	renderer->AddVolume(volume);
 	renderer->SetBackground(0.1, 0.2, 0.3);
 
+	// 创建渲染窗口并添加渲染器
+	vtkSmartPointer<vtkRenderWindow> renderWindow = vtkSmartPointer<vtkRenderWindow>::New();
+	renderWindow->AddRenderer(renderer);
+
+	// 创建渲染窗口交互器并设置渲染窗口
+	vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
+	renderWindowInteractor->SetRenderWindow(renderWindow);
+
+	// 渲染场景并启动交互
+	renderWindow->Render();
+	renderWindowInteractor->Start();
 
 	return 0;
 }

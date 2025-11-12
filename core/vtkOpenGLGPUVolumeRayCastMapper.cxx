@@ -23,6 +23,7 @@
 
 //#include <vtkClipConvexPolyData.h>
 //#include <vtkContourFilter.h>
+#include "vtkContourValues.h"
 #include "vtkCamera.h"
 #include "vtkCellArray.h"
 #include "vtkCellData.h"

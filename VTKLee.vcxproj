@@ -78,8 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <ExternalIncludePath>core\vtkkwiml;core\vtknlohmannjson;core;core\pugixml;core\vtkpegtl;core\vtksys;core\vtkjpeg;$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>core\vtkkwiml;core\vtknlohmannjson;core;core\pugixml;core\vtkpegtl;core\vtksys;core\vtkjpeg;3dparty\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>3dparty\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -116,7 +116,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;CommonDataModel_EXPORTS;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;CommonDataModel_EXPORTS;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;GLAD_API_CALL_EXPORT;jpeg_EXPORTS;IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <OpenMPSupport>true</OpenMPSupport>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -125,7 +125,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>/NODEFAULTLIB:msvcprtd.lib %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;opengl32.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;vtkglad-9.4d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="3dparty\glad.c" />
     <ClCompile Include="core\BlueNoiseTexture64x64.cxx" />
     <ClCompile Include="core\DICOMAppHelper.cxx" />
     <ClCompile Include="core\DICOMFile.cxx" />
@@ -413,6 +414,7 @@
     <ClCompile Include="core\vtkInteractorStyle.cxx" />
     <ClCompile Include="core\vtkInteractorStyle3D.cxx" />
     <ClCompile Include="core\vtkInteractorStyleSwitchBase.cxx" />
+    <ClCompile Include="core\vtkInteractorStyleTrackballCamera.cxx" />
     <ClCompile Include="core\vtkJPEGReader.cxx" />
     <ClCompile Include="core\vtkLargeInteger.cxx" />
     <ClCompile Include="core\vtkLight.cxx" />
@@ -1045,10 +1047,12 @@
     <ClInclude Include="core\vtkInherits.h" />
     <ClInclude Include="core\vtkInputStream.h" />
     <ClInclude Include="core\vtkIntArray.h" />
+    <ClInclude Include="core\vtkInteractionStyleModule.h" />
     <ClInclude Include="core\vtkInteractorObserver.h" />
     <ClInclude Include="core\vtkInteractorStyle.h" />
     <ClInclude Include="core\vtkInteractorStyle3D.h" />
     <ClInclude Include="core\vtkInteractorStyleSwitchBase.h" />
+    <ClInclude Include="core\vtkInteractorStyleTrackballCamera.h" />
     <ClInclude Include="core\vtkIOCoreModule.h" />
     <ClInclude Include="core\vtkIOImageModule.h" />
     <ClInclude Include="core\vtkIOStream.h" />

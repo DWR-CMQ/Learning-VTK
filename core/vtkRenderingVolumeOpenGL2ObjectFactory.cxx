@@ -10,7 +10,7 @@
 
 // Include all of the classes we want to create overrides for.
 #include "vtkOpenGLGPUVolumeRayCastMapper.h"
-#include "vtkOpenGLProjectedTetrahedraMapper.h"
+//#include "vtkOpenGLProjectedTetrahedraMapper.h"
 #include "vtkOpenGLRayCastImageDisplayHelper.h"
 
 
@@ -20,14 +20,14 @@ vtkStandardNewMacro(vtkRenderingVolumeOpenGL2ObjectFactory);
 
 // Now create the functions to create overrides with.
 VTK_CREATE_CREATE_FUNCTION(vtkOpenGLGPUVolumeRayCastMapper)
-VTK_CREATE_CREATE_FUNCTION(vtkOpenGLProjectedTetrahedraMapper)
+//VTK_CREATE_CREATE_FUNCTION(vtkOpenGLProjectedTetrahedraMapper)
 VTK_CREATE_CREATE_FUNCTION(vtkOpenGLRayCastImageDisplayHelper)
 
 
 vtkRenderingVolumeOpenGL2ObjectFactory::vtkRenderingVolumeOpenGL2ObjectFactory()
 {
 this->RegisterOverride("vtkGPUVolumeRayCastMapper", "vtkOpenGLGPUVolumeRayCastMapper", "Override for VTK::RenderingVolumeOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLGPUVolumeRayCastMapper);
-this->RegisterOverride("vtkProjectedTetrahedraMapper", "vtkOpenGLProjectedTetrahedraMapper", "Override for VTK::RenderingVolumeOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLProjectedTetrahedraMapper);
+//this->RegisterOverride("vtkProjectedTetrahedraMapper", "vtkOpenGLProjectedTetrahedraMapper", "Override for VTK::RenderingVolumeOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLProjectedTetrahedraMapper);
 this->RegisterOverride("vtkRayCastImageDisplayHelper", "vtkOpenGLRayCastImageDisplayHelper", "Override for VTK::RenderingVolumeOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLRayCastImageDisplayHelper);
 
 }

@@ -41,7 +41,7 @@ vtkDistributedGraphHelper
 vtkOrderedTriangulator
 vtkClipConvexPolyData
 vtkRenderStepsPass
-
+vtkOpenGLProjectedTetrahedraMapper
 
 参与成像
 vtkCompositeDataPipeline

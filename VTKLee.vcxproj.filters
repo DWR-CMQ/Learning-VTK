@@ -1833,6 +1833,12 @@
     <ClCompile Include="core\vtkVisibilitySort.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkInteractorStyleTrackballCamera.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="3dparty\glad.c">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -3825,6 +3831,12 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkVisibilitySort.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractorStyleTrackballCamera.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractionStyleModule.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
