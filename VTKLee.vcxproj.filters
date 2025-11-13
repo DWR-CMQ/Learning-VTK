@@ -1839,6 +1839,57 @@
     <ClCompile Include="3dparty\glad.c">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkPolyDataVS.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderingOpenGL2ObjectFactory.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkDummyGPUInfoList.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLRenderTimerLog.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkSkybox.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLSkybox.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLHardwareSelector.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLImageMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkOpenGLImageSliceMapper.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkInteractionStyleObjectFactory.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkInteractorStyleJoystickActor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkInteractorStyleJoystickCamera.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkInteractorStyleMultiTouchCamera.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkInteractorStyleTrackballActor.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkInteractorStyleSwitch.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkRenderingUIObjectFactory.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkWin32HardwareWindow.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -3837,6 +3888,63 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkInteractionStyleModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkPolyDataVS.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkAutoInit.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingOpenGL2ObjectFactory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkDummyGPUInfoList.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLRenderTimerLog.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkSkybox.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLSkybox.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLHardwareSelector.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLImageMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkOpenGLImageSliceMapper.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractionStyleObjectFactory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractorStyleJoystickActor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractorStyleJoystickCamera.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractorStyleMultiTouchCamera.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractorStyleTrackballActor.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkInteractorStyleSwitch.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkRenderingUIObjectFactory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkWin32HardwareWindow.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkFiltersCoreModule.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>

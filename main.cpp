@@ -34,9 +34,20 @@
 #include "vtkSmartPointer.h"
 #include "vtkDICOMImageReader.h"
 #include "vtkImageData.h"
+#include "vtkAutoInit.h"
+#include "vtkVersion.h"
 
 #include <iostream>
 #include <windows.h>
+#include <gl/GL.h>
+
+// 链接 OpenGL 库
+#pragma comment(lib, "opengl32.lib")
+
+// 初始化 VTK 所需的模块
+VTK_MODULE_INIT(vtkRenderingOpenGL2);
+VTK_MODULE_INIT(vtkInteractionStyle);
+VTK_MODULE_INIT(vtkRenderingVolumeOpenGL2)
 
 // 函数定义：用于检查给定目录中是否包含 DICOM 文件
 bool checkDICOMDirectory(const std::string& directoryPath)
@@ -82,6 +93,24 @@ bool checkDICOMDirectory(const std::string& directoryPath)
 
 int main(int argc, char* argv[])
 {
+	vtkSmartPointer<vtkRenderWindow> testRenderWindow = vtkSmartPointer<vtkRenderWindow>::New();
+	vtkSmartPointer<vtkRenderer> testRenderer = vtkSmartPointer<vtkRenderer>::New();
+	testRenderWindow->AddRenderer(testRenderer);
+	testRenderWindow->Render();
+
+	// 输出 VTK 版本信息
+	std::cout << "VTK Version: " << vtkVersion::GetVTKSourceVersion() << std::endl;
+
+	// 获取并输出 OpenGL 版本信息
+	const GLubyte* glVersion = glGetString(GL_VERSION);
+	if (glVersion)
+	{
+		std::cout << "OpenGL Version: " << glVersion << std::endl;
+	}
+	else
+	{
+		std::cerr << "Failed to get OpenGL version." << std::endl;
+	}
 
 	// 获取 DICOM 目录路径
 	std::string dicomDirectory = "F:/DicomDataSet/Circle of Willis";
@@ -96,10 +125,6 @@ int main(int argc, char* argv[])
 	vtkSmartPointer<vtkDICOMImageReader> reader = vtkSmartPointer<vtkDICOMImageReader>::New();
 	reader->SetDirectoryName(dicomDirectory.c_str());
 	reader->Update();
-
-	int imageDims[3];
-	reader->GetOutput()->GetDimensions(imageDims); //need include <vtkimagedata.h>
-	cout << "dimension[] :" << imageDims[0] << " " << imageDims[1] << " " << imageDims[2] << endl;
 
 	// 检查读取器的输出是否有效
 	vtkImageData* imageData = reader->GetOutput();
@@ -166,9 +191,13 @@ int main(int argc, char* argv[])
 	vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
 	renderWindowInteractor->SetRenderWindow(renderWindow);
 
+	// 创建交互样式并设置给渲染窗口交互器
+	vtkSmartPointer<vtkInteractorStyleTrackballCamera> style = vtkSmartPointer<vtkInteractorStyleTrackballCamera>::New();
+	renderWindowInteractor->SetInteractorStyle(style);
+
 	// 渲染场景并启动交互
 	renderWindow->Render();
 	renderWindowInteractor->Start();
 
-	return 0;
+	return EXIT_SUCCESS;
 }

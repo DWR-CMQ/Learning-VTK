@@ -19,7 +19,7 @@
 
 #include "vtkObject.h"
 #include "vtkRect.h"                // for ivar
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN

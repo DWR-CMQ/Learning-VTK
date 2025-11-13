@@ -125,7 +125,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>/NODEFAULTLIB:msvcprtd.lib %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;opengl32.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;vtkglad-9.4d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;opengl32.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;vtkglad-9.4d.lib;vtkjpeg-9.4d.lib;vtksys-9.4d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -309,6 +309,7 @@
     <ClCompile Include="core\vtkDirectory.cxx" />
     <ClCompile Include="core\vtkDoubleArray.cxx" />
     <ClCompile Include="core\vtkDualDepthPeelingPass.cxx" />
+    <ClCompile Include="core\vtkDummyGPUInfoList.cxx" />
     <ClCompile Include="core\vtkDynamicLoader.cxx" />
     <ClCompile Include="core\vtkEdgeTable.cxx" />
     <ClCompile Include="core\vtkEmptyCell.cxx" />
@@ -410,10 +411,16 @@
     <ClCompile Include="core\vtkInformationVector.cxx" />
     <ClCompile Include="core\vtkInputStream.cxx" />
     <ClCompile Include="core\vtkIntArray.cxx" />
+    <ClCompile Include="core\vtkInteractionStyleObjectFactory.cxx" />
     <ClCompile Include="core\vtkInteractorObserver.cxx" />
     <ClCompile Include="core\vtkInteractorStyle.cxx" />
     <ClCompile Include="core\vtkInteractorStyle3D.cxx" />
+    <ClCompile Include="core\vtkInteractorStyleJoystickActor.cxx" />
+    <ClCompile Include="core\vtkInteractorStyleJoystickCamera.cxx" />
+    <ClCompile Include="core\vtkInteractorStyleMultiTouchCamera.cxx" />
+    <ClCompile Include="core\vtkInteractorStyleSwitch.cxx" />
     <ClCompile Include="core\vtkInteractorStyleSwitchBase.cxx" />
+    <ClCompile Include="core\vtkInteractorStyleTrackballActor.cxx" />
     <ClCompile Include="core\vtkInteractorStyleTrackballCamera.cxx" />
     <ClCompile Include="core\vtkJPEGReader.cxx" />
     <ClCompile Include="core\vtkLargeInteger.cxx" />
@@ -461,7 +468,10 @@
     <ClCompile Include="core\vtkOpenGLFXAAFilter.cxx" />
     <ClCompile Include="core\vtkOpenGLFXAAPass.cxx" />
     <ClCompile Include="core\vtkOpenGLGPUVolumeRayCastMapper.cxx" />
+    <ClCompile Include="core\vtkOpenGLHardwareSelector.cxx" />
     <ClCompile Include="core\vtkOpenGLHelper.cxx" />
+    <ClCompile Include="core\vtkOpenGLImageMapper.cxx" />
+    <ClCompile Include="core\vtkOpenGLImageSliceMapper.cxx" />
     <ClCompile Include="core\vtkOpenGLIndexBufferObject.cxx" />
     <ClCompile Include="core\vtkOpenGLLight.cxx" />
     <ClCompile Include="core\vtkOpenGLPolyDataMapper.cxx" />
@@ -472,10 +482,12 @@
     <ClCompile Include="core\vtkOpenGLRenderer.cxx" />
     <ClCompile Include="core\vtkOpenGLRenderPass.cxx" />
     <ClCompile Include="core\vtkOpenGLRenderTimer.cxx" />
+    <ClCompile Include="core\vtkOpenGLRenderTimerLog.cxx" />
     <ClCompile Include="core\vtkOpenGLRenderUtilities.cxx" />
     <ClCompile Include="core\vtkOpenGLRenderWindow.cxx" />
     <ClCompile Include="core\vtkOpenGLShaderCache.cxx" />
     <ClCompile Include="core\vtkOpenGLShaderProperty.cxx" />
+    <ClCompile Include="core\vtkOpenGLSkybox.cxx" />
     <ClCompile Include="core\vtkOpenGLState.cxx" />
     <ClCompile Include="core\vtkOpenGLTexture.cxx" />
     <ClCompile Include="core\vtkOpenGLUniforms.cxx" />
@@ -534,6 +546,7 @@
     <ClCompile Include="core\vtkPolyDataFS.cxx" />
     <ClCompile Include="core\vtkPolyDataMapper.cxx" />
     <ClCompile Include="core\vtkPolyDataMapper2D.cxx" />
+    <ClCompile Include="core\vtkPolyDataVS.cxx" />
     <ClCompile Include="core\vtkPolyDataWideLineGS.cxx" />
     <ClCompile Include="core\vtkPolygon.cxx" />
     <ClCompile Include="core\vtkPriorityQueue.cxx" />
@@ -558,6 +571,8 @@
     <ClCompile Include="core\vtkRendererCollection.cxx" />
     <ClCompile Include="core\vtkRendererDelegate.cxx" />
     <ClCompile Include="core\vtkRendererSource.cxx" />
+    <ClCompile Include="core\vtkRenderingOpenGL2ObjectFactory.cxx" />
+    <ClCompile Include="core\vtkRenderingUIObjectFactory.cxx" />
     <ClCompile Include="core\vtkRenderingVolumeOpenGL2ObjectFactory.cxx" />
     <ClCompile Include="core\vtkRenderPass.cxx" />
     <ClCompile Include="core\vtkRenderPassCollection.cxx" />
@@ -577,6 +592,7 @@
     <ClCompile Include="core\vtkShadowMapPass.cxx" />
     <ClCompile Include="core\vtkShortArray.cxx" />
     <ClCompile Include="core\vtkSignedCharArray.cxx" />
+    <ClCompile Include="core\vtkSkybox.cxx" />
     <ClCompile Include="core\vtkSmartPointerBase.cxx" />
     <ClCompile Include="core\vtkSMPTools.cxx" />
     <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_char.cxx" />
@@ -732,6 +748,7 @@
     <ClCompile Include="core\vtkVolumeTexture.cxx" />
     <ClCompile Include="core\vtkVolumetricPass.cxx" />
     <ClCompile Include="core\vtkWeakPointerBase.cxx" />
+    <ClCompile Include="core\vtkWin32HardwareWindow.cxx" />
     <ClCompile Include="core\vtkWin32OpenGLRenderWindow.cxx" />
     <ClCompile Include="core\vtkWin32OutputWindow.cxx" />
     <ClCompile Include="core\vtkWin32RenderWindowInteractor.cxx" />
@@ -814,6 +831,7 @@
     <ClInclude Include="core\vtkAssemblyPath.h" />
     <ClInclude Include="core\vtkAssemblyPaths.h" />
     <ClInclude Include="core\vtkAssume.h" />
+    <ClInclude Include="core\vtkAutoInit.h" />
     <ClInclude Include="core\vtkBase64InputStream.h" />
     <ClInclude Include="core\vtkBase64OutputStream.h" />
     <ClInclude Include="core\vtkBase64Utilities.h" />
@@ -920,6 +938,7 @@
     <ClInclude Include="core\vtkDirectory.h" />
     <ClInclude Include="core\vtkDoubleArray.h" />
     <ClInclude Include="core\vtkDualDepthPeelingPass.h" />
+    <ClInclude Include="core\vtkDummyGPUInfoList.h" />
     <ClInclude Include="core\vtkDynamicLoader.h" />
     <ClInclude Include="core\vtkEdgeTable.h" />
     <ClInclude Include="core\vtkEmptyCell.h" />
@@ -952,6 +971,7 @@
     <ClInclude Include="core\vtkfast_float.h" />
     <ClInclude Include="core\vtkFieldData.h" />
     <ClInclude Include="core\vtkFilteringInformationKeyManager.h" />
+    <ClInclude Include="core\vtkFiltersCoreModule.h" />
     <ClInclude Include="core\vtkFiltersGeneralModule.h" />
     <ClInclude Include="core\vtkFiltersSourcesModule.h" />
     <ClInclude Include="core\vtkFixedPointRayCastImage.h" />
@@ -1048,10 +1068,16 @@
     <ClInclude Include="core\vtkInputStream.h" />
     <ClInclude Include="core\vtkIntArray.h" />
     <ClInclude Include="core\vtkInteractionStyleModule.h" />
+    <ClInclude Include="core\vtkInteractionStyleObjectFactory.h" />
     <ClInclude Include="core\vtkInteractorObserver.h" />
     <ClInclude Include="core\vtkInteractorStyle.h" />
     <ClInclude Include="core\vtkInteractorStyle3D.h" />
+    <ClInclude Include="core\vtkInteractorStyleJoystickActor.h" />
+    <ClInclude Include="core\vtkInteractorStyleJoystickCamera.h" />
+    <ClInclude Include="core\vtkInteractorStyleMultiTouchCamera.h" />
+    <ClInclude Include="core\vtkInteractorStyleSwitch.h" />
     <ClInclude Include="core\vtkInteractorStyleSwitchBase.h" />
+    <ClInclude Include="core\vtkInteractorStyleTrackballActor.h" />
     <ClInclude Include="core\vtkInteractorStyleTrackballCamera.h" />
     <ClInclude Include="core\vtkIOCoreModule.h" />
     <ClInclude Include="core\vtkIOImageModule.h" />
@@ -1110,7 +1136,10 @@
     <ClInclude Include="core\vtkOpenGLFXAAFilter.h" />
     <ClInclude Include="core\vtkOpenGLFXAAPass.h" />
     <ClInclude Include="core\vtkOpenGLGPUVolumeRayCastMapper.h" />
+    <ClInclude Include="core\vtkOpenGLHardwareSelector.h" />
     <ClInclude Include="core\vtkOpenGLHelper.h" />
+    <ClInclude Include="core\vtkOpenGLImageMapper.h" />
+    <ClInclude Include="core\vtkOpenGLImageSliceMapper.h" />
     <ClInclude Include="core\vtkOpenGLIndexBufferObject.h" />
     <ClInclude Include="core\vtkOpenGLLight.h" />
     <ClInclude Include="core\vtkOpenGLPolyDataMapper.h" />
@@ -1121,12 +1150,14 @@
     <ClInclude Include="core\vtkOpenGLRenderer.h" />
     <ClInclude Include="core\vtkOpenGLRenderPass.h" />
     <ClInclude Include="core\vtkOpenGLRenderTimer.h" />
+    <ClInclude Include="core\vtkOpenGLRenderTimerLog.h" />
     <ClInclude Include="core\vtkOpenGLRenderUtilities.h" />
     <ClInclude Include="core\vtkOpenGLRenderWindow.h" />
     <ClInclude Include="core\vtkOpenGLResourceFreeCallback.h" />
     <ClInclude Include="core\vtkOpenGLShaderCache.h" />
     <ClInclude Include="core\vtkOpenGLShaderDeclaration.h" />
     <ClInclude Include="core\vtkOpenGLShaderProperty.h" />
+    <ClInclude Include="core\vtkOpenGLSkybox.h" />
     <ClInclude Include="core\vtkOpenGLState.h" />
     <ClInclude Include="core\vtkOpenGLTexture.h" />
     <ClInclude Include="core\vtkOpenGLUniforms.h" />
@@ -1189,6 +1220,7 @@
     <ClInclude Include="core\vtkPolyDataInternals.h" />
     <ClInclude Include="core\vtkPolyDataMapper.h" />
     <ClInclude Include="core\vtkPolyDataMapper2D.h" />
+    <ClInclude Include="core\vtkPolyDataVS.h" />
     <ClInclude Include="core\vtkPolyDataWideLineGS.h" />
     <ClInclude Include="core\vtkPolygon.h" />
     <ClInclude Include="core\vtkPriorityQueue.h" />
@@ -1220,8 +1252,10 @@
     <ClInclude Include="core\vtkRenderingCoreModule.h" />
     <ClInclude Include="core\vtkRenderingHyperTreeGridModule.h" />
     <ClInclude Include="core\vtkRenderingOpenGL2Module.h" />
+    <ClInclude Include="core\vtkRenderingOpenGL2ObjectFactory.h" />
     <ClInclude Include="core\vtkRenderingOpenGLConfigure.h" />
     <ClInclude Include="core\vtkRenderingUIModule.h" />
+    <ClInclude Include="core\vtkRenderingUIObjectFactory.h" />
     <ClInclude Include="core\vtkRenderingVolumeModule.h" />
     <ClInclude Include="core\vtkRenderingVolumeOpenGL2Module.h" />
     <ClInclude Include="core\vtkRenderingVolumeOpenGL2ObjectFactory.h" />
@@ -1244,6 +1278,7 @@
     <ClInclude Include="core\vtkShadowMapPass.h" />
     <ClInclude Include="core\vtkShortArray.h" />
     <ClInclude Include="core\vtkSignedCharArray.h" />
+    <ClInclude Include="core\vtkSkybox.h" />
     <ClInclude Include="core\vtkSmartPointer.h" />
     <ClInclude Include="core\vtkSmartPointerBase.h" />
     <ClInclude Include="core\vtkSMP.h" />
@@ -1374,6 +1409,7 @@
     <ClInclude Include="core\vtkVolumetricPass.h" />
     <ClInclude Include="core\vtkWeakPointer.h" />
     <ClInclude Include="core\vtkWeakPointerBase.h" />
+    <ClInclude Include="core\vtkWin32HardwareWindow.h" />
     <ClInclude Include="core\vtkWin32Header.h" />
     <ClInclude Include="core\vtkWin32OpenGLRenderWindow.h" />
     <ClInclude Include="core\vtkWin32OutputWindow.h" />

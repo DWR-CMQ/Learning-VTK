@@ -26,7 +26,7 @@
 #ifndef vtkColorTransferFunction_h
 #define vtkColorTransferFunction_h
 
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkScalarsToColors.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALMANUAL
 

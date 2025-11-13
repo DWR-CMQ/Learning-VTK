@@ -31,7 +31,7 @@
 
 #include "vtkEventData.h"           // for enums
 #include "vtkNew.h"                 // For vtkNew
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkSmartPointer.h"        // For vtkSmartPointer
 #include "vtkWindow.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO

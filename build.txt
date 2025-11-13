@@ -42,6 +42,15 @@ vtkOrderedTriangulator
 vtkClipConvexPolyData
 vtkRenderStepsPass
 vtkOpenGLProjectedTetrahedraMapper
+vtkOpenGLTextActor
+vtkOpenGLTextActor3D
+vtkOpenGLTextMapper
+vtkOpenGLGlyph3DMapper
+vtkOpenGLHyperTreeGridMapper
+vtkOpenGLPointGaussianMapper
+vtkOpenGLCompositePolyDataMapperDelegator
+vtkOpenGLBillboardTextActor3D
+vtkOpenGLLabeledContourMapper
 
 参与成像
 vtkCompositeDataPipeline

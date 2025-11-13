@@ -23,7 +23,7 @@
 
 #include "vtkNew.h" // for ivar
 #include "vtkProp.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWeakPointer.h"         // For vtkWeakPointer
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 

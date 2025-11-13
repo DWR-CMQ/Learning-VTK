@@ -16,7 +16,7 @@
 #define vtkGPUInfoList_h
 
 #include "vtkObject.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkGPUInfoListArray; // STL Pimpl

@@ -17,7 +17,7 @@
 #define vtkProp_h
 
 #include "vtkObject.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 #include <vector>                   // for method args
 

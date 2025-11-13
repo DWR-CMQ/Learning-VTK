@@ -16,7 +16,7 @@
 #define vtkPropCollection_h
 
 #include "vtkCollection.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 
 #include "vtkProp.h" // Needed for inline methods

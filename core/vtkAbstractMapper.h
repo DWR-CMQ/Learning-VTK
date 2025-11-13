@@ -17,7 +17,7 @@
 #define vtkAbstractMapper_h
 
 #include "vtkAlgorithm.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALMANUAL
 
 #define VTK_SCALAR_MODE_DEFAULT 0

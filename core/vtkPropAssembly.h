@@ -33,7 +33,7 @@
 #define vtkPropAssembly_h
 
 #include "vtkProp.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkPropAssembly : public vtkProp

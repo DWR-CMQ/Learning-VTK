@@ -17,7 +17,7 @@
 
 #include "vtkProp3D.h" // Needed for inline methods
 #include "vtkPropCollection.h"
-//#include "vtkRenderingCoreModule.h" // For export macro
+#include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkProp3DCollection : public vtkPropCollection
