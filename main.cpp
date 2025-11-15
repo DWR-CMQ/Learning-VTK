@@ -1,26 +1,4 @@
-//#include <vtkActor.h>
-//#include <vtkRenderer.h>
-//#include <vtkRenderWindow.h>
-//#include <vtkRenderWindowInteractor.h>
-//#include <vtkCellPicker.h>
-//#include <vtkImagePlaneWidget.h>
-//#include <vtkMarchingCubes.h>
-//#include <vtkImageCast.h>
-//#include <vtkVolumeRayCastCompositeFunction.h>
-//#include <vtkVolumeProperty.h>
-//#include <vtkVolume.h>
-//#include <vtkVolumeRayCastMapper.h>
-//#include <vtkPiecewiseFunction.h>
-//#include <vtkColorTransferFunction.h>
-//#include <vtkGPUVolumeRayCastMapper.h>
-//#include <vtkImageMapToColors.h>
-//#include <vtkProperty.h>
-//#include <vtkImageActor.h>
-//#include<vtkImageData.h>
-//#include<vtkVolumeRayCastCompositeFunction.h>
-//#include<vtkGPUVolumeRayCastMapper.h>
-//#include<vtkSmartPointer.h>
-
+#include "vtkRenderingCoreModule.h"
 #include "vtkRenderer.h"
 #include "vtkRenderWindow.h"
 #include "vtkRenderWindowInteractor.h"
@@ -48,6 +26,7 @@
 VTK_MODULE_INIT(vtkRenderingOpenGL2);
 VTK_MODULE_INIT(vtkInteractionStyle);
 VTK_MODULE_INIT(vtkRenderingVolumeOpenGL2)
+VTK_MODULE_INIT(vtkRenderingUI)
 
 // 函数定义：用于检查给定目录中是否包含 DICOM 文件
 bool checkDICOMDirectory(const std::string& directoryPath)
