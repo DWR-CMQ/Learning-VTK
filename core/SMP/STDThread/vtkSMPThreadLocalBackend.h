@@ -76,7 +76,7 @@ private:
   void operator=(const HashTableArray&);
 };
 
-class ThreadSpecific final
+class CORE_EXPORTS ThreadSpecific final
 {
 public:
   explicit ThreadSpecific(unsigned numThreads);

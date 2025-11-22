@@ -23,7 +23,7 @@
 #include "vtkDataSet.h"
 #include "vtkSmartPointer.h"  // For vtkSmartPointer ivars
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
-
+#include "Export.h"
 #include "vtkStructuredData.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
@@ -37,7 +37,7 @@ class vtkPoints;
 class vtkVertex;
 //class vtkVoxel;
 
-class  VTK_MARSHALAUTO vtkImageData : public vtkDataSet
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageData : public vtkDataSet
 {
 public:
   static vtkImageData* New();

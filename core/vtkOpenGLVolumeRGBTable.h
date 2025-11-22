@@ -12,7 +12,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderWindow;
 
 //----------------------------------------------------------------------------
-class vtkOpenGLVolumeRGBTable : public vtkOpenGLVolumeLookupTable
+class CORE_EXPORTS vtkOpenGLVolumeRGBTable : public vtkOpenGLVolumeLookupTable
 {
 public:
   vtkTypeMacro(vtkOpenGLVolumeRGBTable, vtkOpenGLVolumeLookupTable);

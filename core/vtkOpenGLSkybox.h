@@ -20,7 +20,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLActor;
 class vtkOpenGLPolyDataMapper;
 
-class VTK_MARSHALAUTO vtkOpenGLSkybox : public vtkSkybox
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLSkybox : public vtkSkybox
 {
 public:
   static vtkOpenGLSkybox* New();

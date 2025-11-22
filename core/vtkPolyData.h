@@ -62,7 +62,7 @@ VTK_ABI_NAMESPACE_BEGIN
 struct vtkPolyDataDummyContainter;
 class vtkIncrementalPointLocator;
 
-class VTK_MARSHALAUTO vtkPolyData : public vtkPointSet
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPolyData : public vtkPointSet
 {
 public:
   static vtkPolyData* New();

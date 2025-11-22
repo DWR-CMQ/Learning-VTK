@@ -72,7 +72,7 @@ class vtkTextureObject;
 class vtkVolumeProperty;
 class vtkWindow;
 
-class vtkVolumeTexture : public vtkObject
+class CORE_EXPORTS vtkVolumeTexture : public vtkObject
 {
   typedef vtkTuple<int, 6> Size6;
   typedef vtkTuple<int, 3> Size3;

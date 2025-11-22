@@ -24,7 +24,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 
 class vtkInformationVector;
-class vtkExecutionRange : public vtkObject
+class CORE_EXPORTS vtkExecutionRange : public vtkObject
 {
 public:
   vtkTypeMacro(vtkExecutionRange, vtkObject);

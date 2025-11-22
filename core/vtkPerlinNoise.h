@@ -24,7 +24,7 @@
 #include "vtkImplicitFunction.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkPerlinNoise : public vtkImplicitFunction
+class CORE_EXPORTS vtkPerlinNoise : public vtkImplicitFunction
 {
 public:
   vtkTypeMacro(vtkPerlinNoise, vtkImplicitFunction);

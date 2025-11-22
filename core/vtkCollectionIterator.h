@@ -23,7 +23,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkCollection;
 class vtkCollectionElement;
 
-class vtkCollectionIterator : public vtkObject
+class CORE_EXPORTS vtkCollectionIterator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCollectionIterator, vtkObject);

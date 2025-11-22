@@ -19,7 +19,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkObjectBaseToWeakPointerBaseFriendship;
 
-class vtkWeakPointerBase
+class CORE_EXPORTS vtkWeakPointerBase
 {
 public:
   /**
@@ -113,7 +113,7 @@ VTK_WEAK_POINTER_BASE_DEFINE_OPERATOR(>=)
 /**
  * Streaming operator to print smart pointer like regular pointers.
  */
-ostream& operator<<(ostream& os, const vtkWeakPointerBase& p);
+CORE_EXPORTS ostream& operator<<(ostream& os, const vtkWeakPointerBase& p);
 
 VTK_ABI_NAMESPACE_END
 #endif

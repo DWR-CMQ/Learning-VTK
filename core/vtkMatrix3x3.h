@@ -20,7 +20,7 @@
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkMatrix3x3 : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkMatrix3x3 : public vtkObject
 {
   // Some of the methods in here have a corresponding static (class)
   // method taking a pointer to 9 doubles that constitutes a user

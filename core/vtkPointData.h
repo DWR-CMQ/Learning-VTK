@@ -21,7 +21,7 @@
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class  VTK_MARSHALAUTO vtkPointData : public vtkDataSetAttributes
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPointData : public vtkDataSetAttributes
 {
 public:
   static vtkPointData* New();

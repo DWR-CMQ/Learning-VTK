@@ -23,7 +23,7 @@ class vtkInformation;
 class vtkInformationKey;
 class vtkInformationIteratorInternals;
 
-class vtkInformationIterator : public vtkObject
+class CORE_EXPORTS vtkInformationIterator : public vtkObject
 {
 public:
   static vtkInformationIterator* New();

@@ -30,7 +30,7 @@
 #include "vtkCommonCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkCallbackCommand : public vtkCommand
+class CORE_EXPORTS vtkCallbackCommand : public vtkCommand
 {
 public:
   vtkTypeMacro(vtkCallbackCommand, vtkCommand);

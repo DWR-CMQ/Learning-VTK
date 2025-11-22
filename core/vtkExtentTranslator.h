@@ -20,7 +20,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkInformationIntegerRequestKey;
 class vtkInformationIntegerKey;
 
-class vtkExtentTranslator : public vtkObject
+class CORE_EXPORTS vtkExtentTranslator : public vtkObject
 {
 public:
   static vtkExtentTranslator* New();

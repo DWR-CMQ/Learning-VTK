@@ -22,7 +22,7 @@ void vtkXMLParserStartElement(void*, const char*, const char**);
 void vtkXMLParserEndElement(void*, const char*);
 void vtkXMLParserCharacterDataHandler(void*, const char*, int);
 
-class vtkXMLParser : public vtkObject
+class CORE_EXPORTS vtkXMLParser : public vtkObject
 {
 public:
   vtkTypeMacro(vtkXMLParser, vtkObject);

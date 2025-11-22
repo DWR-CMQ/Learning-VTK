@@ -17,6 +17,7 @@
 
 #include "vtkCommonDataModelModule.h" // for export
 #include "vtkSystemIncludes.h"        // for VTK's system header config
+#include "Export.h"
 
 #include <algorithm> // for inline impl
 #include <climits>   // for inline impl
@@ -24,7 +25,7 @@
 #include <iostream>  // for inline impl
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkPixelExtent
+class CORE_EXPORTS vtkPixelExtent
 {
 public:
   vtkPixelExtent();
@@ -267,6 +268,7 @@ private:
 /**
  * Stream insertion operator for formatted output of pixel extents.
  */
+CORE_EXPORTS
 std::ostream& operator<<(std::ostream& os, const vtkPixelExtent& ext);
 
 //-----------------------------------------------------------------------------

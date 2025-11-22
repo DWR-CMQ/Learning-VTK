@@ -23,7 +23,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCellArray;
 
-class VTK_MARSHALAUTO vtkUnstructuredGridBase : public vtkPointSet
+class CORE_EXPORTS VTK_MARSHALAUTO vtkUnstructuredGridBase : public vtkPointSet
 {
 public:
   vtkAbstractTypeMacro(vtkUnstructuredGridBase, vtkPointSet);

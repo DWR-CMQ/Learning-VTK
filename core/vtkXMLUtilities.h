@@ -18,7 +18,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkXMLDataElement;
 
-class vtkXMLUtilities : public vtkObject
+class CORE_EXPORTS vtkXMLUtilities : public vtkObject
 {
 public:
   static vtkXMLUtilities* New();

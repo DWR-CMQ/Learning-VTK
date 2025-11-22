@@ -24,7 +24,7 @@ class vtkViewport;
 #define VTK_BACKGROUND_LOCATION 0
 #define VTK_FOREGROUND_LOCATION 1
 
-class VTK_MARSHALAUTO vtkProperty2D : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkProperty2D : public vtkObject
 {
 public:
   vtkTypeMacro(vtkProperty2D, vtkObject);

@@ -21,7 +21,7 @@ class vtkOpenGLRenderWindow;
  *
  * \sa vtkVolumeProperty::SetLabelGradientOpacity
  */
-class vtkOpenGLVolumeMaskGradientOpacityTransferFunction2D
+class CORE_EXPORTS vtkOpenGLVolumeMaskGradientOpacityTransferFunction2D
   : public vtkOpenGLVolumeLookupTable
 {
 public:

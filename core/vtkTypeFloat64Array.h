@@ -25,7 +25,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class vtkTypeFloat64Array : public vtkTypeArrayBase
+class CORE_EXPORTS vtkTypeFloat64Array : public vtkTypeArrayBase
 {
 public:
   static vtkTypeFloat64Array* New();

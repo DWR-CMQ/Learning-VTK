@@ -19,7 +19,7 @@
 #include "vtkImplicitFunction.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkImplicitFunctionCollection : public vtkCollection
+class CORE_EXPORTS vtkImplicitFunctionCollection : public vtkCollection
 {
 public:
   vtkTypeMacro(vtkImplicitFunctionCollection, vtkCollection);

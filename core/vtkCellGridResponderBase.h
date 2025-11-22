@@ -18,7 +18,7 @@ class vtkCellGridQuery;
 class vtkCellMetadata;
 class vtkCellGridResponders;
 
-class  vtkCellGridResponderBase : public vtkObject
+class CORE_EXPORTS vtkCellGridResponderBase : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCellGridResponderBase, vtkObject);

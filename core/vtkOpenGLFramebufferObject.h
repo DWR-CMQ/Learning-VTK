@@ -167,7 +167,7 @@ class vtkShaderProgram;
 class vtkTextureObject;
 class vtkWindow;
 
-class vtkOpenGLFramebufferObject : public vtkFrameBufferObjectBase
+class CORE_EXPORTS vtkOpenGLFramebufferObject : public vtkFrameBufferObjectBase
 {
 public:
   static vtkOpenGLFramebufferObject* New();

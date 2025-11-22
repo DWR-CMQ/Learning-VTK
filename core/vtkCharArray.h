@@ -34,7 +34,7 @@
 #define vtkDataArray vtkAOSDataArrayTemplate<char>
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-class vtkCharArray : public vtkDataArray
+class CORE_EXPORTS vtkCharArray : public vtkDataArray
 {
 public:
   vtkTypeMacro(vtkCharArray, vtkDataArray);

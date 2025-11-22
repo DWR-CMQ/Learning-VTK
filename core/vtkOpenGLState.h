@@ -67,7 +67,7 @@ class vtkOpenGLVertexBufferObjectCache;
 class vtkTextureObject;
 class vtkTextureUnitManager;
 
-class vtkOpenGLState : public vtkObject
+class CORE_EXPORTS vtkOpenGLState : public vtkObject
 {
 public:
   static vtkOpenGLState* New();

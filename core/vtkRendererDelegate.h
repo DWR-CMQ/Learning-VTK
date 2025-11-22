@@ -23,7 +23,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderer;
 
-class vtkRendererDelegate : public vtkObject
+class CORE_EXPORTS vtkRendererDelegate : public vtkObject
 {
 public:
   vtkTypeMacro(vtkRendererDelegate, vtkObject);

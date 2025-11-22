@@ -32,7 +32,7 @@ class vtkIdTypeArray;
 class vtkUnsignedCharArray;
 class vtkIdTypeArray;
 
-class VTK_MARSHALMANUAL vtkUnstructuredGrid : public vtkUnstructuredGridBase
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkUnstructuredGrid : public vtkUnstructuredGridBase
 {
 public:
   /**

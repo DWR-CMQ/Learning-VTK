@@ -20,7 +20,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderWindow;
 
-class VTK_MARSHALAUTO vtkClearZPass : public vtkRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkClearZPass : public vtkRenderPass
 {
 public:
   static vtkClearZPass* New();

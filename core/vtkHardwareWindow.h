@@ -23,7 +23,7 @@
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkHardwareWindow : public vtkWindow
+class CORE_EXPORTS VTK_MARSHALAUTO vtkHardwareWindow : public vtkWindow
 {
 public:
   static vtkHardwareWindow* New();

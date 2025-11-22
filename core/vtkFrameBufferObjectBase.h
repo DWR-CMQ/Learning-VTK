@@ -18,7 +18,7 @@ class vtkRenderer;
 class vtkProp;
 class vtkInformation;
 
-class vtkFrameBufferObjectBase : public vtkObject
+class CORE_EXPORTS vtkFrameBufferObjectBase : public vtkObject
 {
 public:
   vtkTypeMacro(vtkFrameBufferObjectBase, vtkObject);

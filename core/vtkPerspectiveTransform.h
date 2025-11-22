@@ -35,11 +35,12 @@
 
 #include "vtkCommonTransformsModule.h" // For export macro
 #include "vtkHomogeneousTransform.h"
+#include "Export.h"
 
 #include "vtkMatrix4x4.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkPerspectiveTransform : public vtkHomogeneousTransform
+class CORE_EXPORTS vtkPerspectiveTransform : public vtkHomogeneousTransform
 {
 public:
   static vtkPerspectiveTransform* New();

@@ -20,7 +20,7 @@ class vtkEmptyCell;
 class vtkUnsignedCharArray;
 class vtkAMRBox;
 
-class vtkUniformGrid : public vtkImageData
+class CORE_EXPORTS vtkUniformGrid : public vtkImageData
 {
 public:
   ///@{

@@ -26,7 +26,7 @@ class vtkTextureObject;
 class vtkVolume;
 class vtkWindow;
 
-class vtkOpenGLRayCastImageDisplayHelper
+class CORE_EXPORTS vtkOpenGLRayCastImageDisplayHelper
   : public vtkRayCastImageDisplayHelper
 {
 public:

@@ -38,6 +38,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkSmartPointer.h"        // For InteractorStyle
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkTimerIdMap;
@@ -61,7 +62,7 @@ class vtkObserverMediator;
 class vtkInteractorEventRecorder;
 class vtkPickingManager;
 
-class VTK_MARSHALAUTO vtkRenderWindowInteractor : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkRenderWindowInteractor : public vtkObject
 {
 
   friend class vtkInteractorEventRecorder;

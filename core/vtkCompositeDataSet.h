@@ -36,7 +36,7 @@ class vtkInformation;
 class vtkInformationStringKey;
 class vtkInformationIntegerKey;
 
-class VTK_MARSHALAUTO vtkCompositeDataSet : public vtkDataObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCompositeDataSet : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkCompositeDataSet, vtkDataObject);

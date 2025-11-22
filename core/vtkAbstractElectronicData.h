@@ -12,11 +12,12 @@
 
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkDataObject.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkImageData;
 
-class  vtkAbstractElectronicData : public vtkDataObject
+class CORE_EXPORTS vtkAbstractElectronicData : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkAbstractElectronicData, vtkDataObject);

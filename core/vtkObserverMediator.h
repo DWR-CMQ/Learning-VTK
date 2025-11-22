@@ -27,7 +27,7 @@ class vtkRenderWindowInteractor;
 class vtkInteractorObserver;
 class vtkObserverMap;
 
-class vtkObserverMediator : public vtkObject
+class CORE_EXPORTS vtkObserverMediator : public vtkObject
 {
 public:
   /**

@@ -43,7 +43,7 @@ class vtkMatrix4x4;
 #define VTK_LIGHT_TYPE_CAMERA_LIGHT 2
 #define VTK_LIGHT_TYPE_SCENE_LIGHT 3
 
-class VTK_MARSHALAUTO vtkLight : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkLight : public vtkObject
 {
 public:
   vtkTypeMacro(vtkLight, vtkObject);

@@ -32,7 +32,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCellPicker;
 
-class VTK_MARSHALAUTO vtkInteractorStyleTrackballActor
+class CORE_EXPORTS VTK_MARSHALAUTO vtkInteractorStyleTrackballActor
   : public vtkInteractorStyle
 {
 public:

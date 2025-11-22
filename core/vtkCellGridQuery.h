@@ -23,7 +23,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class  vtkCellGridQuery : public vtkObject
+class CORE_EXPORTS vtkCellGridQuery : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCellGridQuery, vtkObject);

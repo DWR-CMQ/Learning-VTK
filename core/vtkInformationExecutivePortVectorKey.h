@@ -20,7 +20,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkExecutive;
 
-class vtkInformationExecutivePortVectorKey : public vtkInformationKey
+class CORE_EXPORTS vtkInformationExecutivePortVectorKey : public vtkInformationKey
 {
 public:
   vtkTypeMacro(vtkInformationExecutivePortVectorKey, vtkInformationKey);

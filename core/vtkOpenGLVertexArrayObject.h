@@ -23,7 +23,7 @@ class vtkOpenGLVertexBufferObject;
  * it bound to a single ShaderProgram object.
  */
 
-class vtkOpenGLVertexArrayObject : public vtkObject
+class CORE_EXPORTS vtkOpenGLVertexArrayObject : public vtkObject
 {
 public:
   static vtkOpenGLVertexArrayObject* New();

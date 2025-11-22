@@ -27,13 +27,14 @@
 
 #include "vtkIOImageModule.h" // For export macro
 #include "vtkImageReader2.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDICOMImageReaderVector;
 class DICOMParser;
 class DICOMAppHelper;
 
-class vtkDICOMImageReader : public vtkImageReader2
+class CORE_EXPORTS vtkDICOMImageReader : public vtkImageReader2
 {
 public:
   ///@{

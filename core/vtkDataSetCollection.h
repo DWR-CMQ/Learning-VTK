@@ -17,7 +17,7 @@
 #include "vtkDataSet.h" // Needed for inline methods.
 
 VTK_ABI_NAMESPACE_BEGIN
-class  vtkDataSetCollection : public vtkCollection
+class CORE_EXPORTS vtkDataSetCollection : public vtkCollection
 {
 public:
   static vtkDataSetCollection* New();

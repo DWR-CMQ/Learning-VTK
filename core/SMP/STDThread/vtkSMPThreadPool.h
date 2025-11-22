@@ -37,7 +37,7 @@ VTK_ABI_NAMESPACE_BEGIN
  * the pool, which enable support for SMP local scopes.
  * You need to have a Proxy to submit job to the pool.
  */
-class vtkSMPThreadPool
+class CORE_EXPORTS vtkSMPThreadPool
 {
   // Internal data structures
   struct ThreadJob;
@@ -56,7 +56,7 @@ public:
    * the creating thread or in a thread that does not belong to the pool, otherwise it may create a
    * deadlock when joining.
    */
-  class Proxy final
+  class CORE_EXPORTS Proxy final
   {
   public:
     /**

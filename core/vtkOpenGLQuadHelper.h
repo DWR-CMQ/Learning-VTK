@@ -49,7 +49,7 @@ class vtkGenericOpenGLResourceFreeCallback;
 class vtkWindow;
 
 // Helper class to render full screen quads
-class vtkOpenGLQuadHelper
+class CORE_EXPORTS vtkOpenGLQuadHelper
 {
 public:
   vtkShaderProgram* Program;

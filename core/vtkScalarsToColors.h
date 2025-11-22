@@ -47,7 +47,7 @@ class vtkAbstractArray;
 class vtkStringArray;
 class vtkUnsignedCharArray;
 
-class VTK_MARSHALAUTO vtkScalarsToColors : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkScalarsToColors : public vtkObject
 {
 public:
   vtkTypeMacro(vtkScalarsToColors, vtkObject);

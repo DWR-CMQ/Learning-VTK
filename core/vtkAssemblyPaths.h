@@ -23,7 +23,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
 
-class vtkAssemblyPaths : public vtkCollection
+class CORE_EXPORTS vtkAssemblyPaths : public vtkCollection
 {
 public:
   static vtkAssemblyPaths* New();

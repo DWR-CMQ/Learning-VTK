@@ -32,7 +32,7 @@ class vtkCellGrid;
 class vtkCellMetadata;
 class vtkCellAttribute;
 
-class vtkCellAttributeCalculator : public vtkObject
+class CORE_EXPORTS vtkCellAttributeCalculator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCellAttributeCalculator, vtkObject);

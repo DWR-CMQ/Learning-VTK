@@ -25,13 +25,14 @@
 #include "vtkInteractionStyleModule.h" // For export macro
 #include "vtkInteractorStyle.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCellPicker;
 
 // motion flags
 
-class VTK_MARSHALAUTO vtkInteractorStyleJoystickActor
+class CORE_EXPORTS VTK_MARSHALAUTO vtkInteractorStyleJoystickActor
   : public vtkInteractorStyle
 {
 public:

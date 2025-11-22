@@ -16,13 +16,14 @@
 #define vtkOStrStreamWrapper_h
 
 #include "vtkCommonCoreModule.h"
+#include "Export.h"
 
 #ifndef VTK_SYSTEM_INCLUDES_INSIDE
 Do_not_include_vtkOStrStreamWrapper_directly_vtkSystemIncludes_includes_it;
 #endif
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkOStrStreamWrapper : public vtkOStreamWrapper
+class CORE_EXPORTS vtkOStrStreamWrapper : public vtkOStreamWrapper
 {
 public:
   /**

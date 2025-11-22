@@ -20,7 +20,7 @@
 #include "vtkImageReader2.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkJPEGReader : public vtkImageReader2
+class CORE_EXPORTS vtkJPEGReader : public vtkImageReader2
 {
 public:
   static vtkJPEGReader* New();

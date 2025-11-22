@@ -14,7 +14,7 @@
  */
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkOpenGLIndexBufferObject : public vtkOpenGLBufferObject
+class CORE_EXPORTS vtkOpenGLIndexBufferObject : public vtkOpenGLBufferObject
 {
 public:
   static vtkOpenGLIndexBufferObject* New();

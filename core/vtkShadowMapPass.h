@@ -47,7 +47,7 @@ class vtkShadowMapBakerPass;
 class vtkInformationObjectBaseKey;
 class vtkShaderProgram;
 
-class VTK_MARSHALAUTO vtkShadowMapPass : public vtkOpenGLRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkShadowMapPass : public vtkOpenGLRenderPass
 {
 public:
   static vtkShadowMapPass* New();

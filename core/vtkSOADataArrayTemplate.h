@@ -28,7 +28,7 @@
 // when we export instantiations of this class from vtkCommonCore.
 VTK_ABI_NAMESPACE_BEGIN
 template <class ValueTypeT>
-class vtkSOADataArrayTemplate
+class CORE_EXPORTS vtkSOADataArrayTemplate
   : public vtkGenericDataArray<vtkSOADataArrayTemplate<ValueTypeT>, ValueTypeT>
 {
   typedef vtkGenericDataArray<vtkSOADataArrayTemplate<ValueTypeT>, ValueTypeT> GenericDataArrayType;
@@ -312,7 +312,7 @@ VTK_ABI_NAMESPACE_END
 #pragma warning(disable : 4910) // extern and dllexport incompatible
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-vtkExternTemplateMacro(extern template class vtkSOADataArrayTemplate);
+vtkExternTemplateMacro(extern template class CORE_EXPORTS vtkSOADataArrayTemplate);
 #ifdef _MSC_VER
 #pragma warning(pop)
 #endif
@@ -345,7 +345,7 @@ VTK_ABI_NAMESPACE_END
 // Use an "extern explicit instantiation" to give the class a DLL
 // interface.  This is a compiler-specific extension.
 VTK_ABI_NAMESPACE_BEGIN
-vtkInstantiateTemplateMacro(extern template class vtkSOADataArrayTemplate);
+vtkInstantiateTemplateMacro(extern template class CORE_EXPORTS vtkSOADataArrayTemplate);
 
 #pragma warning(pop)
 

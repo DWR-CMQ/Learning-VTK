@@ -4,16 +4,16 @@
 #define vtksys_Encoding_hxx
 
 #include "Configure.hxx"
-
+#include "../Export.h"
 #include <string>
 #include <vector>
 
 namespace vtksys {
-class Encoding
+class CORE_EXPORTS Encoding
 {
 public:
   // Container class for argc/argv.
-  class CommandLineArguments
+  class CORE_EXPORTS CommandLineArguments
   {
   public:
     // On Windows, get the program command line arguments

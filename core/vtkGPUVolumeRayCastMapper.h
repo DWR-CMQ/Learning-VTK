@@ -22,13 +22,14 @@
 
 //#include "vtkRenderingVolumeModule.h" // For export macro
 #include "vtkVolumeMapper.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkContourValues;
 class vtkRenderWindow;
 class vtkVolumeProperty;
 
-class vtkGPUVolumeRayCastMapper : public vtkVolumeMapper
+class CORE_EXPORTS vtkGPUVolumeRayCastMapper : public vtkVolumeMapper
 {
 public:
   static vtkGPUVolumeRayCastMapper* New();

@@ -18,7 +18,7 @@
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkDummyGPUInfoList : public vtkGPUInfoList
+class CORE_EXPORTS vtkDummyGPUInfoList : public vtkGPUInfoList
 {
 public:
   static vtkDummyGPUInfoList* New();

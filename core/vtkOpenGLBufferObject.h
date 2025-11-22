@@ -5,6 +5,7 @@
 
 #include "vtkObject.h"
 #include "vtkRenderingOpenGL2Module.h" // for export macro
+#include "Export.h"
 #include <cstddef>                     // for ptrdiff_t
 #include <string>                      // used for std::string
 #include <vector>                      // used for method args
@@ -21,7 +22,7 @@ class vtkPoints;
  * GPU.
  */
 
-class vtkOpenGLBufferObject : public vtkObject
+class CORE_EXPORTS vtkOpenGLBufferObject : public vtkObject
 {
 public:
   static vtkOpenGLBufferObject* New();

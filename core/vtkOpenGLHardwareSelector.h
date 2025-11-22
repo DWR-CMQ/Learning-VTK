@@ -19,7 +19,7 @@
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkOpenGLHardwareSelector : public vtkHardwareSelector
+class CORE_EXPORTS vtkOpenGLHardwareSelector : public vtkHardwareSelector
 {
 public:
   static vtkOpenGLHardwareSelector* New();

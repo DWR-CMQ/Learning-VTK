@@ -42,6 +42,7 @@
 #include "vtkDepthPeelingPass.h"
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
+#include "Export.h"
 
 #include <array> // For std::array!
 
@@ -53,7 +54,7 @@ class vtkRenderTimerLog;
 class vtkShaderProgram;
 class vtkTextureObject;
 
-class VTK_MARSHALAUTO vtkDualDepthPeelingPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkDualDepthPeelingPass
   : public vtkDepthPeelingPass
 {
 public:

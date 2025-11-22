@@ -128,7 +128,7 @@ class vtkProp;
 class vtkStringArray;
 class vtkTDxInteractorStyle;
 
-class VTK_MARSHALAUTO vtkInteractorStyle : public vtkInteractorObserver
+class CORE_EXPORTS VTK_MARSHALAUTO vtkInteractorStyle : public vtkInteractorObserver
 {
 public:
   /**

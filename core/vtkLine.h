@@ -16,7 +16,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkIncrementalPointLocator;
 
-class  vtkLine : public vtkCell
+class CORE_EXPORTS vtkLine : public vtkCell
 {
 public:
   static vtkLine* New();

@@ -33,7 +33,7 @@ class vtkPropCollection;
 class vtkImageProperty;
 class vtkImageMapper3D;
 
-class VTK_MARSHALAUTO vtkImageSlice : public vtkProp3D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageSlice : public vtkProp3D
 {
 public:
   vtkTypeMacro(vtkImageSlice, vtkProp3D);

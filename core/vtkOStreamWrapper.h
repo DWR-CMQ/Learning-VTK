@@ -16,7 +16,7 @@
 #define vtkOStreamWrapper_h
 
 #include "vtkCommonCoreModule.h"
-
+#include "Export.h"
 #ifndef VTK_SYSTEM_INCLUDES_INSIDE
 Do_not_include_vtkOStreamWrapper_directly_vtkSystemIncludes_includes_it;
 #endif
@@ -30,7 +30,7 @@ class vtkSmartPointer;
 class vtkSmartPointerBase;
 class vtkStdString;
 
-class VTK_WRAPEXCLUDE vtkOStreamWrapper
+class CORE_EXPORTS VTK_WRAPEXCLUDE vtkOStreamWrapper
 {
   class std_string;
 

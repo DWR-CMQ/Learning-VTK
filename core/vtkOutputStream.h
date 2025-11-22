@@ -19,7 +19,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkOutputStream : public vtkObject
+class CORE_EXPORTS vtkOutputStream : public vtkObject
 {
 public:
   vtkTypeMacro(vtkOutputStream, vtkObject);

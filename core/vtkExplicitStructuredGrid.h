@@ -52,7 +52,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCellArray;
 
-class vtkExplicitStructuredGrid : public vtkPointSet
+class CORE_EXPORTS vtkExplicitStructuredGrid : public vtkPointSet
 {
 public:
   ///@{

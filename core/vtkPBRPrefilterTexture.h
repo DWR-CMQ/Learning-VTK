@@ -23,7 +23,7 @@ class vtkOpenGLRenderWindow;
 class vtkOpenGLTexture;
 class vtkRenderWindow;
 
-class VTK_MARSHALAUTO vtkPBRPrefilterTexture : public vtkOpenGLTexture
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPBRPrefilterTexture : public vtkOpenGLTexture
 {
 public:
   static vtkPBRPrefilterTexture* New();

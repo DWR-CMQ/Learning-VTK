@@ -38,7 +38,7 @@ class vtkStringArray;
 #define VTK_FILE_BYTE_ORDER_BIG_ENDIAN 0
 #define VTK_FILE_BYTE_ORDER_LITTLE_ENDIAN 1
 
-class vtkImageReader2 : public vtkImageAlgorithm
+class CORE_EXPORTS vtkImageReader2 : public vtkImageAlgorithm
 {
 public:
   static vtkImageReader2* New();

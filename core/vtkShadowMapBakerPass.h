@@ -43,7 +43,7 @@ class vtkLight;
 class vtkOpenGLFramebufferObject;
 class vtkTextureObject;
 
-class VTK_MARSHALAUTO vtkShadowMapBakerPass : public vtkOpenGLRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkShadowMapBakerPass : public vtkOpenGLRenderPass
 {
 public:
   static vtkShadowMapBakerPass* New();

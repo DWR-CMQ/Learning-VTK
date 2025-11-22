@@ -49,7 +49,7 @@
 #include "vtkRenderingCoreModule.h"
 #include "vtkRenderingHyperTreeGridModule.h"
 #include "vtkRenderingUIModule.h"
-
+#include "Export.h"
 
 /* AutoInit implementations. */
 #ifdef vtkRenderingOpenGL2_AUTOINIT_INCLUDE

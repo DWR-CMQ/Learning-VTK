@@ -62,7 +62,7 @@ typedef int vtkMultiThreaderIDType;
 #endif
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkMultiThreader : public vtkObject
+class CORE_EXPORTS vtkMultiThreader : public vtkObject
 {
 public:
   static vtkMultiThreader* New();

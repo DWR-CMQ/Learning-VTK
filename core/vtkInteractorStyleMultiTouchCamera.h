@@ -22,7 +22,7 @@
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkInteractorStyleMultiTouchCamera
+class CORE_EXPORTS VTK_MARSHALAUTO vtkInteractorStyleMultiTouchCamera
   : public vtkInteractorStyleTrackballCamera
 {
 public:

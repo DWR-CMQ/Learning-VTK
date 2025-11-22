@@ -5,6 +5,7 @@
 
 #include "Configure.hxx"
 #include "Encoding.hxx"
+#include "../Export.h"
 
 #include <fstream>
 #if defined(_WIN32)
@@ -320,7 +321,7 @@ enum BOM
 // If a BOM exists, the stream is advanced to after the BOM.
 // This function requires a seekable stream (but not a relative
 // seekable stream).
-BOM ReadBOM(std::istream& in);
+CORE_EXPORTS BOM ReadBOM(std::istream& in);
 }
 }
 

@@ -69,7 +69,7 @@ class vtkCellGridQuery;
 class vtkCellGridResponderBase;
 class vtkCellMetadata;
 
-class  vtkCellGridResponders : public vtkObject
+class CORE_EXPORTS vtkCellGridResponders : public vtkObject
 {
 public:
   static vtkCellGridResponders* New();

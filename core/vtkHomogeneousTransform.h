@@ -17,11 +17,12 @@
 #include "vtkAbstractTransform.h"
 #include "vtkCommonTransformsModule.h" // For export macro
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkMatrix4x4;
 
-class VTK_MARSHALAUTO vtkHomogeneousTransform : public vtkAbstractTransform
+class CORE_EXPORTS VTK_MARSHALAUTO vtkHomogeneousTransform : public vtkAbstractTransform
 {
 public:
   vtkTypeMacro(vtkHomogeneousTransform, vtkAbstractTransform);

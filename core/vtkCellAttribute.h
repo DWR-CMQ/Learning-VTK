@@ -28,7 +28,7 @@ class vtkCellAttribute;
 class vtkCellGrid;
 class vtkDataSetAttributes;
 
-class vtkCellAttribute : public vtkObject
+class CORE_EXPORTS vtkCellAttribute : public vtkObject
 {
 public:
   /// A dictionary of arrays indexed by their roles in interpolation.

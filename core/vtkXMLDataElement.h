@@ -22,7 +22,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkXMLDataParser;
 
-class vtkXMLDataElement : public vtkObject
+class CORE_EXPORTS vtkXMLDataElement : public vtkObject
 {
 public:
   vtkTypeMacro(vtkXMLDataElement, vtkObject);

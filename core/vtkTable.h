@@ -50,7 +50,7 @@ class vtkDataSetAttributes;
 class vtkVariant;
 class vtkVariantArray;
 
-class VTK_MARSHALMANUAL vtkTable : public vtkDataObject
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkTable : public vtkDataObject
 {
 public:
   static vtkTable* New();

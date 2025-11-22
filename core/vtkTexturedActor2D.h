@@ -25,7 +25,7 @@ class vtkTexture;
 class vtkViewport;
 class vtkWindow;
 
-class VTK_MARSHALAUTO vtkTexturedActor2D : public vtkActor2D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkTexturedActor2D : public vtkActor2D
 {
 public:
   static vtkTexturedActor2D* New();

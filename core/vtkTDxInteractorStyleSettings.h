@@ -20,7 +20,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkTDxInteractorStyleSettings : public vtkObject
+class CORE_EXPORTS vtkTDxInteractorStyleSettings : public vtkObject
 {
 public:
   static vtkTDxInteractorStyleSettings* New();

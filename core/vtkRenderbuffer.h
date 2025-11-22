@@ -18,7 +18,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderWindow;
 class vtkWindow;
 
-class vtkRenderbuffer : public vtkObject
+class CORE_EXPORTS vtkRenderbuffer : public vtkObject
 {
 public:
   static vtkRenderbuffer* New();

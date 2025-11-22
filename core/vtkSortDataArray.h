@@ -53,7 +53,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkIdList;
 class vtkAbstractArray;
 
-class vtkSortDataArray : public vtkObject
+class CORE_EXPORTS vtkSortDataArray : public vtkObject
 {
 public:
   ///@{

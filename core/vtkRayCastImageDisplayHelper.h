@@ -25,7 +25,7 @@ class vtkRenderer;
 class vtkVolume;
 class vtkWindow;
 
-class vtkRayCastImageDisplayHelper : public vtkObject
+class CORE_EXPORTS vtkRayCastImageDisplayHelper : public vtkObject
 {
 public:
   static vtkRayCastImageDisplayHelper* New();

@@ -28,7 +28,7 @@ class vtkViewport;
 class vtkActor2D;
 class vtkImageData;
 
-class VTK_MARSHALAUTO vtkImageMapper : public vtkMapper2D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageMapper : public vtkMapper2D
 {
 public:
   vtkTypeMacro(vtkImageMapper, vtkMapper2D);

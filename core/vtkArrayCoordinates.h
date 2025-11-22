@@ -32,7 +32,7 @@
 #include <vector>
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkArrayCoordinates
+class CORE_EXPORTS vtkArrayCoordinates
 {
 public:
   typedef vtkIdType CoordinateT;

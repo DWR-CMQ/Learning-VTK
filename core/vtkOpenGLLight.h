@@ -18,7 +18,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderer;
 
-class VTK_MARSHALAUTO vtkOpenGLLight : public vtkLight
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLLight : public vtkLight
 {
 public:
   static vtkOpenGLLight* New();

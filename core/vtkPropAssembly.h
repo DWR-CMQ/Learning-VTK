@@ -36,7 +36,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkPropAssembly : public vtkProp
+class CORE_EXPORTS vtkPropAssembly : public vtkProp
 {
 public:
   vtkTypeMacro(vtkPropAssembly, vtkProp);

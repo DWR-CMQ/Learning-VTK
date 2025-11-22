@@ -22,13 +22,14 @@
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkDeprecation.h"           // For VTK_DEPRECATED_IN_9_3_0
 #include "vtkObject.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
 class vtkCellArray;
 class vtkIdList;
 
-class vtkAbstractCellLinks : public vtkObject
+class CORE_EXPORTS vtkAbstractCellLinks : public vtkObject
 {
 public:
   ///@{

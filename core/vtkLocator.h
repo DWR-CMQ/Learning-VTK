@@ -55,7 +55,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
 class vtkPolyData;
 
-class  vtkLocator : public vtkObject
+class CORE_EXPORTS vtkLocator : public vtkObject
 {
 public:
   ///@{

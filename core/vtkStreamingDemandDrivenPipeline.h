@@ -33,7 +33,7 @@ class vtkInformationStringKey;
 class vtkInformationStringKey;
 class vtkInformationUnsignedLongKey;
 
-class VTK_MARSHALAUTO vtkStreamingDemandDrivenPipeline
+class CORE_EXPORTS VTK_MARSHALAUTO vtkStreamingDemandDrivenPipeline
   : public vtkDemandDrivenPipeline
 {
 public:

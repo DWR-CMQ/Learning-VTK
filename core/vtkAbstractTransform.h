@@ -30,13 +30,14 @@
 #include "vtkCommonTransformsModule.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataArray;
 class vtkMatrix4x4;
 class vtkPoints;
 
-class VTK_MARSHALAUTO vtkAbstractTransform : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkAbstractTransform : public vtkObject
 {
 public:
   vtkTypeMacro(vtkAbstractTransform, vtkObject);
@@ -353,7 +354,7 @@ public:
 // .SECTION Description
 // A helper class (not derived from vtkObject) to store a series of
 // transformations in a pipelined concatenation.
-class vtkTransformConcatenation
+class CORE_EXPORTS vtkTransformConcatenation
 {
 public:
   static vtkTransformConcatenation* New() { return new vtkTransformConcatenation(); }
@@ -459,7 +460,7 @@ private:
 // .SECTION Description
 // A helper class (not derived from vtkObject) to store a stack of
 // concatenations.
-class vtkTransformConcatenationStack
+class CORE_EXPORTS vtkTransformConcatenationStack
 {
 public:
   static vtkTransformConcatenationStack* New() { return new vtkTransformConcatenationStack(); }

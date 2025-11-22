@@ -23,7 +23,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkMatrix4x4;
 
-class vtkMatrixToLinearTransform : public vtkLinearTransform
+class CORE_EXPORTS vtkMatrixToLinearTransform : public vtkLinearTransform
 {
 public:
   static vtkMatrixToLinearTransform* New();

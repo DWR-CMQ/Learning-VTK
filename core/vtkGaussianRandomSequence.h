@@ -18,7 +18,7 @@
 #include "vtkRandomSequence.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkGaussianRandomSequence : public vtkRandomSequence
+class CORE_EXPORTS vtkGaussianRandomSequence : public vtkRandomSequence
 {
 public:
   ///@{

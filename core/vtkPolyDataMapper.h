@@ -24,7 +24,7 @@ class vtkPolyData;
 class vtkRenderer;
 class vtkRenderWindow;
 
-class VTK_MARSHALAUTO vtkPolyDataMapper : public vtkMapper
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPolyDataMapper : public vtkMapper
 {
 public:
   static vtkPolyDataMapper* New();

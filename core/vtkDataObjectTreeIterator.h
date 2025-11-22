@@ -22,7 +22,7 @@ class vtkDataObjectTreeIndex;
 class vtkDataObject;
 class vtkInformation;
 
-class vtkDataObjectTreeIterator : public vtkCompositeDataIterator
+class CORE_EXPORTS vtkDataObjectTreeIterator : public vtkCompositeDataIterator
 {
 public:
   static vtkDataObjectTreeIterator* New();

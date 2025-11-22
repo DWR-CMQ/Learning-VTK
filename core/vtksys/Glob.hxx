@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-
+#include "../Export.h"
 namespace vtksys {
 
 class GlobInternals;
@@ -22,7 +22,7 @@ class GlobInternals;
  *
  * Finds all files that match a given globbing expression.
  */
-class Glob
+class CORE_EXPORTS Glob
 {
 public:
   enum MessageType

@@ -32,7 +32,7 @@
 #include "vtkIdTypeArray.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkPriorityQueue : public vtkObject
+class CORE_EXPORTS vtkPriorityQueue : public vtkObject
 {
 public:
   class Item

@@ -35,7 +35,7 @@ class vtkWindow;
  * must be provided.
  */
 
-class vtkShaderProgram : public vtkObject
+class CORE_EXPORTS vtkShaderProgram : public vtkObject
 {
 public:
   static vtkShaderProgram* New();

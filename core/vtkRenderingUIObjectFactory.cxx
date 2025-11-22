@@ -15,7 +15,7 @@
 #include <cstdlib>
 #include "vtkWin32RenderWindowInteractor.h"
 #include "vtkWin32HardwareWindow.h"
-
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 
@@ -46,7 +46,7 @@ void vtkRenderingUIObjectFactory::PrintSelf(ostream &os, vtkIndent indent)
 // Registration of object factories.
 static unsigned int vtkRenderingUICount = 0;
 
-void vtkRenderingUI_AutoInit_Construct()
+CORE_EXPORTS void vtkRenderingUI_AutoInit_Construct()
 {
   if(++vtkRenderingUICount == 1)
   {

@@ -50,7 +50,7 @@ class vtkInformationVariantVectorKey;
 class vtkInformationVector;
 class vtkVariant;
 
-class vtkInformation : public vtkObject
+class CORE_EXPORTS vtkInformation : public vtkObject
 {
 public:
   static vtkInformation* New();

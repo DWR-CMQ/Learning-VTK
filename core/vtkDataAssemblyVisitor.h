@@ -45,7 +45,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataAssembly;
 
-class vtkDataAssemblyVisitor : public vtkObject
+class CORE_EXPORTS vtkDataAssemblyVisitor : public vtkObject
 {
 public:
   vtkTypeMacro(vtkDataAssemblyVisitor, vtkObject);

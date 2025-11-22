@@ -25,7 +25,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class vtkHashCombiner
+class CORE_EXPORTS vtkHashCombiner
 {
 public:
   /// Combine an integer \a k with the 64-bit hash \a h (which is modified on exit).

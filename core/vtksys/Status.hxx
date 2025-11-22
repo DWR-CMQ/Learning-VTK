@@ -4,6 +4,7 @@
 #define vtksys_Status_hxx
 
 #include "Configure.hxx"
+#include "../Export.h"
 #include <string>
 
 namespace vtksys {
@@ -11,7 +12,7 @@ namespace vtksys {
 /** \class Status
  * \brief OS-specific status of a system operation.
  */
-class Status
+class CORE_EXPORTS Status
 {
 public:
   enum class Kind

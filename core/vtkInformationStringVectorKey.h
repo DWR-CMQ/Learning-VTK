@@ -19,7 +19,7 @@
 #include <string> // for std::string compat
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkInformationStringVectorKey : public vtkInformationKey
+class CORE_EXPORTS vtkInformationStringVectorKey : public vtkInformationKey
 {
 public:
   vtkTypeMacro(vtkInformationStringVectorKey, vtkInformationKey);

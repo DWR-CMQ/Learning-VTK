@@ -23,6 +23,7 @@
 #include "vtkCommonExecutionModelModule.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALMANUAL
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkAbstractArray;
@@ -40,7 +41,7 @@ class vtkInformationStringVectorKey;
 class vtkInformationVector;
 class vtkProgressObserver;
 
-class VTK_MARSHALMANUAL vtkAlgorithm : public vtkObject
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkAlgorithm : public vtkObject
 {
 public:
   static vtkAlgorithm* New();

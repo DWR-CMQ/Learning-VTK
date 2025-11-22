@@ -29,7 +29,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkCamera;
 class vtkMapper;
 
-class vtkProp3DFollower : public vtkProp3D
+class CORE_EXPORTS vtkProp3DFollower : public vtkProp3D
 {
 public:
   /**

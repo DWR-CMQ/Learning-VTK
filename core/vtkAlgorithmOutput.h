@@ -19,11 +19,12 @@
 #include "vtkCommonExecutionModelModule.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkAlgorithm;
 
-class VTK_MARSHALAUTO vtkAlgorithmOutput : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkAlgorithmOutput : public vtkObject
 {
 public:
   static vtkAlgorithmOutput* New();

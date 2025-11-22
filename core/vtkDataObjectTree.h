@@ -34,7 +34,7 @@ class vtkInformation;
 class vtkInformationStringKey;
 class vtkDataObject;
 
-class VTK_MARSHALAUTO vtkDataObjectTree : public vtkCompositeDataSet
+class CORE_EXPORTS VTK_MARSHALAUTO vtkDataObjectTree : public vtkCompositeDataSet
 {
 public:
   vtkTypeMacro(vtkDataObjectTree, vtkCompositeDataSet);

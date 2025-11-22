@@ -20,7 +20,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 class VTK_DEPRECATED_IN_9_3_0(
-  "`vtkOutputWindowCleanup` is no longer necessary") vtkOutputWindowCleanup
+  "`vtkOutputWindowCleanup` is no longer necessary") CORE_EXPORTS vtkOutputWindowCleanup
 {
 public:
   vtkOutputWindowCleanup() = default;
@@ -32,7 +32,7 @@ private:
 };
 
 class vtkOutputWindowPrivateAccessor;
-class vtkOutputWindow : public vtkObject
+class CORE_EXPORTS vtkOutputWindow : public vtkObject
 {
 public:
   // Methods from vtkObject

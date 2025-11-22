@@ -28,7 +28,7 @@ class vtkTDxMotionEventInfo;
 class vtkRenderer;
 class vtkTDxInteractorStyleSettings;
 
-class vtkTDxInteractorStyle : public vtkObject
+class CORE_EXPORTS vtkTDxInteractorStyle : public vtkObject
 {
 public:
   vtkTypeMacro(vtkTDxInteractorStyle, vtkObject);

@@ -37,7 +37,7 @@ class vtkObjectFactoryCollection;
 class vtkOverrideInformationCollection;
 class vtkCollection;
 
-class vtkObjectFactory : public vtkObject
+class CORE_EXPORTS vtkObjectFactory : public vtkObject
 {
 public:
   // Class Methods used to interface with the registered factories

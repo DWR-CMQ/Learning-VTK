@@ -30,7 +30,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderWindow;
 class vtkDefaultPassLayerList; // Pimpl
 
-class VTK_MARSHALAUTO vtkDefaultPass : public vtkRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkDefaultPass : public vtkRenderPass
 {
 public:
   static vtkDefaultPass* New();

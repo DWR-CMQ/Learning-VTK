@@ -26,7 +26,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkInformationIntegerKey;
 
-class VTK_MARSHALAUTO vtkLightingMapPass : public vtkDefaultPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkLightingMapPass : public vtkDefaultPass
 {
 public:
   static vtkLightingMapPass* New();

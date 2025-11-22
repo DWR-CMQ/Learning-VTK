@@ -19,7 +19,7 @@
 #include "vtkOverrideInformation.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkOverrideInformationCollection : public vtkCollection
+class CORE_EXPORTS vtkOverrideInformationCollection : public vtkCollection
 {
 public:
   vtkTypeMacro(vtkOverrideInformationCollection, vtkCollection);

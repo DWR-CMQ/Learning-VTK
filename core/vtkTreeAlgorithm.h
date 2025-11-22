@@ -27,7 +27,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
 
-class vtkTreeAlgorithm : public vtkAlgorithm
+class CORE_EXPORTS vtkTreeAlgorithm : public vtkAlgorithm
 {
 public:
   static vtkTreeAlgorithm* New();

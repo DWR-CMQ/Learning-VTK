@@ -37,7 +37,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkPoints;
 class vtkIdList;
 
-class  vtkIncrementalPointLocator : public vtkAbstractPointLocator
+class CORE_EXPORTS vtkIncrementalPointLocator : public vtkAbstractPointLocator
 {
 public:
   vtkTypeMacro(vtkIncrementalPointLocator, vtkAbstractPointLocator);

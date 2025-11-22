@@ -24,7 +24,7 @@ class vtkPartitionedDataSet;
 class vtkDataAssembly;
 class vtkDataSet;
 
-class VTK_MARSHALMANUAL vtkPartitionedDataSetCollection
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkPartitionedDataSetCollection
   : public vtkDataObjectTree
 {
 public:

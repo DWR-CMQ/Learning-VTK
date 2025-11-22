@@ -35,7 +35,7 @@
 #include "vtkObject.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkAbstractArray;
-class vtkArrayIterator : public vtkObject
+class CORE_EXPORTS vtkArrayIterator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkArrayIterator, vtkObject);

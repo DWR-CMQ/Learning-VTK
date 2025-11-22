@@ -40,7 +40,7 @@ class vtkTextureObject;
 class vtkTransform;
 class vtkOpenGLShaderProperty;
 
-class VTK_MARSHALAUTO vtkOpenGLPolyDataMapper : public vtkPolyDataMapper
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLPolyDataMapper : public vtkPolyDataMapper
 {
 public:
   static vtkOpenGLPolyDataMapper* New();

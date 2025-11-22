@@ -134,6 +134,7 @@
 #include "vtkTypeInt32Array.h"       // Needed for inline methods
 #include "vtkTypeInt64Array.h"       // Needed for inline methods
 #include "vtkTypeList.h"             // Needed for ArrayList definition
+#include "Export.h"
 
 #include <cassert>          // for assert
 #include <initializer_list> // for API
@@ -166,7 +167,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkCellArrayIterator;
 class vtkIdTypeArray;
 
-class VTK_MARSHALMANUAL vtkCellArray : public vtkAbstractCellArray
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkCellArray : public vtkAbstractCellArray
 {
 public:
   using ArrayType32 = vtkTypeInt32Array;

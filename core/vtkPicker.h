@@ -41,7 +41,7 @@ class vtkActorCollection;
 class vtkProp3DCollection;
 class vtkPoints;
 
-class vtkPicker : public vtkAbstractPropPicker
+class CORE_EXPORTS vtkPicker : public vtkAbstractPropPicker
 {
 public:
   static vtkPicker* New();

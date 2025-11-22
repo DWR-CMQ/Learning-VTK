@@ -15,12 +15,13 @@
 
 #include "vtkCommonCoreModule.h" // For export macro
 #include "vtkSystemIncludes.h"
+#include "Export.h"
 
 #include "vtkDebugLeaksManager.h" // DebugLeaks is around longer than
                                   // the garbage collector.
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkGarbageCollectorManager
+class CORE_EXPORTS vtkGarbageCollectorManager
 {
 public:
   vtkGarbageCollectorManager();

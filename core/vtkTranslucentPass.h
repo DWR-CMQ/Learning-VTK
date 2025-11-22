@@ -24,7 +24,7 @@
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkTranslucentPass : public vtkDefaultPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkTranslucentPass : public vtkDefaultPass
 {
 public:
   static vtkTranslucentPass* New();

@@ -27,7 +27,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkGenericAdaptorCell;
 
-class  vtkGenericCellIterator : public vtkObject
+class CORE_EXPORTS vtkGenericCellIterator : public vtkObject
 {
 public:
   ///@{

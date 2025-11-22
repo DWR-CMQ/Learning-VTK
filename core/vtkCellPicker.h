@@ -52,7 +52,7 @@ class vtkMatrix4x4;
 class vtkBitArray;
 //class vtkHyperTreeGridNonOrientedGeometryCursor;
 
-class vtkCellPicker : public vtkPicker
+class CORE_EXPORTS vtkCellPicker : public vtkPicker
 {
 public:
   static vtkCellPicker* New();

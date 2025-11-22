@@ -17,7 +17,7 @@
 #include "vtkCommonInformationKeyManager.h" // Manage instances of this type.
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkInformationInformationKey : public vtkInformationKey
+class CORE_EXPORTS vtkInformationInformationKey : public vtkInformationKey
 {
 public:
   vtkTypeMacro(vtkInformationInformationKey, vtkInformationKey);

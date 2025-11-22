@@ -28,7 +28,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
-class VTK_MARSHALAUTO vtkMultiPieceDataSet : public vtkPartitionedDataSet
+class CORE_EXPORTS VTK_MARSHALAUTO vtkMultiPieceDataSet : public vtkPartitionedDataSet
 {
 public:
   static vtkMultiPieceDataSet* New();

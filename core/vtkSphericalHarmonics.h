@@ -19,7 +19,7 @@
 #include "vtkImageAlgorithm.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkSphericalHarmonics : public vtkImageAlgorithm
+class CORE_EXPORTS vtkSphericalHarmonics : public vtkImageAlgorithm
 {
 public:
   static vtkSphericalHarmonics* New();

@@ -52,7 +52,7 @@ class vtkTransform;
 #define VTK_TEXTURE_QUALITY_16BIT 16
 #define VTK_TEXTURE_QUALITY_32BIT 32
 
-class VTK_MARSHALMANUAL vtkTexture : public vtkImageAlgorithm
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkTexture : public vtkImageAlgorithm
 {
 public:
   static vtkTexture* New();

@@ -75,7 +75,7 @@ struct vtkTimerLogEntry
   }
 };
 
-class vtkTimerLog : public vtkObject
+class CORE_EXPORTS vtkTimerLog : public vtkObject
 {
 public:
   static vtkTimerLog* New();

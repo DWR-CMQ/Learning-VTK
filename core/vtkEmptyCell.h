@@ -15,7 +15,7 @@
 #include "vtkCommonDataModelModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkEmptyCell : public vtkCell
+class CORE_EXPORTS vtkEmptyCell : public vtkCell
 {
 public:
   static vtkEmptyCell* New();

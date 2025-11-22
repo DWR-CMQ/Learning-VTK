@@ -18,7 +18,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 template <class DType>
-class vtkImageStencilIterator : public vtkImagePointDataIterator
+class CORE_EXPORTS vtkImageStencilIterator : public vtkImagePointDataIterator
 {
 public:
   ///@{

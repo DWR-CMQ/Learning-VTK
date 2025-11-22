@@ -17,12 +17,13 @@
 #include "vtkCommonCoreModule.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkImageData;
 class vtkUnsignedCharArray;
 
-class VTK_MARSHALAUTO vtkWindow : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkWindow : public vtkObject
 {
 public:
   vtkTypeMacro(vtkWindow, vtkObject);

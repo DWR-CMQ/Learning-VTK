@@ -42,6 +42,7 @@
 #include "vtkSystemIncludes.h"
 #include "vtkType.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 #include <atomic> // For std::atomic
 #include <string>
@@ -57,7 +58,7 @@ typedef void* (*vtkMallocingFunction)(size_t);
 typedef void* (*vtkReallocingFunction)(void*, size_t);
 typedef void (*vtkFreeingFunction)(void*);
 
-class vtkObjectBase
+class CORE_EXPORTS vtkObjectBase
 {
   /**
    * Return the class name as a string. This method is overridden
@@ -245,7 +246,7 @@ public:
    * SetUsingMemkind(newValue), but safer. Declare it on the stack in a function where you want to
    * make a temporary change. When the function returns it will restore the original value.
    */
-  class vtkMemkindRAII
+  class CORE_EXPORTS vtkMemkindRAII
   {
 #ifdef VTK_USE_MEMKIND
     bool OriginalValue;
@@ -295,7 +296,7 @@ protected:
   virtual void ObjectFinalize();
 
 private:
-  friend ostream& operator<<(ostream& os, vtkObjectBase& o);
+  friend CORE_EXPORTS ostream& operator<<(ostream& os, vtkObjectBase& o);
   friend class vtkGarbageCollectorToObjectBaseFriendship;
   friend class vtkWeakPointerBaseToObjectBaseFriendship;
 

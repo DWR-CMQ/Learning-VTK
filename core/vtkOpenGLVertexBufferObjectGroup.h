@@ -63,7 +63,7 @@ class vtkShaderProgram;
 class vtkViewport;
 class vtkWindow;
 
-class vtkOpenGLVertexBufferObjectGroup : public vtkObject
+class CORE_EXPORTS vtkOpenGLVertexBufferObjectGroup : public vtkObject
 {
 public:
   static vtkOpenGLVertexBufferObjectGroup* New();

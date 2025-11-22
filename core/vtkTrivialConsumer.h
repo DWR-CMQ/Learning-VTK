@@ -17,7 +17,7 @@
 #include "vtkCommonExecutionModelModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkTrivialConsumer : public vtkAlgorithm
+class CORE_EXPORTS vtkTrivialConsumer : public vtkAlgorithm
 {
 public:
   static vtkTrivialConsumer* New();

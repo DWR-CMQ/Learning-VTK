@@ -180,7 +180,7 @@
 #endif
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkLogger : public vtkObjectBase
+class CORE_EXPORTS vtkLogger : public vtkObjectBase
 {
 public:
   vtkBaseTypeMacro(vtkLogger, vtkObjectBase);

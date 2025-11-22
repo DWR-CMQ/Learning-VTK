@@ -25,7 +25,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkEdgeTableEdge;
 class vtkEdgeTablePoints;
 
-class  vtkGenericEdgeTable : public vtkObject
+class CORE_EXPORTS vtkGenericEdgeTable : public vtkObject
 {
 public:
   /**

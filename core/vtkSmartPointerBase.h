@@ -16,9 +16,10 @@
 
 #include "vtkCommonCoreModule.h" // For export macro
 #include "vtkObjectBase.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkSmartPointerBase
+class CORE_EXPORTS vtkSmartPointerBase
 {
 public:
   /**
@@ -122,7 +123,7 @@ VTK_SMART_POINTER_BASE_DEFINE_OPERATOR(>=)
 /**
  * Streaming operator to print smart pointer like regular pointers.
  */
-ostream& operator<<(ostream& os, const vtkSmartPointerBase& p);
+CORE_EXPORTS ostream& operator<<(ostream& os, const vtkSmartPointerBase& p);
 
 VTK_ABI_NAMESPACE_END
 #endif

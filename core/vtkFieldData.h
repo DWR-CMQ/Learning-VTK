@@ -46,7 +46,7 @@ class vtkIdList;
 class vtkDoubleArray;
 class vtkUnsignedCharArray;
 
-class  VTK_MARSHALAUTO vtkFieldData : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkFieldData : public vtkObject
 {
 public:
   static vtkFieldData* New();

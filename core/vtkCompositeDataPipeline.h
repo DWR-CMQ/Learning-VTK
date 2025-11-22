@@ -49,7 +49,7 @@ class vtkInformationStringKey;
 class vtkInformationDataObjectKey;
 class vtkInformationIntegerKey;
 
-class VTK_MARSHALAUTO vtkCompositeDataPipeline
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCompositeDataPipeline
   : public vtkStreamingDemandDrivenPipeline
 {
 public:

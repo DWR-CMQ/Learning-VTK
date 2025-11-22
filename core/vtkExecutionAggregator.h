@@ -25,7 +25,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class vtkExecutionAggregator : public vtkObject
+class CORE_EXPORTS vtkExecutionAggregator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkExecutionAggregator, vtkObject);

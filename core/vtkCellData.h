@@ -22,7 +22,7 @@
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkCellData : public vtkDataSetAttributes
+class CORE_EXPORTS vtkCellData : public vtkDataSetAttributes
 {
 public:
   static vtkCellData* New();

@@ -48,7 +48,7 @@ class vtkAssemblyPath;
 class vtkRenderer;
 class vtkRenderWindowInteractor;
 
-class vtkPickingManager : public vtkObject
+class CORE_EXPORTS vtkPickingManager : public vtkObject
 {
 public:
   static vtkPickingManager* New();

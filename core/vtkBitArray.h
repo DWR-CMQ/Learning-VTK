@@ -22,7 +22,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkBitArrayLookup;
 
-class vtkBitArray : public vtkDataArray
+class CORE_EXPORTS vtkBitArray : public vtkDataArray
 {
 public:
   enum DeleteMethod

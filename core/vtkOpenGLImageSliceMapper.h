@@ -23,7 +23,7 @@ class vtkRenderWindow;
 class vtkOpenGLRenderWindow;
 class vtkActor;
 
-class VTK_MARSHALAUTO vtkOpenGLImageSliceMapper
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLImageSliceMapper
   : public vtkImageSliceMapper
 {
 public:

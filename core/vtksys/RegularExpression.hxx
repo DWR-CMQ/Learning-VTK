@@ -25,7 +25,7 @@
 #include <vtksys/Configure.hxx>
 
 #include <string>
-
+#include "../Export.h"
 namespace vtksys {
 
 // Forward declaration
@@ -34,7 +34,7 @@ class RegularExpression;
 /** \class RegularExpressionMatch
  * \brief Stores the pattern matches of a RegularExpression
  */
-class RegularExpressionMatch
+class CORE_EXPORTS RegularExpressionMatch
 {
 public:
   RegularExpressionMatch();
@@ -290,7 +290,7 @@ inline std::string RegularExpressionMatch::match(int n) const
  * different threads but only if each invocation uses an own instance of
  * RegularExpression.
  */
-class RegularExpression
+class CORE_EXPORTS RegularExpression
 {
 public:
   /**

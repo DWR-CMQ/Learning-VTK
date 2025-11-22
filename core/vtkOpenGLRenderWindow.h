@@ -38,7 +38,7 @@ class vtkTextureUnitManager;
 class vtkGenericOpenGLResourceFreeCallback;
 class vtkOpenGLState;
 
-class VTK_MARSHALAUTO vtkOpenGLRenderWindow : public vtkRenderWindow
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLRenderWindow : public vtkRenderWindow
 {
 public:
   vtkTypeMacro(vtkOpenGLRenderWindow, vtkRenderWindow);

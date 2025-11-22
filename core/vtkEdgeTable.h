@@ -26,7 +26,7 @@ class vtkIdList;
 class vtkPoints;
 class vtkVoidArray;
 
-class vtkEdgeTable : public vtkObject
+class CORE_EXPORTS vtkEdgeTable : public vtkObject
 {
 public:
   /**

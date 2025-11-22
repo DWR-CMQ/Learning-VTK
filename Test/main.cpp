@@ -6,7 +6,6 @@
 #include "vtkVolume.h"
 #include "vtkPiecewiseFunction.h"
 #include "vtkColorTransferFunction.h"
-#include "vtkVolumeProperty.h"
 #include "vtkGPUVolumeRayCastMapper.h"
 #include "vtkInteractorStyleTrackballCamera.h"
 #include "vtkSmartPointer.h"

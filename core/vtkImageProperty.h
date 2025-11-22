@@ -19,11 +19,12 @@
 #include "vtkObject.h"
 #include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkScalarsToColors;
 
-class VTK_MARSHALAUTO vtkImageProperty : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageProperty : public vtkObject
 {
 public:
   vtkTypeMacro(vtkImageProperty, vtkObject);

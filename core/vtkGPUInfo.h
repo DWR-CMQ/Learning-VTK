@@ -18,7 +18,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkGPUInfo : public vtkObject
+class CORE_EXPORTS vtkGPUInfo : public vtkObject
 {
 public:
   static vtkGPUInfo* New();

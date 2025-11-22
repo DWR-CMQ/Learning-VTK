@@ -28,6 +28,7 @@
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkLocator.h"
 #include "vtkNew.h" // For vtkNew
+#include "Export.h"
 
 #include <memory> // For shared_ptr
 #include <vector> // For Weights
@@ -38,7 +39,7 @@ class vtkGenericCell;
 class vtkIdList;
 class vtkPoints;
 
-class vtkAbstractCellLocator : public vtkLocator
+class CORE_EXPORTS vtkAbstractCellLocator : public vtkLocator
 {
 public:
   vtkTypeMacro(vtkAbstractCellLocator, vtkLocator);

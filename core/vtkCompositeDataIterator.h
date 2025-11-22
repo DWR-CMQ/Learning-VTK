@@ -21,7 +21,7 @@ class vtkCompositeDataSetIndex;
 class vtkDataObject;
 class vtkInformation;
 
-class vtkCompositeDataIterator : public vtkObject
+class CORE_EXPORTS vtkCompositeDataIterator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCompositeDataIterator, vtkObject);

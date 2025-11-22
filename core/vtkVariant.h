@@ -19,6 +19,7 @@
 #include "vtkStdString.h"
 #include "vtkSystemIncludes.h" // To define ostream
 #include "vtkType.h"           // To define type IDs and VTK_TYPE_USE_* flags
+#include "Export.h"
 
 //
 // The following should be eventually placed in vtkSetGet.h
@@ -41,9 +42,9 @@ class vtkAbstractArray;
 class vtkVariant;
 struct vtkVariantLessThan;
 
-ostream& operator<<(ostream& os, const vtkVariant& val);
+CORE_EXPORTS ostream& operator<<(ostream& os, const vtkVariant& val);
 
-class vtkVariant
+class CORE_EXPORTS vtkVariant
 {
 public:
   /**
@@ -393,7 +394,7 @@ public:
   bool operator>=(const vtkVariant& other) const;
   ///@}
 
-  friend ostream& operator<<(ostream& os, const vtkVariant& val);
+  friend CORE_EXPORTS ostream& operator<<(ostream& os, const vtkVariant& val);
 
 private:
   template <typename T>
@@ -437,19 +438,19 @@ VTK_ABI_NAMESPACE_END
 // function for ordered containers like map and set.
 
 VTK_ABI_NAMESPACE_BEGIN
-struct vtkVariantLessThan
+struct CORE_EXPORTS vtkVariantLessThan
 {
 public:
   bool operator()(const vtkVariant& s1, const vtkVariant& s2) const;
 };
 
-struct vtkVariantEqual
+struct CORE_EXPORTS vtkVariantEqual
 {
 public:
   bool operator()(const vtkVariant& s1, const vtkVariant& s2) const;
 };
 
-struct vtkVariantStrictWeakOrder
+struct CORE_EXPORTS vtkVariantStrictWeakOrder
 {
 public:
   bool operator()(const vtkVariant& s1, const vtkVariant& s2) const;
@@ -458,7 +459,7 @@ public:
 // Similarly, this is a fast version of operator== that requires that
 // the types AND the values be equal in order to admit equality.
 
-struct vtkVariantStrictEquality
+struct CORE_EXPORTS vtkVariantStrictEquality
 {
 public:
   bool operator()(const vtkVariant& s1, const vtkVariant& s2) const;

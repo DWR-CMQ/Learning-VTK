@@ -63,7 +63,7 @@ class vtkViewport;
 #define VTK_WORLD 6
 #define VTK_USERDEFINED 7
 
-class VTK_MARSHALAUTO vtkCoordinate : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCoordinate : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCoordinate, vtkObject);

@@ -23,7 +23,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkProperty;
 
-class VTK_MARSHALAUTO vtkActorCollection : public vtkPropCollection
+class CORE_EXPORTS VTK_MARSHALAUTO vtkActorCollection : public vtkPropCollection
 {
 public:
   static vtkActorCollection* New();

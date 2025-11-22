@@ -25,7 +25,7 @@
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkCameraPass : public vtkRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCameraPass : public vtkRenderPass
 {
 public:
   static vtkCameraPass* New();

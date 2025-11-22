@@ -27,7 +27,7 @@
 #include "vtkPolyDataAlgorithm.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkTessellatedBoxSource : public vtkPolyDataAlgorithm
+class CORE_EXPORTS vtkTessellatedBoxSource : public vtkPolyDataAlgorithm
 {
 public:
   static vtkTessellatedBoxSource* New();

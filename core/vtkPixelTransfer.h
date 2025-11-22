@@ -22,7 +22,7 @@
 #include <cstring>                    // for memcpy
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkPixelTransfer
+class CORE_EXPORTS vtkPixelTransfer
 {
 public:
   vtkPixelTransfer() = default;

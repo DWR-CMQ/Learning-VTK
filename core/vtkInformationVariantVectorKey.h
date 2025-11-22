@@ -19,7 +19,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkVariant;
 
-class vtkInformationVariantVectorKey : public vtkInformationKey
+class CORE_EXPORTS vtkInformationVariantVectorKey : public vtkInformationKey
 {
 public:
   vtkTypeMacro(vtkInformationVariantVectorKey, vtkInformationKey);

@@ -19,7 +19,7 @@
 //#include "vtkImagingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkImageStencilData : public vtkDataObject
+class CORE_EXPORTS vtkImageStencilData : public vtkDataObject
 {
 public:
   static vtkImageStencilData* New();

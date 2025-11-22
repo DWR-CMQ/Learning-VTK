@@ -19,7 +19,7 @@
 #include "vtkGaussianRandomSequence.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkBoxMuellerRandomSequence : public vtkGaussianRandomSequence
+class CORE_EXPORTS vtkBoxMuellerRandomSequence : public vtkGaussianRandomSequence
 {
 public:
   ///@{

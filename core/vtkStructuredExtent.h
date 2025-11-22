@@ -18,7 +18,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkStructuredExtent : public vtkObject
+class CORE_EXPORTS vtkStructuredExtent : public vtkObject
 {
 public:
   static vtkStructuredExtent* New();

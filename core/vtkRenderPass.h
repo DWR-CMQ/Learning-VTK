@@ -43,7 +43,7 @@ class vtkRenderState;
 class vtkWindow;
 class vtkRenderer;
 
-class VTK_MARSHALAUTO vtkRenderPass : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkRenderPass : public vtkObject
 {
 public:
   vtkTypeMacro(vtkRenderPass, vtkObject);

@@ -19,12 +19,12 @@
 #include "vtkAlgorithm.h"
 #include "vtkCommonExecutionModelModule.h" // For export macro
 #include "vtkWrappingHints.h"              // For VTK_MARSHALAUTO
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
 class vtkImageData;
 
-class VTK_MARSHALAUTO vtkImageAlgorithm : public vtkAlgorithm
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageAlgorithm : public vtkAlgorithm
 {
 public:
   vtkTypeMacro(vtkImageAlgorithm, vtkAlgorithm);

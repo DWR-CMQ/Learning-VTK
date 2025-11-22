@@ -33,7 +33,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
-class VTK_MARSHALMANUAL vtkPartitionedDataSet : public vtkDataObjectTree
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkPartitionedDataSet : public vtkDataObjectTree
 {
 public:
   static vtkPartitionedDataSet* New();

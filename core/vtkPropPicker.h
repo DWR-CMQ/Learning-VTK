@@ -25,7 +25,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
 class vtkWorldPointPicker;
 
-class vtkPropPicker : public vtkAbstractPropPicker
+class CORE_EXPORTS vtkPropPicker : public vtkAbstractPropPicker
 {
 public:
   static vtkPropPicker* New();

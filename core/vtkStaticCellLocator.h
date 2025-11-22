@@ -45,7 +45,7 @@ VTK_ABI_NAMESPACE_BEGIN
 struct vtkCellBinner;
 struct vtkCellProcessor;
 
-class vtkStaticCellLocator : public vtkAbstractCellLocator
+class CORE_EXPORTS vtkStaticCellLocator : public vtkAbstractCellLocator
 {
   friend struct vtkCellBinner;
   friend struct vtkCellProcessor;

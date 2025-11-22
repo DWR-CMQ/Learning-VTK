@@ -16,7 +16,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkByteSwap : public vtkObject
+class CORE_EXPORTS vtkByteSwap : public vtkObject
 {
 public:
   static vtkByteSwap* New();

@@ -15,9 +15,10 @@
 
 #include "vtkCommonCoreModule.h" // For export macro
 #include "vtkSystemIncludes.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkDebugLeaksManager
+class CORE_EXPORTS vtkDebugLeaksManager
 {
 public:
   vtkDebugLeaksManager();
@@ -32,7 +33,8 @@ private:
 // vtkDebugLeaks or that has a singleton.  It will make sure
 // vtkDebugLeaks is initialized before it is used and is the last
 // static object destroyed.
-static vtkDebugLeaksManager vtkDebugLeaksManagerInstance;
+// 
+//static vtkDebugLeaksManager vtkDebugLeaksManagerInstance;
 
 VTK_ABI_NAMESPACE_END
 #endif

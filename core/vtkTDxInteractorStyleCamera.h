@@ -22,7 +22,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkTransform;
 
-class vtkTDxInteractorStyleCamera : public vtkTDxInteractorStyle
+class CORE_EXPORTS vtkTDxInteractorStyleCamera : public vtkTDxInteractorStyle
 {
 public:
   static vtkTDxInteractorStyleCamera* New();

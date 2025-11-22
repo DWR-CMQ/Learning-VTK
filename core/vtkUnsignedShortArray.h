@@ -25,7 +25,7 @@
 #define vtkDataArray vtkAOSDataArrayTemplate<unsigned short>
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-class vtkUnsignedShortArray : public vtkDataArray
+class CORE_EXPORTS vtkUnsignedShortArray : public vtkDataArray
 {
 public:
   vtkTypeMacro(vtkUnsignedShortArray, vtkDataArray);

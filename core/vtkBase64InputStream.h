@@ -15,7 +15,7 @@
 #include "vtkInputStream.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkBase64InputStream : public vtkInputStream
+class CORE_EXPORTS vtkBase64InputStream : public vtkInputStream
 {
 public:
   vtkTypeMacro(vtkBase64InputStream, vtkInputStream);

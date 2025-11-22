@@ -26,7 +26,7 @@ class vtkQuad;
 class vtkTriangle;
 class vtkIncrementalPointLocator;
 
-class  vtkPolygon : public vtkCell
+class CORE_EXPORTS vtkPolygon : public vtkCell
 {
 public:
   static vtkPolygon* New();

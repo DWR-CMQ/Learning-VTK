@@ -40,7 +40,7 @@ class vtkPolyData;
 class vtkTexturedActor2D;
 class vtkPolyDataMapper2D;
 
-class VTK_MARSHALAUTO vtkOpenGLRenderer : public vtkRenderer
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLRenderer : public vtkRenderer
 {
 public:
   static vtkOpenGLRenderer* New();

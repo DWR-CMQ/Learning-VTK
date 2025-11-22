@@ -17,12 +17,13 @@
 
 #include "vtkFiltersSourcesModule.h" // For export macro
 #include "vtkPolyDataAlgorithm.h"
+#include "Export.h"
 
 #define VTK_BOX_TYPE_AXIS_ALIGNED 0
 #define VTK_BOX_TYPE_ORIENTED 1
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkOutlineSource : public vtkPolyDataAlgorithm
+class CORE_EXPORTS vtkOutlineSource : public vtkPolyDataAlgorithm
 {
 public:
   ///@{

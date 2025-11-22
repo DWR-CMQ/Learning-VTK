@@ -22,7 +22,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 //------------------------------------------------------------------------------
 template <typename ValueType>
-class vtkStructuredPointBackend
+class CORE_EXPORTS vtkStructuredPointBackend
 {
 public:
   //------------------------------------------------------------------------------

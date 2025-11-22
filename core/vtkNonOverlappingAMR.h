@@ -16,7 +16,7 @@
 #include "vtkUniformGridAMR.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkNonOverlappingAMR : public vtkUniformGridAMR
+class CORE_EXPORTS vtkNonOverlappingAMR : public vtkUniformGridAMR
 {
 public:
   static vtkNonOverlappingAMR* New();

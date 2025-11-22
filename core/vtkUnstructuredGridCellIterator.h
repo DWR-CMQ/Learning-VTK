@@ -21,7 +21,7 @@ class vtkUnsignedCharArray;
 class vtkUnstructuredGrid;
 class vtkPoints;
 
-class vtkUnstructuredGridCellIterator : public vtkCellIterator
+class CORE_EXPORTS vtkUnstructuredGridCellIterator : public vtkCellIterator
 {
 public:
   ///@{

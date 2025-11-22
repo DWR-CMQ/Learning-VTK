@@ -23,7 +23,7 @@ class vtkUniformGrid;
 class vtkAMRInformation;
 class vtkAMRDataInternals;
 
-class vtkUniformGridAMR : public vtkCompositeDataSet
+class CORE_EXPORTS vtkUniformGridAMR : public vtkCompositeDataSet
 {
 public:
   static vtkUniformGridAMR* New();

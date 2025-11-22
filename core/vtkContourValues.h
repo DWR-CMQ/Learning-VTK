@@ -21,7 +21,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDoubleArray;
 
-class vtkContourValues : public vtkObject
+class CORE_EXPORTS vtkContourValues : public vtkObject
 {
 public:
   /**

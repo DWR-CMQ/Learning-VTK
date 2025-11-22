@@ -21,7 +21,7 @@ class vtkLine;
 class vtkTriangle;
 class vtkIncrementalPointLocator;
 
-class  vtkQuad : public vtkCell
+class CORE_EXPORTS vtkQuad : public vtkCell
 {
 public:
   static vtkQuad* New();

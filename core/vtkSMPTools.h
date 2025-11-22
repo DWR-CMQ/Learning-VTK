@@ -214,7 +214,7 @@ VTK_ABI_NAMESPACE_END
 #endif // DOXYGEN_SHOULD_SKIP_THIS
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkSMPTools
+class CORE_EXPORTS vtkSMPTools
 {
 public:
   ///@{

@@ -50,7 +50,7 @@ class vtkOpenGLRenderWindow;
 class vtkOpenGLState;
 class vtkOpenGLQuadHelper;
 
-class VTK_MARSHALAUTO vtkDepthPeelingPass : public vtkOpenGLRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkDepthPeelingPass : public vtkOpenGLRenderPass
 {
 public:
   static vtkDepthPeelingPass* New();

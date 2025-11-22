@@ -15,7 +15,7 @@
 
 // The superclass that all commands should be subclasses of
 VTK_ABI_NAMESPACE_BEGIN
-class vtkErrorCode
+class CORE_EXPORTS vtkErrorCode
 {
 public:
   static const char* GetStringFromErrorCode(unsigned long error);

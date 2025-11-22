@@ -10,7 +10,7 @@
 
 // Include all of the classes we want to create overrides for.
 #include "vtkInteractorStyleSwitch.h"
-
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 
@@ -39,7 +39,7 @@ void vtkInteractionStyleObjectFactory::PrintSelf(ostream &os, vtkIndent indent)
 // Registration of object factories.
 static unsigned int vtkInteractionStyleCount = 0;
 
-void vtkInteractionStyle_AutoInit_Construct()
+CORE_EXPORTS void vtkInteractionStyle_AutoInit_Construct()
 {
   if(++vtkInteractionStyleCount == 1)
   {

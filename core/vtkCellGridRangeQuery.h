@@ -29,7 +29,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class  vtkCellGridRangeQuery : public vtkCellGridQuery
+class CORE_EXPORTS vtkCellGridRangeQuery : public vtkCellGridQuery
 {
 public:
   static vtkCellGridRangeQuery* New();

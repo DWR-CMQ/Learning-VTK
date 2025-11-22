@@ -9,7 +9,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class vtkInteractionStyleObjectFactory : public vtkObjectFactory
+class CORE_EXPORTS vtkInteractionStyleObjectFactory : public vtkObjectFactory
 {
 public:
   static vtkInteractionStyleObjectFactory * New();

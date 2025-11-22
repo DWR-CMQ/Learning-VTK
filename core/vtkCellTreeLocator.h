@@ -55,7 +55,7 @@ VTK_ABI_NAMESPACE_END
 }
 
 VTK_ABI_NAMESPACE_BEGIN
-class  vtkCellTreeLocator : public vtkAbstractCellLocator
+class CORE_EXPORTS vtkCellTreeLocator : public vtkAbstractCellLocator
 {
   template <typename>
   friend struct detail::CellTree;

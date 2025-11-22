@@ -22,7 +22,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkLight;
 
-class VTK_MARSHALAUTO vtkLightCollection : public vtkCollection
+class CORE_EXPORTS VTK_MARSHALAUTO vtkLightCollection : public vtkCollection
 {
 public:
   static vtkLightCollection* New();

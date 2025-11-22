@@ -31,7 +31,7 @@ VTK_ABI_NAMESPACE_END
 #endif
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkWin32RenderWindowInteractor
+class CORE_EXPORTS VTK_MARSHALAUTO vtkWin32RenderWindowInteractor
   : public vtkRenderWindowInteractor
 {
 public:

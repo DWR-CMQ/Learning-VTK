@@ -21,7 +21,7 @@ class vtkOpenGLRenderer;
 class vtkMatrix4x4;
 class vtkMatrix3x3;
 
-class VTK_MARSHALAUTO vtkOpenGLActor : public vtkActor
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLActor : public vtkActor
 {
 public:
   static vtkOpenGLActor* New();

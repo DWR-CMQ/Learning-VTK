@@ -28,7 +28,7 @@ class vtkImageData;
 class vtkImageStencilData;
 class vtkAlgorithm;
 
-class vtkImagePointDataIterator
+class CORE_EXPORTS vtkImagePointDataIterator
 {
 public:
   /**

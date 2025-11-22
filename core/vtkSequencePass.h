@@ -25,7 +25,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderPassCollection;
 
-class VTK_MARSHALAUTO vtkSequencePass : public vtkRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkSequencePass : public vtkRenderPass
 {
 public:
   static vtkSequencePass* New();

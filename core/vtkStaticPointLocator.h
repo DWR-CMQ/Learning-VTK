@@ -53,7 +53,7 @@ class vtkIdList;
 struct vtkBucketList;
 class vtkDataArray;
 
-class vtkStaticPointLocator : public vtkAbstractPointLocator
+class CORE_EXPORTS vtkStaticPointLocator : public vtkAbstractPointLocator
 {
 public:
   /**

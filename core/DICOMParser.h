@@ -20,6 +20,7 @@
 #include "DICOMFile.h"
 #include "DICOMParserMap.h"
 #include "DICOMTypes.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class DICOMCallback;
@@ -36,7 +37,7 @@ class DICOMParserImplementation;
 //
 //
 
-class DICOMParser
+class CORE_EXPORTS DICOMParser
 {
 public:
   //

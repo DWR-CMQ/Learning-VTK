@@ -30,7 +30,7 @@ class vtkMatrix4x4;
 class vtkOpenGLFramebufferObject;
 class vtkOpenGLQuadHelper;
 
-class VTK_MARSHALAUTO vtkSSAOPass : public vtkImageProcessingPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkSSAOPass : public vtkImageProcessingPass
 {
 public:
   static vtkSSAOPass* New();

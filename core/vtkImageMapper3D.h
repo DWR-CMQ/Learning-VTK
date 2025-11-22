@@ -35,7 +35,7 @@ class vtkImageData;
 class vtkMultiThreader;
 class vtkImageToImageMapper3DFriendship;
 
-class VTK_MARSHALAUTO vtkImageMapper3D : public vtkAbstractMapper3D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageMapper3D : public vtkAbstractMapper3D
 {
 public:
   vtkTypeMacro(vtkImageMapper3D, vtkAbstractMapper3D);

@@ -55,7 +55,7 @@ class vtkMapper;
 class vtkProperty;
 class vtkActor;
 
-class vtkAssembly : public vtkProp3D
+class CORE_EXPORTS vtkAssembly : public vtkProp3D
 {
 public:
   static vtkAssembly* New();

@@ -21,7 +21,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkFunctionSet : public vtkObject
+class CORE_EXPORTS vtkFunctionSet : public vtkObject
 {
 public:
   vtkTypeMacro(vtkFunctionSet, vtkObject);

@@ -20,7 +20,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkProp3DCollection : public vtkPropCollection
+class CORE_EXPORTS vtkProp3DCollection : public vtkPropCollection
 {
 public:
   static vtkProp3DCollection* New();

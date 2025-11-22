@@ -116,7 +116,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataAssemblyVisitor;
 
-class vtkDataAssembly : public vtkObject
+class CORE_EXPORTS vtkDataAssembly : public vtkObject
 {
 public:
   static vtkDataAssembly* New();

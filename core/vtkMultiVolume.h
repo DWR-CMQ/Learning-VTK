@@ -40,7 +40,7 @@ class vtkWindow;
 class vtkVolumeProperty;
 class vtkAbstractVolumeMapper;
 
-class vtkMultiVolume : public vtkVolume
+class CORE_EXPORTS vtkMultiVolume : public vtkVolume
 {
 public:
   static vtkMultiVolume* New();

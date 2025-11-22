@@ -35,6 +35,7 @@
 //#include "vtkOpenGLTextMapper.h"
 #include "vtkOpenGLTexture.h"
 #include "vtkOpenGLRenderWindow.h"
+#include "Export.h"
 
 
 VTK_ABI_NAMESPACE_BEGIN
@@ -114,7 +115,7 @@ void vtkRenderingOpenGL2ObjectFactory::PrintSelf(ostream &os, vtkIndent indent)
 // Registration of object factories.
 static unsigned int vtkRenderingOpenGL2Count = 0;
 
-void vtkRenderingOpenGL2_AutoInit_Construct()
+CORE_EXPORTS void vtkRenderingOpenGL2_AutoInit_Construct()
 {
   if(++vtkRenderingOpenGL2Count == 1)
   {

@@ -57,6 +57,7 @@
 #include "vtkObject.h"
 #include "vtkVariant.h"       // for variant arguments
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 #include "vtk_nlohmannjson.h"
 #include "vtknlohmannjson/include/vtknlohmann/json_fwd.hpp"
@@ -73,7 +74,7 @@ class vtkInformationInformationVectorKey;
 class vtkInformationVariantVectorKey;
 class vtkVariantArray;
 
-class VTK_MARSHALAUTO vtkAbstractArray : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkAbstractArray : public vtkObject
 {
 public:
   vtkTypeMacro(vtkAbstractArray, vtkObject);

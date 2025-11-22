@@ -9,7 +9,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class vtkRenderingVolumeOpenGL2ObjectFactory : public vtkObjectFactory
+class CORE_EXPORTS vtkRenderingVolumeOpenGL2ObjectFactory : public vtkObjectFactory
 {
 public:
   static vtkRenderingVolumeOpenGL2ObjectFactory * New();

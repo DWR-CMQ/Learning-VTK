@@ -43,7 +43,7 @@ class vtkCellGridQuery;
 class vtkDataSetAttributes;
 class vtkCellAttribute;
 
-class  vtkCellMetadata : public vtkObject
+class CORE_EXPORTS vtkCellMetadata : public vtkObject
 {
 public:
   using CellTypeId = vtkStringToken::Hash;

@@ -35,7 +35,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
 class vtkRenderer;
 
-class VTK_MARSHALAUTO vtkFrustumCoverageCuller : public vtkCuller
+class CORE_EXPORTS VTK_MARSHALAUTO vtkFrustumCoverageCuller : public vtkCuller
 {
 public:
   static vtkFrustumCoverageCuller* New();

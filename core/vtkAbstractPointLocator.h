@@ -20,11 +20,12 @@
 
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkLocator.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkIdList;
 
-class  vtkAbstractPointLocator : public vtkLocator
+class CORE_EXPORTS vtkAbstractPointLocator : public vtkLocator
 {
 public:
   ///@{

@@ -12,11 +12,12 @@
 
 #include "vtkCell.h"
 #include "vtkCommonDataModelModule.h" // For export macro
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkIncrementalPointLocator;
 
-class vtkVertex : public vtkCell
+class CORE_EXPORTS vtkVertex : public vtkCell
 {
 public:
   static vtkVertex* New();

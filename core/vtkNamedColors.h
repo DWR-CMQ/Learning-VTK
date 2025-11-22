@@ -67,7 +67,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkNamedColorsDataStore;
 class vtkColorStringParser;
 
-class VTK_MARSHALAUTO vtkNamedColors : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkNamedColors : public vtkObject
 {
 public:
   vtkTypeMacro(vtkNamedColors, vtkObject);

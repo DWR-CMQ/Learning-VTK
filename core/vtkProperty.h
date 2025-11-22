@@ -50,7 +50,7 @@ class vtkXMLMaterial;
 
 class vtkPropertyInternals;
 
-class VTK_MARSHALAUTO vtkProperty : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkProperty : public vtkObject
 {
 public:
   vtkTypeMacro(vtkProperty, vtkObject);

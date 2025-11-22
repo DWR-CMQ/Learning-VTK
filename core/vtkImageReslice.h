@@ -54,7 +54,7 @@ class vtkImageStencilData;
 class vtkScalarsToColors;
 class vtkAbstractImageInterpolator;
 
-class vtkImageReslice : public vtkThreadedImageAlgorithm
+class CORE_EXPORTS vtkImageReslice : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageReslice* New();

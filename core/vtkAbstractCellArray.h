@@ -17,6 +17,7 @@
 #include "vtkNew.h"                   // for vtkNew
 #include "vtkObject.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 #include <initializer_list> // for std::initializer_list
 
@@ -25,7 +26,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkDataArray;
 class vtkIdList;
 
-class vtkAbstractCellArray : public vtkObject
+class CORE_EXPORTS vtkAbstractCellArray : public vtkObject
 {
 public:
   vtkTypeMacro(vtkAbstractCellArray, vtkObject);

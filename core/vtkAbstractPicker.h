@@ -54,7 +54,7 @@ class vtkRenderer;
 class vtkProp;
 class vtkPropCollection;
 
-class vtkAbstractPicker : public vtkObject
+class CORE_EXPORTS vtkAbstractPicker : public vtkObject
 {
 public:
   vtkTypeMacro(vtkAbstractPicker, vtkObject);

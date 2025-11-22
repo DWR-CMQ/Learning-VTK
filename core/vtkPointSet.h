@@ -52,7 +52,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkAbstractPointLocator;
 class vtkAbstractCellLocator;
 
-class VTK_MARSHALAUTO vtkPointSet : public vtkDataSet
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPointSet : public vtkDataSet
 {
 public:
   /**

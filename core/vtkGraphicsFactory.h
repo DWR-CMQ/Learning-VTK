@@ -12,7 +12,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkGraphicsFactory : public vtkObject
+class CORE_EXPORTS vtkGraphicsFactory : public vtkObject
 {
 public:
   static vtkGraphicsFactory* New();

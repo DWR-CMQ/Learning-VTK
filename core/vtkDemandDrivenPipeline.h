@@ -35,7 +35,7 @@ class vtkInformationUnsignedLongKey;
 /// that information objects use and what each key should be used for.
 ///
 
-class VTK_MARSHALAUTO vtkDemandDrivenPipeline : public vtkExecutive
+class CORE_EXPORTS VTK_MARSHALAUTO vtkDemandDrivenPipeline : public vtkExecutive
 {
 public:
   static vtkDemandDrivenPipeline* New();

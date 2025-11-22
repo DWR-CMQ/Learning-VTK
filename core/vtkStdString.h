@@ -17,10 +17,11 @@
 #include "vtkSystemIncludes.h"   // For VTKCOMMONCORE_EXPORT.
 #include <string>                // For the superclass.
 #include <utility>               // For std::move
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkStdString;
-ostream& operator<<(ostream&, const vtkStdString&);
+CORE_EXPORTS ostream& operator<<(ostream&, const vtkStdString&);
 
 class vtkStdString : public std::string
 {

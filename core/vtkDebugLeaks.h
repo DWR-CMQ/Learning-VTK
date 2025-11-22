@@ -41,7 +41,7 @@
 #include "vtkObject.h"
 
 #include "vtkDebugLeaksManager.h" // Needed for proper singleton initialization
-
+#include "Export.h"
 #include <functional> // for finalizers
 #include <mutex>      // for std::mutex
 #include <vector>     // for finalizers
@@ -51,7 +51,7 @@ class vtkDebugLeaksHashTable;
 class vtkDebugLeaksTraceManager;
 class vtkDebugLeaksObserver;
 
-class vtkDebugLeaks : public vtkObject
+class CORE_EXPORTS vtkDebugLeaks : public vtkObject
 {
 public:
   static vtkDebugLeaks* New();
@@ -142,7 +142,7 @@ private:
 // This class defines callbacks for debugging tools. The callbacks are not for general use.
 // The objects passed as arguments to the callbacks are in partially constructed or destructed
 // state and accessing them may cause undefined behavior.
-class vtkDebugLeaksObserver
+class CORE_EXPORTS vtkDebugLeaksObserver
 {
 public:
   virtual ~vtkDebugLeaksObserver() = default;

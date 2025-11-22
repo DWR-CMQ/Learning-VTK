@@ -16,7 +16,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
 
-class vtkDataSetCellIterator : public vtkCellIterator
+class CORE_EXPORTS vtkDataSetCellIterator : public vtkCellIterator
 {
 public:
   static vtkDataSetCellIterator* New();

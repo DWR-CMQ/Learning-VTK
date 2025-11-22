@@ -17,9 +17,9 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkIndent;
-ostream& operator<<(ostream& os, const vtkIndent& o);
+CORE_EXPORTS ostream& operator<<(ostream& os, const vtkIndent& o);
 
-class vtkIndent
+class CORE_EXPORTS vtkIndent
 {
 public:
   void Delete() { delete this; }
@@ -35,7 +35,7 @@ public:
   /**
    * Print out the indentation. Basically output a bunch of spaces.
    */
-  friend ostream& operator<<(ostream& os, const vtkIndent& o);
+  friend CORE_EXPORTS ostream& operator<<(ostream& os, const vtkIndent& o);
 
 protected:
   int Indent;

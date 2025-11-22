@@ -29,7 +29,7 @@ class vtkWindow;
 class vtkDataSet;
 class vtkMatrix4x4;
 
-class VTK_MARSHALAUTO vtkAbstractMapper3D : public vtkAbstractMapper
+class CORE_EXPORTS VTK_MARSHALAUTO vtkAbstractMapper3D : public vtkAbstractMapper
 {
 public:
   vtkTypeMacro(vtkAbstractMapper3D, vtkAbstractMapper);

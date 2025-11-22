@@ -42,7 +42,7 @@ class vtkShaderProgram;
 class vtkTextureObject;
 class vtkOpenGLQuadHelper;
 
-class vtkOpenGLFXAAFilter : public vtkObject
+class CORE_EXPORTS vtkOpenGLFXAAFilter : public vtkObject
 {
 public:
   static vtkOpenGLFXAAFilter* New();

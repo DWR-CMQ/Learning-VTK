@@ -23,7 +23,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 template <class T>
-class vtkArrayIteratorTemplate : public vtkArrayIterator
+class CORE_EXPORTS vtkArrayIteratorTemplate : public vtkArrayIterator
 {
 public:
   static vtkArrayIteratorTemplate<T>* New();

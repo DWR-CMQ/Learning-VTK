@@ -52,7 +52,7 @@ class vtkMatrix4x4;
 class vtkTimerLog;
 class vtkTransform;
 
-class vtkInteractorStyle3D : public vtkInteractorStyle
+class CORE_EXPORTS vtkInteractorStyle3D : public vtkInteractorStyle
 {
 public:
   static vtkInteractorStyle3D* New();

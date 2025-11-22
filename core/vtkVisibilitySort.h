@@ -35,7 +35,7 @@ class vtkDataSet;
 class vtkMatrix4x4;
 class vtkCamera;
 
-class vtkVisibilitySort : public vtkObject
+class CORE_EXPORTS vtkVisibilitySort : public vtkObject
 {
 public:
   vtkTypeMacro(vtkVisibilitySort, vtkObject);

@@ -35,7 +35,7 @@ class vtkPoints;
 class vtkPointsProjectedHull;
 class vtkCell;
 
-class  vtkPlanesIntersection : public vtkPlanes
+class CORE_EXPORTS vtkPlanesIntersection : public vtkPlanes
 {
   vtkTypeMacro(vtkPlanesIntersection, vtkPlanes);
 

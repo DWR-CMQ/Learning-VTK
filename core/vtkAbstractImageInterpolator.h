@@ -35,7 +35,7 @@ class vtkDataArray;
 struct vtkInterpolationInfo;
 struct vtkInterpolationWeights;
 
-class vtkAbstractImageInterpolator : public vtkObject
+class CORE_EXPORTS vtkAbstractImageInterpolator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkAbstractImageInterpolator, vtkObject);

@@ -7,13 +7,13 @@
 
 #include <stddef.h> /* size_t */
 #include <string>
-
+#include "../Export.h"
 namespace vtksys {
 
 // forward declare the implementation class
 class SystemInformationImplementation;
 
-class SystemInformation
+class CORE_EXPORTS SystemInformation
 {
   friend class SystemInformationImplementation;
   SystemInformationImplementation* Implementation;

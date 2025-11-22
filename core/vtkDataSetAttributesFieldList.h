@@ -55,7 +55,7 @@ class vtkAbstractArray;
 class vtkDataSetAttributes;
 class vtkIdList;
 
-class  vtkDataSetAttributesFieldList
+class CORE_EXPORTS vtkDataSetAttributesFieldList
 {
 public:
   /**

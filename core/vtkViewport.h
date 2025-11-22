@@ -26,6 +26,7 @@
 
 #include "vtkSelection.h"    // Needed for selection
 #include "vtkSmartPointer.h" // Needed for assigning default nullptr value
+#include "Export.h"
 
 #include <array> // To store matrices
 
@@ -36,7 +37,7 @@ class vtkProp;
 class vtkPropCollection;
 class vtkWindow;
 
-class VTK_MARSHALAUTO vtkViewport : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkViewport : public vtkObject
 {
 public:
   vtkTypeMacro(vtkViewport, vtkObject);

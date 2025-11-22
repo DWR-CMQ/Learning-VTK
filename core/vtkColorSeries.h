@@ -45,7 +45,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkLookupTable;
 
-class VTK_MARSHALAUTO vtkColorSeries : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkColorSeries : public vtkObject
 {
 public:
   vtkTypeMacro(vtkColorSeries, vtkObject);

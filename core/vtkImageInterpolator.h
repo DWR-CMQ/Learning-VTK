@@ -17,10 +17,11 @@
 #define vtkImageInterpolator_h
 
 #include "vtkAbstractImageInterpolator.h"
+#include "Export.h"
 //#include "vtkImagingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkImageInterpolator : public vtkAbstractImageInterpolator
+class CORE_EXPORTS vtkImageInterpolator : public vtkAbstractImageInterpolator
 {
 public:
   static vtkImageInterpolator* New();

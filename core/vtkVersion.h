@@ -22,7 +22,7 @@
 #define GetVTKVersion VTK_ABI_NAMESPACE_MANGLE(GetVTKVersion)
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkVersion : public vtkObject
+class CORE_EXPORTS vtkVersion : public vtkObject
 {
 public:
   static vtkVersion* New();

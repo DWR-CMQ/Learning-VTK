@@ -41,7 +41,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
 class vtkMatrix4x4;
 
-class vtkAssemblyNode : public vtkObject
+class CORE_EXPORTS vtkAssemblyNode : public vtkObject
 {
 public:
   /**

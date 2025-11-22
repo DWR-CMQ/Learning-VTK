@@ -22,7 +22,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkGPUInfoListArray; // STL Pimpl
 class vtkGPUInfo;
 
-class vtkGPUInfoList : public vtkObject
+class CORE_EXPORTS vtkGPUInfoList : public vtkObject
 {
 public:
   static vtkGPUInfoList* New();

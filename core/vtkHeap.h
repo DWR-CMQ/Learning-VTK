@@ -39,7 +39,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkHeapBlock; // forward declaration
 
-class vtkHeap : public vtkObject
+class CORE_EXPORTS vtkHeap : public vtkObject
 {
 public:
   static vtkHeap* New();

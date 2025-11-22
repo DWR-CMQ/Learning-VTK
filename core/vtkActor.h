@@ -32,7 +32,7 @@ class vtkTexture;
 class vtkMapper;
 class vtkProperty;
 
-class VTK_MARSHALAUTO vtkActor : public vtkProp3D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkActor : public vtkProp3D
 {
 public:
   vtkTypeMacro(vtkActor, vtkProp3D);

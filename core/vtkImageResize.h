@@ -25,7 +25,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkAbstractImageInterpolator;
 
-class vtkImageResize : public vtkThreadedImageAlgorithm
+class CORE_EXPORTS vtkImageResize : public vtkThreadedImageAlgorithm
 {
 public:
   static vtkImageResize* New();

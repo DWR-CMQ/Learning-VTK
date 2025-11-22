@@ -35,7 +35,7 @@ class vtkVolume;
 class vtkVolumeTexture;
 class vtkWindow;
 
-class vtkVolumeInputHelper
+class CORE_EXPORTS vtkVolumeInputHelper
 {
 public:
   vtkVolumeInputHelper() = default;

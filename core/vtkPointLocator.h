@@ -43,7 +43,7 @@ class vtkIdList;
 class vtkNeighborPoints;
 class vtkPoints;
 
-class vtkPointLocator : public vtkIncrementalPointLocator
+class CORE_EXPORTS vtkPointLocator : public vtkIncrementalPointLocator
 {
 public:
   /**

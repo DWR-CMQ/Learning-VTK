@@ -14,7 +14,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderWindow;
 
 //----------------------------------------------------------------------------
-class vtkOpenGLVolumeOpacityTable
+class CORE_EXPORTS vtkOpenGLVolumeOpacityTable
   : public vtkOpenGLVolumeLookupTable
 {
 public:

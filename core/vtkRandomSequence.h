@@ -24,7 +24,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkRandomSequence : public vtkObject
+class CORE_EXPORTS vtkRandomSequence : public vtkObject
 {
 public:
   ///@{

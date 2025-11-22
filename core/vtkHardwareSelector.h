@@ -109,7 +109,7 @@ class vtkSelection;
 class vtkProp;
 class vtkTextureObject;
 
-class vtkHardwareSelector : public vtkObject
+class CORE_EXPORTS vtkHardwareSelector : public vtkObject
 {
 public:
   ///@{

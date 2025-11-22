@@ -46,7 +46,7 @@ class vtkCallbackCommand;
 class vtkObserverMediator;
 class vtkPickingManager;
 
-class VTK_MARSHALAUTO vtkInteractorObserver : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkInteractorObserver : public vtkObject
 {
 public:
   vtkTypeMacro(vtkInteractorObserver, vtkObject);

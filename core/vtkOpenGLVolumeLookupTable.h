@@ -18,7 +18,7 @@ class vtkOpenGLRenderWindow;
 class vtkTextureObject;
 class vtkWindow;
 
-class vtkOpenGLVolumeLookupTable : public vtkObject
+class CORE_EXPORTS vtkOpenGLVolumeLookupTable : public vtkObject
 {
 public:
   vtkTypeMacro(vtkOpenGLVolumeLookupTable, vtkObject);

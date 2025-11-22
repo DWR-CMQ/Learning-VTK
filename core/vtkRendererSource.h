@@ -42,7 +42,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderer;
 
-class vtkRendererSource : public vtkAlgorithm
+class CORE_EXPORTS vtkRendererSource : public vtkAlgorithm
 {
 public:
   static vtkRendererSource* New();

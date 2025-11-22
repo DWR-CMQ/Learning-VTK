@@ -35,7 +35,7 @@ class vtkPlane;
 class vtkPoints;
 class vtkDataArray;
 
-class  vtkPlanes : public vtkImplicitFunction
+class CORE_EXPORTS vtkPlanes : public vtkImplicitFunction
 {
 public:
   ///@{

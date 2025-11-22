@@ -27,7 +27,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkImageStencilData;
 class vtkImageData;
 
-class vtkImageStencilSource : public vtkImageStencilAlgorithm
+class CORE_EXPORTS vtkImageStencilSource : public vtkImageStencilAlgorithm
 {
 public:
   static vtkImageStencilSource* New();

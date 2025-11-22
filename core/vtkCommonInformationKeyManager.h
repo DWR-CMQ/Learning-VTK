@@ -21,7 +21,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkInformationKey;
 
-class vtkCommonInformationKeyManager
+class CORE_EXPORTS vtkCommonInformationKeyManager
 {
 public:
   vtkCommonInformationKeyManager();

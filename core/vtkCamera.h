@@ -32,7 +32,7 @@ class vtkTransform;
 class vtkCallbackCommand;
 class vtkCameraCallbackCommand;
 
-class VTK_MARSHALAUTO vtkCamera : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCamera : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCamera, vtkObject);

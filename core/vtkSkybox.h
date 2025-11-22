@@ -15,7 +15,7 @@
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkSkybox : public vtkActor
+class CORE_EXPORTS VTK_MARSHALAUTO vtkSkybox : public vtkActor
 {
 public:
   static vtkSkybox* New();

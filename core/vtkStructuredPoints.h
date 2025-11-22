@@ -21,7 +21,7 @@
 #include "vtkImageData.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkStructuredPoints : public vtkImageData
+class CORE_EXPORTS vtkStructuredPoints : public vtkImageData
 {
 public:
   static vtkStructuredPoints* New();

@@ -25,7 +25,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkViewport;
 
-class VTK_MARSHALAUTO vtkActor2DCollection : public vtkPropCollection
+class CORE_EXPORTS VTK_MARSHALAUTO vtkActor2DCollection : public vtkPropCollection
 {
 public:
   /**

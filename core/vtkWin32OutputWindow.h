@@ -25,7 +25,7 @@
 #include "vtkOutputWindow.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkWin32OutputWindow : public vtkOutputWindow
+class CORE_EXPORTS vtkWin32OutputWindow : public vtkOutputWindow
 {
 public:
   // Methods from vtkObject

@@ -21,7 +21,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkUniformGrid;
-class vtkAMRDataInternals : public vtkObject
+class CORE_EXPORTS vtkAMRDataInternals : public vtkObject
 {
 public:
   struct Block

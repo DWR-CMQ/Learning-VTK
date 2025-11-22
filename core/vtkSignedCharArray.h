@@ -21,7 +21,7 @@
 #define vtkDataArray vtkAOSDataArrayTemplate<signed char>
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-class vtkSignedCharArray : public vtkDataArray
+class CORE_EXPORTS vtkSignedCharArray : public vtkDataArray
 {
 public:
   vtkTypeMacro(vtkSignedCharArray, vtkDataArray);

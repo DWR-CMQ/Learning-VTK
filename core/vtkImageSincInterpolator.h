@@ -39,7 +39,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkImageData;
 struct vtkInterpolationInfo;
 
-class vtkImageSincInterpolator : public vtkAbstractImageInterpolator
+class CORE_EXPORTS vtkImageSincInterpolator : public vtkAbstractImageInterpolator
 {
 public:
   static vtkImageSincInterpolator* New();

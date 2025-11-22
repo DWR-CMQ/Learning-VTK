@@ -22,7 +22,7 @@
 #include "vtkVolume.h" // Needed for static cast
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkVolumeCollection : public vtkPropCollection
+class CORE_EXPORTS VTK_MARSHALAUTO vtkVolumeCollection : public vtkPropCollection
 {
 public:
   static vtkVolumeCollection* New();

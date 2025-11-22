@@ -25,7 +25,7 @@ class vtkProp;
 class vtkShaderProgram;
 class vtkOpenGLVertexArrayObject;
 
-class VTK_MARSHALAUTO vtkOpenGLRenderPass : public vtkRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLRenderPass : public vtkRenderPass
 {
 public:
   vtkTypeMacro(vtkOpenGLRenderPass, vtkRenderPass);

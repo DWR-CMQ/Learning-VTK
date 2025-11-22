@@ -19,6 +19,7 @@
 
 #include "DICOMConfig.h"
 #include "DICOMTypes.h"
+#include "Export.h"
 
 //
 // Abstraction of a file used by the DICOMParser.
@@ -26,7 +27,7 @@
 // can be used to abstract a stream.
 //
 VTK_ABI_NAMESPACE_BEGIN
-class DICOMFile
+class CORE_EXPORTS DICOMFile
 {
 public:
   DICOMFile();

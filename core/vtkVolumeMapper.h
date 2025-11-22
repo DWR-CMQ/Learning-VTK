@@ -31,7 +31,7 @@ class vtkVolume;
 
 class vtkWindow;
 
-class VTK_MARSHALAUTO vtkVolumeMapper : public vtkAbstractVolumeMapper
+class CORE_EXPORTS VTK_MARSHALAUTO vtkVolumeMapper : public vtkAbstractVolumeMapper
 {
 public:
   vtkTypeMacro(vtkVolumeMapper, vtkAbstractVolumeMapper);

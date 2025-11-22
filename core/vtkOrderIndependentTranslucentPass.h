@@ -25,7 +25,7 @@ class vtkOpenGLRenderWindow;
 class vtkOpenGLState;
 class vtkOpenGLQuadHelper;
 
-class VTK_MARSHALAUTO vtkOrderIndependentTranslucentPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOrderIndependentTranslucentPass
   : public vtkOpenGLRenderPass
 {
 public:

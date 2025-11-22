@@ -39,7 +39,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
 class vtkCellArray;
 
-class vtkStaticCellLinks : public vtkAbstractCellLinks
+class CORE_EXPORTS vtkStaticCellLinks : public vtkAbstractCellLinks
 {
 public:
   ///@{

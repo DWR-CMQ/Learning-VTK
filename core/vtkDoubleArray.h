@@ -15,13 +15,14 @@
 #include "vtkAOSDataArrayTemplate.h" // Real Superclass
 #include "vtkCommonCoreModule.h"     // For export macro
 #include "vtkDataArray.h"
+#include "Export.h"
 
 // Fake the superclass for the wrappers.
 #ifndef __VTK_WRAP__
 #define vtkDataArray vtkAOSDataArrayTemplate<double>
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-class vtkDoubleArray : public vtkDataArray
+class CORE_EXPORTS vtkDoubleArray : public vtkDataArray
 {
 public:
   vtkTypeMacro(vtkDoubleArray, vtkDataArray);

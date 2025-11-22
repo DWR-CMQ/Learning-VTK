@@ -20,7 +20,7 @@
 #include "vtkObjectFactory.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkObjectFactoryCollection : public vtkCollection
+class CORE_EXPORTS vtkObjectFactoryCollection : public vtkCollection
 {
 public:
   vtkTypeMacro(vtkObjectFactoryCollection, vtkCollection);

@@ -48,7 +48,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 
-class vtkStringToken
+class CORE_EXPORTS vtkStringToken
 {
 public:
   using Hash = std::uint32_t;

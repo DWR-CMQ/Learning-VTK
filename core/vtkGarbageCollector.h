@@ -67,7 +67,7 @@
 // This function is a friend of the collector so that it can call the
 // internal report method.
 VTK_ABI_NAMESPACE_BEGIN
-void vtkGarbageCollectorReportInternal(
+void CORE_EXPORTS vtkGarbageCollectorReportInternal(
   vtkGarbageCollector*, vtkObjectBase*, void*, const char*);
 
 // This forward ref allows us to define methods with vtkNew.
@@ -77,7 +77,7 @@ class vtkNew;
 // This allows vtkObjectBase to get at the methods it needs.
 class vtkObjectBaseToGarbageCollectorFriendship;
 
-class vtkGarbageCollector : public vtkObject
+class CORE_EXPORTS vtkGarbageCollector : public vtkObject
 {
 public:
   vtkTypeMacro(vtkGarbageCollector, vtkObject);
@@ -167,7 +167,7 @@ private:
 
   // Internal report callback and friend function that calls it.
   virtual void Report(vtkObjectBase* obj, void* ptr, const char* desc);
-  friend void vtkGarbageCollectorReportInternal(
+  friend void CORE_EXPORTS vtkGarbageCollectorReportInternal(
     vtkGarbageCollector*, vtkObjectBase*, void*, const char*);
 
   vtkGarbageCollector(const vtkGarbageCollector&) = delete;
@@ -179,7 +179,7 @@ class vtkSmartPointerBase;
 /**
  * Function to report a reference held by a smart pointer to a collector.
  */
-void vtkGarbageCollectorReport(
+void CORE_EXPORTS vtkGarbageCollectorReport(
   vtkGarbageCollector* collector, vtkSmartPointerBase& ptr, const char* desc);
 
 /**

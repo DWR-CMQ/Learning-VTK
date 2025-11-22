@@ -21,7 +21,7 @@ VTK_ABI_NAMESPACE_BEGIN
 
 class vtkStringArray;
 
-class vtkDirectory : public vtkObject
+class CORE_EXPORTS vtkDirectory : public vtkObject
 {
 public:
   ///@{

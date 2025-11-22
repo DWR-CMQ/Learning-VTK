@@ -75,7 +75,7 @@ class vtkVolumeInputHelper;
 class vtkVolumeTexture;
 class vtkOpenGLShaderProperty;
 
-class VTK_MARSHALAUTO vtkOpenGLGPUVolumeRayCastMapper
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLGPUVolumeRayCastMapper
   : public vtkGPUVolumeRayCastMapper
 {
 public:

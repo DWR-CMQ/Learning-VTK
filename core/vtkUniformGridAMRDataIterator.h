@@ -21,7 +21,7 @@ class vtkAMRDataInternals;
 class vtkUniformGridAMR;
 class AMRIndexIterator;
 
-class vtkUniformGridAMRDataIterator : public vtkCompositeDataIterator
+class CORE_EXPORTS vtkUniformGridAMRDataIterator : public vtkCompositeDataIterator
 {
 public:
   static vtkUniformGridAMRDataIterator* New();

@@ -15,7 +15,7 @@
 
 #include "vtkMeta.h" // for IsComplete
 #include "vtkNew.h"  // for vtkNew.h
-
+#include "Export.h"
 #include <functional>  // for std::hash
 #include <type_traits> // for is_base_of
 #include <utility>     // for std::move

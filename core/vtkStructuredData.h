@@ -46,7 +46,7 @@ using vtkConstantArray = vtkImplicitArray<vtkConstantImplicitBackend<Type>>;
 #define VTK_XYZ_GRID 8
 #define VTK_EMPTY 9
 
-class vtkStructuredData : public vtkObject
+class CORE_EXPORTS vtkStructuredData : public vtkObject
 {
 public:
   vtkTypeMacro(vtkStructuredData, vtkObject);

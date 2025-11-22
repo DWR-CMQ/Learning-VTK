@@ -34,7 +34,7 @@ class vtkInformationIntegerKey;
 class vtkInformationDoubleVectorKey;
 class vtkShaderProperty;
 
-class VTK_MARSHALAUTO vtkProp : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkProp : public vtkObject
 {
 public:
   vtkTypeMacro(vtkProp, vtkObject);

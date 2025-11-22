@@ -15,7 +15,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkBitArray;
-class vtkBitArrayIterator : public vtkArrayIterator
+class CORE_EXPORTS vtkBitArrayIterator : public vtkArrayIterator
 {
 public:
   static vtkBitArrayIterator* New();

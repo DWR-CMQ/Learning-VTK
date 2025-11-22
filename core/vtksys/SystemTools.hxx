@@ -5,7 +5,7 @@
 
 #include "Configure.hxx"
 #include "Status.hxx"
-
+#include "../Export.h"
 #include <iosfwd>
 #include <map>
 #include <string>
@@ -49,7 +49,7 @@ class SystemToolsStatic;
  * \brief Use to make sure SystemTools is initialized before it is used
  * and is the last static object destroyed
  */
-class SystemToolsManager
+class CORE_EXPORTS SystemToolsManager
 {
 public:
   SystemToolsManager();
@@ -62,7 +62,13 @@ public:
 // This instance will show up in any translation unit that uses
 // SystemTools. It will make sure SystemTools is initialized
 // before it is used and is the last static object destroyed.
-static SystemToolsManager SystemToolsManagerInstance;
+//static SystemToolsManager SystemToolsManagerInstance;
+
+SystemToolsManager& GetSystemToolsManagerInstance()
+{
+    static SystemToolsManager instance;
+    return instance;
+}
 
 // Flags for use with TestFileAccess.  Use a typedef in case any operating
 // system in the future needs a special type.  These are flags that may be
@@ -85,7 +91,7 @@ static const TestFilePermissions TEST_FILE_EXECUTE = X_OK;
 /** \class SystemTools
  * \brief A collection of useful platform-independent system functions.
  */
-class SystemTools
+class CORE_EXPORTS SystemTools
 {
 public:
   /** -----------------------------------------------------------------
@@ -1001,7 +1007,8 @@ private:
    */
   SystemToolsManager* GetSystemToolsManager()
   {
-    return &SystemToolsManagerInstance;
+    //return &SystemToolsManagerInstance;
+      return &GetSystemToolsManagerInstance();
   }
 
   friend class SystemToolsStatic;

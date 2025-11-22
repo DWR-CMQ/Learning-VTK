@@ -24,7 +24,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderWindow;
 
-class VTK_MARSHALAUTO vtkLightsPass : public vtkRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkLightsPass : public vtkRenderPass
 {
 public:
   static vtkLightsPass* New();

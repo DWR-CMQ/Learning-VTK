@@ -29,7 +29,7 @@ union vtkFourByteUnion
 class vtkCamera;
 class vtkProp3D;
 
-class vtkOpenGLVertexBufferObject : public vtkOpenGLBufferObject
+class CORE_EXPORTS vtkOpenGLVertexBufferObject : public vtkOpenGLBufferObject
 {
 public:
   static vtkOpenGLVertexBufferObject* New();

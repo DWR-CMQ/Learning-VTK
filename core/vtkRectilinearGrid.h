@@ -36,7 +36,7 @@ class vtkDataArray;
 class vtkStructuredCellArray;
 class vtkPoints;
 
-class vtkRectilinearGrid : public vtkDataSet
+class CORE_EXPORTS vtkRectilinearGrid : public vtkDataSet
 {
 public:
   static vtkRectilinearGrid* New();

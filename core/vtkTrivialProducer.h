@@ -21,7 +21,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataObject;
 
-class VTK_MARSHALAUTO vtkTrivialProducer : public vtkAlgorithm
+class CORE_EXPORTS VTK_MARSHALAUTO vtkTrivialProducer : public vtkAlgorithm
 {
 public:
   static vtkTrivialProducer* New();

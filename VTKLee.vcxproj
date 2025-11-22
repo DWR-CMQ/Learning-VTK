@@ -24,6 +24,7 @@
     <ProjectGuid>{04a02340-a287-4415-a47a-957539196858}</ProjectGuid>
     <RootNamespace>VTKLee</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <ProjectName>G217</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -40,7 +41,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -80,6 +81,7 @@
     <LinkIncremental>true</LinkIncremental>
     <ExternalIncludePath>core\vtkkwiml;core\vtknlohmannjson;core;core\pugixml;core\vtkpegtl;core\vtksys;core\vtkjpeg;3dparty\include;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>3dparty\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>G217</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -116,11 +118,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>false</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;CommonDataModel_EXPORTS;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;GLAD_API_CALL_EXPORT;jpeg_EXPORTS;IOImage_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;CommonDataModel_EXPORTS;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;GLAD_API_CALL_EXPORT;jpeg_EXPORTS;IOImage_EXPORTS;Core_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <OpenMPSupport>true</OpenMPSupport>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -759,7 +762,6 @@
     <ClCompile Include="core\vtkXMLDataParser.cxx" />
     <ClCompile Include="core\vtkXMLParser.cxx" />
     <ClCompile Include="core\vtkXMLUtilities.cxx" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\BlueNoiseTexture64x64.h" />
@@ -770,6 +772,7 @@
     <ClInclude Include="core\DICOMParser.h" />
     <ClInclude Include="core\DICOMParserMap.h" />
     <ClInclude Include="core\DICOMTypes.h" />
+    <ClInclude Include="core\Export.h" />
     <ClInclude Include="core\pugixml\vtkpugixml\src\pugiconfig.hpp" />
     <ClInclude Include="core\pugixml\vtkpugixml\src\pugixml.hpp" />
     <ClInclude Include="core\pugixml\vtkpugixml\src\vtk_pugixml_mangle.h" />

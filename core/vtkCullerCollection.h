@@ -21,7 +21,7 @@
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkCullerCollection : public vtkCollection
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCullerCollection : public vtkCollection
 {
 public:
   static vtkCullerCollection* New();

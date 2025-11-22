@@ -26,7 +26,7 @@ class vtkProp;
 class vtkFrameBufferObjectBase;
 class vtkInformation;
 
-class vtkRenderState
+class CORE_EXPORTS vtkRenderState
 {
 public:
   /**

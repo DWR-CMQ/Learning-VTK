@@ -12,7 +12,7 @@
 #include "vtkOpenGLGPUVolumeRayCastMapper.h"
 //#include "vtkOpenGLProjectedTetrahedraMapper.h"
 #include "vtkOpenGLRayCastImageDisplayHelper.h"
-
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 
@@ -45,7 +45,7 @@ void vtkRenderingVolumeOpenGL2ObjectFactory::PrintSelf(ostream &os, vtkIndent in
 // Registration of object factories.
 static unsigned int vtkRenderingVolumeOpenGL2Count = 0;
 
-void vtkRenderingVolumeOpenGL2_AutoInit_Construct()
+CORE_EXPORTS void vtkRenderingVolumeOpenGL2_AutoInit_Construct()
 {
   if(++vtkRenderingVolumeOpenGL2Count == 1)
   {

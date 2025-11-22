@@ -28,13 +28,14 @@
 #include "vtkRenderPass.h"
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLFramebufferObject;
 class vtkOpenGLHelper;
 class vtkTextureObject;
 
-class VTK_MARSHALAUTO vtkSSAAPass : public vtkRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkSSAAPass : public vtkRenderPass
 {
 public:
   static vtkSSAAPass* New();

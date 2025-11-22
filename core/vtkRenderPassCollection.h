@@ -22,7 +22,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderPass;
 
-class VTK_MARSHALAUTO vtkRenderPassCollection : public vtkCollection
+class CORE_EXPORTS VTK_MARSHALAUTO vtkRenderPassCollection : public vtkCollection
 {
 public:
   static vtkRenderPassCollection* New();

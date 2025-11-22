@@ -35,6 +35,7 @@
 #include "vtkCellType.h"    // Needed to define cell types
 #include "vtkDeprecation.h" // For VTK_DEPRECATED_IN_9_4_0
 #include "vtkIdList.h"      // Needed for inline methods
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCellArray;
@@ -44,7 +45,7 @@ class vtkPointData;
 class vtkIncrementalPointLocator;
 class vtkPoints;
 
-class  vtkCell : public vtkObject
+class CORE_EXPORTS vtkCell : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCell, vtkObject);

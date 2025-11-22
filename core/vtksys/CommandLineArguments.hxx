@@ -5,7 +5,7 @@
 
 #include <vtksys/Configure.h>
 #include <vtksys/Configure.hxx>
-
+#include "../Export.h"
 #include <string>
 #include <vector>
 
@@ -56,7 +56,7 @@ struct CommandLineArgumentsCallbackStructure;
  *
  */
 
-class CommandLineArguments
+class CORE_EXPORTS CommandLineArguments
 {
 public:
   CommandLineArguments();

@@ -29,7 +29,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderWindow;
 class vtkOpenGLExtensionManager;
 
-class vtkPixelBufferObject : public vtkObject
+class CORE_EXPORTS vtkPixelBufferObject : public vtkObject
 {
 public:
   // Usage values.

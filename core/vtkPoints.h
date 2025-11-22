@@ -20,7 +20,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkIdList;
 
-class VTK_MARSHALAUTO vtkPoints : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPoints : public vtkObject
 {
 public:
   static vtkPoints* New(int dataType);

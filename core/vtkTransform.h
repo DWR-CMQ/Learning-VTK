@@ -41,7 +41,7 @@
 #include "vtkMatrix4x4.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkTransform : public vtkLinearTransform
+class CORE_EXPORTS VTK_MARSHALAUTO vtkTransform : public vtkLinearTransform
 {
 public:
   static vtkTransform* New();

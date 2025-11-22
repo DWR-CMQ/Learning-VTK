@@ -21,7 +21,7 @@ typedef vtksys::DynamicLoader::LibraryHandle vtkLibHandle;
 typedef vtksys::DynamicLoader::SymbolPointer vtkSymbolPointer;
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkDynamicLoader : public vtkObject
+class CORE_EXPORTS vtkDynamicLoader : public vtkObject
 {
 public:
   static vtkDynamicLoader* New();

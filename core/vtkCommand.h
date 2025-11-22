@@ -380,7 +380,7 @@
 
 // The superclass that all commands should be subclasses of
 VTK_ABI_NAMESPACE_BEGIN
-class vtkCommand : public vtkObjectBase
+class CORE_EXPORTS vtkCommand : public vtkObjectBase
 {
 public:
   vtkBaseTypeMacro(vtkCommand, vtkObjectBase);

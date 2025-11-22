@@ -46,7 +46,7 @@ class vtkDataArray;
 
 class vtkAbstractTransform;
 
-class  vtkImplicitFunction : public vtkObject
+class CORE_EXPORTS vtkImplicitFunction : public vtkObject
 {
 public:
   vtkTypeMacro(vtkImplicitFunction, vtkObject);

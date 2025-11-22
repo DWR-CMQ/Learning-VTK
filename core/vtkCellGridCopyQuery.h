@@ -103,7 +103,7 @@ class vtkCellAttribute;
 class vtkCellGrid;
 class vtkIdList;
 
-class  vtkCellGridCopyQuery : public vtkCellGridQuery
+class CORE_EXPORTS vtkCellGridCopyQuery : public vtkCellGridQuery
 {
 public:
   static vtkCellGridCopyQuery* New();

@@ -39,7 +39,7 @@ class vtkCellMetadata;
 class vtkDataSetAttributes;
 class vtkInformationIntegerVectorKey;
 
-class vtkCellGrid : public vtkDataObject
+class CORE_EXPORTS vtkCellGrid : public vtkDataObject
 {
 public:
   using CellTypeId = vtkStringToken;

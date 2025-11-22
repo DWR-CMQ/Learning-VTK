@@ -12,13 +12,13 @@
 #define vtkCellGridBoundsQuery_h
 
 #include "vtkCellGridQuery.h"
-
+#include "Export.h"
 #include <array> // For Bounds ivar.
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkBoundingBox;
 
-class  vtkCellGridBoundsQuery : public vtkCellGridQuery
+class CORE_EXPORTS vtkCellGridBoundsQuery : public vtkCellGridQuery
 {
 public:
   static vtkCellGridBoundsQuery* New();

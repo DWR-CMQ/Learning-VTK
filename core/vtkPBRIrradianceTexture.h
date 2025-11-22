@@ -22,7 +22,7 @@ class vtkOpenGLRenderWindow;
 class vtkOpenGLTexture;
 class vtkRenderWindow;
 
-class VTK_MARSHALAUTO vtkPBRIrradianceTexture : public vtkOpenGLTexture
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPBRIrradianceTexture : public vtkOpenGLTexture
 {
 public:
   static vtkPBRIrradianceTexture* New();

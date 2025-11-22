@@ -68,7 +68,7 @@ class vtkSelection;
 class vtkUnsignedCharArray;
 class vtkWindow;
 
-class VTK_MARSHALAUTO vtkMapper : public vtkAbstractMapper3D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkMapper : public vtkAbstractMapper3D
 {
 public:
   vtkTypeMacro(vtkMapper, vtkAbstractMapper3D);

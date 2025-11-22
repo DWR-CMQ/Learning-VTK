@@ -21,7 +21,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataObject;
 
-class vtkDataObjectTypes : public vtkObject
+class CORE_EXPORTS vtkDataObjectTypes : public vtkObject
 {
 public:
   static vtkDataObjectTypes* New();

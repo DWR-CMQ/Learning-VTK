@@ -21,7 +21,7 @@
 #include "vtkPoints.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkPointsProjectedHull : public vtkPoints
+class CORE_EXPORTS vtkPointsProjectedHull : public vtkPoints
 {
   vtkTypeMacro(vtkPointsProjectedHull, vtkPoints);
 

@@ -29,7 +29,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkMatrix3x3;
 class vtkMatrix4x4;
 
-class vtkUniforms : public vtkObject
+class CORE_EXPORTS vtkUniforms : public vtkObject
 {
 public:
   static vtkUniforms* New();

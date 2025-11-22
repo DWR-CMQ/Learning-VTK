@@ -26,7 +26,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkMapper2D;
 class vtkProperty2D;
 
-class VTK_MARSHALAUTO vtkActor2D : public vtkProp
+class CORE_EXPORTS VTK_MARSHALAUTO vtkActor2D : public vtkProp
 {
 public:
   void PrintSelf(ostream& os, vtkIndent indent) override;

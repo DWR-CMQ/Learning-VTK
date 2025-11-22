@@ -31,7 +31,7 @@ class vtkPolyData;
 class vtkScalarsToColors;
 class vtkUnsignedCharArray;
 
-class VTK_MARSHALAUTO vtkPolyDataMapper2D : public vtkMapper2D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPolyDataMapper2D : public vtkMapper2D
 {
 public:
   vtkTypeMacro(vtkPolyDataMapper2D, vtkMapper2D);

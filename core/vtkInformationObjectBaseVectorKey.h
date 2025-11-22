@@ -16,11 +16,12 @@
 #include "vtkCommonCoreModule.h"            // For export macro
 #include "vtkCommonInformationKeyManager.h" // Manage instances of this type.
 #include "vtkInformationKey.h"
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkInformationObjectBaseVectorValue;
 
-class vtkInformationObjectBaseVectorKey : public vtkInformationKey
+class CORE_EXPORTS vtkInformationObjectBaseVectorKey : public vtkInformationKey
 {
 public:
   vtkTypeMacro(vtkInformationObjectBaseVectorKey, vtkInformationKey);

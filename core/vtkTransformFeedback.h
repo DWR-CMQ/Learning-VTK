@@ -26,7 +26,7 @@ class vtkShaderProgram;
 class vtkWindow;
 class vtkOpenGLBufferObject;
 
-class vtkTransformFeedback : public vtkObject
+class CORE_EXPORTS vtkTransformFeedback : public vtkObject
 {
 public:
   static vtkTransformFeedback* New();

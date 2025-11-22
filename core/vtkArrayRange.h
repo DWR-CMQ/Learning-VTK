@@ -26,7 +26,7 @@
 #include "vtkSystemIncludes.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkArrayRange
+class CORE_EXPORTS vtkArrayRange
 {
 public:
   typedef vtkArrayCoordinates::CoordinateT CoordinateT;

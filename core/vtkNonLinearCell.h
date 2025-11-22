@@ -22,7 +22,7 @@
 #include "vtkCommonDataModelModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkNonLinearCell : public vtkCell
+class CORE_EXPORTS vtkNonLinearCell : public vtkCell
 {
 public:
   vtkTypeMacro(vtkNonLinearCell, vtkCell);

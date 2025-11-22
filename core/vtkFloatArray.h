@@ -21,7 +21,7 @@
 #define vtkDataArray vtkAOSDataArrayTemplate<float>
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-class vtkFloatArray : public vtkDataArray
+class CORE_EXPORTS vtkFloatArray : public vtkDataArray
 {
 public:
   vtkTypeMacro(vtkFloatArray, vtkDataArray);

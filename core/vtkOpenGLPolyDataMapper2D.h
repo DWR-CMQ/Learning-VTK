@@ -37,7 +37,7 @@ class vtkRenderer;
 class vtkTextureObject;
 class vtkTransform;
 
-class VTK_MARSHALAUTO vtkOpenGLPolyDataMapper2D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLPolyDataMapper2D
   : public vtkPolyDataMapper2D
 {
 public:

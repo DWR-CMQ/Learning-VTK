@@ -59,12 +59,13 @@
 #include "vtkCellArray.h"    // Needed for inline methods
 #include "vtkIdList.h"       // Needed for inline methods
 #include "vtkSmartPointer.h" // For vtkSmartPointer
+#include "Export.h"
 
 #include <cassert>     // for assert
 #include <type_traits> // for std::enable_if
 
 VTK_ABI_NAMESPACE_BEGIN
-class  vtkCellArrayIterator : public vtkObject
+class CORE_EXPORTS vtkCellArrayIterator : public vtkObject
 {
 public:
   ///@{

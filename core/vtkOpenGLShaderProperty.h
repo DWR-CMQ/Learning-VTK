@@ -27,7 +27,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLUniforms;
 
-class VTK_MARSHALAUTO vtkOpenGLShaderProperty : public vtkShaderProperty
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLShaderProperty : public vtkShaderProperty
 {
 public:
   vtkTypeMacro(vtkOpenGLShaderProperty, vtkShaderProperty);

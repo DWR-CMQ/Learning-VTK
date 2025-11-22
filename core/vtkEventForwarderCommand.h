@@ -20,7 +20,7 @@
 #include "vtkCommonCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkEventForwarderCommand : public vtkCommand
+class CORE_EXPORTS vtkEventForwarderCommand : public vtkCommand
 {
 public:
   vtkTypeMacro(vtkEventForwarderCommand, vtkCommand);

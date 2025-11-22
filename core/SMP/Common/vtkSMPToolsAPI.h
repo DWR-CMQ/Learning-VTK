@@ -35,7 +35,7 @@ VTK_ABI_NAMESPACE_BEGIN
 
 using vtkSMPToolsDefaultImpl = vtkSMPToolsImpl<DefaultBackend>;
 
-class vtkSMPToolsAPI
+class CORE_EXPORTS vtkSMPToolsAPI
 {
 public:
   //--------------------------------------------------------------------------------
@@ -298,7 +298,7 @@ private:
 };
 
 //--------------------------------------------------------------------------------
-class vtkSMPToolsAPIInitialize
+class CORE_EXPORTS vtkSMPToolsAPIInitialize
 {
 public:
   vtkSMPToolsAPIInitialize();

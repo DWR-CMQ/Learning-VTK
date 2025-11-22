@@ -24,7 +24,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkBoundingBox;
 
-class vtkBox : public vtkImplicitFunction
+class CORE_EXPORTS vtkBox : public vtkImplicitFunction
 {
 public:
   vtkTypeMacro(vtkBox, vtkImplicitFunction);

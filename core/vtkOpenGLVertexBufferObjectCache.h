@@ -24,7 +24,7 @@ class vtkOpenGLVertexBufferObject;
 class vtkDataArray;
 class vtkTimeStamp;
 
-class vtkOpenGLVertexBufferObjectCache : public vtkObject
+class CORE_EXPORTS vtkOpenGLVertexBufferObjectCache : public vtkObject
 {
 public:
   static vtkOpenGLVertexBufferObjectCache* New();

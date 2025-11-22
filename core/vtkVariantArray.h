@@ -31,7 +31,7 @@ class access;
 VTK_ABI_NAMESPACE_BEGIN
 class vtkVariantArrayLookup;
 
-class vtkVariantArray : public vtkAbstractArray
+class CORE_EXPORTS vtkVariantArray : public vtkAbstractArray
 {
 
   /// Friendship required for Boost serialization

@@ -22,7 +22,7 @@
 #include "vtkProp.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkPropCollection : public vtkCollection
+class CORE_EXPORTS VTK_MARSHALAUTO vtkPropCollection : public vtkCollection
 {
 public:
   static vtkPropCollection* New();

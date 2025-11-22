@@ -25,7 +25,7 @@
 #include "vtkRenderingVolumeModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkFixedPointRayCastImage : public vtkObject
+class CORE_EXPORTS vtkFixedPointRayCastImage : public vtkObject
 {
 public:
   static vtkFixedPointRayCastImage* New();

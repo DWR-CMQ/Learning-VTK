@@ -33,7 +33,7 @@ class vtkMatrix4x4;
 class vtkRenderer;
 class vtkTransform;
 
-class VTK_MARSHALAUTO vtkProp3D : public vtkProp
+class CORE_EXPORTS VTK_MARSHALAUTO vtkProp3D : public vtkProp
 {
 public:
   vtkTypeMacro(vtkProp3D, vtkProp);

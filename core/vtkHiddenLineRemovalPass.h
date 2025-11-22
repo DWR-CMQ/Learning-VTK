@@ -23,7 +23,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
 class vtkViewport;
 
-class VTK_MARSHALAUTO vtkHiddenLineRemovalPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkHiddenLineRemovalPass
   : public vtkOpenGLRenderPass
 {
 public:

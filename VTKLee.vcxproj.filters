@@ -54,9 +54,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="core\DICOMAppHelper.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -3945,6 +3942,9 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkFiltersCoreModule.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Export.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>

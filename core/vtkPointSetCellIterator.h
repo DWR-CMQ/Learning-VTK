@@ -17,7 +17,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkPoints;
 class vtkPointSet;
 
-class vtkPointSetCellIterator : public vtkCellIterator
+class CORE_EXPORTS vtkPointSetCellIterator : public vtkCellIterator
 {
 public:
   static vtkPointSetCellIterator* New();

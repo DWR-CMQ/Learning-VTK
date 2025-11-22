@@ -26,7 +26,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkInformationKey;
 
-class vtkFilteringInformationKeyManager
+class CORE_EXPORTS vtkFilteringInformationKeyManager
 {
 public:
   vtkFilteringInformationKeyManager();

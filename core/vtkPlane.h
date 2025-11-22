@@ -19,7 +19,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkPoints; // forward declaration
 
-class  vtkPlane : public vtkImplicitFunction
+class CORE_EXPORTS vtkPlane : public vtkImplicitFunction
 {
 public:
   /**

@@ -14,13 +14,14 @@
 #include "vtkCamera.h"
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderer;
 class vtkMatrix3x3;
 class vtkMatrix4x4;
 
-class VTK_MARSHALAUTO vtkOpenGLCamera : public vtkCamera
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLCamera : public vtkCamera
 {
 public:
   static vtkOpenGLCamera* New();

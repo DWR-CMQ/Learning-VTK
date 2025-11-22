@@ -18,7 +18,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkObjectFactory;
 
-class vtkOverrideInformation : public vtkObject
+class CORE_EXPORTS vtkOverrideInformation : public vtkObject
 {
 public:
   static vtkOverrideInformation* New();

@@ -21,9 +21,10 @@
 
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 #include "vtkType.h"                   // For vtkTypeUint64, etc
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkOpenGLRenderTimer
+class CORE_EXPORTS vtkOpenGLRenderTimer
 {
 public:
   vtkOpenGLRenderTimer();

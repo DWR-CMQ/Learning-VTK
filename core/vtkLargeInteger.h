@@ -12,7 +12,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_WRAPEXCLUDE vtkLargeInteger
+class CORE_EXPORTS VTK_WRAPEXCLUDE vtkLargeInteger
 {
 public:
   vtkLargeInteger();

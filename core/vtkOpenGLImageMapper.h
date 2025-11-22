@@ -26,7 +26,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkActor2D;
 class vtkTexturedActor2D;
 
-class VTK_MARSHALAUTO vtkOpenGLImageMapper : public vtkImageMapper
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLImageMapper : public vtkImageMapper
 {
 public:
   static vtkOpenGLImageMapper* New();

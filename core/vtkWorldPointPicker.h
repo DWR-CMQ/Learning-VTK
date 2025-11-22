@@ -24,7 +24,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkWorldPointPicker : public vtkAbstractPicker
+class CORE_EXPORTS vtkWorldPointPicker : public vtkAbstractPicker
 {
 public:
   static vtkWorldPointPicker* New();

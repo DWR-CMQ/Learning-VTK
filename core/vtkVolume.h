@@ -22,6 +22,7 @@
 #include "vtkProp3D.h"
 #include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderer;
@@ -31,7 +32,7 @@ class vtkWindow;
 class vtkVolumeProperty;
 class vtkAbstractVolumeMapper;
 
-class VTK_MARSHALAUTO vtkVolume : public vtkProp3D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkVolume : public vtkProp3D
 {
 public:
   vtkTypeMacro(vtkVolume, vtkProp3D);

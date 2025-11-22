@@ -26,7 +26,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkLine;
 class vtkDoubleArray;
 
-class  vtkQuadraticEdge : public vtkNonLinearCell
+class CORE_EXPORTS vtkQuadraticEdge : public vtkNonLinearCell
 {
 public:
   static vtkQuadraticEdge* New();

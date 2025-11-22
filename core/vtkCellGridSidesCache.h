@@ -30,7 +30,7 @@ class vtkIdTypeArray;
  * any others that process the same input (since it is stored in a
  * cache available to them).
  */
-class  vtkCellGridSidesCache : public vtkObject
+class CORE_EXPORTS vtkCellGridSidesCache : public vtkObject
 {
 public:
   static vtkCellGridSidesCache* New();

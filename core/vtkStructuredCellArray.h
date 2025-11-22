@@ -22,13 +22,13 @@
 #include "vtkAbstractCellArray.h"
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkSmartPointer.h"          // For vtkSmartPointer
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 
 template <typename T>
 class vtkImplicitArray;
 
-class vtkStructuredCellArray : public vtkAbstractCellArray
+class CORE_EXPORTS vtkStructuredCellArray : public vtkAbstractCellArray
 {
 public:
   static vtkStructuredCellArray* New();

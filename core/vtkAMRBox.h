@@ -17,9 +17,10 @@
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkObject.h"
 #include "vtkStructuredData.h" // For VTK_XYZ_GRID definition
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkAMRBox
+class CORE_EXPORTS vtkAMRBox
 {
 public:
   /**

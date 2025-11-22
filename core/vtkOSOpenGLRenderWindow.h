@@ -25,7 +25,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkIdList;
 class vtkOSOpenGLRenderWindowInternal;
 
-class VTK_MARSHALAUTO vtkOSOpenGLRenderWindow
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOSOpenGLRenderWindow
   : public vtkOpenGLRenderWindow
 {
 public:

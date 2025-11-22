@@ -26,7 +26,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkCamera;
 class vtkPoints;
 
-class VTK_MARSHALAUTO vtkImageSliceMapper : public vtkImageMapper3D
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageSliceMapper : public vtkImageMapper3D
 {
 public:
   static vtkImageSliceMapper* New();

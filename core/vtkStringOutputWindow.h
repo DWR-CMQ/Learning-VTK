@@ -17,7 +17,7 @@
 #include <sstream> // for ivar
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkStringOutputWindow : public vtkOutputWindow
+class CORE_EXPORTS vtkStringOutputWindow : public vtkOutputWindow
 {
 public:
   vtkTypeMacro(vtkStringOutputWindow, vtkOutputWindow);

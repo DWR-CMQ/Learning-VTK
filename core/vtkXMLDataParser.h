@@ -25,7 +25,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkInputStream;
 class vtkDataCompressor;
 
-class vtkXMLDataParser : public vtkXMLParser
+class CORE_EXPORTS vtkXMLDataParser : public vtkXMLParser
 {
 public:
   vtkTypeMacro(vtkXMLDataParser, vtkXMLParser);

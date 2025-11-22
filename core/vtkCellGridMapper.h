@@ -29,7 +29,7 @@ class vtkCellAttribute;
 class vtkDataObject;
 class vtkRenderer;
 
-class vtkCellGridMapper : public vtkMapper
+class CORE_EXPORTS vtkCellGridMapper : public vtkMapper
 {
 public:
   static vtkCellGridMapper* New();

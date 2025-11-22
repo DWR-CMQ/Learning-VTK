@@ -21,7 +21,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkInformation;
 class vtkInformationVectorInternals;
 
-class vtkInformationVector : public vtkObject
+class CORE_EXPORTS vtkInformationVector : public vtkObject
 {
 public:
   static vtkInformationVector* New();

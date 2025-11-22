@@ -25,7 +25,7 @@ class vtkOpenGLRenderWindow;
 class vtkOpenGLVertexArrayObject;
 class vtkShaderProgram;
 
-class vtkOpenGLRenderUtilities : public vtkObject
+class CORE_EXPORTS vtkOpenGLRenderUtilities : public vtkObject
 {
 public:
   vtkTypeMacro(vtkOpenGLRenderUtilities, vtkObject);

@@ -26,7 +26,7 @@
 #define vtkDataArray vtkAOSDataArrayTemplate<long>
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-class vtkLongArray : public vtkDataArray
+class CORE_EXPORTS vtkLongArray : public vtkDataArray
 {
 public:
   vtkTypeMacro(vtkLongArray, vtkDataArray);

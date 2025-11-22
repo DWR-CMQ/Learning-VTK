@@ -16,7 +16,7 @@ class vtkOpenGLRenderTimer;
 /**
  * @brief OpenGL2 override for vtkRenderTimerLog.
  */
-class vtkOpenGLRenderTimerLog : public vtkRenderTimerLog
+class CORE_EXPORTS vtkOpenGLRenderTimerLog : public vtkRenderTimerLog
 {
 public:
   struct OGLEvent

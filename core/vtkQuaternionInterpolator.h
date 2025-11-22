@@ -50,7 +50,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkQuaterniond;
 class vtkQuaternionList;
 
-class vtkQuaternionInterpolator : public vtkObject
+class CORE_EXPORTS vtkQuaternionInterpolator : public vtkObject
 {
 public:
   vtkTypeMacro(vtkQuaternionInterpolator, vtkObject);

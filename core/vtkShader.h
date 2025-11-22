@@ -24,7 +24,7 @@
  */
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkShader : public vtkObject
+class CORE_EXPORTS vtkShader : public vtkObject
 {
 public:
   static vtkShader* New();

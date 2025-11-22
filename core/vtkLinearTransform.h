@@ -26,7 +26,7 @@
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkLinearTransform : public vtkHomogeneousTransform
+class CORE_EXPORTS VTK_MARSHALAUTO vtkLinearTransform : public vtkHomogeneousTransform
 {
 public:
   vtkTypeMacro(vtkLinearTransform, vtkHomogeneousTransform);

@@ -69,7 +69,7 @@ VTK_ABI_NAMESPACE_END
 } // end namespace vtk_detail
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkMath : public vtkObject
+class CORE_EXPORTS vtkMath : public vtkObject
 {
 public:
   static vtkMath* New();

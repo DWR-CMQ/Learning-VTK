@@ -24,7 +24,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkImageData;
 class vtkMultiThreader;
 
-class vtkThreadedImageAlgorithm : public vtkImageAlgorithm
+class CORE_EXPORTS vtkThreadedImageAlgorithm : public vtkImageAlgorithm
 {
 public:
   vtkTypeMacro(vtkThreadedImageAlgorithm, vtkImageAlgorithm);

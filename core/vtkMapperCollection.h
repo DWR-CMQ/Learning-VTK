@@ -21,7 +21,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkMapperCollection : public vtkCollection
+class CORE_EXPORTS vtkMapperCollection : public vtkCollection
 {
 public:
   static vtkMapperCollection* New();

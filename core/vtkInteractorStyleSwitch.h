@@ -34,7 +34,7 @@ class vtkInteractorStyleTrackballActor;
 class vtkInteractorStyleTrackballCamera;
 class vtkInteractorStyleMultiTouchCamera;
 
-class VTK_MARSHALMANUAL vtkInteractorStyleSwitch
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkInteractorStyleSwitch
   : public vtkInteractorStyleSwitchBase
 {
 public:

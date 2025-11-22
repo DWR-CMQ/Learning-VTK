@@ -24,7 +24,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLRenderWindow;
 
-class vtkTextureUnitManager : public vtkObject
+class CORE_EXPORTS vtkTextureUnitManager : public vtkObject
 {
 public:
   vtkTypeMacro(vtkTextureUnitManager, vtkObject);

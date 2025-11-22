@@ -14,7 +14,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkBase64Utilities : public vtkObject
+class CORE_EXPORTS vtkBase64Utilities : public vtkObject
 {
 public:
   static vtkBase64Utilities* New();

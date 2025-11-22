@@ -19,7 +19,7 @@
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkGenericOpenGLRenderWindow : public vtkOpenGLRenderWindow
+class CORE_EXPORTS vtkGenericOpenGLRenderWindow : public vtkOpenGLRenderWindow
 {
 public:
   static vtkGenericOpenGLRenderWindow* New();

@@ -4,7 +4,7 @@
 #define vtksys_DynamicLoader_hxx
 
 #include <vtksys/Configure.hxx>
-
+#include "../Export.h"
 #include <string>
 
 #if defined(__hpux)
@@ -42,7 +42,7 @@ namespace vtksys {
  * condition so that we can include the correct declaration (POSIX)
  */
 
-class DynamicLoader
+class CORE_EXPORTS DynamicLoader
 {
 public:
 // Ugly stuff for library handles

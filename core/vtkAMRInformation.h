@@ -33,7 +33,7 @@ class vtkIntArray;
 class vtkDoubleArray;
 //class vtkAMRIndexIterator;
 
-class vtkAMRInformation : public vtkObject
+class CORE_EXPORTS vtkAMRInformation : public vtkObject
 {
 public:
   static vtkAMRInformation* New();

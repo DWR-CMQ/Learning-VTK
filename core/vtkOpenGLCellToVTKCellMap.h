@@ -20,8 +20,8 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCellArray;
 class vtkPoints;
-
-class vtkOpenGLCellToVTKCellMap : public vtkObject
+ 
+class CORE_EXPORTS vtkOpenGLCellToVTKCellMap : public vtkObject
 {
 public:
   static vtkOpenGLCellToVTKCellMap* New();

@@ -30,7 +30,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkFXAAOptions;
 
-class VTK_MARSHALAUTO vtkOpenGLFXAAPass : public vtkImageProcessingPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLFXAAPass : public vtkImageProcessingPass
 {
 public:
   static vtkOpenGLFXAAPass* New();

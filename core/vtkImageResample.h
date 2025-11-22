@@ -17,7 +17,7 @@
 //#include "vtkImagingCoreModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkImageResample : public vtkImageReslice
+class CORE_EXPORTS vtkImageResample : public vtkImageReslice
 {
 public:
   static vtkImageResample* New();

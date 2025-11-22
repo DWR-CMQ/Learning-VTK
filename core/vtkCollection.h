@@ -39,7 +39,7 @@ typedef void* vtkCollectionSimpleIterator;
 
 class vtkCollectionIterator;
 
-class VTK_MARSHALAUTO vtkCollection : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCollection : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCollection, vtkObject);

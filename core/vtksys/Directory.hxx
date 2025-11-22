@@ -5,7 +5,7 @@
 
 #include <vtksys/Configure.h>
 #include <vtksys/Status.hxx>
-
+#include "../Export.h"
 #include <cstddef>
 #include <string>
 
@@ -21,7 +21,7 @@ class DirectoryInternals;
  *
  * Directory currently works with Windows and Unix operating systems.
  */
-class Directory
+class CORE_EXPORTS Directory
 {
 public:
   Directory();

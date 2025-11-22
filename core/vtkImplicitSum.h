@@ -21,7 +21,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkDoubleArray;
 class vtkImplicitFunctionCollection;
 
-class vtkImplicitSum : public vtkImplicitFunction
+class CORE_EXPORTS vtkImplicitSum : public vtkImplicitFunction
 {
 public:
   static vtkImplicitSum* New();

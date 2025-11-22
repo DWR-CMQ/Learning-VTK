@@ -44,7 +44,7 @@ struct vtkLODProp3DEntry_t
 };
 using vtkLODProp3DEntry = struct vtkLODProp3DEntry_t;
 
-class vtkLODProp3D : public vtkProp3D
+class CORE_EXPORTS vtkLODProp3D : public vtkProp3D
 {
 public:
   /**

@@ -18,7 +18,7 @@
 #include "vtkSystemIncludes.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkTimeStamp
+class CORE_EXPORTS vtkTimeStamp
 {
 public:
   vtkTimeStamp() { this->ModifiedTime = 0; }

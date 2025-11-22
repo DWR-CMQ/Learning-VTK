@@ -16,6 +16,7 @@
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 #include "vtkWeakPointer.h"            // for render context
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkOpenGLBufferObject;
@@ -27,7 +28,7 @@ class vtkShaderProgram;
 class vtkWindow;
 class vtkGenericOpenGLResourceFreeCallback;
 
-class VTK_MARSHALAUTO vtkTextureObject : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkTextureObject : public vtkObject
 {
 public:
   // DepthTextureCompareFunction values.

@@ -31,7 +31,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkUnsignedCharArray;
 
-class vtkDataCompressor : public vtkObject
+class CORE_EXPORTS vtkDataCompressor : public vtkObject
 {
 public:
   vtkTypeMacro(vtkDataCompressor, vtkObject);

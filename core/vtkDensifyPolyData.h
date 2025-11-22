@@ -25,7 +25,7 @@
 #include "vtkPolyDataAlgorithm.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkDensifyPolyData : public vtkPolyDataAlgorithm
+class CORE_EXPORTS vtkDensifyPolyData : public vtkPolyDataAlgorithm
 {
 public:
   vtkTypeMacro(vtkDensifyPolyData, vtkPolyDataAlgorithm);

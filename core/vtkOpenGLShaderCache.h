@@ -21,7 +21,7 @@ class vtkShaderProgram;
 class vtkWindow;
 class vtkOpenGLRenderWindow;
 
-class vtkOpenGLShaderCache : public vtkObject
+class CORE_EXPORTS vtkOpenGLShaderCache : public vtkObject
 {
 public:
   static vtkOpenGLShaderCache* New();

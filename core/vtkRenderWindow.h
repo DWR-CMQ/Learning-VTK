@@ -35,6 +35,7 @@
 #include "vtkSmartPointer.h"        // For vtkSmartPointer
 #include "vtkWindow.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkFloatArray;
@@ -75,7 +76,7 @@ class vtkUnsignedCharArray;
 #define VTK_CURSOR_CROSSHAIR 10
 #define VTK_CURSOR_CUSTOM 11
 
-class VTK_MARSHALAUTO vtkRenderWindow : public vtkWindow
+class CORE_EXPORTS VTK_MARSHALAUTO vtkRenderWindow : public vtkWindow
 {
 public:
   vtkTypeMacro(vtkRenderWindow, vtkWindow);

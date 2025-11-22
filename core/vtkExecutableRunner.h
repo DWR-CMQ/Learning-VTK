@@ -23,7 +23,7 @@
  * `ExecuteInSystemShell` should be set to true.
  */
 VTK_ABI_NAMESPACE_BEGIN
-class vtkExecutableRunner : public vtkObject
+class CORE_EXPORTS vtkExecutableRunner : public vtkObject
 {
 public:
   static vtkExecutableRunner* New();

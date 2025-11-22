@@ -20,7 +20,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderWindow;
 class vtkTextureObject;
 
-class VTK_MARSHALAUTO vtkOpenGLTexture : public vtkTexture
+class CORE_EXPORTS VTK_MARSHALAUTO vtkOpenGLTexture : public vtkTexture
 {
 public:
   static vtkOpenGLTexture* New();

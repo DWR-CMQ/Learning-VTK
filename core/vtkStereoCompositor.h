@@ -21,7 +21,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkUnsignedCharArray;
 
-class vtkStereoCompositor : public vtkObject
+class CORE_EXPORTS vtkStereoCompositor : public vtkObject
 {
 public:
   static vtkStereoCompositor* New();

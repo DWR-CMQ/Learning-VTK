@@ -22,7 +22,7 @@
 #include "vtkCommonDataModelModule.h" // For export macro
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkGenericCell : public vtkCell
+class CORE_EXPORTS vtkGenericCell : public vtkCell
 {
 public:
   /**

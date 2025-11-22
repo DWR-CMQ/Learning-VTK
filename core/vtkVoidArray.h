@@ -16,7 +16,7 @@
 #include "vtkObject.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkVoidArray : public vtkObject
+class CORE_EXPORTS vtkVoidArray : public vtkObject
 {
 public:
   /**

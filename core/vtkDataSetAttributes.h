@@ -47,7 +47,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkLookupTable;
 
-class VTK_MARSHALMANUAL vtkDataSetAttributes : public vtkFieldData
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkDataSetAttributes : public vtkFieldData
 {
 public:
   /**

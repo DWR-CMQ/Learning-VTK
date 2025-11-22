@@ -40,7 +40,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkSelectionNode;
 class vtkSignedCharArray;
 
-class vtkSelection : public vtkDataObject
+class CORE_EXPORTS vtkSelection : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkSelection, vtkDataObject);

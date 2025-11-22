@@ -66,7 +66,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkGenericCell;
 class vtkPoints;
 
-class  vtkCellIterator : public vtkObject
+class CORE_EXPORTS vtkCellIterator : public vtkObject
 {
 public:
   void PrintSelf(ostream& os, vtkIndent indent) override;

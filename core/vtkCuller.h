@@ -24,7 +24,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
 class vtkRenderer;
 
-class VTK_MARSHALAUTO vtkCuller : public vtkObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkCuller : public vtkObject
 {
 public:
   vtkTypeMacro(vtkCuller, vtkObject);

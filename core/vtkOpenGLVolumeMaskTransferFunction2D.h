@@ -23,7 +23,7 @@ class vtkOpenGLRenderWindow;
  *
  * \sa vtkVolumeProperty::SetTransferFunction2D
  */
-class vtkOpenGLVolumeMaskTransferFunction2D
+class CORE_EXPORTS vtkOpenGLVolumeMaskTransferFunction2D
   : public vtkOpenGLVolumeLookupTable
 {
 public:

@@ -34,6 +34,7 @@
 #include "vtkNew.h"           // For vtkNew
 #include "vtkSmartPointer.h"  // For vtkSmartPointer
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include"Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCell;
@@ -47,7 +48,7 @@ class vtkPoints;
 class vtkUnsignedCharArray;
 class vtkCallbackCommand;
 
-class VTK_MARSHALAUTO vtkDataSet : public vtkDataObject
+class CORE_EXPORTS VTK_MARSHALAUTO vtkDataSet : public vtkDataObject
 {
 public:
   vtkTypeMacro(vtkDataSet, vtkDataObject);

@@ -16,6 +16,7 @@
 #include "DICOMCallback.h"
 #include "DICOMConfig.h"
 #include "DICOMTypes.h"
+#include "Export.h"
 
 #ifdef _MSC_VER
 #pragma warning(default : 4018)
@@ -41,7 +42,7 @@ struct DICOMTagInfo
 
 // Helper class use for ordering DICOM images based on different
 // (group, element) tags.
-class DICOMOrderingElements
+class CORE_EXPORTS DICOMOrderingElements
 {
 public:
   DICOMOrderingElements()

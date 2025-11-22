@@ -223,7 +223,7 @@ class vtkInformationStringVectorKey;
 class vtkProp;
 //class vtkTable;
 
-class vtkSelectionNode : public vtkObject
+class CORE_EXPORTS vtkSelectionNode : public vtkObject
 {
 public:
   vtkTypeMacro(vtkSelectionNode, vtkObject);

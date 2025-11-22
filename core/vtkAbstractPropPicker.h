@@ -54,6 +54,7 @@
 
 #include "vtkAbstractPicker.h"
 #include "vtkRenderingCoreModule.h" // For export macro
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
@@ -65,7 +66,7 @@ class vtkProp3D;
 class vtkAssemblyPath;
 class vtkActor2D;
 
-class vtkAbstractPropPicker : public vtkAbstractPicker
+class CORE_EXPORTS vtkAbstractPropPicker : public vtkAbstractPicker
 {
 public:
   vtkTypeMacro(vtkAbstractPropPicker, vtkAbstractPicker);

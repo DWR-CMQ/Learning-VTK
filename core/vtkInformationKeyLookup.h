@@ -20,7 +20,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkInformationKey;
 
-class vtkInformationKeyLookup : public vtkObject
+class CORE_EXPORTS vtkInformationKeyLookup : public vtkObject
 {
 public:
   static vtkInformationKeyLookup* New();

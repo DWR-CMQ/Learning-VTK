@@ -32,7 +32,7 @@
 #include "vtkWrappingHints.h" // For VTK_MARSHALMANUAL
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALMANUAL vtkMultiBlockDataSet : public vtkDataObjectTree
+class CORE_EXPORTS VTK_MARSHALMANUAL vtkMultiBlockDataSet : public vtkDataObjectTree
 {
 public:
   static vtkMultiBlockDataSet* New();

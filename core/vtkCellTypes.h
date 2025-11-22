@@ -35,7 +35,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkIntArray;
 
-class  vtkCellTypes : public vtkObject
+class CORE_EXPORTS vtkCellTypes : public vtkObject
 {
 public:
   static vtkCellTypes* New();

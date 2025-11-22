@@ -28,7 +28,7 @@ class vtkMatrix4x4;
 enum class vtkEventDataDevice;
 enum class vtkEventDataDeviceInput;
 
-class vtkRenderWindowInteractor3D : public vtkRenderWindowInteractor
+class CORE_EXPORTS vtkRenderWindowInteractor3D : public vtkRenderWindowInteractor
 {
 public:
   /**

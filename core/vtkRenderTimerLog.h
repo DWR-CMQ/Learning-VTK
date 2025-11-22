@@ -66,13 +66,13 @@
   } while (false)     /* Do-while loop prevents duplicate semicolon warnings */
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkRenderTimerLog : public vtkObject
+class CORE_EXPORTS vtkRenderTimerLog : public vtkObject
 {
 public:
   struct Frame;
 
   /** Container for a single timed event. */
-  struct Event
+  struct CORE_EXPORTS Event
   {
     /** Event name. */
     std::string Name;
@@ -107,7 +107,7 @@ public:
   };
 
   /** Container for a frame's events. */
-  struct Frame
+  struct CORE_EXPORTS Frame
   {
     std::vector<Event> Events;
 
@@ -123,7 +123,7 @@ public:
    * vtkRenderTimerLog::StartScopedEvent(name) is called, and end when the
    * returned object is destroyed, or ScopedEventLogger::Stop() is called.
    */
-  struct ScopedEventLogger
+  struct CORE_EXPORTS ScopedEventLogger
   {
     ScopedEventLogger()
       : Log(nullptr)

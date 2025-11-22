@@ -14,7 +14,7 @@
 
 VTK_ABI_NAMESPACE_BEGIN
 template <typename QueryClass>
-class vtkCellGridResponder : public vtkCellGridResponderBase
+class CORE_EXPORTS vtkCellGridResponder : public vtkCellGridResponderBase
 {
 public:
   vtkTypeMacro(vtkCellGridResponder<QueryClass>, vtkCellGridResponderBase);

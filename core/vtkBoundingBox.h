@@ -22,7 +22,7 @@
 VTK_ABI_NAMESPACE_BEGIN
 class vtkPoints;
 
-class  vtkBoundingBox
+class CORE_EXPORTS vtkBoundingBox
 {
 public:
   ///@{

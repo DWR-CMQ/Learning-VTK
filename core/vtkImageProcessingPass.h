@@ -25,7 +25,7 @@ class vtkDepthPeelingPassLayerList; // Pimpl
 class vtkOpenGLFramebufferObject;
 class vtkTextureObject;
 
-class VTK_MARSHALAUTO vtkImageProcessingPass : public vtkOpenGLRenderPass
+class CORE_EXPORTS VTK_MARSHALAUTO vtkImageProcessingPass : public vtkOpenGLRenderPass
 {
 public:
   vtkTypeMacro(vtkImageProcessingPass, vtkOpenGLRenderPass);

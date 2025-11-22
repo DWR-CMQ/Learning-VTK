@@ -19,7 +19,7 @@
 #include "vtkPointLocator.h"
 
 VTK_ABI_NAMESPACE_BEGIN
-class vtkMergePoints : public vtkPointLocator
+class CORE_EXPORTS vtkMergePoints : public vtkPointLocator
 {
 public:
   static vtkMergePoints* New();

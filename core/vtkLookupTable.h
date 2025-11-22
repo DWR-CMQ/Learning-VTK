@@ -55,7 +55,7 @@
 #define VTK_SCALE_LOG10 1
 
 VTK_ABI_NAMESPACE_BEGIN
-class VTK_MARSHALAUTO vtkLookupTable : public vtkScalarsToColors
+class CORE_EXPORTS VTK_MARSHALAUTO vtkLookupTable : public vtkScalarsToColors
 {
 public:
   ///@{

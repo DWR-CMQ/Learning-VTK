@@ -19,7 +19,7 @@
 #include "vtkPlane.h" // Needed for inline methods
 
 VTK_ABI_NAMESPACE_BEGIN
-class  vtkPlaneCollection : public vtkCollection
+class CORE_EXPORTS vtkPlaneCollection : public vtkCollection
 {
 public:
   vtkTypeMacro(vtkPlaneCollection, vtkCollection);

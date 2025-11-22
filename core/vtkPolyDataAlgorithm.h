@@ -27,7 +27,7 @@ VTK_ABI_NAMESPACE_BEGIN
 class vtkDataSet;
 class vtkPolyData;
 
-class vtkPolyDataAlgorithm : public vtkAlgorithm
+class CORE_EXPORTS vtkPolyDataAlgorithm : public vtkAlgorithm
 {
 public:
   static vtkPolyDataAlgorithm* New();
