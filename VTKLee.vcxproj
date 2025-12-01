@@ -121,7 +121,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;CommonDataModel_EXPORTS;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;GLAD_API_CALL_EXPORT;jpeg_EXPORTS;IOImage_EXPORTS;Core_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Common/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -1491,6 +1491,11 @@
     <None Include="core\token\CxxABIConfigure.h.in" />
     <None Include="core\vtkOpenGLVolumeLookupTables.txx" />
     <None Include="core\vtkQuaternion.txx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Common\Common.vcxproj">
+      <Project>{7b088006-8058-411c-9c2f-d53b6dfa1758}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

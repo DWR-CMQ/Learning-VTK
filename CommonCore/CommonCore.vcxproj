@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3dparty\SMP\Common\vtkSMPToolsAPI.cxx" />
+    <ClCompile Include="..\3dparty\SMP\OpenMP\vtkSMPThreadLocalBackend.cxx" />
+    <ClCompile Include="..\3dparty\SMP\Sequential\vtkSMPToolsImpl.cxx" />
+    <ClCompile Include="..\3dparty\SMP\STDThread\vtkSMPThreadLocalBackend.cxx" />
+    <ClCompile Include="..\3dparty\SMP\STDThread\vtkSMPThreadPool.cxx" />
+    <ClCompile Include="..\3dparty\SMP\STDThread\vtkSMPToolsImpl.cxx" />
+    <ClCompile Include="src\vtkAbstractArray.cxx" />
+    <ClCompile Include="src\vtkArrayIterator.cxx" />
+    <ClCompile Include="src\vtkArrayIteratorTemplateInstantiate.cxx" />
+    <ClCompile Include="src\vtkBitArray.cxx" />
+    <ClCompile Include="src\vtkBitArrayIterator.cxx" />
+    <ClCompile Include="src\vtkBoxMuellerRandomSequence.cxx" />
+    <ClCompile Include="src\vtkByteSwap.cxx" />
+    <ClCompile Include="src\vtkCallbackCommand.cxx" />
+    <ClCompile Include="src\vtkCharArray.cxx" />
+    <ClCompile Include="src\vtkCollection.cxx" />
+    <ClCompile Include="src\vtkCollectionIterator.cxx" />
+    <ClCompile Include="src\vtkCommand.cxx" />
+    <ClCompile Include="src\vtkCommonInformationKeyManager.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_char.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_double.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_float.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_int.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_short.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_signed_char.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkConstantArrayInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_char.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_double.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_float.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_int.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_short.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_signed_char.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkConstantImplicitBackendInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="src\vtkDataArray.cxx" />
+    <ClCompile Include="src\vtkDataArray_CopyComponent.cxx" />
+    <ClCompile Include="src\vtkDataArray_DeepCopy.cxx" />
+    <ClCompile Include="src\vtkDataArray_FiniteScalarRange.cxx" />
+    <ClCompile Include="src\vtkDataArray_FiniteVectorRange.cxx" />
+    <ClCompile Include="src\vtkDataArray_GetTuples_ids.cxx" />
+    <ClCompile Include="src\vtkDataArray_GetTuples_range.cxx" />
+    <ClCompile Include="src\vtkDataArray_InsertTuples_array_idlist.cxx" />
+    <ClCompile Include="src\vtkDataArray_InsertTuples_array_idlist_range.cxx" />
+    <ClCompile Include="src\vtkDataArray_InsertTuples_array_range.cxx" />
+    <ClCompile Include="src\vtkDataArray_InterpolateTuple_time.cxx" />
+    <ClCompile Include="src\vtkDataArray_InterpolateTuple_weights.cxx" />
+    <ClCompile Include="src\vtkDataArray_ScalarRange.cxx" />
+    <ClCompile Include="src\vtkDataArray_SetTuple_array.cxx" />
+    <ClCompile Include="src\vtkDataArray_VectorRange.cxx" />
+    <ClCompile Include="src\vtkDebugLeaks.cxx" />
+    <ClCompile Include="src\vtkDebugLeaksManager.cxx" />
+    <ClCompile Include="src\vtkDoubleArray.cxx" />
+    <ClCompile Include="src\vtkDynamicLoader.cxx" />
+    <ClCompile Include="src\vtkEventForwarderCommand.cxx" />
+    <ClCompile Include="src\vtkFloatArray.cxx" />
+    <ClCompile Include="src\vtkGarbageCollector.cxx" />
+    <ClCompile Include="src\vtkGarbageCollectorManager.cxx" />
+    <ClCompile Include="src\vtkGaussianRandomSequence.cxx" />
+    <ClCompile Include="src\vtkGenericDataArray.cxx" />
+    <ClCompile Include="src\vtkGenericDataArrayValueRangeInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkGenericDataArrayValueRangeInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkGenericDataArrayValueRangeInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkGenericDataArrayValueRangeInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkIdList.cxx" />
+    <ClCompile Include="src\vtkIdTypeArray.cxx" />
+    <ClCompile Include="src\vtkIndent.cxx" />
+    <ClCompile Include="src\vtkInformation.cxx" />
+    <ClCompile Include="src\vtkInformationDataObjectKey.cxx" />
+    <ClCompile Include="src\vtkInformationDoubleKey.cxx" />
+    <ClCompile Include="src\vtkInformationDoubleVectorKey.cxx" />
+    <ClCompile Include="src\vtkInformationIdTypeKey.cxx" />
+    <ClCompile Include="src\vtkInformationInformationKey.cxx" />
+    <ClCompile Include="src\vtkInformationInformationVectorKey.cxx" />
+    <ClCompile Include="src\vtkInformationIntegerKey.cxx" />
+    <ClCompile Include="src\vtkInformationIntegerPointerKey.cxx" />
+    <ClCompile Include="src\vtkInformationIntegerVectorKey.cxx" />
+    <ClCompile Include="src\vtkInformationIterator.cxx" />
+    <ClCompile Include="src\vtkInformationKey.cxx" />
+    <ClCompile Include="src\vtkInformationKeyLookup.cxx" />
+    <ClCompile Include="src\vtkInformationKeyVectorKey.cxx" />
+    <ClCompile Include="src\vtkInformationObjectBaseKey.cxx" />
+    <ClCompile Include="src\vtkInformationObjectBaseVectorKey.cxx" />
+    <ClCompile Include="src\vtkInformationRequestKey.cxx" />
+    <ClCompile Include="src\vtkInformationStringKey.cxx" />
+    <ClCompile Include="src\vtkInformationStringVectorKey.cxx" />
+    <ClCompile Include="src\vtkInformationUnsignedLongKey.cxx" />
+    <ClCompile Include="src\vtkInformationVariantKey.cxx" />
+    <ClCompile Include="src\vtkInformationVariantVectorKey.cxx" />
+    <ClCompile Include="src\vtkInformationVector.cxx" />
+    <ClCompile Include="src\vtkIntArray.cxx" />
+    <ClCompile Include="src\vtkLargeInteger.cxx" />
+    <ClCompile Include="src\vtkLogger.cxx" />
+    <ClCompile Include="src\vtkLongArray.cxx" />
+    <ClCompile Include="src\vtkLongLongArray.cxx" />
+    <ClCompile Include="src\vtkLookupTable.cxx" />
+    <ClCompile Include="src\vtkMath.cxx" />
+    <ClCompile Include="src\vtkMinimalStandardRandomSequence.cxx" />
+    <ClCompile Include="src\vtkMultiThreader.cxx" />
+    <ClCompile Include="src\vtkObject.cxx" />
+    <ClCompile Include="src\vtkObjectBase.cxx" />
+    <ClCompile Include="src\vtkObjectFactory.cxx" />
+    <ClCompile Include="src\vtkObjectFactoryCollection.cxx" />
+    <ClCompile Include="src\vtkOStreamWrapper.cxx" />
+    <ClCompile Include="src\vtkOStrStreamWrapper.cxx" />
+    <ClCompile Include="src\vtkOutputWindow.cxx" />
+    <ClCompile Include="src\vtkOverrideInformation.cxx" />
+    <ClCompile Include="src\vtkOverrideInformationCollection.cxx" />
+    <ClCompile Include="src\vtkPoints.cxx" />
+    <ClCompile Include="src\vtkPoints2D.cxx" />
+    <ClCompile Include="src\vtkPriorityQueue.cxx" />
+    <ClCompile Include="src\vtkRandomSequence.cxx" />
+    <ClCompile Include="src\vtkScalarsToColors.cxx" />
+    <ClCompile Include="src\vtkShortArray.cxx" />
+    <ClCompile Include="src\vtkSignedCharArray.cxx" />
+    <ClCompile Include="src\vtkSmartPointerBase.cxx" />
+    <ClCompile Include="src\vtkSMPTools.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_char.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_double.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_float.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_int.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_short.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_signed_char.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="src\vtkSortDataArray.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_char.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_double.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_float.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_int.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_short.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_signed_char.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkStdFunctionArrayInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="src\vtkStdString.cxx" />
+    <ClCompile Include="src\vtkStringArray.cxx" />
+    <ClCompile Include="src\vtkStringOutputWindow.cxx" />
+    <ClCompile Include="src\vtkStringToken.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_char.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_double.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_float.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_int.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_short.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_signed_char.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointArrayInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_char.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_double.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_float.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_int.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_short.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_signed_char.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkStructuredPointBackendInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="src\vtkTimeStamp.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_char.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_double.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_float.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_int.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_long.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_long_long.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_short.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_signed_char.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_unsigned_char.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_unsigned_int.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_unsigned_long.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_unsigned_long_long.cxx" />
+    <ClCompile Include="src\vtkTypedDataArrayInstantiate_unsigned_short.cxx" />
+    <ClCompile Include="src\vtkTypeFloat32Array.cxx" />
+    <ClCompile Include="src\vtkTypeFloat64Array.cxx" />
+    <ClCompile Include="src\vtkTypeInt16Array.cxx" />
+    <ClCompile Include="src\vtkTypeInt32Array.cxx" />
+    <ClCompile Include="src\vtkTypeInt64Array.cxx" />
+    <ClCompile Include="src\vtkTypeInt8Array.cxx" />
+    <ClCompile Include="src\vtkTypeUInt16Array.cxx" />
+    <ClCompile Include="src\vtkTypeUInt32Array.cxx" />
+    <ClCompile Include="src\vtkTypeUInt64Array.cxx" />
+    <ClCompile Include="src\vtkTypeUInt8Array.cxx" />
+    <ClCompile Include="src\vtkUnsignedCharArray.cxx" />
+    <ClCompile Include="src\vtkUnsignedIntArray.cxx" />
+    <ClCompile Include="src\vtkUnsignedLongArray.cxx" />
+    <ClCompile Include="src\vtkUnsignedLongLongArray.cxx" />
+    <ClCompile Include="src\vtkUnsignedShortArray.cxx" />
+    <ClCompile Include="src\vtkValueFromString.cxx" />
+    <ClCompile Include="src\vtkVariant.cxx" />
+    <ClCompile Include="src\vtkVariantArray.cxx" />
+    <ClCompile Include="src\vtkVersion.cxx" />
+    <ClCompile Include="src\vtkVoidArray.cxx" />
+    <ClCompile Include="src\vtkWeakPointerBase.cxx" />
+    <ClCompile Include="src\vtkWin32OutputWindow.cxx" />
+    <ClCompile Include="src\vtkWindow.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3dparty\SMP\Common\vtkSMPThreadLocalAPI.h" />
+    <ClInclude Include="..\3dparty\SMP\Common\vtkSMPThreadLocalImplAbstract.h" />
+    <ClInclude Include="..\3dparty\SMP\Common\vtkSMPToolsAPI.h" />
+    <ClInclude Include="..\3dparty\SMP\Common\vtkSMPToolsImpl.h" />
+    <ClInclude Include="..\3dparty\SMP\Common\vtkSMPToolsInternal.h" />
+    <ClInclude Include="..\3dparty\SMP\Sequential\vtkSMPThreadLocalImpl.h" />
+    <ClInclude Include="..\3dparty\SMP\STDThread\vtkSMPThreadLocalBackend.h" />
+    <ClInclude Include="..\3dparty\SMP\STDThread\vtkSMPThreadLocalImpl.h" />
+    <ClInclude Include="..\3dparty\SMP\STDThread\vtkSMPThreadPool.h" />
+    <ClInclude Include="src\CommonCoreModule.h" />
+    <ClInclude Include="src\vtkABI.h" />
+    <ClInclude Include="src\vtkAbstractArray.h" />
+    <ClInclude Include="src\vtkAOSDataArrayTemplate.h" />
+    <ClInclude Include="src\vtkArrayDispatch.h" />
+    <ClInclude Include="src\vtkArrayDispatchArrayList.h" />
+    <ClInclude Include="src\vtkArrayIterator.h" />
+    <ClInclude Include="src\vtkArrayIteratorIncludes.h" />
+    <ClInclude Include="src\vtkArrayIteratorTemplate.h" />
+    <ClInclude Include="src\vtkAssume.h" />
+    <ClInclude Include="src\vtkBitArray.h" />
+    <ClInclude Include="src\vtkBitArrayIterator.h" />
+    <ClInclude Include="src\vtkBoxMuellerRandomSequence.h" />
+    <ClInclude Include="src\vtkBuffer.h" />
+    <ClInclude Include="src\vtkBuild.h" />
+    <ClInclude Include="src\vtkByteSwap.h" />
+    <ClInclude Include="src\vtkCallbackCommand.h" />
+    <ClInclude Include="src\vtkCharArray.h" />
+    <ClInclude Include="src\vtkCollection.h" />
+    <ClInclude Include="src\vtkCollectionIterator.h" />
+    <ClInclude Include="src\vtkCollectionRange.h" />
+    <ClInclude Include="src\vtkCommand.h" />
+    <ClInclude Include="src\vtkCommonCoreModule.h" />
+    <ClInclude Include="src\vtkCommonInformationKeyManager.h" />
+    <ClInclude Include="src\vtkCompiler.h" />
+    <ClInclude Include="src\vtkConstantArray.h" />
+    <ClInclude Include="src\vtkConstantImplicitBackend.h" />
+    <ClInclude Include="src\vtkDataArray.h" />
+    <ClInclude Include="src\vtkDataArrayAccessor.h" />
+    <ClInclude Include="src\vtkDataArrayMeta.h" />
+    <ClInclude Include="src\vtkDataArrayRange.h" />
+    <ClInclude Include="src\vtkDataArrayTupleRange_AOS.h" />
+    <ClInclude Include="src\vtkDataArrayTupleRange_Generic.h" />
+    <ClInclude Include="src\vtkDataArrayValueRange_AOS.h" />
+    <ClInclude Include="src\vtkDataArrayValueRange_Generic.h" />
+    <ClInclude Include="src\vtkDebug.h" />
+    <ClInclude Include="src\vtkDebugLeaks.h" />
+    <ClInclude Include="src\vtkDebugLeaksManager.h" />
+    <ClInclude Include="src\vtkDoubleArray.h" />
+    <ClInclude Include="src\vtkDynamicLoader.h" />
+    <ClInclude Include="src\vtkEndian.h" />
+    <ClInclude Include="src\vtkEventData.h" />
+    <ClInclude Include="src\vtkEventForwarderCommand.h" />
+    <ClInclude Include="src\vtkfast_float.h" />
+    <ClInclude Include="src\vtkFloatArray.h" />
+    <ClInclude Include="src\vtkGarbageCollector.h" />
+    <ClInclude Include="src\vtkGarbageCollectorManager.h" />
+    <ClInclude Include="src\vtkGaussianRandomSequence.h" />
+    <ClInclude Include="src\vtkGenericDataArray.h" />
+    <ClInclude Include="src\vtkGenericDataArrayLookupHelper.h" />
+    <ClInclude Include="src\vtkHashCombiner.h" />
+    <ClInclude Include="src\vtkIdList.h" />
+    <ClInclude Include="src\vtkIdTypeArray.h" />
+    <ClInclude Include="src\vtkImplicitArray.h" />
+    <ClInclude Include="src\vtkImplicitArrayTraits.h" />
+    <ClInclude Include="src\vtkIndent.h" />
+    <ClInclude Include="src\vtkInformation.h" />
+    <ClInclude Include="src\vtkInformationDataObjectKey.h" />
+    <ClInclude Include="src\vtkInformationDoubleKey.h" />
+    <ClInclude Include="src\vtkInformationDoubleVectorKey.h" />
+    <ClInclude Include="src\vtkInformationIdTypeKey.h" />
+    <ClInclude Include="src\vtkInformationInformationKey.h" />
+    <ClInclude Include="src\vtkInformationInformationVectorKey.h" />
+    <ClInclude Include="src\vtkInformationIntegerKey.h" />
+    <ClInclude Include="src\vtkInformationIntegerPointerKey.h" />
+    <ClInclude Include="src\vtkInformationIntegerVectorKey.h" />
+    <ClInclude Include="src\vtkInformationInternals.h" />
+    <ClInclude Include="src\vtkInformationIterator.h" />
+    <ClInclude Include="src\vtkInformationKey.h" />
+    <ClInclude Include="src\vtkInformationKeyLookup.h" />
+    <ClInclude Include="src\vtkInformationKeyVectorKey.h" />
+    <ClInclude Include="src\vtkInformationObjectBaseKey.h" />
+    <ClInclude Include="src\vtkInformationObjectBaseVectorKey.h" />
+    <ClInclude Include="src\vtkInformationRequestKey.h" />
+    <ClInclude Include="src\vtkInformationStringKey.h" />
+    <ClInclude Include="src\vtkInformationStringVectorKey.h" />
+    <ClInclude Include="src\vtkInformationUnsignedLongKey.h" />
+    <ClInclude Include="src\vtkInformationVariantKey.h" />
+    <ClInclude Include="src\vtkInformationVariantVectorKey.h" />
+    <ClInclude Include="src\vtkInformationVector.h" />
+    <ClInclude Include="src\vtkInherits.h" />
+    <ClInclude Include="src\vtkIntArray.h" />
+    <ClInclude Include="src\vtkIOStream.h" />
+    <ClInclude Include="src\vtkLargeInteger.h" />
+    <ClInclude Include="src\vtkLegacy.h" />
+    <ClInclude Include="src\vtkLogger.h" />
+    <ClInclude Include="src\vtkLongArray.h" />
+    <ClInclude Include="src\vtkLongLongArray.h" />
+    <ClInclude Include="src\vtkLookupTable.h" />
+    <ClInclude Include="src\vtkMath.h" />
+    <ClInclude Include="src\vtkMathConfigure.h" />
+    <ClInclude Include="src\vtkMathPrivate.hxx" />
+    <ClInclude Include="src\vtkMathUtilities.h" />
+    <ClInclude Include="src\vtkMatrixUtilities.h" />
+    <ClInclude Include="src\vtkMeta.h" />
+    <ClInclude Include="src\vtkMinimalStandardRandomSequence.h" />
+    <ClInclude Include="src\vtkMultiThreader.h" />
+    <ClInclude Include="src\vtkNew.h" />
+    <ClInclude Include="src\vtkObject.h" />
+    <ClInclude Include="src\vtkObjectBase.h" />
+    <ClInclude Include="src\vtkObjectFactory.h" />
+    <ClInclude Include="src\vtkObjectFactoryCollection.h" />
+    <ClInclude Include="src\vtkOptions.h" />
+    <ClInclude Include="src\vtkOStreamWrapper.h" />
+    <ClInclude Include="src\vtkOStrStreamWrapper.h" />
+    <ClInclude Include="src\vtkOutputWindow.h" />
+    <ClInclude Include="src\vtkOverrideInformation.h" />
+    <ClInclude Include="src\vtkOverrideInformationCollection.h" />
+    <ClInclude Include="src\vtkPlatform.h" />
+    <ClInclude Include="src\vtkPoints.h" />
+    <ClInclude Include="src\vtkPoints2D.h" />
+    <ClInclude Include="src\vtkPriorityQueue.h" />
+    <ClInclude Include="src\vtkRandomSequence.h" />
+    <ClInclude Include="src\vtkRange.h" />
+    <ClInclude Include="src\vtkRangeIterableTraits.h" />
+    <ClInclude Include="src\vtkScalarsToColors.h" />
+    <ClInclude Include="src\vtkSetGet.h" />
+    <ClInclude Include="src\vtkShortArray.h" />
+    <ClInclude Include="src\vtkSignedCharArray.h" />
+    <ClInclude Include="src\vtkSmartPointer.h" />
+    <ClInclude Include="src\vtkSmartPointerBase.h" />
+    <ClInclude Include="src\vtkSMP.h" />
+    <ClInclude Include="src\vtkSMPThreadLocal.h" />
+    <ClInclude Include="src\vtkSMPThreadLocalObject.h" />
+    <ClInclude Include="src\vtkSMPTools.h" />
+    <ClInclude Include="src\vtkSOADataArrayTemplate.h" />
+    <ClInclude Include="src\vtkSortDataArray.h" />
+    <ClInclude Include="src\vtkStdFunctionArray.h" />
+    <ClInclude Include="src\vtkStdString.h" />
+    <ClInclude Include="src\vtkStringArray.h" />
+    <ClInclude Include="src\vtkStringOutputWindow.h" />
+    <ClInclude Include="src\vtkStringToken.h" />
+    <ClInclude Include="src\vtkStructuredPointArray.h" />
+    <ClInclude Include="src\vtkStructuredPointBackend.h" />
+    <ClInclude Include="src\vtkSystemIncludes.h" />
+    <ClInclude Include="src\vtkTemplateAliasMacro.h" />
+    <ClInclude Include="src\vtkThreads.h" />
+    <ClInclude Include="src\vtkTimeStamp.h" />
+    <ClInclude Include="src\vtkType.h" />
+    <ClInclude Include="src\vtkTypedArray.h" />
+    <ClInclude Include="src\vtkTypedDataArray.h" />
+    <ClInclude Include="src\vtkTypedDataArrayIterator.h" />
+    <ClInclude Include="src\vtkTypeFloat32Array.h" />
+    <ClInclude Include="src\vtkTypeFloat64Array.h" />
+    <ClInclude Include="src\vtkTypeInt16Array.h" />
+    <ClInclude Include="src\vtkTypeInt32Array.h" />
+    <ClInclude Include="src\vtkTypeInt64Array.h" />
+    <ClInclude Include="src\vtkTypeInt8Array.h" />
+    <ClInclude Include="src\vtkTypeList.h" />
+    <ClInclude Include="src\vtkTypeListMacros.h" />
+    <ClInclude Include="src\vtkTypeName.h" />
+    <ClInclude Include="src\vtkTypeTraits.h" />
+    <ClInclude Include="src\vtkTypeUInt16Array.h" />
+    <ClInclude Include="src\vtkTypeUInt32Array.h" />
+    <ClInclude Include="src\vtkTypeUInt64Array.h" />
+    <ClInclude Include="src\vtkTypeUInt8Array.h" />
+    <ClInclude Include="src\vtkUnsignedCharArray.h" />
+    <ClInclude Include="src\vtkUnsignedIntArray.h" />
+    <ClInclude Include="src\vtkUnsignedLongArray.h" />
+    <ClInclude Include="src\vtkUnsignedLongLongArray.h" />
+    <ClInclude Include="src\vtkUnsignedShortArray.h" />
+    <ClInclude Include="src\vtkValueFromString.h" />
+    <ClInclude Include="src\vtkVariant.h" />
+    <ClInclude Include="src\vtkVariantArray.h" />
+    <ClInclude Include="src\vtkVariantCast.h" />
+    <ClInclude Include="src\vtkVariantInlineOperators.h" />
+    <ClInclude Include="src\vtkVersion.h" />
+    <ClInclude Include="src\vtkVersionFull.h" />
+    <ClInclude Include="src\vtkVersionMacros.h" />
+    <ClInclude Include="src\vtkVersionQuick.h" />
+    <ClInclude Include="src\vtkVoidArray.h" />
+    <ClInclude Include="src\vtkWeakPointer.h" />
+    <ClInclude Include="src\vtkWeakPointerBase.h" />
+    <ClInclude Include="src\vtkWin32Header.h" />
+    <ClInclude Include="src\vtkWin32OutputWindow.h" />
+    <ClInclude Include="src\vtkWindow.h" />
+    <ClInclude Include="src\vtkWindows.h" />
+    <ClInclude Include="src\vtkWrappingHints.h" />
+    <ClInclude Include="src\vtk_kwiml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\3dparty\SMP\Sequential\vtkSMPToolsImpl.txx" />
+    <None Include="..\3dparty\SMP\STDThread\vtkSMPToolsImpl.txx" />
+    <None Include="src\vtkAOSDataArrayTemplate.txx" />
+    <None Include="src\vtkArrayDispatch.txx" />
+    <None Include="src\vtkArrayIteratorTemplate.txx" />
+    <None Include="src\vtkArrayIteratorTemplateImplicit.txx" />
+    <None Include="src\vtkDataArrayPrivate.txx" />
+    <None Include="src\vtkGenericDataArray.txx" />
+    <None Include="src\vtkImplicitArray.txx" />
+    <None Include="src\vtkSOADataArrayTemplate.txx" />
+    <None Include="src\vtkStructuredPointArray.txx" />
+    <None Include="src\vtkStructuredPointBackend.txx" />
+    <None Include="src\vtkTypedArray.txx" />
+    <None Include="src\vtkTypedDataArray.txx" />
+    <None Include="src\vtkTypeList.txx" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f5c781db-e6b2-4c53-b017-fa04e726b80d}</ProjectGuid>
+    <RootNamespace>CommonCore</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExternalIncludePath>..\3dparty;..\3dparty\vtknlohmann;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)x64/Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;COMMONCORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;COMMONCORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;Commoncore_EXPORTS;_CRT_SECURE_NO_WARNINGS;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Common/src;$(SolutionDir)ThirdPartyProject/vtksys;$(SolutionDir)ThirdPartyProject/pugixml;$(SolutionDir)ThirdPartyProject/token;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>vtksys.lib;pugixml.lib;token.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;COMMONCORE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
