@@ -35,6 +35,7 @@
 #include "vtkCommonExecutionModelModule.h" // For export macro
 #include "vtkStreamingDemandDrivenPipeline.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
+#include "Export.h"
 #include <vtkSmartPointer.h>  // smart pointer
 
 #include <vector> // for vector in return type

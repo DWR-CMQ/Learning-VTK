@@ -17,6 +17,7 @@
 #define vtkBoundingBox_h
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkSystemIncludes.h"
+#include "Export.h"
 #include <atomic> // For threaded bounding box computation
 
 VTK_ABI_NAMESPACE_BEGIN

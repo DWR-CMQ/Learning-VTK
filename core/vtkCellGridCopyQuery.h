@@ -92,7 +92,7 @@
 
 #include "vtkCellGridQuery.h"
 #include "vtkStringToken.h" // For API.
-
+#include "Export.h"
 #include <map> // For ArrayMap ivar.
 #include <set> // For CellAttributeIds ivar.
 

@@ -40,6 +40,7 @@
 #  endif
 #endif
 
+#include "Export.h"
 /* VTK-HeaderTest-Exclude: vtkCommonDataModelModule.h */
 
 /* Include ABI Namespace */

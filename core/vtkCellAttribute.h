@@ -19,7 +19,7 @@
 #include "vtkScalarsToColors.h" // for colormap
 #include "vtkSmartPointer.h"    // for maps
 #include "vtkStringToken.h"     // for vtkStringToken::Hash
-
+#include "Export.h"
 #include <unordered_map>
 
 VTK_ABI_NAMESPACE_BEGIN

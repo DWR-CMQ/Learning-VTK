@@ -24,7 +24,7 @@
 #include "vtkObject.h"
 #include "vtkSmartPointer.h" //for ivars
 #include <vector>            //for storing AMR Boxes
-
+#include "Export.h"
 typedef std::vector<vtkAMRBox> vtkAMRBoxList;
 
 VTK_ABI_NAMESPACE_BEGIN

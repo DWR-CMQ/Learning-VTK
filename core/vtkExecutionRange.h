@@ -20,7 +20,7 @@
 
 #include "vtkCommonExecutionModelModule.h" // for export macro
 #include "vtkSmartPointer.h"               // for smart pointer signature
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 
 class vtkInformationVector;

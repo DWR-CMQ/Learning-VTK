@@ -20,7 +20,7 @@
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 
 #include "vtkProp.h" // Needed for inline methods
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class CORE_EXPORTS VTK_MARSHALAUTO vtkPropCollection : public vtkCollection
 {

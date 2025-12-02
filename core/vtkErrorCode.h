@@ -12,7 +12,7 @@
 #define vtkErrorCode_h
 #include "vtkCommonMiscModule.h" // For export macro
 #include "vtkSystemIncludes.h"
-
+#include "Export.h"
 // The superclass that all commands should be subclasses of
 VTK_ABI_NAMESPACE_BEGIN
 class CORE_EXPORTS vtkErrorCode

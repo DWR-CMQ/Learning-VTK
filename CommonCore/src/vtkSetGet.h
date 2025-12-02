@@ -842,22 +842,22 @@
 // while vtkOutputWindow #includes vtkObject
 
 VTK_ABI_NAMESPACE_BEGIN
-extern void vtkOutputWindowDisplayText(const char*);
-extern void vtkOutputWindowDisplayErrorText(const char*);
-extern void vtkOutputWindowDisplayWarningText(const char*);
-extern void vtkOutputWindowDisplayGenericWarningText(const char*);
-extern void vtkOutputWindowDisplayDebugText(const char*);
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayText(const char*);
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayErrorText(const char*);
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayWarningText(const char*);
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayGenericWarningText(const char*);
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayDebugText(const char*);
 
 // overloads that allow providing information about the filename and lineno
 // generating the message.
 class vtkObject;
-extern void vtkOutputWindowDisplayErrorText(
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayErrorText(
   const char*, int, const char*, vtkObject* sourceObj);
-extern void vtkOutputWindowDisplayWarningText(
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayWarningText(
   const char*, int, const char*, vtkObject* sourceObj);
-extern void vtkOutputWindowDisplayGenericWarningText(
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayGenericWarningText(
   const char*, int, const char*);
-extern void vtkOutputWindowDisplayDebugText(
+extern COMMONCORE_EXPORTS void vtkOutputWindowDisplayDebugText(
   const char*, int, const char*, vtkObject* sourceObj);
 VTK_ABI_NAMESPACE_END
 

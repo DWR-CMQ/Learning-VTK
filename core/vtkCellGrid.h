@@ -26,7 +26,7 @@
 #include "vtkSmartPointer.h" // For ivars.
 #include "vtkStringToken.h"  // For ivars.
 #include "vtkTypeName.h"     // For vtk::TypeName<>().
-
+#include "Export.h"
 #include <array>         // For ivars.
 #include <set>           // For ivars.
 #include <unordered_map> // For ivars.

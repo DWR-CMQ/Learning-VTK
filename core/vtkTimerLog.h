@@ -18,7 +18,7 @@
 
 #include "vtkCommonSystemModule.h" // For export macro
 #include "vtkObject.h"
-
+#include "Export.h"
 #include <string> // STL Header
 
 #ifdef _WIN32

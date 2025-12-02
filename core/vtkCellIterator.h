@@ -61,7 +61,7 @@
 #include "vtkIdTypeArray.h"           // For inline methods
 #include "vtkNew.h"                   // For vtkNew
 #include "vtkObject.h"
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkGenericCell;
 class vtkPoints;

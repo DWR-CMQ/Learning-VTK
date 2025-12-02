@@ -31,7 +31,7 @@
 #include "vtkIdTypeArray.h"       // Needed for inline methods
 #include "vtkSmartPointer.h"      // Needed for internals
 #include "vtkUnsignedCharArray.h" // Needed for inline methods
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkIntArray;
 

@@ -23,7 +23,7 @@
 #include "vtkObject.h"
 #include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
-
+#include "Export.h"
 #include <map>    // used for ivar
 #include <string> // used for ivar
 

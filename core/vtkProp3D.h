@@ -26,7 +26,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWeakPointer.h"         // For vtkWeakPointer
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkLinearTransform;
 class vtkMatrix4x4;

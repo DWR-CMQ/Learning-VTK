@@ -17,7 +17,7 @@
 #include "vtkSystemIncludes.h"
 
 #include "vtkDebugLeaksManager.h" // DebugLeaks exists longer than info keys.
-
+#include "Export.h"
 #include "token/Singletons.h"     // to increment its Schwarz counter
 
 #include <functional> // for finalizers

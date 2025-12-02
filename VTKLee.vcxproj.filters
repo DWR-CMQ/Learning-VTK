@@ -16,24 +16,6 @@
     <Filter Include="core">
       <UniqueIdentifier>{f5b34589-75bb-4b69-8f28-520762cc43a3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core\vtksys">
-      <UniqueIdentifier>{07b8e5e7-db31-47ea-bc3f-440334c04d62}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\token">
-      <UniqueIdentifier>{25791c89-bb2f-4044-97ad-d8a94d15c5b3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\token\json">
-      <UniqueIdentifier>{f3a62944-5d69-439b-acab-e2b0ec6d6601}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\pugixml">
-      <UniqueIdentifier>{aeae8f1f-6d60-4a0c-b0b5-8b75c0b10e15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\pugixml\vtkpugixml">
-      <UniqueIdentifier>{2ae827b7-29d7-4ae1-a02d-7206c4de88aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\pugixml\vtkpugixml\src">
-      <UniqueIdentifier>{b0f40866-3099-46eb-9ed0-7c2e9c825d6c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="core\vtkexpat">
       <UniqueIdentifier>{2f79a4e4-3537-40dc-a35b-c2fde721b273}</UniqueIdentifier>
     </Filter>
@@ -63,19 +45,10 @@
     <ClCompile Include="core\DICOMParser.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkAbstractArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkAlgorithm.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkAlgorithmOutput.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkCollection.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkDataSet.cxx">
@@ -111,157 +84,16 @@
     <ClCompile Include="core\vtkImageReader2.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkInformation.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationDataObjectKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationDoubleKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationDoubleVectorKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationIdTypeKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationInformationKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationInformationVectorKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationIntegerKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationIntegerPointerKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationIntegerVectorKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationIterator.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationKeyLookup.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationKeyVectorKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationObjectBaseKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationObjectBaseVectorKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationRequestKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationStringKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationStringVectorKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationUnsignedLongKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationVariantKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationVariantVectorKey.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkInformationVector.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkObject.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkObjectBase.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkObjectFactory.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkPointData.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkProgressObserver.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkTimeStamp.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkUnsignedCharArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkUnsignedIntArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkUnsignedLongArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkUnsignedLongLongArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkUnsignedShortArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkValueFromString.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkWeakPointerBase.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkOStreamWrapper.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkOStrStreamWrapper.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkIndent.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSmartPointerBase.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkIdList.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdString.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkVariant.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkDataObject.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkDebugLeaksManager.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDebugLeaks.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGenericDataArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkCommand.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGarbageCollector.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkStructuredData.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkCollectionIterator.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkCompositeDataPipeline.cxx">
@@ -273,9 +105,6 @@
     <ClCompile Include="core\vtkInformationExecutivePortVectorKey.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkMath.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkTreeAlgorithm.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -285,31 +114,7 @@
     <ClCompile Include="core\vtkTrivialProducer.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkCommonInformationKeyManager.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGarbageCollectorManager.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDynamicLoader.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkObjectFactoryCollection.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkOverrideInformation.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkOverrideInformationCollection.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkVersion.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkBoundingBox.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkCallbackCommand.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkCell.cxx">
@@ -363,9 +168,6 @@
     <ClCompile Include="core\vtkDataSetCollection.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkDoubleArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkGenericCell.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -378,88 +180,10 @@
     <ClCompile Include="core\vtkGenericPointIterator.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkPoints.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkPoints2D.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStringArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkMultiThreader.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkNonLinearCell.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkTypeInt32Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeInt64Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkIntArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkLongLongArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkAbstractCellArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkBitArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkCharArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkFloatArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkIdTypeArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkLongArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkMinimalStandardRandomSequence.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkRandomSequence.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkShortArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSignedCharArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeFloat32Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeFloat64Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeInt8Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeInt16Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeUInt8Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeUInt16Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeUInt32Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypeUInt64Array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkVariantArray.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkFilteringInformationKeyManager.cxx">
@@ -486,9 +210,6 @@
     <ClCompile Include="core\vtkPlanesIntersection.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkSMPTools.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkAbstractElectronicData.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -513,22 +234,10 @@
     <ClCompile Include="core\vtkQuadraticEdge.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkBitArrayIterator.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkLogger.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkPolygon.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkEmptyCell.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkScalarsToColors.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStringToken.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkFunctionSet.cxx">
@@ -562,9 +271,6 @@
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkAMRDataInternals.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkLookupTable.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkStructuredCellArray.cxx">
@@ -627,9 +333,6 @@
     <ClCompile Include="core\vtkStructuredPoints.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkSortDataArray.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkCellData.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -642,12 +345,6 @@
     <ClCompile Include="core\vtkBox.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkLargeInteger.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkByteSwap.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkHomogeneousTransform.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -658,12 +355,6 @@
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkTransform.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGaussianRandomSequence.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkBoxMuellerRandomSequence.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkPointsProjectedHull.cxx">
@@ -705,9 +396,6 @@
     <ClCompile Include="core\vtkArrayRange.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkPriorityQueue.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkExplicitStructuredGrid.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -717,415 +405,7 @@
     <ClCompile Include="core\vtkRectilinearGrid.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtksys\CommandLineArguments.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\Directory.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\DynamicLoader.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\EncodingCXX.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\Glob.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\RegularExpression.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\Status.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\SystemInformation.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\SystemTools.cxx">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkOutputWindow.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkWin32OutputWindow.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_FiniteVectorRange.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_FiniteScalarRange.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_GetTuples_ids.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_GetTuples_range.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_InsertTuples_array_idlist.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_InsertTuples_array_idlist_range.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_InsertTuples_array_range.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_InterpolateTuple_time.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_InterpolateTuple_weights.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_ScalarRange.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_SetTuple_array.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_VectorRange.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_CopyComponent.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_DeepCopy.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkArrayIteratorTemplateInstantiate.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\SMP\STDThread\vtkSMPThreadPool.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\SMP\STDThread\vtkSMPToolsImpl.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\SMP\Sequential\vtkSMPToolsImpl.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\SMP\Common\vtkSMPToolsAPI.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\ProcessWin32.c">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkExecutableRunner.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkArrayIterator.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\token\Manager.cxx">
-      <Filter>core\token</Filter>
-    </ClCompile>
-    <ClCompile Include="core\token\Singletons.cxx">
-      <Filter>core\token</Filter>
-    </ClCompile>
-    <ClCompile Include="core\token\Token.cxx">
-      <Filter>core\token</Filter>
-    </ClCompile>
-    <ClCompile Include="core\token\TypeContainer.cxx">
-      <Filter>core\token</Filter>
-    </ClCompile>
-    <ClCompile Include="core\token\json\jsonManager.cxx">
-      <Filter>core\token\json</Filter>
-    </ClCompile>
-    <ClCompile Include="core\token\json\jsonToken.cxx">
-      <Filter>core\token\json</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtksys\EncodingC.c">
-      <Filter>core\vtksys</Filter>
-    </ClCompile>
-    <ClCompile Include="core\pugixml\vtkpugixml\src\pugixml.cpp">
-      <Filter>core\pugixml\vtkpugixml\src</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_double.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_float.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_signed_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_double.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_float.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_signed_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_double.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_float.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_signed_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_double.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_float.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_double.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_float.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_signed_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_double.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_float.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_signed_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_double.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_float.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_signed_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_char.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_int.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_short.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_long_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_unsigned_long.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_unsigned_long_long.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkColorTransferFunction.cxx">
@@ -1210,9 +490,6 @@
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkVolumeProperty.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkWindow.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkRenderWindow.cxx">
@@ -1446,9 +723,6 @@
     <ClCompile Include="core\vtkexpat\lib\xmltok_ns.c">
       <Filter>core\vtkexpat\lib</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkEventForwarderCommand.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkPolyDataAlgorithm.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -1498,9 +772,6 @@
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkVertex.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="core\vtkVoidArray.cxx">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="core\vtkOpenGLGPUVolumeRayCastMapper.cxx">
@@ -1791,9 +1062,6 @@
     <ClCompile Include="core\vtkPerlinNoise.cxx">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\vtkStringOutputWindow.cxx">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="core\vtkWin32OpenGLRenderWindow.cxx">
       <Filter>core</Filter>
     </ClCompile>
@@ -1910,31 +1178,13 @@
     <ClInclude Include="core\DICOMTypes.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkABINamespace.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkAbstractArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkAlgorithm.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkAlgorithmOutput.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkCollection.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkCommonCoreModule.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkCommonExecutionModelModule.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkCompiler.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArray.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkDataSet.h">
@@ -1970,235 +1220,13 @@
     <ClInclude Include="core\vtkImageReader2.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkInformation.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationDataObjectKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationDoubleKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationDoubleVectorKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationIdTypeKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationInformationKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationInformationVectorKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationIntegerKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationIntegerPointerKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationIntegerVectorKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationInternals.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationIterator.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationKeyLookup.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationKeyVectorKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationObjectBaseKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationObjectBaseVectorKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationRequestKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationStringKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationStringVectorKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationUnsignedLongKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationVariantKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationVariantVectorKey.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInformationVector.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkIOImageModule.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkObject.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkObjectBase.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkObjectFactory.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkOptions.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkPointData.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkProgressObserver.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSetGet.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSystemIncludes.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTimeStamp.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkUnsignedCharArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkUnsignedLongArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkUnsignedLongLongArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkUnsignedShortArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkValueFromString.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkWeakPointer.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkWeakPointerBase.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkWrappingHints.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\CommandLineArguments.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Configure.h">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Configure.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Directory.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\DynamicLoader.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Encoding.h">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Encoding.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\FStream.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Glob.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\kwsysPrivate.h">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\MD5.h">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Process.h">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\RegularExpression.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\SharedForward.h">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\Status.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\String.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\System.h">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\SystemInformation.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtksys\SystemTools.hxx">
-      <Filter>core\vtksys</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkWin32Header.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkIOStream.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkType.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkOStreamWrapper.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkOStrStreamWrapper.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkIndent.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtk_kwiml.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSmartPointer.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSmartPointerBase.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkMeta.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkNew.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkIdList.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkStdString.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVariant.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtk_nlohmannjson.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDeprecation.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkDataObject.h">
@@ -2210,55 +1238,7 @@
     <ClInclude Include="core\vtkCommonSystemModule.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkABI.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkBuild.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkPlatform.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDebugLeaksManager.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDebugLeaks.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVersionFull.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVersionMacros.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVersionQuick.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkAOSDataArrayTemplate.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkBuffer.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayMeta.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkGenericDataArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVariantInlineOperators.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkCommand.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkGarbageCollector.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkStructuredData.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkCollectionIterator.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkCompositeDataPipeline.h">
@@ -2270,9 +1250,6 @@
     <ClInclude Include="core\vtkInformationExecutivePortVectorKey.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkMath.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkTreeAlgorithm.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -2282,43 +1259,7 @@
     <ClInclude Include="core\vtkTrivialProducer.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkCommonInformationKeyManager.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkGarbageCollectorManager.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkAssume.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayRange.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkMathUtilities.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSMPThreadLocal.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDynamicLoader.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkObjectFactoryCollection.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkOverrideInformation.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkOverrideInformationCollection.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVersion.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkBoundingBox.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkCallbackCommand.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkCell.h">
@@ -2381,9 +1322,6 @@
     <ClInclude Include="core\vtkDataSetCollection.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkDoubleArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkGenericCell.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -2396,163 +1334,16 @@
     <ClInclude Include="core\vtkGenericPointIterator.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkPoints.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkPoints2D.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkCommonMiscModule.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkStringArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkMultiThreader.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkThreads.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkNonLinearCell.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkTypedArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypedDataArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypedDataArrayIterator.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeList.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeName.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeTraits.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeInt32Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeInt64Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkIntArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkLongLongArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkAbstractCellArray.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkArrayDispatch.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkBitArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkCharArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkFloatArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkIdTypeArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkLongArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkMinimalStandardRandomSequence.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkRandomSequence.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkShortArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSignedCharArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkGenericDataArrayLookupHelper.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkMathPrivate.hxx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkMatrixUtilities.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkMathConfigure.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeFloat32Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeFloat64Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeInt8Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeInt16Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeUInt8Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeUInt16Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeUInt32Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeUInt64Array.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVariantArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVariantCast.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayTupleRange_AOS.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayTupleRange_Generic.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayValueRange_AOS.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayValueRange_Generic.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayAccessor.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkFilteringInformationKeyManager.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayDispatchArrayList.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkStructuredPointArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkImplicitArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkImplicitArrayTraits.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkStructuredPointBackend.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkMatrix3x3.h">
@@ -2577,15 +1368,6 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkPlanesIntersection.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSMPThreadLocalObject.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSMPTools.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSMP.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkAbstractElectronicData.h">
@@ -2615,43 +1397,19 @@
     <ClInclude Include="core\vtkQuadraticEdge.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkBitArrayIterator.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkLogger.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkPolygon.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkEmptyCell.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkDebug.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkScalarsToColors.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkTemplateAliasMacro.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkStringToken.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkFunctionSet.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkHashCombiner.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkAbstractCellLocator.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayIteratorIncludes.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayIteratorTemplate.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkCompositeDataIterator.h">
@@ -2672,9 +1430,6 @@
     <ClInclude Include="core\vtkDataObjectTreeRange.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkLegacy.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkPartitionedDataSet.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -2690,25 +1445,10 @@
     <ClInclude Include="core\vtkAMRDataInternals.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkLookupTable.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkConstantArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkConstantImplicitBackend.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkStructuredCellArray.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkStructuredExtent.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkWindows.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkInherits.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkMultiBlockDataSet.h">
@@ -2726,19 +1466,10 @@
     <ClInclude Include="core\vtkDataAssemblyVisitor.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkSOADataArrayTemplate.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkCompositeDataSetNodeReference.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkCompositeDataSetRange.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkRange.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkRangeIterableTraits.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkDataObjectTypes.h">
@@ -2786,9 +1517,6 @@
     <ClInclude Include="core\vtkStructuredPoints.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkSortDataArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkCellData.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -2798,22 +1526,10 @@
     <ClInclude Include="core\vtkAMRInformation.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkfast_float.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtk_pegtl.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkBox.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkLargeInteger.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkEndian.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkByteSwap.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkCommonTransformsModule.h">
@@ -2829,12 +1545,6 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkTransform.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkGaussianRandomSequence.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkBoxMuellerRandomSequence.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkPointsProjectedHull.h">
@@ -2882,9 +1592,6 @@
     <ClInclude Include="core\vtkArrayRange.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkPriorityQueue.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkExplicitStructuredGrid.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -2894,142 +1601,13 @@
     <ClInclude Include="core\vtkRectilinearGrid.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkOutputWindow.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkWin32OutputWindow.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkUnsignedIntArray.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\STDThread\vtkSMPThreadLocalImpl.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\STDThread\vtkSMPThreadPool.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\Sequential\vtkSMPThreadLocalImpl.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\Common\vtkSMPToolsInternal.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\STDThread\vtkSMPToolsImpl.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\Sequential\vtkSMPToolsImpl.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkAOSDataArrayTemplate.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayDispatch.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayIteratorTemplate.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayIteratorTemplateImplicit.txx">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkCompositeDataSet.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayPrivate.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkGenericDataArray.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkImplicitArray.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkSOADataArrayTemplate.txx">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkStaticCellLinksTemplate.txx">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkStructuredPointArray.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkStructuredPointBackend.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypedArray.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypedDataArray.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeList.txx">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\Common\vtkSMPToolsAPI.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\SMP\Common\vtkSMPThreadLocalAPI.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkExecutableRunner.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayIterator.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Compiler.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\CxxABIConfigure.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Exports.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Hash.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Manager.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Options.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Singletons.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Token.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\Type.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\TypeContainer.h">
-      <Filter>core\token</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\json\jsonManager.h">
-      <Filter>core\token\json</Filter>
-    </ClInclude>
-    <ClInclude Include="core\token\json\jsonToken.h">
-      <Filter>core\token\json</Filter>
-    </ClInclude>
-    <ClInclude Include="core\pugixml\vtk_pugixml.h">
-      <Filter>core\pugixml</Filter>
-    </ClInclude>
-    <ClInclude Include="core\pugixml\vtkpugixml\src\pugiconfig.hpp">
-      <Filter>core\pugixml\vtkpugixml\src</Filter>
-    </ClInclude>
-    <ClInclude Include="core\pugixml\vtkpugixml\src\pugixml.hpp">
-      <Filter>core\pugixml\vtkpugixml\src</Filter>
-    </ClInclude>
-    <ClInclude Include="core\pugixml\vtkpugixml\src\vtk_pugixml_mangle.h">
-      <Filter>core\pugixml\vtkpugixml\src</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkStdFunctionArray.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkColorTransferFunction.h">
@@ -3125,9 +1703,6 @@
     <ClInclude Include="core\vtkVolumeProperty.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkWindow.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkRenderWindow.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -3144,9 +1719,6 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkRenderWindowInteractor3D.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkEventData.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkStereoCompositor.h">
@@ -3338,9 +1910,6 @@
     <ClInclude Include="core\vtkHardwareSelector.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkCollectionRange.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkCellGridMapper.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -3422,9 +1991,6 @@
     <ClInclude Include="core\vtkexpat\lib\xmltok_impl.h">
       <Filter>core\vtkexpat\lib</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkEventForwarderCommand.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkPolyDataAlgorithm.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -3480,9 +2046,6 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkVertex.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkVoidArray.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkexpat\lib\expat_config.h">
@@ -3842,9 +2405,6 @@
     <ClInclude Include="core\vtkPerlinNoise.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkStringOutputWindow.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkWin32OpenGLRenderWindow.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -3949,9 +2509,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="core\token\CxxABIConfigure.h.in">
-      <Filter>core\token</Filter>
-    </None>
     <None Include="core\vtkQuaternion.txx">
       <Filter>core</Filter>
     </None>

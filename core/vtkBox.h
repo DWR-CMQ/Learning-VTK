@@ -21,6 +21,7 @@
 
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkImplicitFunction.h"
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkBoundingBox;
 

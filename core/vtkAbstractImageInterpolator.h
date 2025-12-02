@@ -20,7 +20,7 @@
 
 //#include "vtkImagingCoreModule.h" // For export macro
 #include "vtkObject.h"
-
+#include "Export.h"
 enum vtkImageBorderMode : int
 {
   VTK_IMAGE_BORDER_CLAMP = 0,

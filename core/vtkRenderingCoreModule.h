@@ -15,6 +15,7 @@
 #include "vtkABINamespace.h"
 /* AutoInit dependencies. */
 #include "vtkFiltersCoreModule.h"
+#include "Export.h"
 
 /* AutoInit implementations. */
 #ifdef vtkRenderingCore_AUTOINIT_INCLUDE

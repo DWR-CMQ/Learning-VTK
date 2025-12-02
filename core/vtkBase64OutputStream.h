@@ -13,7 +13,7 @@
 
 #include "vtkIOCoreModule.h" // For export macro
 #include "vtkOutputStream.h"
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class CORE_EXPORTS vtkBase64OutputStream : public vtkOutputStream
 {

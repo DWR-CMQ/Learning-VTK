@@ -21,7 +21,7 @@
 
 //#include "vtkImagingCoreModule.h" // for export macro
 #include "vtkSystemIncludes.h"
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkDataArray;
 class vtkImageData;

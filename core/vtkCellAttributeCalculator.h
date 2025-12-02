@@ -24,7 +24,7 @@
 #include "vtkCommonDataModelModule.h" // for export
 #include "vtkObject.h"
 #include "vtkSmartPointer.h" // for API.
-
+#include "Export.h"
 #include <unordered_map>
 
 VTK_ABI_NAMESPACE_BEGIN

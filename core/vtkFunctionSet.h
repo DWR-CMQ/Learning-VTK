@@ -19,7 +19,7 @@
 
 #include "vtkCommonMathModule.h" // For export macro
 #include "vtkObject.h"
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class CORE_EXPORTS vtkFunctionSet : public vtkObject
 {

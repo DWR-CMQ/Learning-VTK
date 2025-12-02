@@ -79,8 +79,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <ExternalIncludePath>core\vtkkwiml;core\vtknlohmannjson;core;core\pugixml;core\vtkpegtl;core\vtksys;core\vtkjpeg;3dparty\include;$(ExternalIncludePath)</ExternalIncludePath>
-    <LibraryPath>3dparty\lib;$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>core;core\vtkpegtl;core\vtkjpeg;3dparty\include;3dparty;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>3dparty\lib;$(SolutionDir)x64/Debug;$(LibraryPath)</LibraryPath>
     <TargetName>G217</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,7 +121,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;CommonDataModel_EXPORTS;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;GLAD_API_CALL_EXPORT;jpeg_EXPORTS;IOImage_EXPORTS;Core_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalIncludeDirectories>$(SolutionDir)Common/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Common/src;$(SolutionDir)ThirdPartyProject/token;$(SolutionDir)ThirdPartyProject/pugixml;$(SolutionDir)ThirdPartyProject/vtksys;$(SolutionDir)/CommonCore/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -129,7 +129,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>/NODEFAULTLIB:msvcprtd.lib %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;opengl32.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;vtkglad-9.4d.lib;vtkjpeg-9.4d.lib;vtksys-9.4d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;opengl32.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;vtksys.lib;pugixml.lib;token.lib;CommonCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -154,21 +154,8 @@
     <ClCompile Include="core\DICOMAppHelper.cxx" />
     <ClCompile Include="core\DICOMFile.cxx" />
     <ClCompile Include="core\DICOMParser.cxx" />
-    <ClCompile Include="core\pugixml\vtkpugixml\src\pugixml.cpp" />
     <ClCompile Include="core\raycasterfs.cxx" />
     <ClCompile Include="core\raycastervs.cxx" />
-    <ClCompile Include="core\SMP\Common\vtkSMPToolsAPI.cxx" />
-    <ClCompile Include="core\SMP\Sequential\vtkSMPToolsImpl.cxx" />
-    <ClCompile Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.cxx" />
-    <ClCompile Include="core\SMP\STDThread\vtkSMPThreadPool.cxx" />
-    <ClCompile Include="core\SMP\STDThread\vtkSMPToolsImpl.cxx" />
-    <ClCompile Include="core\token\json\jsonManager.cxx" />
-    <ClCompile Include="core\token\json\jsonToken.cxx" />
-    <ClCompile Include="core\token\Manager.cxx" />
-    <ClCompile Include="core\token\Singletons.cxx" />
-    <ClCompile Include="core\token\Token.cxx" />
-    <ClCompile Include="core\token\TypeContainer.cxx" />
-    <ClCompile Include="core\vtkAbstractArray.cxx" />
     <ClCompile Include="core\vtkAbstractCellArray.cxx" />
     <ClCompile Include="core\vtkAbstractCellLinks.cxx" />
     <ClCompile Include="core\vtkAbstractCellLocator.cxx" />
@@ -191,8 +178,6 @@
     <ClCompile Include="core\vtkAMRDataInternals.cxx" />
     <ClCompile Include="core\vtkAMRInformation.cxx" />
     <ClCompile Include="core\vtkArrayCoordinates.cxx" />
-    <ClCompile Include="core\vtkArrayIterator.cxx" />
-    <ClCompile Include="core\vtkArrayIteratorTemplateInstantiate.cxx" />
     <ClCompile Include="core\vtkArrayRange.cxx" />
     <ClCompile Include="core\vtkAssembly.cxx" />
     <ClCompile Include="core\vtkAssemblyNode.cxx" />
@@ -201,13 +186,8 @@
     <ClCompile Include="core\vtkBase64InputStream.cxx" />
     <ClCompile Include="core\vtkBase64OutputStream.cxx" />
     <ClCompile Include="core\vtkBase64Utilities.cxx" />
-    <ClCompile Include="core\vtkBitArray.cxx" />
-    <ClCompile Include="core\vtkBitArrayIterator.cxx" />
     <ClCompile Include="core\vtkBoundingBox.cxx" />
     <ClCompile Include="core\vtkBox.cxx" />
-    <ClCompile Include="core\vtkBoxMuellerRandomSequence.cxx" />
-    <ClCompile Include="core\vtkByteSwap.cxx" />
-    <ClCompile Include="core\vtkCallbackCommand.cxx" />
     <ClCompile Include="core\vtkCamera.cxx" />
     <ClCompile Include="core\vtkCameraPass.cxx" />
     <ClCompile Include="core\vtkCell.cxx" />
@@ -230,66 +210,18 @@
     <ClCompile Include="core\vtkCellPicker.cxx" />
     <ClCompile Include="core\vtkCellTreeLocator.cxx" />
     <ClCompile Include="core\vtkCellTypes.cxx" />
-    <ClCompile Include="core\vtkCharArray.cxx" />
     <ClCompile Include="core\vtkCIEDE2000.cxx" />
     <ClCompile Include="core\vtkClearRGBPass.cxx" />
     <ClCompile Include="core\vtkClearZPass.cxx" />
-    <ClCompile Include="core\vtkCollection.cxx" />
-    <ClCompile Include="core\vtkCollectionIterator.cxx" />
     <ClCompile Include="core\vtkColorSeries.cxx" />
     <ClCompile Include="core\vtkColorTransferFunction.cxx" />
-    <ClCompile Include="core\vtkCommand.cxx" />
-    <ClCompile Include="core\vtkCommonInformationKeyManager.cxx" />
     <ClCompile Include="core\vtkCompositeDataIterator.cxx" />
     <ClCompile Include="core\vtkCompositeDataPipeline.cxx" />
     <ClCompile Include="core\vtkCompositeDataSet.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_char.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_double.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_float.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_int.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_short.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_signed_char.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_char.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_int.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_long_long.cxx" />
-    <ClCompile Include="core\vtkConstantArrayInstantiate_unsigned_short.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_char.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_double.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_float.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_int.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_short.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_signed_char.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_char.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_int.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_long_long.cxx" />
-    <ClCompile Include="core\vtkConstantImplicitBackendInstantiate_unsigned_short.cxx" />
     <ClCompile Include="core\vtkContourValues.cxx" />
     <ClCompile Include="core\vtkCoordinate.cxx" />
     <ClCompile Include="core\vtkCuller.cxx" />
     <ClCompile Include="core\vtkCullerCollection.cxx" />
-    <ClCompile Include="core\vtkDataArray.cxx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="core\vtkDataArray_CopyComponent.cxx" />
-    <ClCompile Include="core\vtkDataArray_DeepCopy.cxx" />
-    <ClCompile Include="core\vtkDataArray_FiniteScalarRange.cxx" />
-    <ClCompile Include="core\vtkDataArray_FiniteVectorRange.cxx" />
-    <ClCompile Include="core\vtkDataArray_GetTuples_ids.cxx" />
-    <ClCompile Include="core\vtkDataArray_GetTuples_range.cxx" />
-    <ClCompile Include="core\vtkDataArray_InsertTuples_array_idlist.cxx" />
-    <ClCompile Include="core\vtkDataArray_InsertTuples_array_idlist_range.cxx" />
-    <ClCompile Include="core\vtkDataArray_InsertTuples_array_range.cxx" />
-    <ClCompile Include="core\vtkDataArray_InterpolateTuple_time.cxx" />
-    <ClCompile Include="core\vtkDataArray_InterpolateTuple_weights.cxx" />
-    <ClCompile Include="core\vtkDataArray_ScalarRange.cxx" />
-    <ClCompile Include="core\vtkDataArray_SetTuple_array.cxx" />
-    <ClCompile Include="core\vtkDataArray_VectorRange.cxx" />
     <ClCompile Include="core\vtkDataAssembly.cxx" />
     <ClCompile Include="core\vtkDataCompressor.cxx" />
     <ClCompile Include="core\vtkDataObject.cxx" />
@@ -301,8 +233,6 @@
     <ClCompile Include="core\vtkDataSetAttributesFieldList.cxx" />
     <ClCompile Include="core\vtkDataSetCellIterator.cxx" />
     <ClCompile Include="core\vtkDataSetCollection.cxx" />
-    <ClCompile Include="core\vtkDebugLeaks.cxx" />
-    <ClCompile Include="core\vtkDebugLeaksManager.cxx" />
     <ClCompile Include="core\vtkDefaultPass.cxx" />
     <ClCompile Include="core\vtkDemandDrivenPipeline.cxx" />
     <ClCompile Include="core\vtkDensifyPolyData.cxx" />
@@ -311,14 +241,11 @@
     <ClCompile Include="core\vtkDepthPeelingPassIntermediateFS.cxx" />
     <ClCompile Include="core\vtkDICOMImageReader.cxx" />
     <ClCompile Include="core\vtkDirectory.cxx" />
-    <ClCompile Include="core\vtkDoubleArray.cxx" />
     <ClCompile Include="core\vtkDualDepthPeelingPass.cxx" />
     <ClCompile Include="core\vtkDummyGPUInfoList.cxx" />
-    <ClCompile Include="core\vtkDynamicLoader.cxx" />
     <ClCompile Include="core\vtkEdgeTable.cxx" />
     <ClCompile Include="core\vtkEmptyCell.cxx" />
     <ClCompile Include="core\vtkErrorCode.cxx" />
-    <ClCompile Include="core\vtkEventForwarderCommand.cxx" />
     <ClCompile Include="core\vtkExecutableRunner.cxx" />
     <ClCompile Include="core\vtkExecutionAggregator.cxx" />
     <ClCompile Include="core\vtkExecutionRange.cxx" />
@@ -333,22 +260,13 @@
     <ClCompile Include="core\vtkFieldData.cxx" />
     <ClCompile Include="core\vtkFilteringInformationKeyManager.cxx" />
     <ClCompile Include="core\vtkFixedPointRayCastImage.cxx" />
-    <ClCompile Include="core\vtkFloatArray.cxx" />
     <ClCompile Include="core\vtkFrameBufferObjectBase.cxx" />
     <ClCompile Include="core\vtkFrustumCoverageCuller.cxx" />
     <ClCompile Include="core\vtkFunctionSet.cxx" />
     <ClCompile Include="core\vtkFXAAFilterFS.cxx" />
     <ClCompile Include="core\vtkFXAAOptions.cxx" />
-    <ClCompile Include="core\vtkGarbageCollector.cxx" />
-    <ClCompile Include="core\vtkGarbageCollectorManager.cxx" />
-    <ClCompile Include="core\vtkGaussianRandomSequence.cxx" />
     <ClCompile Include="core\vtkGenericCell.cxx" />
     <ClCompile Include="core\vtkGenericCellIterator.cxx" />
-    <ClCompile Include="core\vtkGenericDataArray.cxx" />
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkGenericDataArrayValueRangeInstantiate_unsigned_long_long.cxx" />
     <ClCompile Include="core\vtkGenericEdgeTable.cxx" />
     <ClCompile Include="core\vtkGenericOpenGLRenderWindow.cxx" />
     <ClCompile Include="core\vtkGenericPointIterator.cxx" />
@@ -361,8 +279,6 @@
     <ClCompile Include="core\vtkHeap.cxx" />
     <ClCompile Include="core\vtkHiddenLineRemovalPass.cxx" />
     <ClCompile Include="core\vtkHomogeneousTransform.cxx" />
-    <ClCompile Include="core\vtkIdList.cxx" />
-    <ClCompile Include="core\vtkIdTypeArray.cxx" />
     <ClCompile Include="core\vtkImageAlgorithm.cxx" />
     <ClCompile Include="core\vtkImageData.cxx" />
     <ClCompile Include="core\vtkImageInterpolator.cxx" />
@@ -386,35 +302,10 @@
     <ClCompile Include="core\vtkImplicitFunctionCollection.cxx" />
     <ClCompile Include="core\vtkImplicitSum.cxx" />
     <ClCompile Include="core\vtkIncrementalPointLocator.cxx" />
-    <ClCompile Include="core\vtkIndent.cxx" />
-    <ClCompile Include="core\vtkInformation.cxx" />
-    <ClCompile Include="core\vtkInformationDataObjectKey.cxx" />
-    <ClCompile Include="core\vtkInformationDoubleKey.cxx" />
-    <ClCompile Include="core\vtkInformationDoubleVectorKey.cxx" />
     <ClCompile Include="core\vtkInformationExecutivePortKey.cxx" />
     <ClCompile Include="core\vtkInformationExecutivePortVectorKey.cxx" />
-    <ClCompile Include="core\vtkInformationIdTypeKey.cxx" />
-    <ClCompile Include="core\vtkInformationInformationKey.cxx" />
-    <ClCompile Include="core\vtkInformationInformationVectorKey.cxx" />
-    <ClCompile Include="core\vtkInformationIntegerKey.cxx" />
-    <ClCompile Include="core\vtkInformationIntegerPointerKey.cxx" />
     <ClCompile Include="core\vtkInformationIntegerRequestKey.cxx" />
-    <ClCompile Include="core\vtkInformationIntegerVectorKey.cxx" />
-    <ClCompile Include="core\vtkInformationIterator.cxx" />
-    <ClCompile Include="core\vtkInformationKey.cxx" />
-    <ClCompile Include="core\vtkInformationKeyLookup.cxx" />
-    <ClCompile Include="core\vtkInformationKeyVectorKey.cxx" />
-    <ClCompile Include="core\vtkInformationObjectBaseKey.cxx" />
-    <ClCompile Include="core\vtkInformationObjectBaseVectorKey.cxx" />
-    <ClCompile Include="core\vtkInformationRequestKey.cxx" />
-    <ClCompile Include="core\vtkInformationStringKey.cxx" />
-    <ClCompile Include="core\vtkInformationStringVectorKey.cxx" />
-    <ClCompile Include="core\vtkInformationUnsignedLongKey.cxx" />
-    <ClCompile Include="core\vtkInformationVariantKey.cxx" />
-    <ClCompile Include="core\vtkInformationVariantVectorKey.cxx" />
-    <ClCompile Include="core\vtkInformationVector.cxx" />
     <ClCompile Include="core\vtkInputStream.cxx" />
-    <ClCompile Include="core\vtkIntArray.cxx" />
     <ClCompile Include="core\vtkInteractionStyleObjectFactory.cxx" />
     <ClCompile Include="core\vtkInteractorObserver.cxx" />
     <ClCompile Include="core\vtkInteractorStyle.cxx" />
@@ -427,7 +318,6 @@
     <ClCompile Include="core\vtkInteractorStyleTrackballActor.cxx" />
     <ClCompile Include="core\vtkInteractorStyleTrackballCamera.cxx" />
     <ClCompile Include="core\vtkJPEGReader.cxx" />
-    <ClCompile Include="core\vtkLargeInteger.cxx" />
     <ClCompile Include="core\vtkLight.cxx" />
     <ClCompile Include="core\vtkLightCollection.cxx" />
     <ClCompile Include="core\vtkLightingMapPass.cxx" />
@@ -436,32 +326,21 @@
     <ClCompile Include="core\vtkLinearTransform.cxx" />
     <ClCompile Include="core\vtkLocator.cxx" />
     <ClCompile Include="core\vtkLODProp3D.cxx" />
-    <ClCompile Include="core\vtkLogger.cxx" />
-    <ClCompile Include="core\vtkLongArray.cxx" />
-    <ClCompile Include="core\vtkLongLongArray.cxx" />
-    <ClCompile Include="core\vtkLookupTable.cxx" />
     <ClCompile Include="core\vtkMapper.cxx" />
     <ClCompile Include="core\vtkMapper2D.cxx" />
     <ClCompile Include="core\vtkMapperCollection.cxx" />
     <ClCompile Include="core\vtkMarchingSquaresLineCases.cxx" />
-    <ClCompile Include="core\vtkMath.cxx" />
     <ClCompile Include="core\vtkMatrix3x3.cxx" />
     <ClCompile Include="core\vtkMatrix4x4.cxx" />
     <ClCompile Include="core\vtkMatrixToLinearTransform.cxx" />
     <ClCompile Include="core\vtkMergePoints.cxx" />
-    <ClCompile Include="core\vtkMinimalStandardRandomSequence.cxx" />
     <ClCompile Include="core\vtkMultiBlockDataSet.cxx" />
     <ClCompile Include="core\vtkMultiBlockDataSetSerDesHelper.cxx" />
     <ClCompile Include="core\vtkMultiPieceDataSet.cxx" />
-    <ClCompile Include="core\vtkMultiThreader.cxx" />
     <ClCompile Include="core\vtkMultiVolume.cxx" />
     <ClCompile Include="core\vtkNamedColors.cxx" />
     <ClCompile Include="core\vtkNonLinearCell.cxx" />
     <ClCompile Include="core\vtkNonOverlappingAMR.cxx" />
-    <ClCompile Include="core\vtkObject.cxx" />
-    <ClCompile Include="core\vtkObjectBase.cxx" />
-    <ClCompile Include="core\vtkObjectFactory.cxx" />
-    <ClCompile Include="core\vtkObjectFactoryCollection.cxx" />
     <ClCompile Include="core\vtkObserverMediator.cxx" />
     <ClCompile Include="core\vtkOpaquePass.cxx" />
     <ClCompile Include="core\vtkOpenGLActor.cxx" />
@@ -509,13 +388,8 @@
     <ClCompile Include="core\vtkOrderIndependentTranslucentPass.cxx" />
     <ClCompile Include="core\vtkOrderIndependentTranslucentPassFinalFS.cxx" />
     <ClCompile Include="core\vtkOSOpenGLRenderWindow.cxx" />
-    <ClCompile Include="core\vtkOStreamWrapper.cxx" />
-    <ClCompile Include="core\vtkOStrStreamWrapper.cxx" />
     <ClCompile Include="core\vtkOutlineSource.cxx" />
     <ClCompile Include="core\vtkOutputStream.cxx" />
-    <ClCompile Include="core\vtkOutputWindow.cxx" />
-    <ClCompile Include="core\vtkOverrideInformation.cxx" />
-    <ClCompile Include="core\vtkOverrideInformationCollection.cxx" />
     <ClCompile Include="core\vtkPartitionedDataSet.cxx" />
     <ClCompile Include="core\vtkPartitionedDataSetCollection.cxx" />
     <ClCompile Include="core\vtkPBRFunctions.cxx" />
@@ -537,8 +411,6 @@
     <ClCompile Include="core\vtkPlanesIntersection.cxx" />
     <ClCompile Include="core\vtkPointData.cxx" />
     <ClCompile Include="core\vtkPointLocator.cxx" />
-    <ClCompile Include="core\vtkPoints.cxx" />
-    <ClCompile Include="core\vtkPoints2D.cxx" />
     <ClCompile Include="core\vtkPointSet.cxx" />
     <ClCompile Include="core\vtkPointSetCellIterator.cxx" />
     <ClCompile Include="core\vtkPointsProjectedHull.cxx" />
@@ -553,7 +425,6 @@
     <ClCompile Include="core\vtkPolyDataVS.cxx" />
     <ClCompile Include="core\vtkPolyDataWideLineGS.cxx" />
     <ClCompile Include="core\vtkPolygon.cxx" />
-    <ClCompile Include="core\vtkPriorityQueue.cxx" />
     <ClCompile Include="core\vtkProgressObserver.cxx" />
     <ClCompile Include="core\vtkProp.cxx" />
     <ClCompile Include="core\vtkProp3D.cxx" />
@@ -567,7 +438,6 @@
     <ClCompile Include="core\vtkQuad.cxx" />
     <ClCompile Include="core\vtkQuadraticEdge.cxx" />
     <ClCompile Include="core\vtkQuaternionInterpolator.cxx" />
-    <ClCompile Include="core\vtkRandomSequence.cxx" />
     <ClCompile Include="core\vtkRayCastImageDisplayHelper.cxx" />
     <ClCompile Include="core\vtkRectilinearGrid.cxx" />
     <ClCompile Include="core\vtkRenderbuffer.cxx" />
@@ -585,7 +455,6 @@
     <ClCompile Include="core\vtkRenderWindow.cxx" />
     <ClCompile Include="core\vtkRenderWindowInteractor.cxx" />
     <ClCompile Include="core\vtkRenderWindowInteractor3D.cxx" />
-    <ClCompile Include="core\vtkScalarsToColors.cxx" />
     <ClCompile Include="core\vtkSelection.cxx" />
     <ClCompile Include="core\vtkSelectionNode.cxx" />
     <ClCompile Include="core\vtkSequencePass.cxx" />
@@ -594,25 +463,7 @@
     <ClCompile Include="core\vtkShaderProperty.cxx" />
     <ClCompile Include="core\vtkShadowMapBakerPass.cxx" />
     <ClCompile Include="core\vtkShadowMapPass.cxx" />
-    <ClCompile Include="core\vtkShortArray.cxx" />
-    <ClCompile Include="core\vtkSignedCharArray.cxx" />
     <ClCompile Include="core\vtkSkybox.cxx" />
-    <ClCompile Include="core\vtkSmartPointerBase.cxx" />
-    <ClCompile Include="core\vtkSMPTools.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_char.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_double.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_float.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_int.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_short.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_signed_char.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_char.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_int.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_long_long.cxx" />
-    <ClCompile Include="core\vtkSOADataArrayTemplateInstantiate_unsigned_short.cxx" />
-    <ClCompile Include="core\vtkSortDataArray.cxx" />
     <ClCompile Include="core\vtkSphericalHarmonics.cxx" />
     <ClCompile Include="core\vtkSSAAPass.cxx" />
     <ClCompile Include="core\vtkSSAAPassFS.cxx" />
@@ -620,66 +471,12 @@
     <ClCompile Include="core\vtkStaticCellLinks.cxx" />
     <ClCompile Include="core\vtkStaticCellLocator.cxx" />
     <ClCompile Include="core\vtkStaticPointLocator.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_char.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_double.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_float.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_int.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_short.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_signed_char.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_char.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_int.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_long_long.cxx" />
-    <ClCompile Include="core\vtkStdFunctionArrayInstantiate_unsigned_short.cxx" />
-    <ClCompile Include="core\vtkStdString.cxx" />
     <ClCompile Include="core\vtkStereoCompositor.cxx" />
     <ClCompile Include="core\vtkStreamingDemandDrivenPipeline.cxx" />
-    <ClCompile Include="core\vtkStringArray.cxx" />
-    <ClCompile Include="core\vtkStringOutputWindow.cxx" />
-    <ClCompile Include="core\vtkStringToken.cxx" />
     <ClCompile Include="core\vtkStructuredCellArray.cxx" />
     <ClCompile Include="core\vtkStructuredData.cxx" />
     <ClCompile Include="core\vtkStructuredExtent.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_char.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_double.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_float.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_int.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_short.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_signed_char.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_char.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_int.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_long_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointArrayInstantiate_unsigned_short.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_char.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_double.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_float.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_int.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_short.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_signed_char.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_char.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_int.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_long_long.cxx" />
-    <ClCompile Include="core\vtkStructuredPointBackendInstantiate_unsigned_short.cxx" />
     <ClCompile Include="core\vtkStructuredPoints.cxx" />
-    <ClCompile Include="core\vtksys\CommandLineArguments.cxx" />
-    <ClCompile Include="core\vtksys\Directory.cxx" />
-    <ClCompile Include="core\vtksys\DynamicLoader.cxx" />
-    <ClCompile Include="core\vtksys\EncodingC.c" />
-    <ClCompile Include="core\vtksys\EncodingCXX.cxx" />
-    <ClCompile Include="core\vtksys\Glob.cxx" />
-    <ClCompile Include="core\vtksys\ProcessWin32.c" />
-    <ClCompile Include="core\vtksys\RegularExpression.cxx" />
-    <ClCompile Include="core\vtksys\Status.cxx" />
-    <ClCompile Include="core\vtksys\SystemInformation.cxx" />
-    <ClCompile Include="core\vtksys\SystemTools.cxx" />
     <ClCompile Include="core\vtkTable.cxx" />
     <ClCompile Include="core\vtkTDxInteractorStyle.cxx" />
     <ClCompile Include="core\vtkTDxInteractorStyleCamera.cxx" />
@@ -693,7 +490,6 @@
     <ClCompile Include="core\vtkTextureUnitManager.cxx" />
     <ClCompile Include="core\vtkThreadedImageAlgorithm.cxx" />
     <ClCompile Include="core\vtkTimerLog.cxx" />
-    <ClCompile Include="core\vtkTimeStamp.cxx" />
     <ClCompile Include="core\vtkTransform.cxx" />
     <ClCompile Include="core\vtkTransformFeedback.cxx" />
     <ClCompile Include="core\vtkTranslucentPass.cxx" />
@@ -701,49 +497,16 @@
     <ClCompile Include="core\vtkTriangle.cxx" />
     <ClCompile Include="core\vtkTrivialConsumer.cxx" />
     <ClCompile Include="core\vtkTrivialProducer.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_char.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_double.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_float.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_int.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_long_long.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_short.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_signed_char.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_char.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_int.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_long_long.cxx" />
-    <ClCompile Include="core\vtkTypedDataArrayInstantiate_unsigned_short.cxx" />
-    <ClCompile Include="core\vtkTypeFloat32Array.cxx" />
-    <ClCompile Include="core\vtkTypeFloat64Array.cxx" />
-    <ClCompile Include="core\vtkTypeInt16Array.cxx" />
-    <ClCompile Include="core\vtkTypeInt32Array.cxx" />
-    <ClCompile Include="core\vtkTypeInt64Array.cxx" />
-    <ClCompile Include="core\vtkTypeInt8Array.cxx" />
-    <ClCompile Include="core\vtkTypeUInt16Array.cxx" />
-    <ClCompile Include="core\vtkTypeUInt32Array.cxx" />
-    <ClCompile Include="core\vtkTypeUInt64Array.cxx" />
-    <ClCompile Include="core\vtkTypeUInt8Array.cxx" />
     <ClCompile Include="core\vtkUniformGrid.cxx" />
     <ClCompile Include="core\vtkUniformGridAMR.cxx" />
     <ClCompile Include="core\vtkUniformGridAMRDataIterator.cxx" />
     <ClCompile Include="core\vtkUniforms.cxx" />
-    <ClCompile Include="core\vtkUnsignedCharArray.cxx" />
-    <ClCompile Include="core\vtkUnsignedIntArray.cxx" />
-    <ClCompile Include="core\vtkUnsignedLongArray.cxx" />
-    <ClCompile Include="core\vtkUnsignedLongLongArray.cxx" />
-    <ClCompile Include="core\vtkUnsignedShortArray.cxx" />
     <ClCompile Include="core\vtkUnstructuredGrid.cxx" />
     <ClCompile Include="core\vtkUnstructuredGridBase.cxx" />
     <ClCompile Include="core\vtkUnstructuredGridCellIterator.cxx" />
-    <ClCompile Include="core\vtkValueFromString.cxx" />
-    <ClCompile Include="core\vtkVariant.cxx" />
-    <ClCompile Include="core\vtkVariantArray.cxx" />
-    <ClCompile Include="core\vtkVersion.cxx" />
     <ClCompile Include="core\vtkVertex.cxx" />
     <ClCompile Include="core\vtkViewport.cxx" />
     <ClCompile Include="core\vtkVisibilitySort.cxx" />
-    <ClCompile Include="core\vtkVoidArray.cxx" />
     <ClCompile Include="core\vtkVolume.cxx" />
     <ClCompile Include="core\vtkVolumeCollection.cxx" />
     <ClCompile Include="core\vtkVolumeInputHelper.cxx" />
@@ -751,12 +514,9 @@
     <ClCompile Include="core\vtkVolumeProperty.cxx" />
     <ClCompile Include="core\vtkVolumeTexture.cxx" />
     <ClCompile Include="core\vtkVolumetricPass.cxx" />
-    <ClCompile Include="core\vtkWeakPointerBase.cxx" />
     <ClCompile Include="core\vtkWin32HardwareWindow.cxx" />
     <ClCompile Include="core\vtkWin32OpenGLRenderWindow.cxx" />
-    <ClCompile Include="core\vtkWin32OutputWindow.cxx" />
     <ClCompile Include="core\vtkWin32RenderWindowInteractor.cxx" />
-    <ClCompile Include="core\vtkWindow.cxx" />
     <ClCompile Include="core\vtkWorldPointPicker.cxx" />
     <ClCompile Include="core\vtkXMLDataElement.cxx" />
     <ClCompile Include="core\vtkXMLDataParser.cxx" />
@@ -773,34 +533,8 @@
     <ClInclude Include="core\DICOMParserMap.h" />
     <ClInclude Include="core\DICOMTypes.h" />
     <ClInclude Include="core\Export.h" />
-    <ClInclude Include="core\pugixml\vtkpugixml\src\pugiconfig.hpp" />
-    <ClInclude Include="core\pugixml\vtkpugixml\src\pugixml.hpp" />
-    <ClInclude Include="core\pugixml\vtkpugixml\src\vtk_pugixml_mangle.h" />
-    <ClInclude Include="core\pugixml\vtk_pugixml.h" />
     <ClInclude Include="core\raycasterfs.h" />
     <ClInclude Include="core\raycastervs.h" />
-    <ClInclude Include="core\SMP\Common\vtkSMPThreadLocalAPI.h" />
-    <ClInclude Include="core\SMP\Common\vtkSMPToolsAPI.h" />
-    <ClInclude Include="core\SMP\Common\vtkSMPToolsInternal.h" />
-    <ClInclude Include="core\SMP\Sequential\vtkSMPThreadLocalImpl.h" />
-    <ClInclude Include="core\SMP\STDThread\vtkSMPThreadLocalBackend.h" />
-    <ClInclude Include="core\SMP\STDThread\vtkSMPThreadLocalImpl.h" />
-    <ClInclude Include="core\SMP\STDThread\vtkSMPThreadPool.h" />
-    <ClInclude Include="core\token\Compiler.h" />
-    <ClInclude Include="core\token\CxxABIConfigure.h" />
-    <ClInclude Include="core\token\Exports.h" />
-    <ClInclude Include="core\token\Hash.h" />
-    <ClInclude Include="core\token\json\jsonManager.h" />
-    <ClInclude Include="core\token\json\jsonToken.h" />
-    <ClInclude Include="core\token\Manager.h" />
-    <ClInclude Include="core\token\Options.h" />
-    <ClInclude Include="core\token\Singletons.h" />
-    <ClInclude Include="core\token\Token.h" />
-    <ClInclude Include="core\token\Type.h" />
-    <ClInclude Include="core\token\TypeContainer.h" />
-    <ClInclude Include="core\vtkABI.h" />
-    <ClInclude Include="core\vtkABINamespace.h" />
-    <ClInclude Include="core\vtkAbstractArray.h" />
     <ClInclude Include="core\vtkAbstractCellArray.h" />
     <ClInclude Include="core\vtkAbstractCellLinks.h" />
     <ClInclude Include="core\vtkAbstractCellLocator.h" />
@@ -822,33 +556,19 @@
     <ClInclude Include="core\vtkAMRBox.h" />
     <ClInclude Include="core\vtkAMRDataInternals.h" />
     <ClInclude Include="core\vtkAMRInformation.h" />
-    <ClInclude Include="core\vtkAOSDataArrayTemplate.h" />
     <ClInclude Include="core\vtkArrayCoordinates.h" />
-    <ClInclude Include="core\vtkArrayDispatch.h" />
-    <ClInclude Include="core\vtkArrayDispatchArrayList.h" />
-    <ClInclude Include="core\vtkArrayIterator.h" />
-    <ClInclude Include="core\vtkArrayIteratorIncludes.h" />
-    <ClInclude Include="core\vtkArrayIteratorTemplate.h" />
     <ClInclude Include="core\vtkArrayRange.h" />
     <ClInclude Include="core\vtkAssembly.h" />
     <ClInclude Include="core\vtkAssemblyNode.h" />
     <ClInclude Include="core\vtkAssemblyPath.h" />
     <ClInclude Include="core\vtkAssemblyPaths.h" />
-    <ClInclude Include="core\vtkAssume.h" />
     <ClInclude Include="core\vtkAutoInit.h" />
     <ClInclude Include="core\vtkBase64InputStream.h" />
     <ClInclude Include="core\vtkBase64OutputStream.h" />
     <ClInclude Include="core\vtkBase64Utilities.h" />
-    <ClInclude Include="core\vtkBitArray.h" />
-    <ClInclude Include="core\vtkBitArrayIterator.h" />
     <ClInclude Include="core\vtkBlockSortHelper.h" />
     <ClInclude Include="core\vtkBoundingBox.h" />
     <ClInclude Include="core\vtkBox.h" />
-    <ClInclude Include="core\vtkBoxMuellerRandomSequence.h" />
-    <ClInclude Include="core\vtkBuffer.h" />
-    <ClInclude Include="core\vtkBuild.h" />
-    <ClInclude Include="core\vtkByteSwap.h" />
-    <ClInclude Include="core\vtkCallbackCommand.h" />
     <ClInclude Include="core\vtkCamera.h" />
     <ClInclude Include="core\vtkCameraPass.h" />
     <ClInclude Include="core\vtkCell.h" />
@@ -874,46 +594,28 @@
     <ClInclude Include="core\vtkCellTreeLocator.h" />
     <ClInclude Include="core\vtkCellType.h" />
     <ClInclude Include="core\vtkCellTypes.h" />
-    <ClInclude Include="core\vtkCharArray.h" />
     <ClInclude Include="core\vtkCIEDE2000.h" />
     <ClInclude Include="core\vtkClearRGBPass.h" />
     <ClInclude Include="core\vtkClearZPass.h" />
-    <ClInclude Include="core\vtkCollection.h" />
-    <ClInclude Include="core\vtkCollectionIterator.h" />
-    <ClInclude Include="core\vtkCollectionRange.h" />
     <ClInclude Include="core\vtkColor.h" />
     <ClInclude Include="core\vtkColorSeries.h" />
     <ClInclude Include="core\vtkColorTransferFunction.h" />
-    <ClInclude Include="core\vtkCommand.h" />
     <ClInclude Include="core\vtkCommonColorModule.h" />
-    <ClInclude Include="core\vtkCommonCoreModule.h" />
     <ClInclude Include="core\vtkCommonDataModelModule.h" />
     <ClInclude Include="core\vtkCommonExecutionModelModule.h" />
-    <ClInclude Include="core\vtkCommonInformationKeyManager.h" />
     <ClInclude Include="core\vtkCommonMathModule.h" />
     <ClInclude Include="core\vtkCommonMiscModule.h" />
     <ClInclude Include="core\vtkCommonSystemModule.h" />
     <ClInclude Include="core\vtkCommonTransformsModule.h" />
-    <ClInclude Include="core\vtkCompiler.h" />
     <ClInclude Include="core\vtkCompositeDataIterator.h" />
     <ClInclude Include="core\vtkCompositeDataPipeline.h" />
     <ClInclude Include="core\vtkCompositeDataSet.h" />
     <ClInclude Include="core\vtkCompositeDataSetNodeReference.h" />
     <ClInclude Include="core\vtkCompositeDataSetRange.h" />
-    <ClInclude Include="core\vtkConstantArray.h" />
-    <ClInclude Include="core\vtkConstantImplicitBackend.h" />
     <ClInclude Include="core\vtkContourValues.h" />
     <ClInclude Include="core\vtkCoordinate.h" />
     <ClInclude Include="core\vtkCuller.h" />
     <ClInclude Include="core\vtkCullerCollection.h" />
-    <ClInclude Include="core\vtkDataArray.h" />
-    <ClInclude Include="core\vtkDataArrayAccessor.h" />
-    <ClInclude Include="core\vtkDataArrayMeta.h" />
-    <ClInclude Include="core\vtkDataArrayRange.h" />
-    <ClInclude Include="core\vtkDataArrayTupleRange_AOS.h" />
-    <ClInclude Include="core\vtkDataArrayTupleRange_Generic.h" />
-    <ClInclude Include="core\vtkDataArrayValueRange_AOS.h" />
-    <ClInclude Include="core\vtkDataArrayValueRange_Generic.h" />
     <ClInclude Include="core\vtkDataAssembly.h" />
     <ClInclude Include="core\vtkDataAssemblyVisitor.h" />
     <ClInclude Include="core\vtkDataCompressor.h" />
@@ -928,28 +630,19 @@
     <ClInclude Include="core\vtkDataSetAttributesFieldList.h" />
     <ClInclude Include="core\vtkDataSetCellIterator.h" />
     <ClInclude Include="core\vtkDataSetCollection.h" />
-    <ClInclude Include="core\vtkDebug.h" />
-    <ClInclude Include="core\vtkDebugLeaks.h" />
-    <ClInclude Include="core\vtkDebugLeaksManager.h" />
     <ClInclude Include="core\vtkDefaultPass.h" />
     <ClInclude Include="core\vtkDemandDrivenPipeline.h" />
     <ClInclude Include="core\vtkDensifyPolyData.h" />
-    <ClInclude Include="core\vtkDeprecation.h" />
     <ClInclude Include="core\vtkDepthPeelingPass.h" />
     <ClInclude Include="core\vtkDepthPeelingPassFinalFS.h" />
     <ClInclude Include="core\vtkDepthPeelingPassIntermediateFS.h" />
     <ClInclude Include="core\vtkDICOMImageReader.h" />
     <ClInclude Include="core\vtkDirectory.h" />
-    <ClInclude Include="core\vtkDoubleArray.h" />
     <ClInclude Include="core\vtkDualDepthPeelingPass.h" />
     <ClInclude Include="core\vtkDummyGPUInfoList.h" />
-    <ClInclude Include="core\vtkDynamicLoader.h" />
     <ClInclude Include="core\vtkEdgeTable.h" />
     <ClInclude Include="core\vtkEmptyCell.h" />
-    <ClInclude Include="core\vtkEndian.h" />
     <ClInclude Include="core\vtkErrorCode.h" />
-    <ClInclude Include="core\vtkEventData.h" />
-    <ClInclude Include="core\vtkEventForwarderCommand.h" />
     <ClInclude Include="core\vtkExecutableRunner.h" />
     <ClInclude Include="core\vtkExecutionAggregator.h" />
     <ClInclude Include="core\vtkExecutionRange.h" />
@@ -972,26 +665,19 @@
     <ClInclude Include="core\vtkexpat\lib\xmltok_impl.h" />
     <ClInclude Include="core\vtkExplicitStructuredGrid.h" />
     <ClInclude Include="core\vtkExtentTranslator.h" />
-    <ClInclude Include="core\vtkfast_float.h" />
     <ClInclude Include="core\vtkFieldData.h" />
     <ClInclude Include="core\vtkFilteringInformationKeyManager.h" />
     <ClInclude Include="core\vtkFiltersCoreModule.h" />
     <ClInclude Include="core\vtkFiltersGeneralModule.h" />
     <ClInclude Include="core\vtkFiltersSourcesModule.h" />
     <ClInclude Include="core\vtkFixedPointRayCastImage.h" />
-    <ClInclude Include="core\vtkFloatArray.h" />
     <ClInclude Include="core\vtkFrameBufferObjectBase.h" />
     <ClInclude Include="core\vtkFrustumCoverageCuller.h" />
     <ClInclude Include="core\vtkFunctionSet.h" />
     <ClInclude Include="core\vtkFXAAFilterFS.h" />
     <ClInclude Include="core\vtkFXAAOptions.h" />
-    <ClInclude Include="core\vtkGarbageCollector.h" />
-    <ClInclude Include="core\vtkGarbageCollectorManager.h" />
-    <ClInclude Include="core\vtkGaussianRandomSequence.h" />
     <ClInclude Include="core\vtkGenericCell.h" />
     <ClInclude Include="core\vtkGenericCellIterator.h" />
-    <ClInclude Include="core\vtkGenericDataArray.h" />
-    <ClInclude Include="core\vtkGenericDataArrayLookupHelper.h" />
     <ClInclude Include="core\vtkGenericEdgeTable.h" />
     <ClInclude Include="core\vtkGenericOpenGLRenderWindow.h" />
     <ClInclude Include="core\vtkGenericPointIterator.h" />
@@ -1007,12 +693,9 @@
     <ClInclude Include="core\vtkGraphicsFactory.h" />
     <ClInclude Include="core\vtkHardwareSelector.h" />
     <ClInclude Include="core\vtkHardwareWindow.h" />
-    <ClInclude Include="core\vtkHashCombiner.h" />
     <ClInclude Include="core\vtkHeap.h" />
     <ClInclude Include="core\vtkHiddenLineRemovalPass.h" />
     <ClInclude Include="core\vtkHomogeneousTransform.h" />
-    <ClInclude Include="core\vtkIdList.h" />
-    <ClInclude Include="core\vtkIdTypeArray.h" />
     <ClInclude Include="core\vtkImageAlgorithm.h" />
     <ClInclude Include="core\vtkImageData.h" />
     <ClInclude Include="core\vtkImageInterpolator.h" />
@@ -1034,43 +717,14 @@
     <ClInclude Include="core\vtkImageStencilIterator.h" />
     <ClInclude Include="core\vtkImageStencilSource.h" />
     <ClInclude Include="core\vtkImagingCoreModule.h" />
-    <ClInclude Include="core\vtkImplicitArray.h" />
-    <ClInclude Include="core\vtkImplicitArrayTraits.h" />
     <ClInclude Include="core\vtkImplicitFunction.h" />
     <ClInclude Include="core\vtkImplicitFunctionCollection.h" />
     <ClInclude Include="core\vtkImplicitSum.h" />
     <ClInclude Include="core\vtkIncrementalPointLocator.h" />
-    <ClInclude Include="core\vtkIndent.h" />
-    <ClInclude Include="core\vtkInformation.h" />
-    <ClInclude Include="core\vtkInformationDataObjectKey.h" />
-    <ClInclude Include="core\vtkInformationDoubleKey.h" />
-    <ClInclude Include="core\vtkInformationDoubleVectorKey.h" />
     <ClInclude Include="core\vtkInformationExecutivePortKey.h" />
     <ClInclude Include="core\vtkInformationExecutivePortVectorKey.h" />
-    <ClInclude Include="core\vtkInformationIdTypeKey.h" />
-    <ClInclude Include="core\vtkInformationInformationKey.h" />
-    <ClInclude Include="core\vtkInformationInformationVectorKey.h" />
-    <ClInclude Include="core\vtkInformationIntegerKey.h" />
-    <ClInclude Include="core\vtkInformationIntegerPointerKey.h" />
     <ClInclude Include="core\vtkInformationIntegerRequestKey.h" />
-    <ClInclude Include="core\vtkInformationIntegerVectorKey.h" />
-    <ClInclude Include="core\vtkInformationInternals.h" />
-    <ClInclude Include="core\vtkInformationIterator.h" />
-    <ClInclude Include="core\vtkInformationKey.h" />
-    <ClInclude Include="core\vtkInformationKeyLookup.h" />
-    <ClInclude Include="core\vtkInformationKeyVectorKey.h" />
-    <ClInclude Include="core\vtkInformationObjectBaseKey.h" />
-    <ClInclude Include="core\vtkInformationObjectBaseVectorKey.h" />
-    <ClInclude Include="core\vtkInformationRequestKey.h" />
-    <ClInclude Include="core\vtkInformationStringKey.h" />
-    <ClInclude Include="core\vtkInformationStringVectorKey.h" />
-    <ClInclude Include="core\vtkInformationUnsignedLongKey.h" />
-    <ClInclude Include="core\vtkInformationVariantKey.h" />
-    <ClInclude Include="core\vtkInformationVariantVectorKey.h" />
-    <ClInclude Include="core\vtkInformationVector.h" />
-    <ClInclude Include="core\vtkInherits.h" />
     <ClInclude Include="core\vtkInputStream.h" />
-    <ClInclude Include="core\vtkIntArray.h" />
     <ClInclude Include="core\vtkInteractionStyleModule.h" />
     <ClInclude Include="core\vtkInteractionStyleObjectFactory.h" />
     <ClInclude Include="core\vtkInteractorObserver.h" />
@@ -1085,11 +739,8 @@
     <ClInclude Include="core\vtkInteractorStyleTrackballCamera.h" />
     <ClInclude Include="core\vtkIOCoreModule.h" />
     <ClInclude Include="core\vtkIOImageModule.h" />
-    <ClInclude Include="core\vtkIOStream.h" />
     <ClInclude Include="core\vtkIOXMLParserModule.h" />
     <ClInclude Include="core\vtkJPEGReader.h" />
-    <ClInclude Include="core\vtkLargeInteger.h" />
-    <ClInclude Include="core\vtkLegacy.h" />
     <ClInclude Include="core\vtkLight.h" />
     <ClInclude Include="core\vtkLightCollection.h" />
     <ClInclude Include="core\vtkLightingMapPass.h" />
@@ -1098,37 +749,20 @@
     <ClInclude Include="core\vtkLinearTransform.h" />
     <ClInclude Include="core\vtkLocator.h" />
     <ClInclude Include="core\vtkLODProp3D.h" />
-    <ClInclude Include="core\vtkLogger.h" />
-    <ClInclude Include="core\vtkLongArray.h" />
-    <ClInclude Include="core\vtkLongLongArray.h" />
-    <ClInclude Include="core\vtkLookupTable.h" />
     <ClInclude Include="core\vtkMapper.h" />
     <ClInclude Include="core\vtkMapper2D.h" />
     <ClInclude Include="core\vtkMapperCollection.h" />
     <ClInclude Include="core\vtkMarchingSquaresLineCases.h" />
-    <ClInclude Include="core\vtkMath.h" />
-    <ClInclude Include="core\vtkMathConfigure.h" />
-    <ClInclude Include="core\vtkMathPrivate.hxx" />
-    <ClInclude Include="core\vtkMathUtilities.h" />
     <ClInclude Include="core\vtkMatrix3x3.h" />
     <ClInclude Include="core\vtkMatrix4x4.h" />
     <ClInclude Include="core\vtkMatrixToLinearTransform.h" />
-    <ClInclude Include="core\vtkMatrixUtilities.h" />
     <ClInclude Include="core\vtkMergePoints.h" />
-    <ClInclude Include="core\vtkMeta.h" />
-    <ClInclude Include="core\vtkMinimalStandardRandomSequence.h" />
     <ClInclude Include="core\vtkMultiBlockDataSet.h" />
     <ClInclude Include="core\vtkMultiPieceDataSet.h" />
-    <ClInclude Include="core\vtkMultiThreader.h" />
     <ClInclude Include="core\vtkMultiVolume.h" />
     <ClInclude Include="core\vtkNamedColors.h" />
-    <ClInclude Include="core\vtkNew.h" />
     <ClInclude Include="core\vtkNonLinearCell.h" />
     <ClInclude Include="core\vtkNonOverlappingAMR.h" />
-    <ClInclude Include="core\vtkObject.h" />
-    <ClInclude Include="core\vtkObjectBase.h" />
-    <ClInclude Include="core\vtkObjectFactory.h" />
-    <ClInclude Include="core\vtkObjectFactoryCollection.h" />
     <ClInclude Include="core\vtkObserverMediator.h" />
     <ClInclude Include="core\vtkOpaquePass.h" />
     <ClInclude Include="core\vtkOpenGLActor.h" />
@@ -1177,17 +811,11 @@
     <ClInclude Include="core\vtkOpenGLVolumeOpacityTable.h" />
     <ClInclude Include="core\vtkOpenGLVolumeRGBTable.h" />
     <ClInclude Include="core\vtkOpenGLVolumeTransferFunction2D.h" />
-    <ClInclude Include="core\vtkOptions.h" />
     <ClInclude Include="core\vtkOrderIndependentTranslucentPass.h" />
     <ClInclude Include="core\vtkOrderIndependentTranslucentPassFinalFS.h" />
     <ClInclude Include="core\vtkOSOpenGLRenderWindow.h" />
-    <ClInclude Include="core\vtkOStreamWrapper.h" />
-    <ClInclude Include="core\vtkOStrStreamWrapper.h" />
     <ClInclude Include="core\vtkOutlineSource.h" />
     <ClInclude Include="core\vtkOutputStream.h" />
-    <ClInclude Include="core\vtkOutputWindow.h" />
-    <ClInclude Include="core\vtkOverrideInformation.h" />
-    <ClInclude Include="core\vtkOverrideInformationCollection.h" />
     <ClInclude Include="core\vtkPartitionedDataSet.h" />
     <ClInclude Include="core\vtkPartitionedDataSetCollection.h" />
     <ClInclude Include="core\vtkPBRFunctions.h" />
@@ -1207,11 +835,8 @@
     <ClInclude Include="core\vtkPlaneCollection.h" />
     <ClInclude Include="core\vtkPlanes.h" />
     <ClInclude Include="core\vtkPlanesIntersection.h" />
-    <ClInclude Include="core\vtkPlatform.h" />
     <ClInclude Include="core\vtkPointData.h" />
     <ClInclude Include="core\vtkPointLocator.h" />
-    <ClInclude Include="core\vtkPoints.h" />
-    <ClInclude Include="core\vtkPoints2D.h" />
     <ClInclude Include="core\vtkPointSet.h" />
     <ClInclude Include="core\vtkPointSetCellIterator.h" />
     <ClInclude Include="core\vtkPointsProjectedHull.h" />
@@ -1227,7 +852,6 @@
     <ClInclude Include="core\vtkPolyDataVS.h" />
     <ClInclude Include="core\vtkPolyDataWideLineGS.h" />
     <ClInclude Include="core\vtkPolygon.h" />
-    <ClInclude Include="core\vtkPriorityQueue.h" />
     <ClInclude Include="core\vtkProgressObserver.h" />
     <ClInclude Include="core\vtkProp.h" />
     <ClInclude Include="core\vtkProp3D.h" />
@@ -1242,9 +866,6 @@
     <ClInclude Include="core\vtkQuadraticEdge.h" />
     <ClInclude Include="core\vtkQuaternion.h" />
     <ClInclude Include="core\vtkQuaternionInterpolator.h" />
-    <ClInclude Include="core\vtkRandomSequence.h" />
-    <ClInclude Include="core\vtkRange.h" />
-    <ClInclude Include="core\vtkRangeIterableTraits.h" />
     <ClInclude Include="core\vtkRayCastImageDisplayHelper.h" />
     <ClInclude Include="core\vtkRect.h" />
     <ClInclude Include="core\vtkRectilinearGrid.h" />
@@ -1270,27 +891,15 @@
     <ClInclude Include="core\vtkRenderWindow.h" />
     <ClInclude Include="core\vtkRenderWindowInteractor.h" />
     <ClInclude Include="core\vtkRenderWindowInteractor3D.h" />
-    <ClInclude Include="core\vtkScalarsToColors.h" />
     <ClInclude Include="core\vtkSelection.h" />
     <ClInclude Include="core\vtkSelectionNode.h" />
     <ClInclude Include="core\vtkSequencePass.h" />
-    <ClInclude Include="core\vtkSetGet.h" />
     <ClInclude Include="core\vtkShader.h" />
     <ClInclude Include="core\vtkShaderProgram.h" />
     <ClInclude Include="core\vtkShaderProperty.h" />
     <ClInclude Include="core\vtkShadowMapBakerPass.h" />
     <ClInclude Include="core\vtkShadowMapPass.h" />
-    <ClInclude Include="core\vtkShortArray.h" />
-    <ClInclude Include="core\vtkSignedCharArray.h" />
     <ClInclude Include="core\vtkSkybox.h" />
-    <ClInclude Include="core\vtkSmartPointer.h" />
-    <ClInclude Include="core\vtkSmartPointerBase.h" />
-    <ClInclude Include="core\vtkSMP.h" />
-    <ClInclude Include="core\vtkSMPThreadLocal.h" />
-    <ClInclude Include="core\vtkSMPThreadLocalObject.h" />
-    <ClInclude Include="core\vtkSMPTools.h" />
-    <ClInclude Include="core\vtkSOADataArrayTemplate.h" />
-    <ClInclude Include="core\vtkSortDataArray.h" />
     <ClInclude Include="core\vtkSphericalHarmonics.h" />
     <ClInclude Include="core\vtkSSAAPass.h" />
     <ClInclude Include="core\vtkSSAAPassFS.h" />
@@ -1300,39 +909,12 @@
     <ClInclude Include="core\vtkStaticCellLinksTemplate.h" />
     <ClInclude Include="core\vtkStaticCellLocator.h" />
     <ClInclude Include="core\vtkStaticPointLocator.h" />
-    <ClInclude Include="core\vtkStdFunctionArray.h" />
-    <ClInclude Include="core\vtkStdString.h" />
     <ClInclude Include="core\vtkStereoCompositor.h" />
     <ClInclude Include="core\vtkStreamingDemandDrivenPipeline.h" />
-    <ClInclude Include="core\vtkStringArray.h" />
-    <ClInclude Include="core\vtkStringOutputWindow.h" />
-    <ClInclude Include="core\vtkStringToken.h" />
     <ClInclude Include="core\vtkStructuredCellArray.h" />
     <ClInclude Include="core\vtkStructuredData.h" />
     <ClInclude Include="core\vtkStructuredExtent.h" />
-    <ClInclude Include="core\vtkStructuredPointArray.h" />
-    <ClInclude Include="core\vtkStructuredPointBackend.h" />
     <ClInclude Include="core\vtkStructuredPoints.h" />
-    <ClInclude Include="core\vtkSystemIncludes.h" />
-    <ClInclude Include="core\vtksys\CommandLineArguments.hxx" />
-    <ClInclude Include="core\vtksys\Configure.h" />
-    <ClInclude Include="core\vtksys\Configure.hxx" />
-    <ClInclude Include="core\vtksys\Directory.hxx" />
-    <ClInclude Include="core\vtksys\DynamicLoader.hxx" />
-    <ClInclude Include="core\vtksys\Encoding.h" />
-    <ClInclude Include="core\vtksys\Encoding.hxx" />
-    <ClInclude Include="core\vtksys\FStream.hxx" />
-    <ClInclude Include="core\vtksys\Glob.hxx" />
-    <ClInclude Include="core\vtksys\kwsysPrivate.h" />
-    <ClInclude Include="core\vtksys\MD5.h" />
-    <ClInclude Include="core\vtksys\Process.h" />
-    <ClInclude Include="core\vtksys\RegularExpression.hxx" />
-    <ClInclude Include="core\vtksys\SharedForward.h" />
-    <ClInclude Include="core\vtksys\Status.hxx" />
-    <ClInclude Include="core\vtksys\String.hxx" />
-    <ClInclude Include="core\vtksys\System.h" />
-    <ClInclude Include="core\vtksys\SystemInformation.hxx" />
-    <ClInclude Include="core\vtksys\SystemTools.hxx" />
     <ClInclude Include="core\vtkTable.h" />
     <ClInclude Include="core\vtkTDxInteractorStyle.h" />
     <ClInclude Include="core\vtkTDxInteractorStyleCamera.h" />
@@ -1347,9 +929,7 @@
     <ClInclude Include="core\vtkTextureObjectVS.h" />
     <ClInclude Include="core\vtkTextureUnitManager.h" />
     <ClInclude Include="core\vtkThreadedImageAlgorithm.h" />
-    <ClInclude Include="core\vtkThreads.h" />
     <ClInclude Include="core\vtkTimerLog.h" />
-    <ClInclude Include="core\vtkTimeStamp.h" />
     <ClInclude Include="core\vtkTransform.h" />
     <ClInclude Include="core\vtkTransformFeedback.h" />
     <ClInclude Include="core\vtkTranslucentPass.h" />
@@ -1358,50 +938,18 @@
     <ClInclude Include="core\vtkTrivialConsumer.h" />
     <ClInclude Include="core\vtkTrivialProducer.h" />
     <ClInclude Include="core\vtkTuple.h" />
-    <ClInclude Include="core\vtkType.h" />
-    <ClInclude Include="core\vtkTypedArray.h" />
-    <ClInclude Include="core\vtkTypedDataArray.h" />
-    <ClInclude Include="core\vtkTypedDataArrayIterator.h" />
-    <ClInclude Include="core\vtkTypeFloat32Array.h" />
-    <ClInclude Include="core\vtkTypeFloat64Array.h" />
-    <ClInclude Include="core\vtkTypeInt16Array.h" />
-    <ClInclude Include="core\vtkTypeInt32Array.h" />
-    <ClInclude Include="core\vtkTypeInt64Array.h" />
-    <ClInclude Include="core\vtkTypeInt8Array.h" />
-    <ClInclude Include="core\vtkTypeList.h" />
-    <ClInclude Include="core\vtkTypeName.h" />
-    <ClInclude Include="core\vtkTypeTraits.h" />
-    <ClInclude Include="core\vtkTypeUInt16Array.h" />
-    <ClInclude Include="core\vtkTypeUInt32Array.h" />
-    <ClInclude Include="core\vtkTypeUInt64Array.h" />
-    <ClInclude Include="core\vtkTypeUInt8Array.h" />
     <ClInclude Include="core\vtkUniformGrid.h" />
     <ClInclude Include="core\vtkUniformGridAMR.h" />
     <ClInclude Include="core\vtkUniformGridAMRDataIterator.h" />
     <ClInclude Include="core\vtkUniforms.h" />
-    <ClInclude Include="core\vtkUnsignedCharArray.h" />
-    <ClInclude Include="core\vtkUnsignedIntArray.h" />
-    <ClInclude Include="core\vtkUnsignedLongArray.h" />
-    <ClInclude Include="core\vtkUnsignedLongLongArray.h" />
-    <ClInclude Include="core\vtkUnsignedShortArray.h" />
     <ClInclude Include="core\vtkUnstructuredGrid.h" />
     <ClInclude Include="core\vtkUnstructuredGridBase.h" />
     <ClInclude Include="core\vtkUnstructuredGridCellIterator.h" />
-    <ClInclude Include="core\vtkValueFromString.h" />
-    <ClInclude Include="core\vtkVariant.h" />
-    <ClInclude Include="core\vtkVariantArray.h" />
-    <ClInclude Include="core\vtkVariantCast.h" />
-    <ClInclude Include="core\vtkVariantInlineOperators.h" />
     <ClInclude Include="core\vtkVector.h" />
     <ClInclude Include="core\vtkVectorOperators.h" />
-    <ClInclude Include="core\vtkVersion.h" />
-    <ClInclude Include="core\vtkVersionFull.h" />
-    <ClInclude Include="core\vtkVersionMacros.h" />
-    <ClInclude Include="core\vtkVersionQuick.h" />
     <ClInclude Include="core\vtkVertex.h" />
     <ClInclude Include="core\vtkViewport.h" />
     <ClInclude Include="core\vtkVisibilitySort.h" />
-    <ClInclude Include="core\vtkVoidArray.h" />
     <ClInclude Include="core\vtkVolume.h" />
     <ClInclude Include="core\vtkVolumeCollection.h" />
     <ClInclude Include="core\vtkVolumeInputHelper.h" />
@@ -1411,17 +959,10 @@
     <ClInclude Include="core\vtkVolumeStateRAII.h" />
     <ClInclude Include="core\vtkVolumeTexture.h" />
     <ClInclude Include="core\vtkVolumetricPass.h" />
-    <ClInclude Include="core\vtkWeakPointer.h" />
-    <ClInclude Include="core\vtkWeakPointerBase.h" />
     <ClInclude Include="core\vtkWin32HardwareWindow.h" />
-    <ClInclude Include="core\vtkWin32Header.h" />
     <ClInclude Include="core\vtkWin32OpenGLRenderWindow.h" />
-    <ClInclude Include="core\vtkWin32OutputWindow.h" />
     <ClInclude Include="core\vtkWin32RenderWindowInteractor.h" />
-    <ClInclude Include="core\vtkWindow.h" />
-    <ClInclude Include="core\vtkWindows.h" />
     <ClInclude Include="core\vtkWorldPointPicker.h" />
-    <ClInclude Include="core\vtkWrappingHints.h" />
     <ClInclude Include="core\vtkXMLDataElement.h" />
     <ClInclude Include="core\vtkXMLDataHeaderPrivate.h" />
     <ClInclude Include="core\vtkXMLDataParser.h" />
@@ -1430,72 +971,19 @@
     <ClInclude Include="core\vtk_expat.h" />
     <ClInclude Include="core\vtk_glad.h" />
     <ClInclude Include="core\vtk_jpeg.h" />
-    <ClInclude Include="core\vtk_kwiml.h" />
-    <ClInclude Include="core\vtk_nlohmannjson.h" />
     <ClInclude Include="core\vtk_pegtl.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="core\SMP\Sequential\vtkSMPToolsImpl.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\SMP\STDThread\vtkSMPToolsImpl.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkAOSDataArrayTemplate.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayDispatch.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayIteratorTemplate.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkArrayIteratorTemplateImplicit.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
     <ClInclude Include="core\vtkCompositeDataSet.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkDataArrayPrivate.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkGenericDataArray.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkImplicitArray.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkSOADataArrayTemplate.txx">
       <FileType>Document</FileType>
     </ClInclude>
     <ClInclude Include="core\vtkStaticCellLinksTemplate.txx">
       <FileType>Document</FileType>
     </ClInclude>
-    <ClInclude Include="core\vtkStructuredPointArray.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkStructuredPointBackend.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypedArray.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypedDataArray.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
-    <ClInclude Include="core\vtkTypeList.txx">
-      <FileType>Document</FileType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="core\token\CxxABIConfigure.h.in" />
     <None Include="core\vtkOpenGLVolumeLookupTables.txx" />
     <None Include="core\vtkQuaternion.txx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Common\Common.vcxproj">
-      <Project>{7b088006-8058-411c-9c2f-d53b6dfa1758}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

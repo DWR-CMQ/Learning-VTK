@@ -9,7 +9,7 @@
 #include "vtkCommonDataModelModule.h" // For export macro.
 #include "vtkHashCombiner.h"          // For templated AddSide() method.
 #include "vtkStringToken.h"           // For API.
-
+#include "Export.h"
 #include <functional>
 #include <map>
 #include <set>

@@ -21,7 +21,7 @@
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 
 #include "vtkActor2D.h" // Needed for inline methods
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkViewport;
 

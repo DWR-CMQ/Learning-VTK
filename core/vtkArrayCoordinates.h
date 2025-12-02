@@ -30,7 +30,7 @@
 #include "vtkCommonCoreModule.h" // For export macro
 #include "vtkSystemIncludes.h"
 #include <vector>
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class CORE_EXPORTS vtkArrayCoordinates
 {

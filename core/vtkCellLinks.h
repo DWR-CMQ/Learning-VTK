@@ -26,7 +26,7 @@
 
 #include "vtkAbstractCellLinks.h"
 #include "vtkCommonDataModelModule.h" // For export macro
-
+#include "Export.h"
 #include <memory> // For shared_ptr
 
 VTK_ABI_NAMESPACE_BEGIN

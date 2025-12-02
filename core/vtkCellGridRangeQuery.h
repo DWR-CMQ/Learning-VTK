@@ -23,7 +23,7 @@
 
 #include "vtkCellAttribute.h" // For Attribute ivar.
 #include "vtkCellGridQuery.h"
-
+#include "Export.h"
 #include <array>  // For Ranges ivar.
 #include <vector> // For Ranges ivar.
 

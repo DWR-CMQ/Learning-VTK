@@ -19,7 +19,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 
 #include "vtkAssemblyPath.h" // Needed for inline methods
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkProp;
 

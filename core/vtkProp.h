@@ -20,7 +20,7 @@
 #include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
 #include <vector>                   // for method args
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkAssemblyPath;
 class vtkAssemblyPaths;

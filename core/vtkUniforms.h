@@ -22,6 +22,7 @@
 
 #include "vtkObject.h"
 #include "vtkRenderingCoreModule.h" // For export macro
+#include "Export.h"
 #include <string>                   // member function parameters
 #include <vector>                   // member function parameters
 

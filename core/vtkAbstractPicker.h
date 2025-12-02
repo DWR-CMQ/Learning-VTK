@@ -48,6 +48,7 @@
 
 #include "vtkObject.h"
 #include "vtkRenderingCoreModule.h" // For export macro
+#include "Export.h"
 
 VTK_ABI_NAMESPACE_BEGIN
 class vtkRenderer;

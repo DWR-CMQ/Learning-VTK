@@ -29,7 +29,7 @@
 #include "vtkSmartPointer.h" // for constructor return values
 #include "vtkStringToken.h"  // for vtkStringToken::Hash
 #include "vtkTypeName.h"     // for vtk::TypeName<>()
-
+#include "Export.h"
 #include <token/Singletons.h> // Increment Schwarz counter for initialization.
 
 #include <functional>

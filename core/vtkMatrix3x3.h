@@ -18,7 +18,7 @@
 #include "vtkCommonMathModule.h" // For export macro
 #include "vtkObject.h"
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class CORE_EXPORTS VTK_MARSHALAUTO vtkMatrix3x3 : public vtkObject
 {

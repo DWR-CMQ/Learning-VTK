@@ -5,7 +5,7 @@
 
 #include "vtkCommonSystemModule.h" // For export macro
 #include "vtkObject.h"
-
+#include "Export.h"
 #include "vtksys/Process.h" // For class vtksysProcess
 
 #include <string> // for class std::string

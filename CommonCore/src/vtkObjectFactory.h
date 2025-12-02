@@ -257,7 +257,7 @@ private:
 };
 
 // Implementation detail for Schwarz counter idiom.
-class vtkObjectFactoryRegistryCleanup
+class COMMONCORE_EXPORTS vtkObjectFactoryRegistryCleanup
 {
 public:
   vtkObjectFactoryRegistryCleanup();
@@ -281,7 +281,7 @@ static vtkObjectFactoryRegistryCleanup vtkObjectFactoryRegistryCleanupInstance;
 VTK_ABI_NAMESPACE_END
 #endif
 
-#define VTK_FACTORY_INTERFACE_EXPORT
+#define VTK_FACTORY_INTERFACE_EXPORT COMMONCORE_EXPORTS
 
 // Macro to create the interface "C" functions used in
 // a dll or shared library that contains a VTK object factory.
@@ -289,11 +289,11 @@ VTK_ABI_NAMESPACE_END
 // and pass in the name of the factory sub-class that you want
 // the dll to create.
 #define VTK_FACTORY_INTERFACE_IMPLEMENT(factoryName)                                               \
-  extern "C"  const char* vtkGetFactoryVersion()                       \
+  extern "C"  VTK_FACTORY_INTERFACE_EXPORT const char* vtkGetFactoryVersion()                       \
   {                                                                                                \
     return VTK_SOURCE_VERSION;                                                                     \
   }                                                                                                \
-  extern "C"  vtkObjectFactory* vtkLoad()                              \
+  extern "C"  VTK_FACTORY_INTERFACE_EXPORT vtkObjectFactory* vtkLoad()                              \
   {                                                                                                \
     return factoryName ::New();                                                                    \
   }

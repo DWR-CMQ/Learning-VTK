@@ -18,7 +18,7 @@
 #include "vtkObject.h"
 #include "vtkSmartPointer.h" //for storing smart pointers to blocks
 #include <vector>            //for storing blocks
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkUniformGrid;
 class CORE_EXPORTS vtkAMRDataInternals : public vtkObject

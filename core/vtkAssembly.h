@@ -47,7 +47,7 @@
 
 #include "vtkProp3D.h"
 #include "vtkRenderingCoreModule.h" // For export macro
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkAssemblyPaths;
 class vtkProp3DCollection;

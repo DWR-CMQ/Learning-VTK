@@ -60,7 +60,7 @@
 #include "vtkSmartPointer.h" // For return values
 #include "vtkStringToken.h"  // For API.
 #include "vtkTypeName.h"     // For RegisterQueryResponder.
-
+#include "Export.h"
 #include <unordered_map>
 #include <unordered_set>
 

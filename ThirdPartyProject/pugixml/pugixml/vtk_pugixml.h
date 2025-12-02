@@ -9,7 +9,8 @@
 #if VTK_MODULE_USE_EXTERNAL_vtkpugixml
 # include <pugixml.hpp>
 #else
-#include <vtkpugixml/src/pugixml.hpp>
+//#include <vtkpugixml/src/pugixml.hpp>
+#include "vtkpugixml/src/pugixml.hpp"
 #endif
 
 #endif

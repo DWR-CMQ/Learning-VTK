@@ -14,7 +14,7 @@
 
 #include "vtkCommonExecutionModelModule.h" // For export macro
 #include "vtkInformationKey.h"
-
+#include "Export.h"
 #include "vtkFilteringInformationKeyManager.h" // Manage instances of this type.
 
 VTK_ABI_NAMESPACE_BEGIN

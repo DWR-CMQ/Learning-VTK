@@ -41,7 +41,7 @@
 
 #include "vtkAbstractCellLocator.h"
 #include "vtkCommonDataModelModule.h" // For export macro
-
+#include "Export.h"
 namespace detail
 {
 VTK_ABI_NAMESPACE_BEGIN

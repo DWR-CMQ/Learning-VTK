@@ -19,7 +19,7 @@
 #include "vtkPropCollection.h"
 #include "vtkRenderingCoreModule.h" // For export macro
 #include "vtkWrappingHints.h"       // For VTK_MARSHALAUTO
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkProperty;
 

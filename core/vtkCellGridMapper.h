@@ -22,7 +22,7 @@
 #include "vtkMapper.h"
 #include "vtkRenderingCoreModule.h" // For export macro.
 #include "vtkUnsignedCharArray.h"   // For API.
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCellGrid;
 class vtkCellAttribute;

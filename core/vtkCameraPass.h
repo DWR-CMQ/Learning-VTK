@@ -23,7 +23,7 @@
 #include "vtkRenderPass.h"
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 #include "vtkWrappingHints.h"          // For VTK_MARSHALAUTO
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class CORE_EXPORTS VTK_MARSHALAUTO vtkCameraPass : public vtkRenderPass
 {

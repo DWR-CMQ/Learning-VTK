@@ -62,7 +62,7 @@
 #include "vtkStdString.h"     // Needed for arguments
 #include "vtkStringArray.h"   // For returning color names
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkNamedColorsDataStore;
 class vtkColorStringParser;

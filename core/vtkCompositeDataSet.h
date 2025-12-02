@@ -25,7 +25,7 @@
 #include "vtkDataObject.h"
 #include "vtkDeprecation.h"   // For VTK_DEPRECATED_IN_9_3_0
 #include "vtkWrappingHints.h" // For VTK_MARSHALAUTO
-
+#include "Export.h"
 #include <vector> // For GetDataSets
 
 VTK_ABI_NAMESPACE_BEGIN

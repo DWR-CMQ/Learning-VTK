@@ -13,7 +13,7 @@
 
 #include "vtkCommonDataModelModule.h" // For export macro
 #include "vtkObject.h"
-
+#include "Export.h"
 VTK_ABI_NAMESPACE_BEGIN
 class vtkCompositeDataSet;
 class vtkCompositeDataSetInternals;
