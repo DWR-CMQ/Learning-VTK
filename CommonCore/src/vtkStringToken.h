@@ -134,7 +134,7 @@ protected:
 /// The value \a jj must be an integer or string.
 /// If it is a string, it will be hashed into a token.
 /// If it is an integer, it will be treated as a hash.
-inline void from_json(const nlohmann::json& jj, vtkStringToken& tt)
+inline void COMMONCORE_EXPORTS from_json(const nlohmann::json& jj, vtkStringToken& tt)
 {
   if (jj.is_number_integer())
   {
@@ -154,7 +154,7 @@ inline void from_json(const nlohmann::json& jj, vtkStringToken& tt)
 ///
 /// If \a tt has a valid string, \a jj will be set to the string.
 /// Otherwise, \a jj will be set to the integer hash held by \a tt.
-inline void to_json(nlohmann::json& jj, const vtkStringToken& tt)
+inline void COMMONCORE_EXPORTS to_json(nlohmann::json& jj, const vtkStringToken& tt)
 {
   if (tt.HasData())
   {
@@ -195,10 +195,10 @@ VTK_ABI_NAMESPACE_BEGIN
 /// a sequence of if-conditionals performing string
 /// comparisons.
 #if VTK_STRING_TOKEN_SPACE_BEFORE_SUFFIX
-inline constexpr vtkStringToken::Hash operator"" _hash(
+inline constexpr COMMONCORE_EXPORTS vtkStringToken::Hash operator"" _hash(
   const char* data, std::size_t size)
 #else
-inline constexpr vtkStringToken::Hash operator""_hash(
+inline constexpr COMMONCORE_EXPORTS vtkStringToken::Hash operator""_hash(
   const char* data, std::size_t size)
 #endif
 {
@@ -215,10 +215,10 @@ inline constexpr vtkStringToken::Hash operator""_hash(
 /// ctor; else throws exception.
 /// ```
 #if VTK_STRING_TOKEN_SPACE_BEFORE_SUFFIX
-inline constexpr vtkStringToken operator"" _token(
+inline constexpr COMMONCORE_EXPORTS vtkStringToken operator"" _token(
   const char* data, std::size_t size)
 #else
-inline constexpr vtkStringToken operator""_token(
+inline constexpr COMMONCORE_EXPORTS vtkStringToken operator""_token(
   const char* data, std::size_t size)
 #endif
 {
@@ -230,33 +230,33 @@ VTK_ABI_NAMESPACE_END
 } // namespace vtk
 
 VTK_ABI_NAMESPACE_BEGIN
-bool operator==(const std::string& a, const vtkStringToken& b);
-bool operator!=(const std::string& a, const vtkStringToken& b);
-bool operator>(const std::string& a, const vtkStringToken& b);
-bool operator<(const std::string& a, const vtkStringToken& b);
-bool operator>=(const std::string& a, const vtkStringToken& b);
-bool operator<=(const std::string& a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator==(const std::string& a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator!=(const std::string& a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator>(const std::string& a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator<(const std::string& a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator>=(const std::string& a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator<=(const std::string& a, const vtkStringToken& b);
 
-bool operator==(const vtkStringToken& a, const std::string& b);
-bool operator!=(const vtkStringToken& a, const std::string& b);
-bool operator>(const vtkStringToken& a, const std::string& b);
-bool operator<(const vtkStringToken& a, const std::string& b);
-bool operator>=(const vtkStringToken& a, const std::string& b);
-bool operator<=(const vtkStringToken& a, const std::string& b);
+bool COMMONCORE_EXPORTS operator==(const vtkStringToken& a, const std::string& b);
+bool COMMONCORE_EXPORTS operator!=(const vtkStringToken& a, const std::string& b);
+bool COMMONCORE_EXPORTS operator>(const vtkStringToken& a, const std::string& b);
+bool COMMONCORE_EXPORTS operator<(const vtkStringToken& a, const std::string& b);
+bool COMMONCORE_EXPORTS operator>=(const vtkStringToken& a, const std::string& b);
+bool COMMONCORE_EXPORTS operator<=(const vtkStringToken& a, const std::string& b);
 
-bool operator==(const char* a, const vtkStringToken& b);
-bool operator!=(const char* a, const vtkStringToken& b);
-bool operator>(const char* a, const vtkStringToken& b);
-bool operator<(const char* a, const vtkStringToken& b);
-bool operator>=(const char* a, const vtkStringToken& b);
-bool operator<=(const char* a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator==(const char* a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator!=(const char* a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator>(const char* a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator<(const char* a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator>=(const char* a, const vtkStringToken& b);
+bool COMMONCORE_EXPORTS operator<=(const char* a, const vtkStringToken& b);
 
-bool operator==(const vtkStringToken& a, const char* b);
-bool operator!=(const vtkStringToken& a, const char* b);
-bool operator>(const vtkStringToken& a, const char* b);
-bool operator<(const vtkStringToken& a, const char* b);
-bool operator>=(const vtkStringToken& a, const char* b);
-bool operator<=(const vtkStringToken& a, const char* b);
+bool COMMONCORE_EXPORTS operator==(const vtkStringToken& a, const char* b);
+bool COMMONCORE_EXPORTS operator!=(const vtkStringToken& a, const char* b);
+bool COMMONCORE_EXPORTS operator>(const vtkStringToken& a, const char* b);
+bool COMMONCORE_EXPORTS operator<(const vtkStringToken& a, const char* b);
+bool COMMONCORE_EXPORTS operator>=(const vtkStringToken& a, const char* b);
+bool COMMONCORE_EXPORTS operator<=(const vtkStringToken& a, const char* b);
 VTK_ABI_NAMESPACE_END
 
 namespace std
@@ -264,7 +264,7 @@ namespace std
 /// vtkStringTokens provide a specialization of std::hash so they can be used in unordered
 /// containers.
 template <>
-struct hash<vtkStringToken>
+struct COMMONCORE_EXPORTS hash<vtkStringToken>
 {
   std::size_t operator()(const vtkStringToken& t) const { return t.GetId(); }
 };

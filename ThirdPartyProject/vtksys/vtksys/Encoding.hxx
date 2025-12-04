@@ -8,11 +8,11 @@
 #include <vector>
 
 namespace vtksys {
-class SYS_EXPORTS Encoding
+class vtksys_EXPORT Encoding
 {
 public:
   // Container class for argc/argv.
-  class SYS_EXPORTS CommandLineArguments
+  class vtksys_EXPORT CommandLineArguments
   {
   public:
     // On Windows, get the program command line arguments

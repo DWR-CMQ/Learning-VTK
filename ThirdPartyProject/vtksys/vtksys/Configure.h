@@ -28,10 +28,10 @@
 /* Setup the export macro.  */
 #if 1
 #  if defined(_WIN32) || defined(__CYGWIN__)
-#    if defined(Sys_EXPORTS)
-#      define SYS_EXPORTS __declspec(dllexport)
+#    if defined(vtksys_EXPORTS)
+#      define vtksys_EXPORT __declspec(dllexport)
 #    else
-#      define SYS_EXPORTS __declspec(dllimport)
+#      define vtksys_EXPORT __declspec(dllimport)
 #    endif
 #  elif __GNUC__ >= 4
 #    define vtksys_EXPORT __attribute__((visibility("default")))

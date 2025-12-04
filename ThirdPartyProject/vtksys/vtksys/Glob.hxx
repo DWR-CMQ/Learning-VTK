@@ -22,7 +22,7 @@ class GlobInternals;
  *
  * Finds all files that match a given globbing expression.
  */
-class SYS_EXPORTS Glob
+class vtksys_EXPORT Glob
 {
 public:
   enum MessageType

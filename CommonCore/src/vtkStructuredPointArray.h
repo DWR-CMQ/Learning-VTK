@@ -53,14 +53,14 @@ VTK_ABI_NAMESPACE_END
 // which when Dispatching is enabled, it instantiates a class with a value type, before exporting it
 #define VTK_INSTANTIATE_STRUCTURED_POINT_ARRAY_EXPORT(ValueType)                                   \
   VTK_ABI_NAMESPACE_BEGIN                                                                          \
-  template class  vtkImplicitArray<vtkStructuredPointBackend<ValueType>>;                          \
+  template class COMMONCORE_EXPORTS vtkImplicitArray<vtkStructuredPointBackend<ValueType>>;        \
   VTK_ABI_NAMESPACE_END
 
 #define VTK_INSTANTIATE_STRUCTURED_POINT_ARRAY_FUNCTIONS(ValueType)                                \
   namespace vtk                                                                                    \
   {                                                                                                \
   VTK_ABI_NAMESPACE_BEGIN                                                                          \
-  template                                                                                         \
+  template COMMONCORE_EXPORTS                                                                      \
     vtkSmartPointer<vtkImplicitArray<vtkStructuredPointBackend<ValueType>>>                        \
     CreateStructuredPointArray(vtkDataArray* xCoords, vtkDataArray* yCoords,                       \
       vtkDataArray* zCoords, int extent[6], int dataDescription, double dirMatrix[9]);             \
@@ -85,7 +85,7 @@ VTK_ABI_NAMESPACE_END
 #endif
 VTK_ABI_NAMESPACE_BEGIN
 vtkExternSecondOrderTemplateMacro(
-  extern template class  vtkImplicitArray, vtkStructuredPointBackend);
+  extern template class COMMONCORE_EXPORTS vtkImplicitArray, vtkStructuredPointBackend);
 #ifdef _MSC_VER
 #pragma warning(pop)
 #endif
@@ -117,7 +117,7 @@ VTK_ABI_NAMESPACE_END
 // interface.  This is a compiler-specific extension.
 VTK_ABI_NAMESPACE_BEGIN
 vtkInstantiateSecondOrderTemplateMacro(
-  extern template class vtkImplicitArray, vtkStructuredPointBackend);
+  extern template class COMMONCORE_EXPORTS vtkImplicitArray, vtkStructuredPointBackend);
 
 #pragma warning(pop)
 

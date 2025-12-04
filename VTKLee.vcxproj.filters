@@ -22,18 +22,6 @@
     <Filter Include="core\vtkexpat\lib">
       <UniqueIdentifier>{8abd0548-6e99-41fb-bdf5-e51f2474d352}</UniqueIdentifier>
     </Filter>
-    <Filter Include="core\vtkglad">
-      <UniqueIdentifier>{dfec621f-f223-48fe-ada1-e4626748e6b7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\vtkglad\include">
-      <UniqueIdentifier>{417e57f5-f33f-46e4-9e7c-689dc9360dfa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\vtkglad\include\glad">
-      <UniqueIdentifier>{6517fb9c-0380-4ce7-8f0d-9449b48e02ff}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="core\vtkglad\include\KHR">
-      <UniqueIdentifier>{35ec997f-96ea-40d4-b5da-42e64aeaaa61}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\DICOMAppHelper.cxx">
@@ -2072,24 +2060,6 @@
     <ClInclude Include="core\vtkRenderingUIModule.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtkglad\include\glad\gl.h">
-      <Filter>core\vtkglad\include\glad</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkglad\include\glad\vtk_gl_mangle.h">
-      <Filter>core\vtkglad\include\glad</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkglad\include\glad\vtk_wgl_mangle.h">
-      <Filter>core\vtkglad\include\glad</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkglad\include\glad\wgl.h">
-      <Filter>core\vtkglad\include\glad</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkglad\include\KHR\khrplatform.h">
-      <Filter>core\vtkglad\include\KHR</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtk_glad.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkVolumeStateRAII.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -2393,9 +2363,6 @@
     <ClInclude Include="core\vtkJPEGReader.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="core\vtk_jpeg.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="core\vtkOpenGLLight.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -2448,9 +2415,6 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkPolyDataVS.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\vtkAutoInit.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\vtkRenderingOpenGL2ObjectFactory.h">

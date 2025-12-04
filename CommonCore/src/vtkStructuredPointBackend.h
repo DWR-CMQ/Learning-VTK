@@ -292,7 +292,7 @@ VTK_ABI_NAMESPACE_END
 
 #define VTK_INSTANTIATE_STRUCTURED_POINT_BACKEND(ValueType)                                        \
   VTK_ABI_NAMESPACE_BEGIN                                                                          \
-  template class vtkStructuredPointBackend<ValueType>;                        \
+  template class COMMONCORE_EXPORTS vtkStructuredPointBackend<ValueType>;                        \
   VTK_ABI_NAMESPACE_END
 #elif defined(VTK_USE_EXTERN_TEMPLATE)
 
@@ -303,7 +303,7 @@ VTK_ABI_NAMESPACE_END
 #pragma warning(disable : 4910) // extern and dllexport incompatible
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-vtkExternTemplateMacro(extern template class vtkStructuredPointBackend);
+vtkExternTemplateMacro(extern template class COMMONCORE_EXPORTS vtkStructuredPointBackend);
 VTK_ABI_NAMESPACE_END
 #ifdef _MSC_VER
 #pragma warning(pop)

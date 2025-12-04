@@ -11,7 +11,7 @@ namespace vtksys {
 /** \class Status
  * \brief OS-specific status of a system operation.
  */
-class SYS_EXPORTS Status
+class vtksys_EXPORT Status
 {
 public:
   enum class Kind

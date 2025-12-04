@@ -320,7 +320,7 @@ enum BOM
 // If a BOM exists, the stream is advanced to after the BOM.
 // This function requires a seekable stream (but not a relative
 // seekable stream).
-SYS_EXPORTS BOM ReadBOM(std::istream& in);
+vtksys_EXPORT BOM ReadBOM(std::istream& in);
 }
 }
 

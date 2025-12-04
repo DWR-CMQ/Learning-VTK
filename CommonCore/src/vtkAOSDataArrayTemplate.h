@@ -44,7 +44,7 @@ VTK_ABI_NAMESPACE_END
 // when we export instantiations of this class from vtkCommonCore.
 VTK_ABI_NAMESPACE_BEGIN
 template <class ValueTypeT>
-class vtkAOSDataArrayTemplate
+class COMMONCORE_EXPORTS vtkAOSDataArrayTemplate
   : public vtkGenericDataArray<vtkAOSDataArrayTemplate<ValueTypeT>, ValueTypeT>
 {
   typedef vtkGenericDataArray<vtkAOSDataArrayTemplate<ValueTypeT>, ValueTypeT> GenericDataArrayType;
@@ -393,7 +393,7 @@ VTK_ABI_NAMESPACE_END
   VTK_ABI_NAMESPACE_END                                                                            \
   }                                                                                                \
   VTK_ABI_NAMESPACE_BEGIN                                                                          \
-  template class vtkAOSDataArrayTemplate<T>;                                  \
+  template class COMMONCORE_EXPORTS vtkAOSDataArrayTemplate<T>;                                  \
   VTK_ABI_NAMESPACE_END
 
 #elif defined(VTK_USE_EXTERN_TEMPLATE)
@@ -406,7 +406,7 @@ VTK_ABI_NAMESPACE_END
 #pragma warning(disable : 4910) // extern and dllexport incompatible
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-vtkExternTemplateMacro(extern template class vtkAOSDataArrayTemplate);
+vtkExternTemplateMacro(extern template class COMMONCORE_EXPORTS vtkAOSDataArrayTemplate);
 VTK_ABI_NAMESPACE_END
 #ifdef _MSC_VER
 #pragma warning(pop)
@@ -439,7 +439,7 @@ VTK_ABI_NAMESPACE_END
 // Use an "extern explicit instantiation" to give the class a DLL
 // interface.  This is a compiler-specific extension.
 VTK_ABI_NAMESPACE_BEGIN
-vtkInstantiateTemplateMacro(extern template class vtkAOSDataArrayTemplate);
+vtkInstantiateTemplateMacro(extern template class COMMONCORE_EXPORTS vtkAOSDataArrayTemplate);
 VTK_ABI_NAMESPACE_END
 
 #pragma warning(pop)

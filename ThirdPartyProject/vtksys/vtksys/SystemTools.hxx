@@ -48,7 +48,7 @@ class SystemToolsStatic;
  * \brief Use to make sure SystemTools is initialized before it is used
  * and is the last static object destroyed
  */
-class SYS_EXPORTS SystemToolsManager
+class vtksys_EXPORT SystemToolsManager
 {
 public:
   SystemToolsManager();
@@ -90,7 +90,7 @@ static const TestFilePermissions TEST_FILE_EXECUTE = X_OK;
 /** \class SystemTools
  * \brief A collection of useful platform-independent system functions.
  */
-class SYS_EXPORTS SystemTools
+class vtksys_EXPORT SystemTools
 {
 public:
   /** -----------------------------------------------------------------

@@ -500,7 +500,8 @@ VTK_ABI_NAMESPACE_END
 #endif // vtkImplicitArray_h
 
 // See vtkGenericDataArray for similar section
-#ifdef VTK_IMPLICIT_VALUERANGE_INSTANTIATING
+#define fuck 1
+#ifdef fuck
 VTK_ABI_NAMESPACE_BEGIN
 template <typename ValueType>
 struct vtkAffineImplicitBackend;
@@ -517,13 +518,13 @@ VTK_ABI_NAMESPACE_END
 
 // Needed to export for this module and not CommonCore
 #define VTK_INSTANTIATE_VALUERANGE_ARRAYTYPE(ArrayType, ValueType)                                 \
-  template bool DoComputeScalarRange(                                         \
+  template COMMONCORE_EXPORTS bool DoComputeScalarRange(                                         \
     ArrayType*, ValueType*, vtkDataArrayPrivate::AllValues, const unsigned char*, unsigned char);  \
-  template bool DoComputeScalarRange(ArrayType*, ValueType*,                  \
+  template COMMONCORE_EXPORTS bool DoComputeScalarRange(ArrayType*, ValueType*,                  \
     vtkDataArrayPrivate::FiniteValues, const unsigned char*, unsigned char);                       \
-  template bool DoComputeVectorRange(ArrayType*, ValueType[2],                \
+  template COMMONCORE_EXPORTS bool DoComputeVectorRange(ArrayType*, ValueType[2],                \
     vtkDataArrayPrivate::AllValues, const unsigned char*, unsigned char);                          \
-  template bool DoComputeVectorRange(ArrayType*, ValueType[2],                \
+  template COMMONCORE_EXPORTS bool DoComputeVectorRange(ArrayType*, ValueType[2],                \
     vtkDataArrayPrivate::FiniteValues, const unsigned char*, unsigned char);
 
 #define VTK_INSTANTIATE_VALUERANGE_VALUETYPE(ValueType)                                            \
@@ -568,25 +569,25 @@ namespace vtkDataArrayPrivate
 {
 VTK_ABI_NAMESPACE_BEGIN
 template <typename A, typename R, typename T>
-bool DoComputeScalarRange(
+COMMONCORE_EXPORTS bool DoComputeScalarRange(
   A*, R*, T, const unsigned char* ghosts, unsigned char ghostsToSkip);
 template <typename A, typename R>
-bool DoComputeVectorRange(
+COMMONCORE_EXPORTS bool DoComputeVectorRange(
   A*, R[2], AllValues, const unsigned char* ghosts, unsigned char ghostsToSkip);
 template <typename A, typename R>
-bool DoComputeVectorRange(
+COMMONCORE_EXPORTS bool DoComputeVectorRange(
   A*, R[2], FiniteValues, const unsigned char* ghosts, unsigned char ghostsToSkip);
 VTK_ABI_NAMESPACE_END
 } // namespace vtkDataArrayPrivate
 
 #define VTK_DECLARE_VALUERANGE_ARRAYTYPE(ArrayType, ValueType)                                     \
-  extern template bool DoComputeScalarRange(                                  \
+  extern template COMMONCORE_EXPORTS bool DoComputeScalarRange(                                  \
     ArrayType*, ValueType*, vtkDataArrayPrivate::AllValues, const unsigned char*, unsigned char);  \
-  extern template bool DoComputeScalarRange(ArrayType*, ValueType*,           \
+  extern template COMMONCORE_EXPORTS bool DoComputeScalarRange(ArrayType*, ValueType*,           \
     vtkDataArrayPrivate::FiniteValues, const unsigned char*, unsigned char);                       \
-  extern template bool DoComputeVectorRange(ArrayType*, ValueType[2],         \
+  extern template COMMONCORE_EXPORTS bool DoComputeVectorRange(ArrayType*, ValueType[2],         \
     vtkDataArrayPrivate::AllValues, const unsigned char*, unsigned char);                          \
-  extern template bool DoComputeVectorRange(ArrayType*, ValueType[2],         \
+  extern template COMMONCORE_EXPORTS bool DoComputeVectorRange(ArrayType*, ValueType[2],         \
     vtkDataArrayPrivate::FiniteValues, const unsigned char*, unsigned char);
 
 #define VTK_DECLARE_VALUERANGE_VALUETYPE(ValueType)                                                \

@@ -33,7 +33,7 @@ class RegularExpression;
 /** \class RegularExpressionMatch
  * \brief Stores the pattern matches of a RegularExpression
  */
-class SYS_EXPORTS RegularExpressionMatch
+class vtksys_EXPORT RegularExpressionMatch
 {
 public:
   RegularExpressionMatch();
@@ -289,7 +289,7 @@ inline std::string RegularExpressionMatch::match(int n) const
  * different threads but only if each invocation uses an own instance of
  * RegularExpression.
  */
-class SYS_EXPORTS RegularExpression
+class vtksys_EXPORT RegularExpression
 {
 public:
   /**

@@ -32,7 +32,7 @@
  */
 VTK_ABI_NAMESPACE_BEGIN
 template <typename ValueType>
-struct vtkConstantImplicitBackend final
+struct COMMONCORE_EXPORTS vtkConstantImplicitBackend final
 {
   /**
    * A non-trivially contructible constructor
@@ -64,7 +64,7 @@ VTK_ABI_NAMESPACE_END
 
 #define VTK_INSTANTIATE_CONSTANT_BACKEND(ValueType)                                                \
   VTK_ABI_NAMESPACE_BEGIN                                                                          \
-  template struct vtkConstantImplicitBackend<ValueType>;                      \
+  template struct COMMONCORE_EXPORTS vtkConstantImplicitBackend<ValueType>;                      \
   VTK_ABI_NAMESPACE_END
 
 #elif defined(VTK_USE_EXTERN_TEMPLATE)
@@ -76,7 +76,7 @@ VTK_ABI_NAMESPACE_END
 #pragma warning(disable : 4910) // extern and dllexport incompatible
 #endif
 VTK_ABI_NAMESPACE_BEGIN
-vtkExternTemplateMacro(extern template struct vtkConstantImplicitBackend);
+vtkExternTemplateMacro(extern template struct COMMONCORE_EXPORTS vtkConstantImplicitBackend);
 VTK_ABI_NAMESPACE_END
 #ifdef _MSC_VER
 #pragma warning(pop)

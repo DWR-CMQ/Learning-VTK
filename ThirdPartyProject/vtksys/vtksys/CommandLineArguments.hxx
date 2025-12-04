@@ -55,7 +55,7 @@ struct CommandLineArgumentsCallbackStructure;
  *
  */
 
-class SYS_EXPORTS CommandLineArguments
+class vtksys_EXPORT CommandLineArguments
 {
 public:
   CommandLineArguments();

@@ -20,7 +20,7 @@ class DirectoryInternals;
  *
  * Directory currently works with Windows and Unix operating systems.
  */
-class SYS_EXPORTS Directory
+class vtksys_EXPORT Directory
 {
 public:
   Directory();

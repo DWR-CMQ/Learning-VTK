@@ -41,7 +41,7 @@ namespace vtksys {
  * condition so that we can include the correct declaration (POSIX)
  */
 
-class SYS_EXPORTS DynamicLoader
+class vtksys_EXPORT DynamicLoader
 {
 public:
 // Ugly stuff for library handles

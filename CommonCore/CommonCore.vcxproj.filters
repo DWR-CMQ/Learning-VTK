@@ -1244,6 +1244,9 @@
     <ClInclude Include="src\vtkConstantImplicitBackend.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\vtkAutoInit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\vtkDataArrayPrivate.txx">

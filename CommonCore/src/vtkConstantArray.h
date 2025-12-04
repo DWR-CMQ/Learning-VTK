@@ -39,7 +39,7 @@ VTK_ABI_NAMESPACE_END
 
 #define VTK_INSTANTIATE_CONSTANT_ARRAY(ValueType)                                                  \
   VTK_ABI_NAMESPACE_BEGIN                                                                          \
-  template class vtkImplicitArray<vtkConstantImplicitBackend<ValueType>>;     \
+  template class COMMONCORE_EXPORTS vtkImplicitArray<vtkConstantImplicitBackend<ValueType>>;     \
   VTK_ABI_NAMESPACE_END                                                                            \
   namespace vtkDataArrayPrivate                                                                    \
   {                                                                                                \
@@ -59,7 +59,7 @@ VTK_ABI_NAMESPACE_END
 #endif
 VTK_ABI_NAMESPACE_BEGIN
 vtkExternSecondOrderTemplateMacro(
-  extern template class vtkImplicitArray, vtkConstantImplicitBackend);
+  extern template class COMMONCORE_EXPORTS vtkImplicitArray, vtkConstantImplicitBackend);
 #ifdef _MSC_VER
 #pragma warning(pop)
 #endif
@@ -91,7 +91,7 @@ VTK_ABI_NAMESPACE_END
 // interface.  This is a compiler-specific extension.
 VTK_ABI_NAMESPACE_BEGIN
 vtkInstantiateSecondOrderTemplateMacro(
-  extern template class vtkImplicitArray, vtkConstantImplicitBackend);
+  extern template class COMMONCORE_EXPORTS vtkImplicitArray, vtkConstantImplicitBackend);
 
 #pragma warning(pop)
 

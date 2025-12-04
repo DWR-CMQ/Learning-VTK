@@ -121,7 +121,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NOMINMAX;VTK_AOS_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_SOA_DATA_ARRAY_TEMPLATE_INSTANTIATING;VTK_GDA_VALUERANGE_INSTANTIATING;VTK_SMP_ENABLE_STDTHREAD;KWSYS_NAMESPACE=vtksys;VTKCOMMONCORE_EXPORT;CommonDataModel_EXPORTS;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;GLAD_API_CALL_EXPORT;jpeg_EXPORTS;IOImage_EXPORTS;Core_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalIncludeDirectories>$(SolutionDir)Common/src;$(SolutionDir)ThirdPartyProject/token;$(SolutionDir)ThirdPartyProject/pugixml;$(SolutionDir)ThirdPartyProject/vtksys;$(SolutionDir)/CommonCore/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Common/src;$(SolutionDir)ThirdPartyProject/token;$(SolutionDir)ThirdPartyProject/pugixml;$(SolutionDir)ThirdPartyProject/glad;$(SolutionDir)ThirdPartyProject/jpeg;$(SolutionDir)ThirdPartyProject/vtksys;$(SolutionDir)/CommonCore/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -129,7 +129,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>/NODEFAULTLIB:msvcprtd.lib %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;opengl32.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;vtksys.lib;pugixml.lib;token.lib;CommonCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>msvcprtd.lib;msvcrtd.lib;ws2_32.lib;dbghelp.lib;opengl32.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;vtksys.lib;pugixml.lib;token.lib;CommonCore.lib;glad.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -562,7 +562,6 @@
     <ClInclude Include="core\vtkAssemblyNode.h" />
     <ClInclude Include="core\vtkAssemblyPath.h" />
     <ClInclude Include="core\vtkAssemblyPaths.h" />
-    <ClInclude Include="core\vtkAutoInit.h" />
     <ClInclude Include="core\vtkBase64InputStream.h" />
     <ClInclude Include="core\vtkBase64OutputStream.h" />
     <ClInclude Include="core\vtkBase64Utilities.h" />
@@ -681,11 +680,6 @@
     <ClInclude Include="core\vtkGenericEdgeTable.h" />
     <ClInclude Include="core\vtkGenericOpenGLRenderWindow.h" />
     <ClInclude Include="core\vtkGenericPointIterator.h" />
-    <ClInclude Include="core\vtkglad\include\glad\gl.h" />
-    <ClInclude Include="core\vtkglad\include\glad\vtk_gl_mangle.h" />
-    <ClInclude Include="core\vtkglad\include\glad\vtk_wgl_mangle.h" />
-    <ClInclude Include="core\vtkglad\include\glad\wgl.h" />
-    <ClInclude Include="core\vtkglad\include\KHR\khrplatform.h" />
     <ClInclude Include="core\vtkGPUInfo.h" />
     <ClInclude Include="core\vtkGPUInfoList.h" />
     <ClInclude Include="core\vtkGPUInfoListArray.h" />
@@ -969,8 +963,6 @@
     <ClInclude Include="core\vtkXMLParser.h" />
     <ClInclude Include="core\vtkXMLUtilities.h" />
     <ClInclude Include="core\vtk_expat.h" />
-    <ClInclude Include="core\vtk_glad.h" />
-    <ClInclude Include="core\vtk_jpeg.h" />
     <ClInclude Include="core\vtk_pegtl.h" />
   </ItemGroup>
   <ItemGroup>

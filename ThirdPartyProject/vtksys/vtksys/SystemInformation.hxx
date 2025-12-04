@@ -12,7 +12,7 @@ namespace vtksys {
 // forward declare the implementation class
 class SystemInformationImplementation;
 
-class SYS_EXPORTS SystemInformation
+class vtksys_EXPORT SystemInformation
 {
   friend class SystemInformationImplementation;
   SystemInformationImplementation* Implementation;

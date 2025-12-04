@@ -19,45 +19,73 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vtksys\CommandLineArguments.cxx" />
-    <ClCompile Include="vtksys\Directory.cxx" />
-    <ClCompile Include="vtksys\DynamicLoader.cxx" />
-    <ClCompile Include="vtksys\EncodingC.c" />
-    <ClCompile Include="vtksys\EncodingCXX.cxx" />
-    <ClCompile Include="vtksys\Glob.cxx" />
-    <ClCompile Include="vtksys\MD5.c" />
-    <ClCompile Include="vtksys\ProcessWin32.c" />
-    <ClCompile Include="vtksys\RegularExpression.cxx" />
-    <ClCompile Include="vtksys\Status.cxx" />
-    <ClCompile Include="vtksys\SystemInformation.cxx" />
-    <ClCompile Include="vtksys\SystemTools.cxx" />
+    <ClCompile Include="vtkjpeg\jaricom.c" />
+    <ClCompile Include="vtkjpeg\jcapimin.c" />
+    <ClCompile Include="vtkjpeg\jcapistd.c" />
+    <ClCompile Include="vtkjpeg\jcarith.c" />
+    <ClCompile Include="vtkjpeg\jccoefct.c" />
+    <ClCompile Include="vtkjpeg\jccolor.c" />
+    <ClCompile Include="vtkjpeg\jcdctmgr.c" />
+    <ClCompile Include="vtkjpeg\jchuff.c" />
+    <ClCompile Include="vtkjpeg\jcicc.c" />
+    <ClCompile Include="vtkjpeg\jcinit.c" />
+    <ClCompile Include="vtkjpeg\jcmainct.c" />
+    <ClCompile Include="vtkjpeg\jcmarker.c" />
+    <ClCompile Include="vtkjpeg\jcmaster.c" />
+    <ClCompile Include="vtkjpeg\jcomapi.c" />
+    <ClCompile Include="vtkjpeg\jcparam.c" />
+    <ClCompile Include="vtkjpeg\jcphuff.c" />
+    <ClCompile Include="vtkjpeg\jcprepct.c" />
+    <ClCompile Include="vtkjpeg\jcsample.c" />
+    <ClCompile Include="vtkjpeg\jcstest.c" />
+    <ClCompile Include="vtkjpeg\jctrans.c" />
+    <ClCompile Include="vtkjpeg\jdapimin.c" />
+    <ClCompile Include="vtkjpeg\jdapistd.c" />
+    <ClCompile Include="vtkjpeg\jdarith.c" />
+    <ClCompile Include="vtkjpeg\jdatadst.c" />
+    <ClCompile Include="vtkjpeg\jdatasrc.c" />
+    <ClCompile Include="vtkjpeg\jdcoefct.c" />
+    <ClCompile Include="vtkjpeg\jdcolor.c" />
+    <ClCompile Include="vtkjpeg\jddctmgr.c" />
+    <ClCompile Include="vtkjpeg\jdhuff.c" />
+    <ClCompile Include="vtkjpeg\jdicc.c" />
+    <ClCompile Include="vtkjpeg\jdinput.c" />
+    <ClCompile Include="vtkjpeg\jdmainct.c" />
+    <ClCompile Include="vtkjpeg\jdmarker.c" />
+    <ClCompile Include="vtkjpeg\jdmaster.c" />
+    <ClCompile Include="vtkjpeg\jdmerge.c" />
+    <ClCompile Include="vtkjpeg\jdphuff.c" />
+    <ClCompile Include="vtkjpeg\jdpostct.c" />
+    <ClCompile Include="vtkjpeg\jdsample.c" />
+    <ClCompile Include="vtkjpeg\jdtrans.c" />
+    <ClCompile Include="vtkjpeg\jerror.c" />
+    <ClCompile Include="vtkjpeg\jfdctflt.c" />
+    <ClCompile Include="vtkjpeg\jfdctfst.c" />
+    <ClCompile Include="vtkjpeg\jfdctint.c" />
+    <ClCompile Include="vtkjpeg\jidctflt.c" />
+    <ClCompile Include="vtkjpeg\jidctfst.c" />
+    <ClCompile Include="vtkjpeg\jidctint.c" />
+    <ClCompile Include="vtkjpeg\jidctred.c" />
+    <ClCompile Include="vtkjpeg\jmemmgr.c" />
+    <ClCompile Include="vtkjpeg\jmemnobs.c" />
+    <ClCompile Include="vtkjpeg\jquant1.c" />
+    <ClCompile Include="vtkjpeg\jquant2.c" />
+    <ClCompile Include="vtkjpeg\jsimd_none.c" />
+    <ClCompile Include="vtkjpeg\jutils.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vtksys\CommandLineArguments.hxx" />
-    <ClInclude Include="vtksys\Configure.h" />
-    <ClInclude Include="vtksys\Configure.hxx" />
-    <ClInclude Include="vtksys\Directory.hxx" />
-    <ClInclude Include="vtksys\DynamicLoader.hxx" />
-    <ClInclude Include="vtksys\Encoding.h" />
-    <ClInclude Include="vtksys\Encoding.hxx" />
-    <ClInclude Include="vtksys\FStream.hxx" />
-    <ClInclude Include="vtksys\Glob.hxx" />
-    <ClInclude Include="vtksys\kwsysPrivate.h" />
-    <ClInclude Include="vtksys\MD5.h" />
-    <ClInclude Include="vtksys\Process.h" />
-    <ClInclude Include="vtksys\RegularExpression.hxx" />
-    <ClInclude Include="vtksys\SharedForward.h" />
-    <ClInclude Include="vtksys\Status.hxx" />
-    <ClInclude Include="vtksys\String.hxx" />
-    <ClInclude Include="vtksys\System.h" />
-    <ClInclude Include="vtksys\SystemInformation.hxx" />
-    <ClInclude Include="vtksys\SystemTools.hxx" />
+    <ClInclude Include="vtkjpeg\jconfig.h" />
+    <ClInclude Include="vtkjpeg\jconfigint.h" />
+    <ClInclude Include="vtkjpeg\jerror.h" />
+    <ClInclude Include="vtkjpeg\jmorecfg.h" />
+    <ClInclude Include="vtkjpeg\jpeglib.h" />
+    <ClInclude Include="vtkjpeg\vtk_jpeg_mangle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2b5a974f-05a4-40db-b11a-2a14b45e986d}</ProjectGuid>
-    <RootNamespace>vtksys</RootNamespace>
+    <ProjectGuid>{319d2a93-024c-4d67-8308-e4961e82cccf}</ProjectGuid>
+    <RootNamespace>jpeg</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -121,7 +149,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;VTKSYS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;JPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -138,7 +166,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;VTKSYS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;JPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -155,17 +183,16 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;vtksys_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;KWSYS_NAMESPACE=vtksys;KWSYS_ENCODING_DEFAULT_CODEPAGE=CP_ACP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;jpeg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)ThirdPartyProject/vtksys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ThirdPartyProject/jpeg;$(SolutionDir)ThirdPartyProject/jpeg/vtkjpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>ws2_32.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -174,7 +201,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;VTKSYS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;JPEG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>

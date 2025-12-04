@@ -261,6 +261,7 @@
     <ClInclude Include="src\vtkArrayIteratorIncludes.h" />
     <ClInclude Include="src\vtkArrayIteratorTemplate.h" />
     <ClInclude Include="src\vtkAssume.h" />
+    <ClInclude Include="src\vtkAutoInit.h" />
     <ClInclude Include="src\vtkBitArray.h" />
     <ClInclude Include="src\vtkBitArrayIterator.h" />
     <ClInclude Include="src\vtkBoxMuellerRandomSequence.h" />
