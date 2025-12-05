@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{04a02340-a287-4415-a47a-957539196858}</ProjectGuid>
-    <RootNamespace>VTKLee</RootNamespace>
+    <RootNamespace>VA</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <ProjectName>G217</ProjectName>
   </PropertyGroup>
