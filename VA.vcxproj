@@ -298,6 +298,7 @@
     <ClCompile Include="core\vtkImageStencilData.cxx" />
     <ClCompile Include="core\vtkImageStencilIterator.cxx" />
     <ClCompile Include="core\vtkImageStencilSource.cxx" />
+    <ClCompile Include="core\vtkImageTransform.cxx" />
     <ClCompile Include="core\vtkImplicitFunction.cxx" />
     <ClCompile Include="core\vtkImplicitFunctionCollection.cxx" />
     <ClCompile Include="core\vtkImplicitSum.cxx" />
@@ -329,6 +330,8 @@
     <ClCompile Include="core\vtkMapper.cxx" />
     <ClCompile Include="core\vtkMapper2D.cxx" />
     <ClCompile Include="core\vtkMapperCollection.cxx" />
+    <ClCompile Include="core\vtkMarchingCubes.cxx" />
+    <ClCompile Include="core\vtkMarchingCubesTriangleCases.cxx" />
     <ClCompile Include="core\vtkMarchingSquaresLineCases.cxx" />
     <ClCompile Include="core\vtkMatrix3x3.cxx" />
     <ClCompile Include="core\vtkMatrix4x4.cxx" />
@@ -710,6 +713,7 @@
     <ClInclude Include="core\vtkImageStencilData.h" />
     <ClInclude Include="core\vtkImageStencilIterator.h" />
     <ClInclude Include="core\vtkImageStencilSource.h" />
+    <ClInclude Include="core\vtkImageTransform.h" />
     <ClInclude Include="core\vtkImagingCoreModule.h" />
     <ClInclude Include="core\vtkImplicitFunction.h" />
     <ClInclude Include="core\vtkImplicitFunctionCollection.h" />
@@ -746,6 +750,8 @@
     <ClInclude Include="core\vtkMapper.h" />
     <ClInclude Include="core\vtkMapper2D.h" />
     <ClInclude Include="core\vtkMapperCollection.h" />
+    <ClInclude Include="core\vtkMarchingCubes.h" />
+    <ClInclude Include="core\vtkMarchingCubesTriangleCases.h" />
     <ClInclude Include="core\vtkMarchingSquaresLineCases.h" />
     <ClInclude Include="core\vtkMatrix3x3.h" />
     <ClInclude Include="core\vtkMatrix4x4.h" />

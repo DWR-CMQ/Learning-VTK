@@ -1143,6 +1143,15 @@
     <ClCompile Include="core\vtkWin32HardwareWindow.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkMarchingCubes.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkMarchingCubesTriangleCases.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageTransform.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -2469,6 +2478,15 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\Export.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkMarchingCubes.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkMarchingCubesTriangleCases.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageTransform.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>

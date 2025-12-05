@@ -157,13 +157,15 @@ int main(int argc, char* argv[])
 	volume->SetProperty(volumeProperty);
 
 	// 创建渲染器并添加体积，设置背景颜色
-	vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
-	renderer->AddVolume(volume);
-	renderer->SetBackground(0.1, 0.2, 0.3);
+	vtkSmartPointer<vtkRenderer> volumeRenderer = vtkSmartPointer<vtkRenderer>::New();
+	volumeRenderer->AddVolume(volume);
+	volumeRenderer->SetViewport(0.0, 0.0, 0.5, 1.0);
+	volumeRenderer->SetBackground(0.1, 0.2, 0.3);
 
 	// 创建渲染窗口并添加渲染器
 	vtkSmartPointer<vtkRenderWindow> renderWindow = vtkSmartPointer<vtkRenderWindow>::New();
-	renderWindow->AddRenderer(renderer);
+	renderWindow->SetSize(1000, 500);
+	renderWindow->AddRenderer(volumeRenderer);
 
 	// 创建渲染窗口交互器并设置渲染窗口
 	vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
