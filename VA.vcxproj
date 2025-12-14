@@ -282,10 +282,12 @@
     <ClCompile Include="core\vtkImageAlgorithm.cxx" />
     <ClCompile Include="core\vtkImageData.cxx" />
     <ClCompile Include="core\vtkImageInterpolator.cxx" />
+    <ClCompile Include="core\vtkImageIterator.cxx" />
     <ClCompile Include="core\vtkImageMapper.cxx" />
     <ClCompile Include="core\vtkImageMapper3D.cxx" />
     <ClCompile Include="core\vtkImagePointDataIterator.cxx" />
     <ClCompile Include="core\vtkImageProcessingPass.cxx" />
+    <ClCompile Include="core\vtkImageProgressIterator.cxx" />
     <ClCompile Include="core\vtkImageProperty.cxx" />
     <ClCompile Include="core\vtkImageReader2.cxx" />
     <ClCompile Include="core\vtkImageResample.cxx" />
@@ -298,6 +300,7 @@
     <ClCompile Include="core\vtkImageStencilData.cxx" />
     <ClCompile Include="core\vtkImageStencilIterator.cxx" />
     <ClCompile Include="core\vtkImageStencilSource.cxx" />
+    <ClCompile Include="core\vtkImageThreshold.cxx" />
     <ClCompile Include="core\vtkImageTransform.cxx" />
     <ClCompile Include="core\vtkImplicitFunction.cxx" />
     <ClCompile Include="core\vtkImplicitFunctionCollection.cxx" />
@@ -467,6 +470,7 @@
     <ClCompile Include="core\vtkShadowMapBakerPass.cxx" />
     <ClCompile Include="core\vtkShadowMapPass.cxx" />
     <ClCompile Include="core\vtkSkybox.cxx" />
+    <ClCompile Include="core\vtkSphereSource.cxx" />
     <ClCompile Include="core\vtkSphericalHarmonics.cxx" />
     <ClCompile Include="core\vtkSSAAPass.cxx" />
     <ClCompile Include="core\vtkSSAAPassFS.cxx" />
@@ -697,10 +701,12 @@
     <ClInclude Include="core\vtkImageData.h" />
     <ClInclude Include="core\vtkImageInterpolator.h" />
     <ClInclude Include="core\vtkImageInterpolatorInternals.h" />
+    <ClInclude Include="core\vtkImageIterator.h" />
     <ClInclude Include="core\vtkImageMapper.h" />
     <ClInclude Include="core\vtkImageMapper3D.h" />
     <ClInclude Include="core\vtkImagePointDataIterator.h" />
     <ClInclude Include="core\vtkImageProcessingPass.h" />
+    <ClInclude Include="core\vtkImageProgressIterator.h" />
     <ClInclude Include="core\vtkImageProperty.h" />
     <ClInclude Include="core\vtkImageReader2.h" />
     <ClInclude Include="core\vtkImageResample.h" />
@@ -713,6 +719,7 @@
     <ClInclude Include="core\vtkImageStencilData.h" />
     <ClInclude Include="core\vtkImageStencilIterator.h" />
     <ClInclude Include="core\vtkImageStencilSource.h" />
+    <ClInclude Include="core\vtkImageThreshold.h" />
     <ClInclude Include="core\vtkImageTransform.h" />
     <ClInclude Include="core\vtkImagingCoreModule.h" />
     <ClInclude Include="core\vtkImplicitFunction.h" />
@@ -900,6 +907,7 @@
     <ClInclude Include="core\vtkShadowMapBakerPass.h" />
     <ClInclude Include="core\vtkShadowMapPass.h" />
     <ClInclude Include="core\vtkSkybox.h" />
+    <ClInclude Include="core\vtkSphereSource.h" />
     <ClInclude Include="core\vtkSphericalHarmonics.h" />
     <ClInclude Include="core\vtkSSAAPass.h" />
     <ClInclude Include="core\vtkSSAAPassFS.h" />
@@ -980,6 +988,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="core\vtkImageIterator.txx" />
+    <None Include="core\vtkImageProgressIterator.txx" />
     <None Include="core\vtkOpenGLVolumeLookupTables.txx" />
     <None Include="core\vtkQuaternion.txx" />
   </ItemGroup>

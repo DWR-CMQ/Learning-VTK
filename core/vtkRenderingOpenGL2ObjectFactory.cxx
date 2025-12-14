@@ -44,7 +44,7 @@ vtkStandardNewMacro(vtkRenderingOpenGL2ObjectFactory);
 
 // Now create the functions to create overrides with.
 VTK_CREATE_CREATE_FUNCTION(vtkDummyGPUInfoList)
-//VTK_CREATE_CREATE_FUNCTION(vtkOpenGLActor)
+VTK_CREATE_CREATE_FUNCTION(vtkOpenGLActor)
 //VTK_CREATE_CREATE_FUNCTION(vtkOpenGLCompositePolyDataMapperDelegator)
 //VTK_CREATE_CREATE_FUNCTION(vtkOpenGLBillboardTextActor3D)
 VTK_CREATE_CREATE_FUNCTION(vtkOpenGLCamera)
@@ -74,7 +74,7 @@ VTK_CREATE_CREATE_FUNCTION(vtkOpenGLRenderWindow)
 vtkRenderingOpenGL2ObjectFactory::vtkRenderingOpenGL2ObjectFactory()
 {
 this->RegisterOverride("vtkGPUInfoList", "vtkDummyGPUInfoList", "Override for VTK::RenderingOpenGL2 module", 1, vtkObjectFactoryCreatevtkDummyGPUInfoList);
-//this->RegisterOverride("vtkActor", "vtkOpenGLActor", "Override for VTK::RenderingOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLActor);
+this->RegisterOverride("vtkActor", "vtkOpenGLActor", "Override for VTK::RenderingOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLActor);
 //this->RegisterOverride("vtkCompositePolyDataMapperDelegator", "vtkOpenGLCompositePolyDataMapperDelegator", "Override for VTK::RenderingOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLCompositePolyDataMapperDelegator);
 //this->RegisterOverride("vtkBillboardTextActor3D", "vtkOpenGLBillboardTextActor3D", "Override for VTK::RenderingOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLBillboardTextActor3D);
 this->RegisterOverride("vtkCamera", "vtkOpenGLCamera", "Override for VTK::RenderingOpenGL2 module", 1, vtkObjectFactoryCreatevtkOpenGLCamera);

@@ -1152,6 +1152,18 @@
     <ClCompile Include="core\vtkImageTransform.cxx">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="core\vtkSphereSource.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageThreshold.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageProgressIterator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vtkImageIterator.cxx">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\DICOMAppHelper.h">
@@ -2489,12 +2501,30 @@
     <ClInclude Include="core\vtkImageTransform.h">
       <Filter>core</Filter>
     </ClInclude>
+    <ClInclude Include="core\vtkSphereSource.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageThreshold.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageProgressIterator.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vtkImageIterator.h">
+      <Filter>core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="core\vtkQuaternion.txx">
       <Filter>core</Filter>
     </None>
     <None Include="core\vtkOpenGLVolumeLookupTables.txx">
+      <Filter>core</Filter>
+    </None>
+    <None Include="core\vtkImageProgressIterator.txx">
+      <Filter>core</Filter>
+    </None>
+    <None Include="core\vtkImageIterator.txx">
       <Filter>core</Filter>
     </None>
   </ItemGroup>

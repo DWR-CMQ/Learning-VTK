@@ -144,11 +144,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="va_dicom2mesh.cpp" />
+    <ClCompile Include="va_mesh_visualizer.cpp" />
+    <ClCompile Include="va_volume_visualizer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VTKLee.vcxproj">
       <Project>{04a02340-a287-4415-a47a-957539196858}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="va_dicom2mesh.h" />
+    <ClInclude Include="va_mesh_visualizer.h" />
+    <ClInclude Include="va_volume_visualizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
