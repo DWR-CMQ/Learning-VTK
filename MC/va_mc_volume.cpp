@@ -9,19 +9,24 @@ MCVolume::MCVolume(vtkSmartPointer<vtkImageData> input)
     m_spImageData = input;
 }
 
-bool MCVolume::GetDataType()
+vtkSmartPointer<vtkImageData> MCVolume::GetImageData()
+{
+    return m_spImageData;
+}
+
+TextureInfo MCVolume::GetDataType()
 {
     if (m_spImageData == NULL)
     {
         std::cout << "ConvertImageDataToVoid Input is invalid!" << std::endl;
-        return false;
+        return TextureInfo();
     }
 
     vtkDataArray* scalars = m_spImageData->GetPointData()->GetScalars();
     if (scalars == NULL)
     {
         std::cout << "ConvertImageDataToVoid scalars is invalid!" << std::endl;
-        return false;
+        return TextureInfo();
     }
 
     int numComponents = scalars->GetNumberOfComponents();
@@ -95,7 +100,9 @@ bool MCVolume::GetDataType()
     default:
         std::cout << "ConvertImageDataToVoid dataType is invalid!" << std::endl;
         break;
+
     }
+    return m_stInfo;
 }
 
 GLuint MCVolume::ConvertImageDataToTexture3D()

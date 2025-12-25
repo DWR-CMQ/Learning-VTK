@@ -35,14 +35,20 @@ MCWindow::MCWindow(int width, int height, const char* title, bool fullscreen)
     glfwSetMouseButtonCallback(m_pWindow, mouseButtonCallback);
     glfwSetCursorPosCallback(m_pWindow, cursorPosCallback);
     glfwSetScrollCallback(m_pWindow, mouseScrollCallback);
-
+    //glfwSetFramebufferSizeCallback(m_pWindow, framebufferSizeCallback);
     glfwGetFramebufferSize(m_pWindow, &m_iFramebufferWidth, &m_iFramebufferHeight);
     glViewport(0, 0, m_iFramebufferWidth, m_iFramebufferHeight);
 
+    //glfwIconifyWindow(m_pWindow);
+    //glfwSwapInterval(0);
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glfwSwapBuffers(m_pWindow);
     glfwPollEvents();
+    //glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    //glfwSwapBuffers(m_pWindow);
+    //glfwPollEvents();
 }
 
 MCWindow::~MCWindow()

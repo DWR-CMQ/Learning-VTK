@@ -3,7 +3,7 @@
 MCRender::MCRender(vtkImageData* image, glm::ivec2 windowSize, glm::ivec2 fbSize)
 {
     m_iWorkGroupX = m_iWorkGroupY = 0;
-    m_spCamera = std::make_shared<MCCamera>();
+    m_spCamera = std::make_shared<MCCamera>(30);
     m_spVolume = std::make_shared<MCVolume>(image);
     alpha_scale = 1.0f;
     m_iCamUBOID = 0;
@@ -38,15 +38,50 @@ void MCRender::SetUp()
     glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
     glDrawBuffer(GL_BACK);
     
-    if (!m_spVolume->GetDataType())
+    //m_iVolumeTex3D = m_spVolume->ConvertImageDataToTexture3D();
+
+    void* data = NULL;
+    TextureInfo stInfo;
+    stInfo = m_spVolume->GetDataType();
+    stInfo.internalFormat = GL_R16I;
+    stInfo.type = GL_SHORT;
+    auto spData = m_spVolume->GetImageData();
+    if (spData == nullptr)
     {
-        std::cout << "MCRender SetUp Failed!" << std::endl;
+        std::cout << "SetUp data is nullptr" << std::endl;
+        return;
     }
-    else
+    std::cout << "SetUp data is normal" << std::endl;
+    data = spData->GetScalarPointer();
+
+    glGenTextures(1, &vol_tex3D);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_3D, vol_tex3D);
+
+    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    if (tex3D_dim.x % 4 != 0)
     {
-        std::cout << "MCRender SetUp Success!" << std::endl;
+        glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     }
-    m_iVolumeTex3D = m_spVolume->ConvertImageDataToTexture3D();
+
+    glTexImage3D(GL_TEXTURE_3D,
+        0,
+        stInfo.internalFormat,
+        stInfo.width,
+        stInfo.height,
+        stInfo.depth,
+        0,
+        stInfo.format,
+        stInfo.type,
+        data);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+    //glBindTexture(GL_TEXTURE_3D, 0);
+
 }
 
 void MCRender::SetUpFBO()
@@ -98,10 +133,13 @@ void MCRender::LoadShader()
     glUniform3f(1, voxel_size.x, voxel_size.y, voxel_size.z);
     glUniform1i(2, min_val);
     glUniform1i(3, max_val);
-    glUniform1i(4, 0);
+    glUniform1i(4, 1);
+
+    m_spCamera->resetCamera();
     glUniform1i(5, 1);
     glUniform1i(6, 0);
-
+    m_spCamera->resetCamera();
+    //glBindTextureUnit(1, m_iVolumeTex3D);
 }
 
 void MCRender::SetupUBO(bool is_update)
@@ -110,7 +148,7 @@ void MCRender::SetupUBO(bool is_update)
     cam_data.clear();
     m_spCamera->setUBO(cam_data);
     bool bInit = false;
-    if (!bInit || m_iCamUBOID == 0)
+    if (!is_update || m_iCamUBOID == 0)
     {
         bInit = true;
     }
@@ -130,6 +168,7 @@ void MCRender::SetupUBO(bool is_update)
 
 void MCRender::Render()
 {
+    glUseProgram(m_spShader->ID);
     if (m_spCamera->is_changed)
     {
         SetupUBO(true);

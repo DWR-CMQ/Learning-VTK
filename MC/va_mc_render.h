@@ -20,7 +20,7 @@ private:
 	friend class MCApp;
 	GLuint m_iFBOID;
 	GLuint m_iFBOTexID;
-	GLuint m_iVolumeTex3D;
+	GLuint vol_tex3D;
 	GLuint m_iCamUBOID;
 	glm::ivec2 m_WindowSize;
 	glm::ivec2 m_FrameBufferSize;
