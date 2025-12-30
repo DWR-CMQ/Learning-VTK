@@ -18,22 +18,22 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="va_mc_window.cpp">
+    <ClCompile Include="va_mc_comp_window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="va_mc_app.cpp">
+    <ClCompile Include="va_mc_comp_app.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="va_mc_common_function.cpp">
+    <ClCompile Include="va_mc_comp_common_function.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="va_mc_volume.cpp">
+    <ClCompile Include="va_mc_comp_volume.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="va_mc_render.cpp">
+    <ClCompile Include="va_mc_comp_render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="va_mc_camera.cpp">
+    <ClCompile Include="va_mc_comp_camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\3dparty\glad.c">
@@ -41,25 +41,25 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="va_mc_window.h">
+    <ClInclude Include="va_mc_comp_window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="va_mc_app.h">
+    <ClInclude Include="va_mc_comp_app.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="va_mc_common_function.h">
+    <ClInclude Include="va_mc_comp_common_function.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="va_mc_volume.h">
+    <ClInclude Include="va_mc_comp_volume.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="va_mc_shader.h">
+    <ClInclude Include="va_mc_comp_shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="va_mc_render.h">
+    <ClInclude Include="va_mc_comp_render.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="va_mc_camera.h">
+    <ClInclude Include="va_mc_comp_camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,4 +1,4 @@
-#include "va_mc_common_function.h"
+#include "va_mc_comp_common_function.h"
 #include <windows.h>
 
 bool CommonFunction::CheckDICOMDirectory(const std::string& directoryPath)

@@ -1,4 +1,4 @@
-#include "va_mc_render.h"
+#include "va_mc_comp_render.h"
 
 MCRender::MCRender(vtkImageData* image, glm::ivec2 windowSize, glm::ivec2 fbSize)
 {
@@ -76,7 +76,7 @@ void MCRender::SetUp()
         stInfo.height,
         stInfo.depth,
         0,
-        stInfo.format,
+        GL_RED_INTEGER,
         stInfo.type,
         data);
     glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
@@ -122,7 +122,7 @@ void MCRender::SetUpFBO()
 
 void MCRender::LoadShader()
 {
-    m_spShader = std::make_shared<MCShader>("F://ToGithub//Learning-VTK//MC//shaders//raycast.comp");
+    m_spShader = std::make_shared<MCShader>("F://ToGithub//Learning-VTK//MCComp//shaders//raycast.comp");
     int iWorkGroup[3];
     glGetProgramiv(m_spShader->ID, GL_COMPUTE_WORK_GROUP_SIZE, iWorkGroup);
     m_iWorkGroupX = m_WindowSize.x / iWorkGroup[0];

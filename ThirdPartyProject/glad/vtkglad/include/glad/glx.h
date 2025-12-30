@@ -587,7 +587,7 @@ typedef struct {
     Display *display;
     int extension;
     int evtype;
-    GLXDrawable window;
+    GLXDrawable m_pWindow;
     Bool stereo_tree;
 } GLXStereoNotifyEventEXT;
 typedef struct {

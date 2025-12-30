@@ -1,8 +1,8 @@
-#include "va_mc_volume.h"
+#include "va_mc_comp_volume.h"
 #include <vtkPointData.h>
 #include <vtkDataArray.h>
 
-#include "va_mc_shader.h"
+#include "va_mc_comp_shader.h"
 
 MCVolume::MCVolume(vtkSmartPointer<vtkImageData> input)
 {

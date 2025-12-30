@@ -1,4 +1,4 @@
-#include "va_mc_window.h"
+#include "va_mc_comp_window.h"
 #include <iostream>
 
 std::function<void(float, float, float)> MCWindow::cameraUpdateCallback;

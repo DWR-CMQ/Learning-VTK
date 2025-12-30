@@ -1,12 +1,12 @@
 #pragma once
-#include "va_mc_camera.h"
+#include "va_mc_comp_camera.h"
 #include "vtkDICOMImageReader.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include "va_mc_volume.h"
-#include "va_mc_render.h"
-#include "va_mc_window.h"
+#include "va_mc_comp_volume.h"
+#include "va_mc_comp_render.h"
+#include "va_mc_comp_window.h"
 
 class MCApp
 {

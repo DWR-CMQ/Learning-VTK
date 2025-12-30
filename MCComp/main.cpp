@@ -1,4 +1,4 @@
-#include "va_mc_app.h"
+#include "va_mc_comp_app.h"
 
 // Á´½Ó OpenGL ¿â
 #pragma comment(lib, "opengl32.lib")

@@ -1,4 +1,4 @@
-#include "va_mc_camera.h"
+#include "va_mc_comp_camera.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/matrix_access.hpp>

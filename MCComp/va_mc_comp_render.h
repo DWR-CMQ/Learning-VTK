@@ -2,9 +2,9 @@
 
 #include <glm/vec2.hpp>
 #include <glm/vec3.hpp>
-#include "va_mc_shader.h"
-#include "va_mc_camera.h"
-#include "va_mc_volume.h"
+#include "va_mc_comp_shader.h"
+#include "va_mc_comp_camera.h"
+#include "va_mc_comp_volume.h"
 class MCRender
 {
 public:

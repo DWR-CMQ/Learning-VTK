@@ -1,10 +1,10 @@
-#include "va_mc_app.h"
+#include "va_mc_comp_app.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
 #include <vtkSmartPointer.h>
-#include "va_mc_common_function.h"
+#include "va_mc_comp_common_function.h"
 
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
