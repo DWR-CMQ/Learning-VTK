@@ -10,6 +10,7 @@
 #include <vtkRenderWindowInteractor.h>
 #include <vtkInteractorStyleTrackballCamera.h>
 #include <vtkCamera.h>
+#include <vtkOpenGLGPUVolumeRayCastMapper.h>
 
 VolumeVisualizer::VolumeVisualizer()
 {
@@ -56,14 +57,16 @@ void VolumeVisualizer::DisplayVolume(vtkSmartPointer<vtkRenderWindow> renderWind
 
 	// 创建 GPU 体积光线投射映射器并设置输入连接
 	vtkSmartPointer<vtkGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkGPUVolumeRayCastMapper>::New();
-
 	// 设置映射器的输入连接
 	volumeMapper->SetInputConnection(volumeData);
-
+	
 	// 创建体积并设置映射器和体积属性
 	vtkSmartPointer<vtkVolume> volume = vtkSmartPointer<vtkVolume>::New();
 	volume->SetMapper(volumeMapper);
 	volume->SetProperty(volumeProperty);
+
+	//auto baseGPURender = volume->GetMapper();
+	//auto xx = dynamic_cast<vtkOpenGLGPUVolumeRayCastMapper*>(baseGPURender);
 
 	// 创建渲染器并添加体积，设置背景颜色
 	m_spVolumeRenderer->AddVolume(volume);

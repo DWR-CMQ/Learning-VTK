@@ -118,7 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)core;$(SolutionDir)/CommonCore/src;$(SolutionDir)/Common/src;$(SolutionDir)ThirdPartyProject/vtksys;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)core;$(SolutionDir)/CommonCore/src;$(SolutionDir)/Common/src;$(SolutionDir)ThirdPartyProject/vtksys;$(SolutionDir)ThirdPartyProject/glad;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

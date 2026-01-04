@@ -78,7 +78,7 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
     <ExternalIncludePath>core;core\vtkpegtl;core\vtkjpeg;3dparty\include;3dparty;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>3dparty\lib;$(SolutionDir)x64/Debug;$(LibraryPath)</LibraryPath>
     <TargetName>G217</TargetName>

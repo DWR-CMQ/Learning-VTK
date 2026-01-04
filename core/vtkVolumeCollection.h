@@ -47,6 +47,8 @@ public:
    */
   vtkVolume* GetNextItem() { return this->GetNextVolume(); }
 
+  vtkVolume* GetVolume() { return static_cast<vtkVolume*>(this->Top->Item); }
+
   /**
    * Reentrant safe way to get an object in a collection. Just pass the
    * same cookie back and forth.

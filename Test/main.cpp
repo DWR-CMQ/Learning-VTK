@@ -14,6 +14,8 @@
 #include "vtkAutoInit.h"
 #include "vtkVersion.h"
 #include "vtkCamera.h"
+#include "vtkRendererCollection.h"
+#include "vtkVolumeCollection.h"
 #include <iostream>
 #include <windows.h>
 #include <gl/GL.h>
@@ -129,7 +131,12 @@ int main(int argc, char* argv[])
 
 	// 渲染场景并启动交互
 	spRenderWindow->Render();
-	renderWindowInteractor->Start();
+	auto renderColl = spRenderWindow->GetRenderers();
+	auto firstRender = renderColl->GetFirstRenderer();
+	auto volumeColl = firstRender->GetVolumes();
+	auto xx = volumeColl->GetVolume();
+	//auto firstVolume = volumeColl->ge
+	//renderWindowInteractor->Start();
 
 	return EXIT_SUCCESS;
 }

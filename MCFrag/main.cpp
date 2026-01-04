@@ -1,3 +1,8 @@
+#include <vtkSmartPointer.h>
+#include <vtkDICOMImageReader.h>
+#include <vtkImageData.h>
+#include <vtkDataArray.h>
+#include <vtkPointData.h>
 #include "va_mc_frag_utils.h"
 
 #include <glm/gtc/type_ptr.hpp>
@@ -37,12 +42,13 @@ glm::vec3 getTrackBallVector(double x, double y);
 glm::vec4 camPos = glm::vec4(0, 0, 280.0, 1.0);
 float a = 256, b = 256, c = 256;
 /* ---------------------------Volume size = 256 * 256 * 256---------------------------*/
-const int volume_size = a * b * c;
+int volume_size = 0;
 /*--------------------------- Step size for ray ---------------------------*/
 float step_size = 2.0f;
 /*--------------------------- Array to store loaded volume data---------------------------*/
-GLubyte* volume_data = new GLubyte[volume_size];
-GLubyte* normals = new GLubyte[volume_size];
+//GLubyte* volume_data = new GLubyte[volume_size];
+//GLubyte* normals = new GLubyte[volume_size];
+void* volume_data = NULL;
 /*--------------------------- Pointer to the location of volume---------------------------*/
 const char* location = "Null";
 /*--------------------------- File name to save transfer function---------------------------*/
@@ -61,8 +67,123 @@ GLfloat* transfer_function = new GLfloat[1024];
 GLuint VAO, transferfun, volumeTexture, normalTexture;
 int mode = 1;
 
+struct TextureInfo
+{
+    GLuint id = 0;
+    int width = 0;
+    int height = 0;
+    int depth = 0;
+    GLenum internalFormat = GL_R8;
+    GLenum format = GL_RED;
+    GLenum type = GL_UNSIGNED_BYTE;
+};
+
 int main()
 {
+    std::string dicomDirectory = "F:/Data/2d/smoke_ct/1.0 x 0.6_20150507_111124";
+    vtkSmartPointer<vtkDICOMImageReader> reader = vtkSmartPointer<vtkDICOMImageReader>::New();
+    reader->SetDirectoryName(dicomDirectory.c_str());
+    reader->Update();
+    vtkImageData* imageData = reader->GetOutput();
+    int dims[3];
+    imageData->GetDimensions(dims);
+    a = dims[0];
+    b = dims[1];
+    c = dims[2];
+
+    TextureInfo stInfo;
+    if (imageData == NULL)
+    {
+        std::cout << "ConvertImageDataToVoid Input is invalid!" << std::endl;
+        return 0;
+    }
+    vtkDataArray* scalars = imageData->GetPointData()->GetScalars();
+    if (scalars == NULL)
+    {
+        std::cout << "ConvertImageDataToVoid scalars is invalid!" << std::endl;
+        return 0;
+    }
+    
+
+    int numComponents = scalars->GetNumberOfComponents();
+    int dataType = scalars->GetDataType();
+
+    // 设置默认格式
+    stInfo.format = GL_RED;
+    stInfo.internalFormat = GL_R8;
+    stInfo.type = GL_UNSIGNED_BYTE;
+
+    stInfo.width = dims[0];
+    stInfo.height = dims[1];
+    stInfo.depth = dims[2];
+
+    // 根据组件数设置格式
+    switch (numComponents)
+    {
+    case 1:
+        stInfo.format = GL_RED;
+        break;
+    case 2:
+        stInfo.format = GL_RG;
+        break;
+    case 3:
+        stInfo.format = GL_RGB;
+        break;
+    case 4:
+        stInfo.format = GL_RGBA;
+        break;
+    default:
+        std::cout << "ConvertImageDataToVoid numComponets is invalid!" << std::endl;
+        break;
+    }
+
+    // 根据数据类型设置内部格式和类型
+    switch (dataType)
+    {
+    case VTK_UNSIGNED_CHAR:
+        stInfo.type = GL_UNSIGNED_BYTE;
+        if (numComponents == 1) stInfo.internalFormat = GL_R8;
+        else if (numComponents == 2) stInfo.internalFormat = GL_RG8;
+        else if (numComponents == 3) stInfo.internalFormat = GL_RGB8;
+        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA8;
+        break;
+
+    case VTK_FLOAT:
+        stInfo.type = GL_FLOAT;
+        if (numComponents == 1) stInfo.internalFormat = GL_R32F;
+        else if (numComponents == 2) stInfo.internalFormat = GL_RG32F;
+        else if (numComponents == 3) stInfo.internalFormat = GL_RGB32F;
+        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA32F;
+        break;
+
+    case VTK_SHORT:
+        stInfo.type = GL_SHORT;
+        if (numComponents == 1) stInfo.internalFormat = GL_R16_SNORM;
+        else if (numComponents == 2) stInfo.internalFormat = GL_RG16_SNORM;
+        else if (numComponents == 3) stInfo.internalFormat = GL_RGB16_SNORM;
+        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA16_SNORM;
+        break;
+
+    case VTK_UNSIGNED_SHORT:
+        stInfo.type = GL_UNSIGNED_SHORT;
+        if (numComponents == 1) stInfo.internalFormat = GL_R16;
+        else if (numComponents == 2) stInfo.internalFormat = GL_RG16;
+        else if (numComponents == 3) stInfo.internalFormat = GL_RGB16;
+        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA16;
+        break;
+    default:
+        std::cout << "ConvertImageDataToVoid dataType is invalid!" << std::endl;
+        break;
+    }
+    stInfo.internalFormat = GL_R16I;
+    stInfo.type = GL_SHORT;
+
+    volume_data = imageData->GetScalarPointer();
+
+    volume_size = a * b * c;
+    //GLubyte* volume_data = new GLubyte[volume_size];
+    GLubyte* normals = new GLubyte[volume_size];
+
     /*------------------ Setup window------------------*/
     GLFWwindow* window = setupWindow(screen_width, screen_height);
     ImGuiIO& io = ImGui::GetIO(); // Create IO object
@@ -80,7 +201,7 @@ int main()
 
     currentTransferFunction = UpdateTransferFunction("./transferFunction/default");
 
-    memset(volume_data, 0, volume_size);
+    //memset(volume_data, 0, volume_size);
     /*------------------ Create a shader program------------------*/
     unsigned int shaderProgram = createProgram("./shaders/vshader.vs", "./shaders/fshader.fs");
     glUseProgram(shaderProgram);
@@ -93,7 +214,8 @@ int main()
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, volume_data);
+    //glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, volume_data);
+    glTexImage3D(GL_TEXTURE_3D, 0, GL_R16_SNORM, a, b, c, 0, GL_RED, stInfo.type, volume_data);
 
     /*------------------  Create Textures for transfer function ------------------*/
     glGenTextures(1, &transferfun);
@@ -118,7 +240,8 @@ int main()
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_1D, transferfun);
     glUniform1i(tex2, 1);
-    /* --------------------------- Bind location of variables from shader program  for normal texture and also create normal texture ---------------------------*/
+
+    computeNormals();
     glGenTextures(1, &normalTexture);
     glActiveTexture(GL_TEXTURE2);
     glBindTexture(GL_TEXTURE_3D, normalTexture);
@@ -127,7 +250,7 @@ int main()
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, nullptr); // Provide nullptr as data for now
+    glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, normals); // Provide nullptr as data for now
     glUniform1i(glGetUniformLocation(shaderProgram, "normalTexture"), 2);
     glUseProgram(shaderProgram);
     /*------------------ Setup Transformations------------------*/
@@ -248,48 +371,48 @@ int main()
                 {
                     if (ImGui::MenuItem(files[i].c_str()))
                     {
-                        /*------------------ Reset volume data------------------*/
-                        memset(volume_data, 0, volume_size);
-                        glDeleteTextures(1, &volumeTexture);
-                        glDeleteTextures(1, &normalTexture);
+                        ///*------------------ Reset volume data------------------*/
+                        //memset(volume_data, 0, volume_size);
+                        //glDeleteTextures(1, &volumeTexture);
+                        //glDeleteTextures(1, &normalTexture);
 
-                        location = files[i].c_str();
-                        /*--------------------------- Read volume data from file ---------------------------*/
-                        FILE* file = fopen(location, "rb");
-                        if (NULL == file)
-                        {
-                            fprintf(stderr, "Error opening file\n");
-                            exit(0);
-                        }
-                        fread(volume_data, sizeof(GLubyte), volume_size, file);
-                        fclose(file);
+                        //location = files[i].c_str();
+                        ///*--------------------------- Read volume data from file ---------------------------*/
+                        //FILE* file = fopen(location, "rb");
+                        //if (NULL == file)
+                        //{
+                        //    fprintf(stderr, "Error opening file\n");
+                        //    exit(0);
+                        //}
+                        //fread(volume_data, sizeof(GLubyte), volume_size, file);
+                        //fclose(file);
 
-                        /*------------------ Update texture for volume data ------------------*/
-                        glUseProgram(shaderProgram);
-                        glGenTextures(1, &volumeTexture);
-                        glActiveTexture(GL_TEXTURE0);
-                        /*------------------ Tri-linear interpolation ------------------*/
-                        /*------------------ Reference https://learnopengl.com/Getting-started/Textures ------------------*/
-                        glBindTexture(GL_TEXTURE_3D, volumeTexture);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-                        glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, volume_data);
+                        ///*------------------ Update texture for volume data ------------------*/
+                        //glUseProgram(shaderProgram);
+                        //glGenTextures(1, &volumeTexture);
+                        //glActiveTexture(GL_TEXTURE0);
+                        ///*------------------ Tri-linear interpolation ------------------*/
+                        ///*------------------ Reference https://learnopengl.com/Getting-started/Textures ------------------*/
+                        //glBindTexture(GL_TEXTURE_3D, volumeTexture);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                        //glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, volume_data);
 
-                        computeNormals();
-                        /*------------------ Compute normals ------------------*/
+                        //computeNormals();
+                        ///*------------------ Compute normals ------------------*/
 
-                        glGenTextures(1, &normalTexture);
-                        glActiveTexture(GL_TEXTURE2);
-                        glBindTexture(GL_TEXTURE_3D, normalTexture);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-                        glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-                        glTexSubImage3D(GL_TEXTURE_3D, 0, 0, 0, 0, a, b, c, GL_RED, GL_UNSIGNED_BYTE, normals);
+                        //glGenTextures(1, &normalTexture);
+                        //glActiveTexture(GL_TEXTURE2);
+                        //glBindTexture(GL_TEXTURE_3D, normalTexture);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                        //glTexSubImage3D(GL_TEXTURE_3D, 0, 0, 0, 0, a, b, c, GL_RED, GL_UNSIGNED_BYTE, normals);
 
                         /*-------------------- Update normal texture with the newly calculated normals ------------------*/
                     }
@@ -451,37 +574,37 @@ bool saveTransferFunction(std::string fileName)
 /*------------------------------ Function to compute normals using central differences method ------------------------------*/
 void computeNormals()
 {
-    int nx = a;
-    int ny = b;
-    int nz = c;
-    for (int x = 1; x < nx - 1; ++x)
-    {
-        for (int y = 1; y < ny - 1; ++y)
-        {
-            for (int z = 1; z < nz - 1; ++z)
-            {
-                /*--------------- Compute directional derivatives using central differences ------------------*/
-                int idx = x * ny * nz + y * nz + z;
-                double fx = static_cast<double>(volume_data[(x + 1) * ny * nz + y * nz + z]) -
-                    static_cast<double>(volume_data[(x - 1) * ny * nz + y * nz + z]);
-                double fy = static_cast<double>(volume_data[x * ny * nz + (y + 1) * nz + z]) -
-                    static_cast<double>(volume_data[x * ny * nz + (y - 1) * nz + z]);
-                double fz = static_cast<double>(volume_data[x * ny * nz + y * nz + (z + 1)]) -
-                    static_cast<double>(volume_data[x * ny * nz + y * nz + (z - 1)]);
+    //int nx = a;
+    //int ny = b;
+    //int nz = c;
+    //for (int x = 1; x < nx - 1; ++x)
+    //{
+    //    for (int y = 1; y < ny - 1; ++y)
+    //    {
+    //        for (int z = 1; z < nz - 1; ++z)
+    //        {
+    //            /*--------------- Compute directional derivatives using central differences ------------------*/
+    //            int idx = x * ny * nz + y * nz + z;
+    //            double fx = static_cast<double>(volume_data[(x + 1) * ny * nz + y * nz + z]) -
+    //                static_cast<double>(volume_data[(x - 1) * ny * nz + y * nz + z]);
+    //            double fy = static_cast<double>(volume_data[x * ny * nz + (y + 1) * nz + z]) -
+    //                static_cast<double>(volume_data[x * ny * nz + (y - 1) * nz + z]);
+    //            double fz = static_cast<double>(volume_data[x * ny * nz + y * nz + (z + 1)]) -
+    //                static_cast<double>(volume_data[x * ny * nz + y * nz + (z - 1)]);
 
-                double norm = std::sqrt(fx * fx + fy * fy + fz * fz);
+    //            double norm = std::sqrt(fx * fx + fy * fy + fz * fz);
 
-                if (norm == 0)
-                {
-                    norm = 1;
-                }
-                /*--------------------------- Compute normal vector and store in the 'normals' array, since need to store in GLubyte format , we need to convert to 0-255 range ---------------------------*/
-                normals[idx] = static_cast<GLubyte>(std::round(fx / norm * 255.0));
-                normals[idx + 1] = static_cast<GLubyte>(std::round(fy / norm * 255.0));
-                normals[idx + 2] = static_cast<GLubyte>(std::round(fz / norm * 255.0));
-            }
-        }
-    }
+    //            if (norm == 0)
+    //            {
+    //                norm = 1;
+    //            }
+    //            /*--------------------------- Compute normal vector and store in the 'normals' array, since need to store in GLubyte format , we need to convert to 0-255 range ---------------------------*/
+    //            normals[idx] = static_cast<GLubyte>(std::round(fx / norm * 255.0));
+    //            normals[idx + 1] = static_cast<GLubyte>(std::round(fy / norm * 255.0));
+    //            normals[idx + 2] = static_cast<GLubyte>(std::round(fz / norm * 255.0));
+    //        }
+    //    }
+    //}
 }
 /*------------------ Create Bounding box by using code from assignments------------------*/
 void createBoundingbox(unsigned int& program, unsigned int& cube_VAO)
