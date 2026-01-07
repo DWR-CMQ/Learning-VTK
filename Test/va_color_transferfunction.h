@@ -44,7 +44,6 @@ private:
 	bool Clamping;
 	int ColorSpace;
 	int HSVWrap;
-	int Scale;
 public:
 	ColorTransferFunctionInternals* Internal;
 
