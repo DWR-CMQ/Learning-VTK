@@ -144,8 +144,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="va_color_transferfunction.cpp" />
     <ClCompile Include="va_dicom2mesh.cpp" />
     <ClCompile Include="va_mesh_visualizer.cpp" />
+    <ClCompile Include="va_opacity_transferfunction.cpp" />
     <ClCompile Include="va_volume_visualizer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,8 +156,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="va_color_transferfunction.h" />
     <ClInclude Include="va_dicom2mesh.h" />
     <ClInclude Include="va_mesh_visualizer.h" />
+    <ClInclude Include="va_opacity_transferfunction.h" />
     <ClInclude Include="va_volume_visualizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
