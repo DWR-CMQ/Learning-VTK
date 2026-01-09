@@ -1,6 +1,8 @@
 #include "va_color_transferfunction.h"
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
 
 class CTFNode
 {
@@ -107,6 +109,265 @@ void ColorTransferFunction::GetBelowRangeColor(double* input)
 	input[0] = BelowRangeColor[0];
 	input[1] = BelowRangeColor[1];
 	input[2] = BelowRangeColor[2];
+}
+
+int ColorTransferFunction::AddRGBPoint(double x, double r, double g, double b)
+{
+	return 0;
+}
+
+int ColorTransferFunction::AddRGBPoint(double x, double r, double g, double b, double midpoint, double sharpness)
+{
+	return 0;
+}
+
+int ColorTransferFunction::AddRGBPoints(double* x, double* rgbColors)
+{
+	return 0;
+}
+
+int ColorTransferFunction::AddRGBPoints(double* x, double* rgbColors, double midpoint, double sharpness)
+{
+	return 0;
+}
+
+int ColorTransferFunction::AddHSVPoint(double x, double h, double s, double v)
+{
+	return 0;
+}
+
+int ColorTransferFunction::AddHSVPoint(double x, double h, double s, double v, double midpoint, double sharpness)
+{
+	return 0;
+}
+
+int ColorTransferFunction::RemovePoint(double x)
+{
+	unsigned int i;
+	for (i = 0; i < this->Internal->Nodes.size(); i++)
+	{
+		if (this->Internal->Nodes[i]->X == x)
+		{
+			break;
+		}
+	}
+
+	int retVal;
+	if (i < this->Internal->Nodes.size())
+	{
+		retVal = i;
+	}
+	else
+	{
+		return -1;
+	}
+
+	this->Internal->FindNodeEqual.X = x;
+	std::vector<CTFNode*>::iterator iter = std::find_if(this->Internal->Nodes.begin(), this->Internal->Nodes.end(), this->Internal->FindNodeEqual);
+	if (iter != this->Internal->Nodes.end())
+	{
+		delete* iter;
+		this->Internal->Nodes.erase(iter);
+		if (i == 0 || i == this->Internal->Nodes.size())
+		{
+			this->UpdateRange();
+		}
+	}
+	else
+	{
+		return -1;
+	}
+	return retVal;
+}
+
+void ColorTransferFunction::SetRange(double, double)
+{
+
+}
+
+void ColorTransferFunction::SetRange(const double rng[2])
+{
+
+}
+
+void ColorTransferFunction::SortAndUpdateRange()
+{
+	std::stable_sort(this->Internal->Nodes.begin(), this->Internal->Nodes.end(), this->Internal->CompareNodes);
+	this->UpdateRange();
+}
+
+bool ColorTransferFunction::UpdateRange()
+{
+	double oldRange[2];
+	oldRange[0] = this->Range[0];
+	oldRange[1] = this->Range[1];
+
+	int size = static_cast<int>(this->Internal->Nodes.size());
+	if (size)
+	{
+		this->Range[0] = this->Internal->Nodes[0]->X;
+		this->Range[1] = this->Internal->Nodes[size - 1]->X;
+	}
+	else
+	{
+		this->Range[0] = 0;
+		this->Range[1] = 0;
+	}
+
+	if (oldRange[0] == this->Range[0] && oldRange[1] == this->Range[1])
+	{
+		return false;
+	}
+	return true;
+}
+
+void ColorTransferFunction::MovePoint(double oldX, double newX)
+{
+	if (oldX == newX)
+	{
+		return;
+	}
+	this->RemovePoint(newX);
+	for (unsigned int i = 0; i < Internal->Nodes.size(); i++)
+	{
+		if (this->Internal->Nodes[i]->X == oldX)
+		{
+			this->Internal->Nodes[i]->X == newX;
+			this->SortAndUpdateRange();
+			break;
+		}
+	}
+}
+
+void ColorTransferFunction::RemoveAllPoints()
+{
+	for (unsigned int i = 0; i < this->Internal->Nodes.size(); i++)
+	{
+		delete this->Internal->Nodes[i];
+	}
+	this->Internal->Nodes.clear();
+	this->SortAndUpdateRange();
+}
+
+double ColorTransferFunction::FindMinimumXDistance()
+{
+	std::vector<CTFNode*> const& nodes = this->Internal->Nodes;
+	size_t const size = nodes.size();
+	double distance = std::numeric_limits<double>::max();
+	for (size_t i = 0; i < size - 1; i++)
+	{
+		double const currentDist = nodes[i + 1]->X - nodes[i]->X;
+		if (currentDist < distance)
+		{
+			distance = currentDist;
+		}
+	}
+	return distance;
+}
+
+int ColorTransferFunction::AdjustRange(double range[2])
+{
+	if (!range)
+	{
+		return 0;
+	}
+
+	double* function_range = this->Range;
+	double rgb[3];
+	if (function_range[0] < range[0])
+	{
+		
+	}
+}
+
+void ColorTransferFunction::GetColor(double x, double rgb[3])
+{
+	if (this->IndexedLookup)
+	{
+		int numNodes = this->GetSize();
+
+	}
+}
+
+int ColorTransferFunction::GetSize()
+{
+	return static_cast<int>(this->Internal->Nodes.size());
+}
+
+int ColorTransferFunction::GetNodeValue(int index, double val[6])
+{
+	int size = static_cast<int>(this->Internal->Nodes.size());
+
+	if (index < 0 || index >= size)
+	{
+		std::cout << "Index out of range!" << std::endl;
+		return -1;
+	}
+
+	val[0] = this->Internal->Nodes[index]->X;
+	val[1] = this->Internal->Nodes[index]->R;
+	val[2] = this->Internal->Nodes[index]->G;
+	val[3] = this->Internal->Nodes[index]->B;
+	val[4] = this->Internal->Nodes[index]->Midpoint;
+	val[5] = this->Internal->Nodes[index]->Sharpness;
+
+	return 1;
+}
+
+int ColorTransferFunction::SetNodeValue(int index, double val[6])
+{
+	int size = static_cast<int>(this->Internal->Nodes.size());
+
+	if (index < 0 || index >= size)
+	{
+		std::cout << "Index out of range!" << std::endl;
+		return -1;
+	}
+
+	double oldX = this->Internal->Nodes[index]->X;
+	this->Internal->Nodes[index]->X = val[0];
+	this->Internal->Nodes[index]->R = val[1];
+	this->Internal->Nodes[index]->G = val[2];
+	this->Internal->Nodes[index]->B = val[3];
+	this->Internal->Nodes[index]->Midpoint = val[4];
+	this->Internal->Nodes[index]->Sharpness = val[5];
+
+	if (oldX != val[0])
+	{
+		// The point has been moved, the order of points or the range might have
+		// been modified.
+		this->SortAndUpdateRange();
+		// No need to call Modified() here because SortAndUpdateRange() has done it
+		// already.
+	}
+	return 1;
+}
+
+void ColorTransferFunction::AddRGBSegment(double x1, double r1, double g1, double b1, double x2, double r2, double g2, double b2)
+{
+	int done = 0;
+	while (!done)
+	{
+		done = 1;
+		this->Internal->FindNodeInRange.X1 = x1;
+		this->Internal->FindNodeInRange.X2 = x2;
+		std::vector<CTFNode*>::iterator iter = std::find_if(
+			this->Internal->Nodes.begin(), this->Internal->Nodes.end(), this->Internal->FindNodeInRange);
+
+		if (iter != this->Internal->Nodes.end())
+		{
+			delete* iter;
+			this->Internal->Nodes.erase(iter);
+			done = 0;
+		}
+	}
+	this->AddRGBPoint(x1, r1, g1, b1, 0.5, 0.0);
+	this->AddRGBPoint(x2, r2, g2, b2, 0.5, 0.0);
+}
+
+void ColorTransferFunction::AddHSVSegment(double x1, double h1, double s1, double v1, double x2, double h2, double s2, double v2)
+{
+
 }
 
 void ColorTransferFunction::GetTable(double xStart, double xEnd, int size, double* table)
