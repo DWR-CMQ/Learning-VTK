@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -146,6 +146,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="va_color_transferfunction.cpp" />
     <ClCompile Include="va_dicom2mesh.cpp" />
+    <ClCompile Include="va_common_function.cpp" />
     <ClCompile Include="va_mesh_visualizer.cpp" />
     <ClCompile Include="va_opacity_transferfunction.cpp" />
     <ClCompile Include="va_volume_visualizer.cpp" />
@@ -158,6 +159,7 @@
   <ItemGroup>
     <ClInclude Include="va_color_transferfunction.h" />
     <ClInclude Include="va_dicom2mesh.h" />
+    <ClInclude Include="va_common_function.h" />
     <ClInclude Include="va_mesh_visualizer.h" />
     <ClInclude Include="va_opacity_transferfunction.h" />
     <ClInclude Include="va_volume_visualizer.h" />

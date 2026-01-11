@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 
+#include "va_common_function.h"
 
 class CTFNode
 {
@@ -113,32 +114,171 @@ void ColorTransferFunction::GetBelowRangeColor(double* input)
 
 int ColorTransferFunction::AddRGBPoint(double x, double r, double g, double b)
 {
-	return 0;
+	return this->AddRGBPoint(x, r, g, b, 0.5, 0.0);
 }
 
 int ColorTransferFunction::AddRGBPoint(double x, double r, double g, double b, double midpoint, double sharpness)
 {
-	return 0;
+	if (midpoint < 0.0 || midpoint > 1.0)
+	{
+		std::cout << "Midpoint outside range [0.0, 1.0]" << std::endl;
+		return -1;
+	}
+
+	if (sharpness < 0.0 || sharpness > 1.0)
+	{
+		std::cout << "Sharpness outside range [0.0, 1.0]" << std::endl;
+		return -1;
+	}
+
+	// remove any node already at this X location
+	if (!this->AllowDuplicateScalars)
+	{
+		this->RemovePoint(x);
+	}
+
+	// Create the new node
+	CTFNode* node = new CTFNode;
+	node->X = x;
+	node->R = r;
+	node->G = g;
+	node->B = b;
+	node->Midpoint = midpoint;
+	node->Sharpness = sharpness;
+
+	// Add it, then sort to get everything in order
+	this->Internal->Nodes.push_back(node);
+	this->SortAndUpdateRange();
+
+	// We need to find the index of the node we just added in order
+	// to return this value
+	unsigned int i;
+	for (i = 0; i < this->Internal->Nodes.size(); i++)
+	{
+		if (this->Internal->Nodes[i]->X == x)
+		{
+			break;
+		}
+	}
+
+	int retVal;
+	// If we didn't find it, something went horribly wrong so
+	// return -1
+	if (i < this->Internal->Nodes.size())
+	{
+		retVal = i;
+	}
+	else
+	{
+		retVal = -1;
+	}
+
+	return retVal;
 }
 
-int ColorTransferFunction::AddRGBPoints(double* x, double* rgbColors)
+int ColorTransferFunction::AddRGBPoints(std::vector<double> x, std::vector<std::tuple<double, double, double>> rgb)
 {
-	return 0;
+	return this->AddRGBPoints(x, rgb, 0.5, 0.0);
 }
 
-int ColorTransferFunction::AddRGBPoints(double* x, double* rgbColors, double midpoint, double sharpness)
+int ColorTransferFunction::AddRGBPoints(std::vector<double> x, std::vector<std::tuple<double, double, double>> rgb, double midpoint, double sharpness)
 {
-	return 0;
+	if (x.empty())
+	{
+		std::cout << "x is null" << std::endl;
+		return -1;
+	}
+
+	if (rgb.empty())
+	{
+		std::cout << "rgb is null" << std::endl;
+		return -1;
+	}
+
+	if (x.size() != rgb.size())
+	{
+		std::cout << "x is not equal rgb" << std::endl;
+	}
+
+	if (midpoint < 0.0 || midpoint > 1.0)
+	{
+		std::cout << "Midpoint outside range [0.0, 1.0]" << std::endl;
+		return -1;
+	}
+
+	if (sharpness < 0.0 || sharpness > 1.0)
+	{
+		std::cout << "Sharpness outside range [0.0, 1.0]" << std::endl;
+		return -1;
+	}
+
+	// remove any node already at this X location
+	if (!this->AllowDuplicateScalars)
+	{
+		std::cout << "Adding points in bulk doesn't support checking for duplicates" << std::endl;
+		return -1;
+	}
+
+	auto numNodes = rgb.size();
+	for (int i = 0; i < numNodes; i++)
+	{
+		// Create the new node
+		CTFNode* node = new CTFNode;
+		node->X = x[i];
+		node->R = std::get<0>(rgb[i]);
+		node->G = std::get<1>(rgb[i]);
+		node->B = std::get<2>(rgb[i]);
+		node->Midpoint = midpoint;
+		node->Sharpness = sharpness;
+
+		// Add it
+		this->Internal->Nodes.push_back(node);
+	}
+
+	// Then sort to get everything in order
+	this->SortAndUpdateRange();
+
+	return static_cast<int>(this->Internal->Nodes.size()) - 1;
 }
+
 
 int ColorTransferFunction::AddHSVPoint(double x, double h, double s, double v)
 {
-	return 0;
+	double r, b, g;
+	CommonFunction::HSVToRGB(h, s, v, &r, &g, &b);
+	return this->AddRGBPoint(x, r, g, b);
 }
 
 int ColorTransferFunction::AddHSVPoint(double x, double h, double s, double v, double midpoint, double sharpness)
 {
-	return 0;
+	double r, b, g;
+	CommonFunction::HSVToRGB(h, s, v, &r, &g, &b);
+	return this->AddRGBPoint(x, r, g, b, midpoint, sharpness);
+}
+
+void ColorTransferFunction::DeepCopy(ColorTransferFunction* src)
+{
+	if (src != nullptr)
+	{
+		this->Clamping = src->Clamping;
+		this->ColorSpace = src->ColorSpace;
+		this->HSVWrap = src->HSVWrap;
+		this->Scale = src->Scale;
+
+		int i;
+		this->RemoveAllPoints();
+		for (i = 0; i < src->GetSize(); i++)
+		{
+			double val[6];
+			src->GetNodeValue(i, val);
+			this->AddRGBPoint(val[0], val[1], val[2], val[3], val[4], val[5]);
+		}
+	}
+}
+
+void ColorTransferFunction::ShallowCopy(ColorTransferFunction* src)
+{
+	this->DeepCopy(src);
 }
 
 int ColorTransferFunction::RemovePoint(double x)
@@ -182,12 +322,10 @@ int ColorTransferFunction::RemovePoint(double x)
 
 void ColorTransferFunction::SetRange(double, double)
 {
-
 }
 
 void ColorTransferFunction::SetRange(const double rng[2])
 {
-
 }
 
 void ColorTransferFunction::SortAndUpdateRange()
@@ -265,28 +403,11 @@ double ColorTransferFunction::FindMinimumXDistance()
 	return distance;
 }
 
-int ColorTransferFunction::AdjustRange(double range[2])
+int ColorTransferFunction::EstimateMinNumberOfSamples(double const& x1, double const& x2)
 {
-	if (!range)
-	{
-		return 0;
-	}
-
-	double* function_range = this->Range;
-	double rgb[3];
-	if (function_range[0] < range[0])
-	{
-		
-	}
-}
-
-void ColorTransferFunction::GetColor(double x, double rgb[3])
-{
-	if (this->IndexedLookup)
-	{
-		int numNodes = this->GetSize();
-
-	}
+	double const d = this->FindMinimumXDistance();
+	int idealWidth = static_cast<int>(ceil((x2 - x1) / d));
+	return idealWidth;
 }
 
 int ColorTransferFunction::GetSize()
@@ -367,7 +488,11 @@ void ColorTransferFunction::AddRGBSegment(double x1, double r1, double g1, doubl
 
 void ColorTransferFunction::AddHSVSegment(double x1, double h1, double s1, double v1, double x2, double h2, double s2, double v2)
 {
+	double r1, r2, b1, b2, g1, g2;
 
+	CommonFunction::HSVToRGB(h1, s1, v1, &r1, &g1, &b1);
+	CommonFunction::HSVToRGB(h2, s2, v2, &r2, &g2, &b2);
+	this->AddRGBSegment(x1, r1, g1, b1, x2, r2, g2, b2);
 }
 
 void ColorTransferFunction::GetTable(double xStart, double xEnd, int size, double* table)
@@ -598,6 +723,36 @@ void ColorTransferFunction::GetTable(double xStart, double xEnd, int size, doubl
 					tptr[1] = rgb2[1];
 					tptr[2] = rgb2[2];
 				}
+				else if (this->ColorSpace == VTK_CTF_HSV)
+				{
+					double hsv1[3], hsv2[3];
+					CommonFunction::RGBToHSV(rgb1, hsv1);
+					CommonFunction::RGBToHSV(rgb2, hsv2);
+
+					if (this->HSVWrap && (hsv1[0] - hsv2[0] > 0.5 || hsv2[0] - hsv1[0] > 0.5))
+					{
+						if (hsv1[0] > hsv2[0])
+						{
+							hsv1[0] -= 1.0;
+						}
+						else
+						{
+							hsv2[0] -= 1.0;
+						}
+					}
+
+					double hsvTmp[3];
+					hsvTmp[0] = (1 - s) * hsv1[0] + s * hsv2[0];
+					if (hsvTmp[0] < 0.0)
+					{
+						hsvTmp[0] += 1.0;
+					}
+					hsvTmp[1] = (1 - s) * hsv1[1] + s * hsv2[1];
+					hsvTmp[2] = (1 - s) * hsv1[2] + s * hsv2[2];
+
+					// Now convert this back to RGB
+					CommonFunction::HSVToRGB(hsvTmp, tptr);
+				}
 				else
 				{
 					std::cout << "ColorSpace set to invalid value" << std::endl;
@@ -638,6 +793,42 @@ void ColorTransferFunction::GetTable(double xStart, double xEnd, int size, doubl
 				tptr[1] = rgb2[1];
 				tptr[2] = rgb2[2];
 			}
+			else if (this->ColorSpace == VTK_CTF_HSV)
+			{
+				double hsv1[3], hsv2[3];
+				CommonFunction::RGBToHSV(rgb1, hsv1);
+				CommonFunction::RGBToHSV(rgb2, hsv2);
+
+				if (this->HSVWrap && (hsv1[0] - hsv2[0] > 0.5 || hsv2[0] - hsv1[0] > 0.5))
+				{
+					if (hsv1[0] > hsv2[0])
+					{
+						hsv1[0] -= 1.0;
+					}
+					else
+					{
+						hsv2[0] -= 1.0;
+					}
+				}
+
+				double hsvTmp[3];
+
+				for (j = 0; j < 3; j++)
+				{
+					// Use one slope for both end points
+					slope = hsv2[j] - hsv1[j];
+					t = (1.0 - sharpness) * slope;
+
+					// Compute the value
+					hsvTmp[j] = h1 * hsv1[j] + h2 * hsv2[j] + h3 * t + h4 * t;
+					if (j == 0 && hsvTmp[j] < 0.0)
+					{
+						hsvTmp[j] += 1.0;
+					}
+				}
+				// Now convert this back to RGB
+				CommonFunction::HSVToRGB(hsvTmp, tptr);
+			}
 			else
 			{
 				std::cout << "ColorSpace set to invalid value" << std::endl;
@@ -650,4 +841,59 @@ void ColorTransferFunction::GetTable(double xStart, double xEnd, int size, doubl
 			}
 		}
 	}
+}
+
+void ColorTransferFunction::GetTable(double xStart, double xEnd, int size, float* table)
+{
+	double* tmpTable = new double[size * 3];
+	this->GetTable(xStart, xEnd, size, tmpTable);
+
+	double* tmpPtr = tmpTable;
+	float* tPtr = table;
+
+	for (int i = 0; i < size * 3; i++)
+	{
+		*tPtr = static_cast<float>(*tmpPtr);
+		tPtr++;
+		tmpPtr++;
+	}
+
+	delete[] tmpTable;
+}
+
+const unsigned char* ColorTransferFunction::GetTable(double xStart, double xEnd, int size)
+{
+	if (this->TableSize == size)
+	{
+		return this->Table;
+	}
+
+	if (this->Internal->Nodes.empty())
+	{
+		std::cout << "Attempting to lookup a value with no points in the function" << std::endl;
+		return this->Table;
+	}
+
+	if (this->TableSize != size)
+	{
+		delete[] this->Table;
+		this->Table = new unsigned char[size * 3];
+		this->TableSize = size;
+	}
+
+	double* tmpTable = new double[size * 3];
+	this->GetTable(xStart, xEnd, size, tmpTable);
+
+	double* tmpPtr = tmpTable;
+	unsigned char* tPtr = this->Table;
+
+	for (int i = 0; i < size * 3; i++)
+	{
+		*tPtr = static_cast<unsigned char>(*tmpPtr * 255.0 + 0.5);
+		tPtr++;
+		tmpPtr++;
+	}
+
+	delete[] tmpTable;
+	return this->Table;
 }

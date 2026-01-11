@@ -1,721 +1,196 @@
-#include <vtkSmartPointer.h>
-#include <vtkDICOMImageReader.h>
-#include <vtkImageData.h>
-#include <vtkDataArray.h>
-#include <vtkPointData.h>
-#include "va_mc_frag_utils.h"
-
-#include <glm/gtc/type_ptr.hpp>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtx/string_cast.hpp>
-
-#include <filesystem>
+// Standard Library
 #include <iostream>
-#include <stdio.h>
-#include <cmath>
-#include <vector>
-#include <string>
-namespace fs = std::filesystem;
 
-/*--------------------------- Window size ---------------------------*/
-int screen_width = 1080, screen_height = 800;
-GLint vModel_uniform, vView_uniform, vProjection_uniform, vColor_uniform, vCam_uniform;
-glm::mat4 modelT, viewT, projectionT;
+// OpenGL Loader
+// This can be replaced with another loader, e.g. glad, but
+// remember to also change the corresponding initialize call!
 
-double oldX, oldY, currentX, currentY;
-bool isDragging = false;
-bool is_ok = false;
-/*--------------------------- Scaler index of the Transfer function array ---------------------------*/
-int trans_coord;
-/*---------------------------Function Declarations---------------------------*/
-void fileIterator(std::string, std::vector<std::string>&);
-std::string UpdateTransferFunction(std::string);
-bool saveTransferFunction(std::string);
-void computeNormals();
-void createBoundingbox(unsigned int&, unsigned int&);
-void setupModelTransformation(unsigned int&);
-void setupViewTransformation(unsigned int&);
-void setupProjectionTransformation(unsigned int&);
-glm::vec3 getTrackBallVector(double x, double y);
-/* --------------------------- Camera Position---------------------------*/
-glm::vec4 camPos = glm::vec4(0, 0, 280.0, 1.0);
-float a = 256, b = 256, c = 256;
-/* ---------------------------Volume size = 256 * 256 * 256---------------------------*/
-int volume_size = 0;
-/*--------------------------- Step size for ray ---------------------------*/
-float step_size = 2.0f;
-/*--------------------------- Array to store loaded volume data---------------------------*/
-//GLubyte* volume_data = new GLubyte[volume_size];
-//GLubyte* normals = new GLubyte[volume_size];
-void* volume_data = NULL;
-/*--------------------------- Pointer to the location of volume---------------------------*/
-const char* location = "Null";
-/*--------------------------- File name to save transfer function---------------------------*/
-char fileName[1024];
-/*--------------------------- Array to store volume data, transfer function file names---------------------------*/
-std::string path = "./data";
-std::vector<std::string> files;
-std::string pathT = "./transferFunction";
-std::vector<std::string> transferfiles;
+// Include glfw3.h after our OpenGL definitions
+#define GLFW_INCLUDE_NONE
+#include <GLFW/glfw3.h>
+#include <glad/glad.h>
+// ImGui + imgui-vtk
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+#include "VtkViewer.h"
 
-/*--------------------------- Current transfer function file name---------------------------*/
-std::string currentTransferFunction;
-/* --------------------------- Create a transfer function Array with 256*4 size since we have 256 values and each have 4 values for RGBA where A is alpha and R is red, G is green and B is blue---------------------------*/
-GLfloat* transfer_function = new GLfloat[1024];
-/* --------------------------- Shader programs ---------------------------*/
-GLuint VAO, transferfun, volumeTexture, normalTexture;
-int mode = 1;
+// VTK
+#include <vtkSmartPointer.h>
+#include <vtkActor.h>
 
-struct TextureInfo
+// 链接 OpenGL 库
+//#pragma comment(lib, "opengl32.lib")
+//VTK_MODULE_INIT(vtkRenderingOpenGL2);
+//VTK_MODULE_INIT(vtkInteractionStyle);
+//VTK_MODULE_INIT(vtkRenderingVolumeOpenGL2)
+//VTK_MODULE_INIT(vtkRenderingUI)
+
+static void glfw_error_callback(int error, const char* description)
 {
-    GLuint id = 0;
-    int width = 0;
-    int height = 0;
-    int depth = 0;
-    GLenum internalFormat = GL_R8;
-    GLenum format = GL_RED;
-    GLenum type = GL_UNSIGNED_BYTE;
-};
+    fprintf(stderr, "Glfw Error %d: %s\n", error, description);
+}
 
-int main()
+int main(int argc, char* argv[])
 {
-    std::string dicomDirectory = "F:/Data/2d/smoke_ct/1.0 x 0.6_20150507_111124";
-    vtkSmartPointer<vtkDICOMImageReader> reader = vtkSmartPointer<vtkDICOMImageReader>::New();
-    reader->SetDirectoryName(dicomDirectory.c_str());
-    reader->Update();
-    vtkImageData* imageData = reader->GetOutput();
-    int dims[3];
-    imageData->GetDimensions(dims);
-    a = dims[0];
-    b = dims[1];
-    c = dims[2];
+    vtkSmartPointer<vtkRenderWindow> testRenderWindow = vtkSmartPointer<vtkRenderWindow>::New();
 
-    TextureInfo stInfo;
-    if (imageData == NULL)
-    {
-        std::cout << "ConvertImageDataToVoid Input is invalid!" << std::endl;
-        return 0;
+    vtkSmartPointer<vtkRenderer> testRenderer = vtkSmartPointer<vtkRenderer>::New();
+    testRenderWindow->AddRenderer(testRenderer);
+    testRenderWindow->Render();
+
+    // Setup window
+    glfwSetErrorCallback(glfw_error_callback);
+    glfwInit();
+
+    // Use GL 3.2 (All Platforms)
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+
+    // Decide GLSL version
+#ifdef __APPLE__
+  // GLSL 150
+    const char* glsl_version = "#version 150";
+#else
+  // GLSL 130
+    const char* glsl_version = "#version 130";
+#endif
+
+    // Create window with graphics context
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "Dear ImGui VTKViewer Example", NULL, NULL);
+    if (window == NULL) {
+        return 1;
     }
-    vtkDataArray* scalars = imageData->GetPointData()->GetScalars();
-    if (scalars == NULL)
+    glfwMakeContextCurrent(window);
+    glfwSwapInterval(1); // Enable vsync
+
+    if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress)))
     {
-        std::cout << "ConvertImageDataToVoid scalars is invalid!" << std::endl;
-        return 0;
-    }
-    
-
-    int numComponents = scalars->GetNumberOfComponents();
-    int dataType = scalars->GetDataType();
-
-    // 设置默认格式
-    stInfo.format = GL_RED;
-    stInfo.internalFormat = GL_R8;
-    stInfo.type = GL_UNSIGNED_BYTE;
-
-    stInfo.width = dims[0];
-    stInfo.height = dims[1];
-    stInfo.depth = dims[2];
-
-    // 根据组件数设置格式
-    switch (numComponents)
-    {
-    case 1:
-        stInfo.format = GL_RED;
-        break;
-    case 2:
-        stInfo.format = GL_RG;
-        break;
-    case 3:
-        stInfo.format = GL_RGB;
-        break;
-    case 4:
-        stInfo.format = GL_RGBA;
-        break;
-    default:
-        std::cout << "ConvertImageDataToVoid numComponets is invalid!" << std::endl;
-        break;
+        std::cout << "Failed to initialize GLAD" << std::endl;
+        return -1;
     }
 
-    // 根据数据类型设置内部格式和类型
-    switch (dataType)
-    {
-    case VTK_UNSIGNED_CHAR:
-        stInfo.type = GL_UNSIGNED_BYTE;
-        if (numComponents == 1) stInfo.internalFormat = GL_R8;
-        else if (numComponents == 2) stInfo.internalFormat = GL_RG8;
-        else if (numComponents == 3) stInfo.internalFormat = GL_RGB8;
-        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA8;
-        break;
+    // Setup Dear ImGui context
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    //io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
+    //io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows'
 
-    case VTK_FLOAT:
-        stInfo.type = GL_FLOAT;
-        if (numComponents == 1) stInfo.internalFormat = GL_R32F;
-        else if (numComponents == 2) stInfo.internalFormat = GL_RG32F;
-        else if (numComponents == 3) stInfo.internalFormat = GL_RGB32F;
-        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA32F;
-        break;
+    // Setup Dear ImGui style
+    ImGui::StyleColorsDark();
 
-    case VTK_SHORT:
-        stInfo.type = GL_SHORT;
-        if (numComponents == 1) stInfo.internalFormat = GL_R16_SNORM;
-        else if (numComponents == 2) stInfo.internalFormat = GL_RG16_SNORM;
-        else if (numComponents == 3) stInfo.internalFormat = GL_RGB16_SNORM;
-        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA16_SNORM;
-        break;
+    // Setup Platform/Renderer backends
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init(glsl_version);
 
-    case VTK_UNSIGNED_SHORT:
-        stInfo.type = GL_UNSIGNED_SHORT;
-        if (numComponents == 1) stInfo.internalFormat = GL_R16;
-        else if (numComponents == 2) stInfo.internalFormat = GL_RG16;
-        else if (numComponents == 3) stInfo.internalFormat = GL_RGB16;
-        else if (numComponents == 4) stInfo.internalFormat = GL_RGBA16;
-        break;
-    default:
-        std::cout << "ConvertImageDataToVoid dataType is invalid!" << std::endl;
-        break;
-    }
-    stInfo.internalFormat = GL_R16I;
-    stInfo.type = GL_SHORT;
+    // Initialize VtkViewer objects
 
-    volume_data = imageData->GetScalarPointer();
+    VtkViewer vtkViewer1;
+    //vtkViewer1.addActor(actor);
 
-    volume_size = a * b * c;
-    //GLubyte* volume_data = new GLubyte[volume_size];
-    GLubyte* normals = new GLubyte[volume_size];
+    //VtkViewer vtkViewer2;
+    //vtkViewer2.getRenderer()->SetBackground(0, 0, 0); // Black background
+    //vtkViewer2.addActor(actor);
 
-    /*------------------ Setup window------------------*/
-    GLFWwindow* window = setupWindow(screen_width, screen_height);
-    ImGuiIO& io = ImGui::GetIO(); // Create IO object
-    /*------------------ Background Color(Default Color)------------------*/
-    ImVec4 clearColor = ImVec4(1.0f, 1.0f, 1.0f, 1.00f);
-    /*------------------ RGBA values for the Transfer function ------------------*/
-    float RGBA[4] = { 0.0f, 0.0f, 0.0f, 1.0f };
-    /*
-    ------------------ Open directory and iterator over each file and add them to files array ------------------
-    ------------------ These files will be used to load volume data from file ------------------
-    ------------------ User then can select the desired volume data from the GUI ------------------
-    */
-    fileIterator(path, files);
-    fileIterator(pathT, transferfiles);
+    // Our state
+    bool show_demo_window = true;
+    bool show_another_window = false;
+    bool vtk_2_open = true;
+    ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-    currentTransferFunction = UpdateTransferFunction("./transferFunction/default");
-
-    //memset(volume_data, 0, volume_size);
-    /*------------------ Create a shader program------------------*/
-    unsigned int shaderProgram = createProgram("./shaders/vshader.vs", "./shaders/fshader.fs");
-    glUseProgram(shaderProgram);
-    /*------------------ Create Textures for volume data ------------------*/
-    glGenTextures(1, &volumeTexture);
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_3D, volumeTexture);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    //glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, volume_data);
-    glTexImage3D(GL_TEXTURE_3D, 0, GL_R16_SNORM, a, b, c, 0, GL_RED, stInfo.type, volume_data);
-
-    /*------------------  Create Textures for transfer function ------------------*/
-    glGenTextures(1, &transferfun);
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_1D, transferfun);
-    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glGenVertexArrays(1, &VAO);
-
-    /* --------------------------- Bind location of variables from shader program  for volume texture ---------------------------*/
-    GLuint tex1 = glGetUniformLocation(shaderProgram, "volumeTexture");
-
-    unsigned int VAO;
-    glGenVertexArrays(1, &VAO);
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_3D, volumeTexture);
-    glUniform1i(tex1, 0);
-    /* --------------------------- Bind location of variables from shader program  for transfer function texture ---------------------------*/
-    GLuint tex2 = glGetUniformLocation(shaderProgram, "transferfun");
-    glActiveTexture(GL_TEXTURE1);
-    glBindTexture(GL_TEXTURE_1D, transferfun);
-    glUniform1i(tex2, 1);
-
-    computeNormals();
-    glGenTextures(1, &normalTexture);
-    glActiveTexture(GL_TEXTURE2);
-    glBindTexture(GL_TEXTURE_3D, normalTexture);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, normals); // Provide nullptr as data for now
-    glUniform1i(glGetUniformLocation(shaderProgram, "normalTexture"), 2);
-    glUseProgram(shaderProgram);
-    /*------------------ Setup Transformations------------------*/
-    setupModelTransformation(shaderProgram);
-    setupViewTransformation(shaderProgram);
-    setupProjectionTransformation(shaderProgram);
-    /*------------------ Create Bounding box------------------*/
-    createBoundingbox(shaderProgram, VAO);
-
-    oldX = oldY = currentX = currentY = 0.0;
-    int prevLeftButtonState = GLFW_RELEASE;
-    glEnable(GL_DEPTH_TEST);
-    /*------------------ Main loop------------------*/
+    // Main loop
     while (!glfwWindowShouldClose(window))
     {
+        // Poll and handle events (inputs, window resize, etc.)
+        // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
+        // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
+        // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application.
+        // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
         glfwPollEvents();
-        if (!ImGui::IsAnyItemActive())
-        {
-            /*--------------------------- Handle Keyboard events---------------------------*/
-            if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-            {
-                if (is_ok)
-                {
-                    is_ok = false;
-                }
-                else
-                {
-                    is_ok = true;
-                }
-            }
-            int leftButtonState = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
-            double x, y;
-            glfwGetCursorPos(window, &x, &y);
-            if (leftButtonState == GLFW_PRESS && prevLeftButtonState == GLFW_RELEASE && !is_ok)
-            {
-                isDragging = true;
-                currentX = oldX = x;
-                currentY = oldY = y;
-            }
-            else if (leftButtonState == GLFW_PRESS && prevLeftButtonState == GLFW_PRESS && !is_ok)
-            {
-                currentX = x;
-                currentY = y;
-            }
-            else if (leftButtonState == GLFW_RELEASE && prevLeftButtonState == GLFW_PRESS && !is_ok)
-            {
-                isDragging = false;
-            }
-            if (ImGui::IsKeyDown(ImGui::GetKeyIndex(ImGuiKey_UpArrow)))
-            { // Moving camera with key press up/(shift-up)
-                camPos.z = camPos.z + 1;
-                setupViewTransformation(shaderProgram);
-            }
-            if (ImGui::IsKeyDown(ImGui::GetKeyIndex(ImGuiKey_DownArrow)))
-            {
-                camPos.z = camPos.z - 1;
-                setupViewTransformation(shaderProgram);
-            }
-            /*------------------ Rotate based on mouse drag movements------------------*/
-            float angle = 0.0f;
-            prevLeftButtonState = leftButtonState;
-            if (mode == 0)
-            {
-                if (isDragging && (currentX != oldX || currentY != oldY))
-                {
-                    glm::vec3 va = getTrackBallVector(oldX, oldY);
-                    glm::vec3 vb = getTrackBallVector(currentX, currentY);
-                    angle = acos(std::min(1.0f, glm::dot(va, vb)));
-                    glm::vec3 axis_in_camera_coord = glm::cross(va, vb);
-                    glm::mat3 camera2object = glm::inverse(glm::mat3(viewT * modelT));
-                    glm::vec3 axis_in_object_coord = camera2object * axis_in_camera_coord;
-                    glm::mat4 dummy = glm::rotate(modelT, -angle, axis_in_object_coord);
-                    camPos = glm::vec4(glm::mat3(dummy) * glm::vec3(camPos), 1.0);
-                    setupViewTransformation(shaderProgram);
-                    oldX = currentX;
-                    oldY = currentY;
-                }
-            }
-            else
-            {
-                /*------------------ Auto rotate, credits lab 5     ------------------*/
-                angle += 0.005;
-                glm::mat4 dummy = glm::rotate(modelT, angle, glm::vec3(0.0, 1.0, 0.0));
-                camPos = glm::vec4(glm::mat3(dummy) * glm::vec3(camPos), 1.0);
-                setupViewTransformation(shaderProgram);
-                oldX = currentX;
-                oldY = currentY;
-            }
-        }
-        /*------------------Start the Dear ImGui frame------------------*/
+
+        // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-        {
-            /*------------------ Window Properties ------------------*/
-            ImGui::Begin("Window Properties", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
-            ImGui::SetWindowFontScale(1.25);
-            std::string title = "Current Volume: " + std::string(location);
-            ImGui::Text(title.c_str(), NULL);
-            std::string function = "Current Transfer Function: " + std::string(currentTransferFunction);
-            ImGui::Text(function.c_str(), NULL);
-            if (ImGui::Button("Toggle Auto Rotate", ImVec2(200, 50))) {
-                if (mode == 0) {
-                    mode = 1;
-                }
-                else {
-                    mode = 0;
-                }
-            }
-            if (ImGui::Button("Reset Camera", ImVec2(200, 50))) {
-                camPos = glm::vec4(0, 0, 280.0, 1.0);
-                setupViewTransformation(shaderProgram);
-            }
-            /*------------------ Create Menu of Options Of Volume ------------------ */
-            if (ImGui::BeginMenu("Select Volume Data"))
-            {
-                for (int i = 0; i < files.size(); i++)
-                {
-                    if (ImGui::MenuItem(files[i].c_str()))
-                    {
-                        ///*------------------ Reset volume data------------------*/
-                        //memset(volume_data, 0, volume_size);
-                        //glDeleteTextures(1, &volumeTexture);
-                        //glDeleteTextures(1, &normalTexture);
 
-                        //location = files[i].c_str();
-                        ///*--------------------------- Read volume data from file ---------------------------*/
-                        //FILE* file = fopen(location, "rb");
-                        //if (NULL == file)
-                        //{
-                        //    fprintf(stderr, "Error opening file\n");
-                        //    exit(0);
-                        //}
-                        //fread(volume_data, sizeof(GLubyte), volume_size, file);
-                        //fclose(file);
-
-                        ///*------------------ Update texture for volume data ------------------*/
-                        //glUseProgram(shaderProgram);
-                        //glGenTextures(1, &volumeTexture);
-                        //glActiveTexture(GL_TEXTURE0);
-                        ///*------------------ Tri-linear interpolation ------------------*/
-                        ///*------------------ Reference https://learnopengl.com/Getting-started/Textures ------------------*/
-                        //glBindTexture(GL_TEXTURE_3D, volumeTexture);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-                        //glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, a, b, c, 0, GL_RED, GL_UNSIGNED_BYTE, volume_data);
-
-                        //computeNormals();
-                        ///*------------------ Compute normals ------------------*/
-
-                        //glGenTextures(1, &normalTexture);
-                        //glActiveTexture(GL_TEXTURE2);
-                        //glBindTexture(GL_TEXTURE_3D, normalTexture);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-                        //glTexParameteri(GL_TEXTURE_3D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-                        //glTexSubImage3D(GL_TEXTURE_3D, 0, 0, 0, 0, a, b, c, GL_RED, GL_UNSIGNED_BYTE, normals);
-
-                        /*-------------------- Update normal texture with the newly calculated normals ------------------*/
-                    }
-                }
-                ImGui::EndMenu();
-            }
-            if (ImGui::BeginMenu("Select Transfer Function"))
-            {
-                for (int i = 0; i < transferfiles.size(); i++)
-                {
-                    if (ImGui::MenuItem(transferfiles[i].c_str()))
-                    {
-                        currentTransferFunction = UpdateTransferFunction(transferfiles[i]);
-                        glActiveTexture(GL_TEXTURE1);
-                        glBindTexture(GL_TEXTURE_1D, transferfun);
-                        glTexImage1D(GL_TEXTURE_1D, 0, GL_RGBA, 256, 0, GL_RGBA, GL_FLOAT, transfer_function);
-                    }
-                }
-                ImGui::EndMenu();
-            }
-            ImGui::Text("Camera Position");
-            ImGui::SliderFloat("X", &camPos.x, -1024, 1024);
-            ImGui::SliderFloat("Y", &camPos.y, -1024, 1024);
-            ImGui::SliderFloat("Z", &camPos.z, -1024, 1024);
-            ImGui::ColorPicker3("Change Background Color", (float*)&clearColor);
-            ImGui::PlotHistogram("Histogram", transfer_function, 256, 0, "Transfer Function", 0.0f, 1.0f, ImVec2(0, 80));
-            ImGui::End();
-
-            /*------------------Transfer function Window------------------*/
-            ImGui::StyleColorsLight();
-            ImGui::Begin("Transfer Function", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
-            ImGui::SetWindowFontScale(1.25);
-            ImGui::SliderInt("Scalar Index", &trans_coord, 0, 255);
-            ImGui::ColorPicker4("Change Color", (float*)&RGBA, ImGuiColorEditFlags_DisplayRGB);
-            ImGui::SliderFloat("Step Size", &step_size, 1.0f, 20.0f);
-            ImGui::Text("Enter Output TF File Name:");
-            ImGui::InputTextWithHint("##FileName", "Enter File Name", fileName, IM_ARRAYSIZE(fileName));
-            if (ImGui::Button("Save Transfer Function", ImVec2(200, 25)))
-            {
-                saveTransferFunction(fileName);
-            }
-            ImGui::SetColorEditOptions(ImGuiColorEditFlags_Float);
-
-            // Update transfer function based on user input of coordinates and RGBA values
-            transfer_function[trans_coord * 4] = RGBA[0];
-            transfer_function[trans_coord * 4 + 1] = RGBA[1];
-            transfer_function[trans_coord * 4 + 2] = RGBA[2];
-            transfer_function[trans_coord * 4 + 3] = RGBA[3];
-
-            glActiveTexture(GL_TEXTURE1);
-            glBindTexture(GL_TEXTURE_1D, transferfun);
-            /*------------------Map transfer function to texture------------------*/
-            glTexImage1D(GL_TEXTURE_1D, 0, GL_RGBA, 256, 0, GL_RGBA, GL_FLOAT, transfer_function);
-            ImGui::End();
-        }
-        /*------------------Shader varialbles and uniforms and get location from shader program------------------*/
-        glUseProgram(shaderProgram);
-        {
-
-            vCam_uniform = glGetUniformLocation(shaderProgram, "camPosition");
-
-            glUniform3fv(vCam_uniform, 1, glm::value_ptr(glm::vec3(camPos)));
-
-            GLuint vstep_size = glGetUniformLocation(shaderProgram, "stepSize");
-
-            glUniform1f(vstep_size, step_size);
-
-            GLuint vMin = glGetUniformLocation(shaderProgram, "Mini");
-
-            glUniform3f(vMin, 0, 0, -c);
-
-            GLuint vMax = glGetUniformLocation(shaderProgram, "Maxi");
-
-            glUniform3f(vMax, a, b, 0);
+        // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
+        if (show_demo_window) {
+            ImGui::ShowDemoWindow(&show_demo_window);
         }
 
-        /*------------------Rendering------------------*/
+        // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
+        {
+            static float f = 0.0f;
+            static int counter = 0;
+
+            ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+            ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
+            ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
+            ImGui::Checkbox("Another Window", &show_another_window);
+            ImGui::Checkbox("VTK Viewer #2", &vtk_2_open);
+
+            ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
+            ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
+
+            if (ImGui::Button("Button")) {                            // Buttons return true when clicked (most widgets return true when edited/activated)
+                counter++;
+            }
+            ImGui::SameLine();
+            ImGui::Text("counter = %d", counter);
+
+            ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+        }
+        ImGui::End();
+
+        // 3. Show another simple window.
+        if (show_another_window) 
+        {
+            ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
+            ImGui::Text("Hello from another window!");
+            if (ImGui::Button("Close Me")) {
+                show_another_window = false;
+            }
+            ImGui::End();
+        }
+
+        // 4. Show a simple VtkViewer Instance (Always Open)
+        ImGui::SetNextWindowSize(ImVec2(360, 240), ImGuiCond_FirstUseEver);
+        ImGui::Begin("Vtk Viewer 1", nullptr, VtkViewer::NoScrollFlags());
+        vtkViewer1.render(); // default render size = ImGui::GetContentRegionAvail()
+        ImGui::End();
+
+        // 5. Show a more complex VtkViewer Instance (Closable, Widgets in Window)
+        ImGui::SetNextWindowSize(ImVec2(720, 480), ImGuiCond_FirstUseEver);
         ImGui::Render();
+
         int display_w, display_h;
         glfwGetFramebufferSize(window, &display_w, &display_h);
         glViewport(0, 0, display_w, display_h);
-        glClearColor(clearColor.x, clearColor.y, clearColor.z, clearColor.w);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        glBindVertexArray(VAO);
-
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-
+        glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        // Update and Render additional Platform Windows
+        //if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+        //{
+        //    GLFWwindow* backup_current_context = glfwGetCurrentContext();
+        //    ImGui::UpdatePlatformWindows();
+        //    ImGui::RenderPlatformWindowsDefault();
+        //    glfwMakeContextCurrent(backup_current_context);
+        //}
 
         glfwSwapBuffers(window);
     }
-    delete[] volume_data;
-    delete[] normals;
-    delete[] transfer_function;
-    cleanup(window);
+
+    // Cleanup
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
+
+    glfwDestroyWindow(window);
+    glfwTerminate();
 
     return 0;
-}
-/* --------------------------- Function to Iterate over files in a directory and add them to a vector ---------------------------*/
-void fileIterator(std::string path, std::vector<std::string>& files)
-{
-    for (const auto& entry : fs::directory_iterator(path))
-    {
-        std::filesystem::path outfilename = entry.path();
-        std::string outfilename_str = outfilename.string();
-        const char* path = outfilename_str.c_str();
-        for (int i = 0; i < files.size(); i++)
-        {
-            if (files[i] == path)
-            {
-                continue;
-            }
-        }
-        files.push_back(path);
-    }
-}
-/* --------------------------- Function to update transfer function based on user choice ---------------------------*/
-std::string UpdateTransferFunction(std::string fileName)
-{
-    FILE* file = fopen(fileName.c_str(), "rb");
-    if (NULL == file)
-    {
-        file = fopen("./transferFunction/default", "rb");
-        if (NULL == file)
-        {
-            fprintf(stderr, "Error opening default transfer function file\n");
-            exit(0);
-        }
-        fileName = "./transferFunction/default";
-    }
-    fread(transfer_function, sizeof(GLfloat), 1024, file);
-    fclose(file);
-    return fileName;
-}
-/* -------------------Save transfer function to a file in transferFunction folder------------------- */
-bool saveTransferFunction(std::string fileName)
-{
-    std::string path = "./transferFunction/" + fileName;
-    FILE* file = fopen(path.c_str(), "wb");
-    if (NULL == file)
-    {
-        fprintf(stderr, "Error opening file\n");
-        return 1;
-    }
-    fwrite(transfer_function, sizeof(GLfloat), 1024, file);
-    for (int i = 0; i < transferfiles.size(); i++)
-    {
-        if (transferfiles[i] == path)
-        {
-            return 0;
-        }
-    }
-    transferfiles.push_back(path);
-    fclose(file);
-    return 0;
-}
-
-/*------------------------------ Function to compute normals using central differences method ------------------------------*/
-void computeNormals()
-{
-    //int nx = a;
-    //int ny = b;
-    //int nz = c;
-    //for (int x = 1; x < nx - 1; ++x)
-    //{
-    //    for (int y = 1; y < ny - 1; ++y)
-    //    {
-    //        for (int z = 1; z < nz - 1; ++z)
-    //        {
-    //            /*--------------- Compute directional derivatives using central differences ------------------*/
-    //            int idx = x * ny * nz + y * nz + z;
-    //            double fx = static_cast<double>(volume_data[(x + 1) * ny * nz + y * nz + z]) -
-    //                static_cast<double>(volume_data[(x - 1) * ny * nz + y * nz + z]);
-    //            double fy = static_cast<double>(volume_data[x * ny * nz + (y + 1) * nz + z]) -
-    //                static_cast<double>(volume_data[x * ny * nz + (y - 1) * nz + z]);
-    //            double fz = static_cast<double>(volume_data[x * ny * nz + y * nz + (z + 1)]) -
-    //                static_cast<double>(volume_data[x * ny * nz + y * nz + (z - 1)]);
-
-    //            double norm = std::sqrt(fx * fx + fy * fy + fz * fz);
-
-    //            if (norm == 0)
-    //            {
-    //                norm = 1;
-    //            }
-    //            /*--------------------------- Compute normal vector and store in the 'normals' array, since need to store in GLubyte format , we need to convert to 0-255 range ---------------------------*/
-    //            normals[idx] = static_cast<GLubyte>(std::round(fx / norm * 255.0));
-    //            normals[idx + 1] = static_cast<GLubyte>(std::round(fy / norm * 255.0));
-    //            normals[idx + 2] = static_cast<GLubyte>(std::round(fz / norm * 255.0));
-    //        }
-    //    }
-    //}
-}
-/*------------------ Create Bounding box by using code from assignments------------------*/
-void createBoundingbox(unsigned int& program, unsigned int& cube_VAO)
-{
-    glUseProgram(program);
-
-    // Bind shader variables
-    int vVertex_attrib = glGetAttribLocation(program, "vVertex");
-    if (vVertex_attrib == -1)
-    {
-        fprintf(stderr, "Could not bind location: vVertex\n");
-        exit(0);
-    }
-    // Cube data
-    GLfloat cube_vertices[] = {
-        a - 1, b - 1, -c + 1, 0, b - 1, -c + 1, 0, 0, -c + 1, a - 1, 0, -c + 1,
-        a - 1, b - 1, 0, 0, b - 1, 0, 0, 0, 0, a - 1, 0, 0 };
-    GLushort cube_indices[] = {
-        0, 1, 2, 0, 2, 3, // Front
-        4, 7, 5, 5, 7, 6, // Back
-        1, 6, 2, 1, 5, 6, // Left
-        0, 3, 4, 4, 7, 3, // Right
-        0, 4, 1, 4, 5, 1, // Top
-        2, 6, 3, 3, 6, 7  // Bottom
-    };
-
-    // Generate VAO object
-    glGenVertexArrays(1, &cube_VAO);
-    glBindVertexArray(cube_VAO);
-
-    // Create VBOs for the VAO
-    // Position information (data + format)
-    int nVertices = (6 * 2) * 3; //(6 faces) * (2 triangles each) * (3 vertices each)
-    GLfloat* expanded_vertices = new GLfloat[nVertices * 3];
-    for (int i = 0; i < nVertices; i++)
-    {
-        expanded_vertices[i * 3] = cube_vertices[cube_indices[i] * 3];
-        expanded_vertices[i * 3 + 1] = cube_vertices[cube_indices[i] * 3 + 1];
-        expanded_vertices[i * 3 + 2] = cube_vertices[cube_indices[i] * 3 + 2];
-    }
-    GLuint vertex_VBO;
-    glGenBuffers(1, &vertex_VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, vertex_VBO);
-    glBufferData(GL_ARRAY_BUFFER, nVertices * 3 * sizeof(GLfloat), expanded_vertices, GL_STATIC_DRAW);
-    glEnableVertexAttribArray(vVertex_attrib);
-    glVertexAttribPointer(vVertex_attrib, 3, GL_FLOAT, GL_FALSE, 0, 0);
-    delete[] expanded_vertices;
-
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0); // Unbind the VAO to disable changes outside this function.
-}
-
-/*------------------Setup Transformations of Model using code provided in assignments------------------*/
-void setupModelTransformation(unsigned int& program)
-{
-    // Modelling transformations (Model -> World coordinates)
-    modelT = glm::translate(glm::mat4(1.0f), glm::vec3(-a / 2, -b / 2, c / 2)); // Model coordinates are the world coordinates
-
-    // Pass on the modelling matrix to the vertex shader
-    glUseProgram(program);
-    vModel_uniform = glGetUniformLocation(program, "vModel");
-    if (vModel_uniform == -1)
-    {
-        fprintf(stderr, "Could not bind location: vModel\n");
-        exit(0);
-    }
-    glUniformMatrix4fv(vModel_uniform, 1, GL_FALSE, glm::value_ptr(modelT));
-}
-/*------------------ View Transform , code credits goes to Assignment------------------*/
-void setupViewTransformation(unsigned int& program)
-{
-    // Viewing transformations (World -> Camera coordinates
-    viewT = glm::lookAt(glm::vec3(camPos), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.0, 1.0, 0.0));
-
-    // Pass-on the viewing matrix to the vertex shader
-    glUseProgram(program);
-    vView_uniform = glGetUniformLocation(program, "vView");
-    if (vView_uniform == -1)
-    {
-        fprintf(stderr, "Could not bind location: vView\n");
-        exit(0);
-    }
-    glUniformMatrix4fv(vView_uniform, 1, GL_FALSE, glm::value_ptr(viewT));
-}
-
-/*------------------ Projection Transformation, code from assignments------------------*/
-void setupProjectionTransformation(unsigned int& program)
-{
-    // Projection transformation
-    projectionT = glm::perspective(45.0f, (GLfloat)screen_width / (GLfloat)screen_height, 0.1f, 800.0f);
-
-    // Pass on the projection matrix to the vertex shader
-    glUseProgram(program);
-    vProjection_uniform = glGetUniformLocation(program, "vProjection");
-    if (vProjection_uniform == -1)
-    {
-        fprintf(stderr, "Could not bind location: vProjection\n");
-        exit(0);
-    }
-    glUniformMatrix4fv(vProjection_uniform, 1, GL_FALSE, glm::value_ptr(projectionT));
-}
-
-glm::vec3 getTrackBallVector(double x, double y)
-{
-    glm::vec3 p = glm::vec3(2.0 * x / screen_width - 1.0, 2.0 * y / screen_height - 1.0, 0.0); // Normalize to [-1, +1]
-    p.y = -p.y;                                                                                // Invert Y since screen coordinate and OpenGL coordinates have different Y directions.
-
-    float mag2 = p.x * p.x + p.y * p.y;
-    if (mag2 <= 1.0f)
-        p.z = sqrtf(1.0f - mag2);
-    else
-        p = glm::normalize(p); // Nearest point, close to the sides of the trackball
-    return p;
 }

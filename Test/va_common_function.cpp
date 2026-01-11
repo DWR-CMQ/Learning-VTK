@@ -105,3 +105,91 @@ void CommonFunction::HSVToRGB(float h, float s, float v, float* r, float* g, flo
 	*g = static_cast<float>(dg);
 	*b = static_cast<float>(db);
 }
+
+void CommonFunction::HSVToRGB(const double hsv[3], double rgb[3])
+{
+	HSVToRGB(hsv[0], hsv[1], hsv[2], rgb, rgb + 1, rgb + 2);
+}
+
+void CommonFunction::HSVToRGB(const float hsv[3], float rgb[3])
+{
+	HSVToRGB(hsv[0], hsv[1], hsv[2], rgb, rgb + 1, rgb + 2);
+}
+
+void CommonFunction::RGBToHSV(const float rgb[3], float hsv[3])
+{
+	RGBToHSV(rgb[0], rgb[1], rgb[2], hsv, hsv + 1, hsv + 2);
+}
+
+void CommonFunction::RGBToHSV(float r, float g, float b, float* h, float* s, float* v)
+{
+	double dh, ds, dv;
+	RGBToHSV(r, g, b, &dh, &ds, &dv);
+	*h = static_cast<float>(dh);
+	*s = static_cast<float>(ds);
+	*v = static_cast<float>(dv);
+}
+
+void CommonFunction::RGBToHSV(const double rgb[3], double hsv[3])
+{
+	RGBToHSV(rgb[0], rgb[1], rgb[2], hsv, hsv + 1, hsv + 2);
+}
+
+void CommonFunction::RGBToHSV(double r, double g, double b, double* h, double* s, double* v)
+{
+	const double onethird = 1.0 / 3.0;
+	const double onesixth = 1.0 / 6.0;
+	const double twothird = 2.0 / 3.0;
+
+	double cmax = r;
+	double cmin = r;
+	if (g > cmax)
+	{
+		cmax = g;
+	}
+	else if (g < cmin)
+	{
+		cmin = g;
+	}
+	if (b > cmax)
+	{
+		cmax = b;
+	}
+	else if (b < cmin)
+	{
+		cmin = b;
+	}
+	*v = cmax;
+
+	if (*v > 0.0)
+	{
+		*s = (cmax - cmin) / cmax;
+	}
+	else
+	{
+		*s = 0.0;
+	}
+	if (*s > 0)
+	{
+		if (r == cmax)
+		{
+			*h = onesixth * (g - b) / (cmax - cmin);
+		}
+		else if (g == cmax)
+		{
+			*h = onethird + onesixth * (b - r) / (cmax - cmin);
+		}
+		else
+		{
+			*h = twothird + onesixth * (r - g) / (cmax - cmin);
+		}
+		if (*h < 0.0)
+		{
+			*h += 1.0;
+		}
+	}
+	else
+	{
+		*h = 0.0;
+	}
+}

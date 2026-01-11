@@ -1,5 +1,7 @@
 #pragma once
 #include <list>
+#include <tuple>
+#include <vector>
 class ColorTransferFunctionInternals;
 
 #define VTK_CTF_RGB 0
@@ -26,6 +28,9 @@ public:
 	virtual ~ColorTransferFunction();
 
 	void GetTable(double xStart, double xEnd, int size, double* table);
+	void GetTable(double xStart, double xEnd, int size, float* table);
+	const unsigned char* GetTable(double xStart, double xEnd, int size);
+
 	inline bool GetUseAboveRangeColor()
 	{
 		return UseAboveRangeColor;
@@ -37,8 +42,9 @@ public:
 
 	int AddRGBPoint(double x, double r, double g, double b);
 	int AddRGBPoint(double x, double r, double g, double b, double midpoint, double sharpness);
-	int AddRGBPoints(double* x, double* rgbColors);
-	int AddRGBPoints(double* x, double* rgbColors, double midpoint, double sharpness);
+	int AddRGBPoints(std::vector<double> x, std::vector<std::tuple<double, double, double>> rgb);
+	int AddRGBPoints(std::vector<double> x, std::vector<std::tuple<double, double, double>> rgb, double midpoint, double sharpness);
+
 	int AddHSVPoint(double x, double h, double s, double v);
 	int AddHSVPoint(double x, double h, double s, double v, double midpoint, double sharpness);
 	int RemovePoint(double x);
@@ -52,7 +58,6 @@ public:
 
 	void SetRange(double, double);
 	void SetRange(const double rng[2]);
-	int AdjustRange(double range[2]);
 
 	void SortAndUpdateRange();
 	bool UpdateRange();
@@ -60,12 +65,17 @@ public:
 	void MovePoint(double oldX, double newX);
 	
 	double FindMinimumXDistance();
+	int EstimateMinNumberOfSamples(double const& x1, double const& x2);
 
-	void GetColor(double x, double rgb[3]);
 	int GetSize();
 
 	int GetNodeValue(int index, double val[6]);
 	int SetNodeValue(int index, double val[6]);
+
+	// 外部给this深拷贝
+	void DeepCopy(ColorTransferFunction* src);
+	// 外部给this前拷贝
+	void ShallowCopy(ColorTransferFunction* src);
 private:
 	double NanColor[3];
 	int Scale;
@@ -80,9 +90,11 @@ private:
 	bool Clamping;
 	int ColorSpace;
 	int HSVWrap;
+	int AllowDuplicateScalars;
 
 	double* Function;
 	unsigned char* Table;
+	int TableSize;
 
 	bool IndexedLookup;
 	std::list<double> AnnotatedValueList;
