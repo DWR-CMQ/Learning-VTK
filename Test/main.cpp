@@ -25,7 +25,8 @@
 #include "va_mesh_visualizer.h"
 #include "va_dicom2mesh.h"
 #include "va_volume_visualizer.h"
-
+#include "va_camera.h"
+#include "va_imagedata_relevant_info.h"
 // 链接 OpenGL 库
 #pragma comment(lib, "opengl32.lib")
 
@@ -98,30 +99,39 @@ int main(int argc, char* argv[])
 		std::cerr << "Error: Failed to read DICOM data from " << dicomDirectory << std::endl;
 	}
 
-	auto spDicom2Mesh = std::make_shared<Dicom2mesh>();
-	auto spMesh3D = spDicom2Mesh->DicomToMesh(imageData, 0.0, true, 100.0);
+    vtkSmartPointer<vtkCamera> camera1 = vtkSmartPointer<vtkCamera>::New();
+    std::shared_ptr<ImageDataRelevantInfo> volume1 = std::make_shared<ImageDataRelevantInfo>(imageData);
+    volume1->Init();
+    Camera xx(camera1, volume1);
+    xx.Init();
+
+    vtkMatrix4x4* wcvc, * vcdc, * wcdc;
+    vtkMatrix3x3* norm;
+    xx.GetKeyMatrices(wcvc, norm, vcdc, wcdc);
+	//auto spDicom2Mesh = std::make_shared<Dicom2mesh>();
+	//auto spMesh3D = spDicom2Mesh->DicomToMesh(imageData, 0.0, true, 100.0);
 
 	auto spRenderWindow = vtkSmartPointer<vtkRenderWindow>::New();
 	spRenderWindow->SetSize(1000, 500);
 
 	auto spVolumeVisa = std::make_shared<VolumeVisualizer>();
-	auto spMeshVisa = std::make_shared<MeshVisualizer>();
+	//auto spMeshVisa = std::make_shared<MeshVisualizer>();
 	spVolumeVisa->DisplayVolume(spRenderWindow, reader->GetOutputPort());
-	spMeshVisa->DisplayMesh(spRenderWindow, spMesh3D);
+	//spMeshVisa->DisplayMesh(spRenderWindow, spMesh3D);
 
 	auto spVolumeRender = spVolumeVisa->GetRenderer();
-	auto spMeshRender = spMeshVisa->GetRenderer();
+	//auto spMeshRender = spMeshVisa->GetRenderer();
 	auto volumeRenderCamera = spVolumeRender->GetActiveCamera();
 	if (volumeRenderCamera == nullptr)
 	{
 		std::cerr << "Error volumeRenderCamera is null" << std::endl;
 		return 0;
 	}
-	spMeshRender->SetActiveCamera(volumeRenderCamera);
+	//spMeshRender->SetActiveCamera(volumeRenderCamera);
 
 	spVolumeRender->ResetCamera();
 	spVolumeRender->ResetCameraClippingRange();
-	spMeshRender->ResetCameraClippingRange();
+	//spMeshRender->ResetCameraClippingRange();
 
 	// 创建渲染窗口交互器并设置渲染窗口
 	vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
@@ -133,6 +143,8 @@ int main(int argc, char* argv[])
 
 	// 渲染场景并启动交互
 	spRenderWindow->Render();
+    renderWindowInteractor->Start();
+
     auto renderColl = spRenderWindow->GetRenderers();
     auto firstRender = renderColl->GetFirstRenderer();
     auto volumeColl = firstRender->GetVolumes();
