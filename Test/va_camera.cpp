@@ -1,9 +1,9 @@
 #include "va_camera.h"
 
-Camera::Camera(vtkSmartPointer<vtkCamera> camera, std::shared_ptr<ImageDataRelevantInfo> spInfo)
+Camera::Camera(vtkSmartPointer<vtkCamera> camera, std::shared_ptr<SetVolumeParameter> spParameter)
 {
 	m_spCamera = camera;
-    m_spInfo = spInfo;
+    m_spParameter = spParameter;
     this->ClippingRangeExpansion = 0.5;
     this->NearClippingPlaneTolerance = 0;
 
@@ -154,7 +154,7 @@ void Camera::Init()
     this->m_spCamera->SetViewAngle(30.0);
 
     double bounds[6];
-    m_spInfo->ComputeVisiblePropBounds(bounds);
+    m_spParameter->ComputeVisiblePropBounds(bounds);
 
     double expandedBounds[6] = { bounds[0], bounds[1], bounds[2], bounds[3], bounds[4], bounds[5] };
     this->ExpandBounds(expandedBounds, this->m_spCamera->GetModelTransformMatrix());

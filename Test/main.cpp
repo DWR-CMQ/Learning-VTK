@@ -26,7 +26,7 @@
 #include "va_dicom2mesh.h"
 #include "va_volume_visualizer.h"
 #include "va_camera.h"
-#include "va_imagedata_relevant_info.h"
+#include "va_set_volume_parameter.h"
 // Á´½Ó OpenGL ¿â
 #pragma comment(lib, "opengl32.lib")
 
@@ -100,7 +100,7 @@ int main(int argc, char* argv[])
 	}
 
     vtkSmartPointer<vtkCamera> camera1 = vtkSmartPointer<vtkCamera>::New();
-    std::shared_ptr<ImageDataRelevantInfo> volume1 = std::make_shared<ImageDataRelevantInfo>(imageData);
+    std::shared_ptr<SetVolumeParameter> volume1 = std::make_shared<SetVolumeParameter>(imageData);
     volume1->Init();
     Camera xx(camera1, volume1);
     xx.Init();

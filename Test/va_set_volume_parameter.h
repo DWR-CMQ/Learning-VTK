@@ -13,6 +13,9 @@ public:
 	void Init();
 	void ComputeBounds();
 	void CalculateParameter();
+
+	void ComputeVisiblePropBounds(double allBounds[6]);
+	double* GetBound();
 private:
 	vtkSmartPointer<vtkImageData> m_spImageData;
 	float m_fCellStep[3];
@@ -29,6 +32,10 @@ private:
 	vtkNew<vtkMatrix4x4> m_mat4TextureToDataset;
 	vtkNew<vtkMatrix4x4> m_mat4TextureToDatasetInv;
 	vtkNew<vtkMatrix4x4> m_mat4TempMatrix4x4;
+
+	double m_dBounds[6];
+	double m_dCenter[3];
+	vtkMatrix4x4* Matrix;
 
 	std::vector<float> m_vecVolMat;
 	std::vector<float> m_vecInvMat;

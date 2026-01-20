@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\3dparty\glad.c" />
     <ClCompile Include="va_camera.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="va_color_table.cpp" />
@@ -151,10 +152,10 @@
     <ClCompile Include="va_common_function.cpp" />
     <ClCompile Include="va_mesh_visualizer.cpp" />
     <ClCompile Include="va_opacity_transferfunction.cpp" />
+    <ClCompile Include="va_render.cpp" />
     <ClCompile Include="va_set_volume_paramter.cpp" />
     <ClCompile Include="va_texture_object.cpp" />
     <ClCompile Include="va_volume_visualizer.cpp" />
-    <ClCompile Include="va_volume.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VTKLee.vcxproj">
@@ -169,9 +170,10 @@
     <ClInclude Include="va_mesh_visualizer.h" />
     <ClInclude Include="va_opacity_transferfunction.h" />
     <ClInclude Include="va_color_table.h" />
+    <ClInclude Include="va_render.h" />
     <ClInclude Include="va_set_volume_parameter.h" />
+    <ClInclude Include="va_shader.h" />
     <ClInclude Include="va_texture_object.h" />
-    <ClInclude Include="va_volume.h" />
     <ClInclude Include="va_volume_visualizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
