@@ -100,14 +100,13 @@ int main(int argc, char* argv[])
 	}
 
     vtkSmartPointer<vtkCamera> camera1 = vtkSmartPointer<vtkCamera>::New();
-    std::shared_ptr<SetVolumeParameter> volume1 = std::make_shared<SetVolumeParameter>(imageData);
-    volume1->Init();
-    Camera xx(camera1, volume1);
+    std::shared_ptr<SetVolumeParameter> para = std::make_shared<SetVolumeParameter>(imageData);
+    para->Init();
+    double visibleBound[6];
+    para->ComputeVisiblePropBounds(visibleBound);
+    Camera xx(camera1, visibleBound);
     xx.Init();
 
-    vtkMatrix4x4* wcvc, * vcdc, * wcdc;
-    vtkMatrix3x3* norm;
-    xx.GetKeyMatrices(wcvc, norm, vcdc, wcdc);
 	//auto spDicom2Mesh = std::make_shared<Dicom2mesh>();
 	//auto spMesh3D = spDicom2Mesh->DicomToMesh(imageData, 0.0, true, 100.0);
 

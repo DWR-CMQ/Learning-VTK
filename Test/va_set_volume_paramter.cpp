@@ -3,9 +3,14 @@
 SetVolumeParameter::SetVolumeParameter(const vtkSmartPointer<vtkImageData>& imageData)
 {
 	m_spImageData = imageData;
-    m_mat4TempMatrix4x4->Identity();
     ComputeBounds();
     Matrix = vtkMatrix4x4::New();
+
+    this->CellToPointMatrix->Identity();
+    this->AdjustedTexMin[0] = this->AdjustedTexMin[1] = this->AdjustedTexMin[2] = 0.0f;
+    this->AdjustedTexMin[3] = 1.0f;
+    this->AdjustedTexMax[0] = this->AdjustedTexMax[1] = this->AdjustedTexMax[2] = 1.0f;
+    this->AdjustedTexMax[3] = 1.0f;
 }
 
 SetVolumeParameter::~SetVolumeParameter()
@@ -152,53 +157,6 @@ void SetVolumeParameter::ComputeBounds()
     this->m_fCellSpacing[2] = static_cast<float>(spacing[2]);
 }
 
-void SetVolumeParameter::CalculateParameter()
-{
-    int numVolumes = 1;
-    this->m_vecVolMat.resize(numVolumes * 16, 0);
-    this->m_vecInvMat.resize(numVolumes * 16, 0);
-    this->m_vecTexMat.resize(numVolumes * 16, 0);
-    this->m_vecInvTexMat.resize(numVolumes * 16, 0);
-    this->m_vecTexEyeMat.resize(numVolumes * 16, 0);
-    this->m_vecCellToPoint.resize(numVolumes * 16, 0);
-    this->m_vecTexMin.resize(numVolumes * 3, 0);
-    this->m_vecTexMax.resize(numVolumes * 3, 0);
-    this->m_vecEyePos.resize(numVolumes * 3, 0);
-
-    vtkNew<vtkMatrix4x4> dataToWorld;
-    vtkNew<vtkMatrix4x4> dataToView;
-    vtkNew<vtkMatrix4x4> texToDataMat;
-    vtkNew<vtkMatrix4x4> texToViewMat;
-    vtkNew<vtkMatrix4x4> cellToPointMat;
-
-    float defaultTexMin[3] = { 0.0f, 0.0f, 0.0f };
-    float defaultTexMax[3] = { 1.0f, 1.0f, 1.0f };
-    float eyePos[3] = { 0.0f, 0.0f, 0.0f };
-
-    for (int i = 0; i < numVolumes; i++)
-    {
-        const int vecOfffset = i * 16;
-        float* texMin;
-        float* texMax;
-
-        if (numVolumes > 1)
-        {
-        }
-        else
-        {
-            vtkMatrix4x4* volMatrix = this->m_mat4TempMatrix4x4;
-            // DeepCopy的参数是source 
-            dataToWorld->DeepCopy(volMatrix);
-            texToDataMat->DeepCopy(this->m_mat4TextureToDataset.GetPointer());
-
-            // Texture matrices (texture to view)
-            // Multiply4x4 => a * b = c
-            vtkMatrix4x4::Multiply4x4(volMatrix, texToDataMat.GetPointer(), texToViewMat.GetPointer());
-            //vtkMatrix4x4::Multiply4x4(modelViewMat, texToViewMat.GetPointer(), texToViewMat.GetPointer());
-        }
-    }
-}
-
 double* SetVolumeParameter::GetBound()
 {
     int i, n;
@@ -306,4 +264,48 @@ void SetVolumeParameter::ComputeVisiblePropBounds(double allBounds[6])
             allBounds[5] = bounds[5];
         }
     } // not bogus
+}
+
+void SetVolumeParameter::ComputeCellToPointMatrix(int extents[6])
+{
+    this->CellToPointMatrix->Identity();
+    this->AdjustedTexMin[0] = this->AdjustedTexMin[1] = this->AdjustedTexMin[2] = 0.0f;
+    this->AdjustedTexMin[3] = 1.0f;
+    this->AdjustedTexMax[0] = this->AdjustedTexMax[1] = this->AdjustedTexMax[2] = 1.0f;
+    this->AdjustedTexMax[3] = 1.0f;
+
+    if (!this->m_iIsCellData) // point data
+    {
+        // Extents are one minus the number of elements
+        // so we have to add 1 to it to account for
+        // number of elements in any cell or point image
+        // data.
+        float delta[3];
+        delta[0] = extents[1] - extents[0] + 1;
+        delta[1] = extents[3] - extents[2] + 1;
+        delta[2] = extents[5] - extents[4] + 1;
+
+        float min[3];
+        min[0] = delta[0] > 0.0 ? 0.5f / delta[0] : 0.5f;
+        min[1] = delta[1] > 0.0 ? 0.5f / delta[1] : 0.5f;
+        min[2] = delta[2] > 0.0 ? 0.5f / delta[2] : 0.5f;
+
+        float range[3]; // max - min
+        range[0] = (delta[0] - 0.5f) / delta[0] - min[0];
+        range[1] = (delta[1] - 0.5f) / delta[1] - min[1];
+        range[2] = (delta[2] - 0.5f) / delta[2] - min[2];
+
+        this->CellToPointMatrix->SetElement(0, 0, range[0]); // Scale diag
+        this->CellToPointMatrix->SetElement(1, 1, range[1]);
+        this->CellToPointMatrix->SetElement(2, 2, range[2]);
+        this->CellToPointMatrix->SetElement(0, 3, min[0]); // t vector
+        this->CellToPointMatrix->SetElement(1, 3, min[1]);
+        this->CellToPointMatrix->SetElement(2, 3, min[2]);
+
+        // Adjust limit coordinates for texture access.
+        float const zeros[4] = { 0.0f, 0.0f, 0.0f, 1.0f }; // GL tex min
+        float const ones[4] = { 1.0f, 1.0f, 1.0f, 1.0f };  // GL tex max
+        this->CellToPointMatrix->MultiplyPoint(zeros, this->AdjustedTexMin);
+        this->CellToPointMatrix->MultiplyPoint(ones, this->AdjustedTexMax);
+    }
 }

@@ -1,12 +1,11 @@
 #include "va_camera.h"
 
-Camera::Camera(vtkSmartPointer<vtkCamera> camera, std::shared_ptr<SetVolumeParameter> spParameter)
+Camera::Camera(vtkSmartPointer<vtkCamera> camera, double* bounds)
 {
 	m_spCamera = camera;
-    m_spParameter = spParameter;
     this->ClippingRangeExpansion = 0.5;
     this->NearClippingPlaneTolerance = 0;
-
+    memcpy(m_dBounds, bounds, 6 * sizeof(double));
     this->WCDCMatrix = vtkMatrix4x4::New();
     this->WCVCMatrix = vtkMatrix4x4::New();
     this->NormalMatrix = vtkMatrix3x3::New();
@@ -153,10 +152,12 @@ void Camera::Init()
     // the view angle to become very small and cause bad depth sorting.
     this->m_spCamera->SetViewAngle(30.0);
 
-    double bounds[6];
-    m_spParameter->ComputeVisiblePropBounds(bounds);
-
-    double expandedBounds[6] = { bounds[0], bounds[1], bounds[2], bounds[3], bounds[4], bounds[5] };
+    double expandedBounds[6] = { m_dBounds[0], 
+                                m_dBounds[1], 
+                                m_dBounds[2], 
+                                m_dBounds[3], 
+                                m_dBounds[4], 
+                                m_dBounds[5] };
     this->ExpandBounds(expandedBounds, this->m_spCamera->GetModelTransformMatrix());
 
     center[0] = (expandedBounds[0] + expandedBounds[1]) / 2.0;

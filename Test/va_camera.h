@@ -8,7 +8,7 @@
 class Camera
 {
 public:
-	Camera(vtkSmartPointer<vtkCamera> camera, std::shared_ptr<SetVolumeParameter> spParameter);
+	Camera(vtkSmartPointer<vtkCamera> camera, double* bounds);
 	~Camera();
 	void Init();
 	void ResetCameraClippingRange(const double bounds[6]);
@@ -16,9 +16,9 @@ public:
 	void GetKeyMatrices(vtkMatrix4x4*& WCVCMatrix, vtkMatrix3x3*& normalMatrix, vtkMatrix4x4*& VCDCMatrix, vtkMatrix4x4*& WCDCMatrix);
 private:
 	vtkSmartPointer<vtkCamera> m_spCamera;
-	std::shared_ptr<SetVolumeParameter> m_spParameter;
 	double ClippingRangeExpansion;
 	double NearClippingPlaneTolerance;
+	double m_dBounds[6];
 
 	vtkMatrix4x4* WCDCMatrix;
 	vtkMatrix4x4* WCVCMatrix;
