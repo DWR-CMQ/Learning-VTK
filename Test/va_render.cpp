@@ -7,13 +7,14 @@
 #include <vtkIdTypeArray.h>
 
 #include "va_common_function.h"
-Render::Render(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera)
+Render::Render(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera, std::shared_ptr<Window> spWindow)
 {
     m_uiVao = 0;
     m_uiVbo = 0;
     m_uiEbo = 0;
     m_spVolumePara = spParameter;
     m_spCamera = spCamera;
+    m_spWindow = spWindow;
     m_mat4TempMatrix4x4->Identity();
 }
 
@@ -116,6 +117,8 @@ void Render::Init()
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     }
 
+    // 其它参数
+    m_spWindow->GetTiledSizeAndOrigin(this->WindowSize, this->WindowSize + 1, this->WindowLowerLeft, this->WindowLowerLeft + 1);
 }
 
 void Render::InitShaderInput()
@@ -147,12 +150,15 @@ void Render::InitShaderInput()
 
     for (int i = 0; i < numVolumes; i++)
     {
-        const int vecOfffset = i * 16;
+        const int vecOffset = i * 16;
         float* texMin;
         float* texMax;
 
         if (numVolumes > 1)
         {
+            cellToPointMat->Identity();
+            texMin = defaultTexMin;
+            texMax = defaultTexMax;
         }
         else
         {
@@ -166,8 +172,114 @@ void Render::InitShaderInput()
             vtkMatrix4x4::Multiply4x4(volMatrix, texToDataMat.GetPointer(), texToViewMat.GetPointer());
             vtkMatrix4x4::Multiply4x4(wcvc, texToViewMat.GetPointer(), texToViewMat.GetPointer());
 
-            CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(texToViewMat.GetPointer(), this->m_vecTexEyeMat.data(), vecOfffset);
+            CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(texToViewMat.GetPointer(), this->m_vecTexEyeMat.data(), vecOffset);
             cellToPointMat->DeepCopy(this->m_spVolumePara->CellToPointMatrix.GetPointer());
+            texMin = this->m_spVolumePara->AdjustedTexMin;
+            texMax = this->m_spVolumePara->AdjustedTexMax;
         }
+
+        // Volume matrices (dataset to world)
+        dataToWorld->Transpose();
+
+        // Get the effective position of the eye in world coordinates for this
+        // volume (or the bbox).
+        // This multiply may look backwards, but dataToWorld and modelViewMat are
+        // both already transposed to send to OpenGL.
+        vtkMatrix4x4::Multiply4x4(dataToWorld.GetPointer(), wcvc, dataToView.GetPointer());
+        dataToView->Invert();
+        eyePos[0] = dataToView->GetElement(3, 0);
+        eyePos[1] = dataToView->GetElement(3, 1);
+        eyePos[2] = dataToView->GetElement(3, 2);
+        CommonFunction::CopyVector<float, 3>(eyePos, this->m_vecEyePos.data(), i * 3);
+
+        CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(
+            dataToWorld.GetPointer(), this->m_vecVolMat.data(), vecOffset);
+
+        this->m_mat4InverseVolume->DeepCopy(dataToWorld.GetPointer());
+        this->m_mat4InverseVolume->Invert();
+        CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(
+            this->m_mat4InverseVolume.GetPointer(), this->m_vecInvMat.data(), vecOffset);
+
+        // Texture matrices (texture to dataset)
+        texToDataMat->Transpose();
+        CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(
+            texToDataMat.GetPointer(), this->m_vecTexMat.data(), vecOffset);
+
+        texToDataMat->Invert();
+        CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(
+            texToDataMat.GetPointer(), this->m_vecInvTexMat.data(), vecOffset);
+
+        // Cell to Point (texture adjustment)
+        cellToPointMat->Transpose();
+        CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(
+            cellToPointMat.GetPointer(), this->m_vecCellToPoint.data(), vecOffset);
+        CommonFunction::CopyVector<float, 3>(texMin, this->m_vecTexMin.data(), i * 3);
+        CommonFunction::CopyVector<float, 3>(texMax, this->m_vecTexMax.data(), i * 3);
     }
+
+    // the matrix from data to world
+    m_pDrawShader->setMat4("in_volumeMatrix", this->m_vecVolMat.data());
+    m_pDrawShader->setMat4("in_inverseVolumeMatrix", this->m_vecInvMat.data());
+    m_pDrawShader->setMat4("in_textureDatasetMatrix", this->m_vecTexMat.data());
+    m_pDrawShader->setMat4("in_inverseTextureDatasetMatrix", this->m_vecInvTexMat.data());
+
+    // matrix from texture to view coordinates
+    m_pDrawShader->setMat4("in_textureToEye", this->m_vecTexEyeMat.data());
+
+    // handle cell/point differences in tcoords
+    m_pDrawShader->setMat4("in_cellToPoint", this->m_vecCellToPoint.data());
+
+    m_pDrawShader->setVec3("in_texMin", this->m_vecTexMin.data());
+    m_pDrawShader->setVec3("in_texMax", this->m_vecTexMax.data());
+    m_pDrawShader->setVec3("in_eyePosObjs", this->m_vecEyePos.data());
+}
+
+void Render::SetMapperShaderParameters()
+{
+
+}
+
+void Render::SetVolumeShaderParameters()
+{
+
+}
+
+void Render::SetLightingShaderParameters()
+{
+
+}
+
+void Render::SetCameraShaderParameters()
+{
+    vtkMatrix4x4* glTransformMatrix;
+    vtkMatrix4x4* modelViewMatrix;
+    vtkMatrix3x3* normalMatrix;
+    vtkMatrix4x4* projectionMatrix;
+    m_spCamera->GetKeyMatrices(modelViewMatrix, normalMatrix, projectionMatrix, glTransformMatrix);
+
+    this->m_mat4InverseProjection->DeepCopy(projectionMatrix);
+    this->m_mat4InverseProjection->Invert();
+    m_pDrawShader->SetUniformMatrix("in_projectionMatrix", projectionMatrix);
+    m_pDrawShader->SetUniformMatrix("in_inverseProjectionMatrix", this->m_mat4InverseProjection.GetPointer());
+
+    this->m_mat4InverseModelView->DeepCopy(modelViewMatrix);
+    this->m_mat4InverseModelView->Invert();
+    m_pDrawShader->SetUniformMatrix("in_modelViewMatrix", modelViewMatrix);
+    m_pDrawShader->SetUniformMatrix("in_inverseModelViewMatrix", this->m_mat4InverseModelView.GetPointer());
+
+    // TODO Take consideration of reduction factor
+    float fvalue2[2];
+    CommonFunction::ToFloat(this->WindowLowerLeft, fvalue2);
+    m_pDrawShader->setVec2("in_windowLowerLeftCorner", fvalue2);
+
+    CommonFunction::ToFloat(1.0 / this->WindowSize[0], 1.0 / this->WindowSize[1], fvalue2);
+    m_pDrawShader->setVec2("in_inverseOriginalWindowSize", fvalue2);
+
+    CommonFunction::ToFloat(1.0 / this->WindowSize[0], 1.0 / this->WindowSize[1], fvalue2);
+    m_pDrawShader->setVec2("in_inverseWindowSize", fvalue2);
+}
+
+void Render::GPURender()
+{
+
 }

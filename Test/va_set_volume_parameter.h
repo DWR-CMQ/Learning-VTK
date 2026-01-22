@@ -26,8 +26,6 @@ private:
 	int m_iExtents[6];
 
 	int m_iIsCellData = 0;
-	float AdjustedTexMin[4];
-	float AdjustedTexMax[4];
 
 	double m_dBounds[6];
 	double m_dCenter[3];
@@ -37,6 +35,9 @@ public:
 	vtkNew<vtkMatrix4x4> m_mat4TextureToDataset;
 	vtkNew<vtkMatrix4x4> m_mat4TextureToDatasetInv;
 	vtkNew<vtkMatrix4x4> CellToPointMatrix;
+	float AdjustedTexMin[4];
+	float AdjustedTexMax[4];
+
 	double m_dVolumeGeometry[24];
 };
 

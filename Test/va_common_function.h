@@ -19,14 +19,14 @@ public:
 	static void RGBToHSV(double r, double g, double b, double* h, double* s, double* v);
 
     template <typename T>
-    void ToFloat(const T& in1, const T& in2, float(&out)[2])
+    static void ToFloat(const T& in1, const T& in2, float(&out)[2])
     {
         out[0] = static_cast<float>(in1);
         out[1] = static_cast<float>(in2);
     }
 
     template <typename T>
-    void ToFloat(const T& in1, const T& in2, const T& in3, float(&out)[3])
+    static void ToFloat(const T& in1, const T& in2, const T& in3, float(&out)[3])
     {
         out[0] = static_cast<float>(in1);
         out[1] = static_cast<float>(in2);
@@ -34,7 +34,7 @@ public:
     }
 
     template <typename T>
-    void ToFloat(T* in, float* out, int noOfComponents)
+    static void ToFloat(T* in, float* out, int noOfComponents)
     {
         for (int i = 0; i < noOfComponents; ++i)
         {
@@ -43,7 +43,7 @@ public:
     }
 
     template <typename T>
-    void ToFloat(T(&in)[3], float(&out)[3])
+    static void ToFloat(T(&in)[3], float(&out)[3])
     {
         out[0] = static_cast<float>(in[0]);
         out[1] = static_cast<float>(in[1]);
@@ -51,7 +51,7 @@ public:
     }
 
     template <unsigned int N, typename T>
-    std::array<float, N> ToFloat(T* in)
+    static std::array<float, N> ToFloat(T* in)
     {
         std::array<float, N> out;
         for (size_t i = 0; i < N; i++)
@@ -62,19 +62,20 @@ public:
     }
 
     template <typename T>
-    void ToFloat(T(&in)[2], float(&out)[2])
+    static void ToFloat(T(&in)[2], float(&out)[2])
     {
         out[0] = static_cast<float>(in[0]);
         out[1] = static_cast<float>(in[1]);
     }
 
     template <typename T>
-    void ToFloat(T& in, float& out)
+    static void ToFloat(T& in, float& out)
     {
         out = static_cast<float>(in);
     }
+
     template <typename T>
-    void ToFloat(T(&in)[4][2], float(&out)[4][2])
+    static void ToFloat(T(&in)[4][2], float(&out)[4][2])
     {
         out[0][0] = static_cast<float>(in[0][0]);
         out[0][1] = static_cast<float>(in[0][1]);
@@ -97,7 +98,7 @@ public:
     }
 
     template <typename T, int SizeSrc>
-    void CopyVector(T* srcVec, T* dstVec, int offset)
+    static void CopyVector(T* srcVec, T* dstVec, int offset)
     {
         for (int j = 0; j < SizeSrc; j++)
         {

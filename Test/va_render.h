@@ -6,13 +6,20 @@
 #include "va_shader.h"
 #include "va_camera.h"
 #include "va_set_volume_parameter.h"
+#include "va_window.h"
 class Render
 {
 public:
-    Render(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera);
+    Render(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera, std::shared_ptr<Window> spWindow);
     ~Render();
     void Init();
     void InitShaderInput();
+	void GPURender();
+private:
+	void SetMapperShaderParameters();
+	void SetVolumeShaderParameters();
+	void SetLightingShaderParameters();
+	void SetCameraShaderParameters();
 private:
     unsigned int m_uiVao;
     unsigned int m_uiVbo;
@@ -22,8 +29,15 @@ private:
     vtkSmartPointer<vtkPolyData> BBoxPolyData;
     std::shared_ptr<SetVolumeParameter> m_spVolumePara;
     std::shared_ptr<Camera> m_spCamera;
+	std::shared_ptr<Window> m_spWindow;
 
 	vtkNew<vtkMatrix4x4> m_mat4TempMatrix4x4;
+	vtkNew<vtkMatrix4x4> m_mat4InverseProjection;
+	vtkNew<vtkMatrix4x4> m_mat4InverseModelView;
+	vtkNew<vtkMatrix4x4> m_mat4InverseVolume;
+
+	int WindowLowerLeft[2];
+	int WindowSize[2];
 
 	std::vector<float> m_vecVolMat;
 	std::vector<float> m_vecInvMat;

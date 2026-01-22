@@ -156,6 +156,7 @@
     <ClCompile Include="va_set_volume_paramter.cpp" />
     <ClCompile Include="va_texture_object.cpp" />
     <ClCompile Include="va_volume_visualizer.cpp" />
+    <ClCompile Include="va_window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VTKLee.vcxproj">
@@ -175,6 +176,7 @@
     <ClInclude Include="va_shader.h" />
     <ClInclude Include="va_texture_object.h" />
     <ClInclude Include="va_volume_visualizer.h" />
+    <ClInclude Include="va_window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
