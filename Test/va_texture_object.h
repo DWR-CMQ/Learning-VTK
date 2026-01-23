@@ -1,5 +1,6 @@
 #pragma once
 #include <glad/glad.h>
+#include <vtkType.h>
 class TextureObject
 {
 public:
@@ -53,11 +54,32 @@ public:
     };
 
 public:
-    TextureObject();
+    TextureObject(int dataType);
     ~TextureObject();
 
+    void InitializeTextureInternalFormats();
     void CreateTexture();
     void DestroyTexture();
+
+    bool Create1DTexture(int numComps, bool shaderSupportsTextureInt);
+    bool Create2DTexture(unsigned int width, unsigned int height, int numComps, bool shaderSupportsTextureInt);
+    bool Create3DTexture(unsigned int width, unsigned int height, unsigned int depth, int numComps, bool shaderSupportsTextureInt);
+    int GetDefaultDataType(int dataType);
+    unsigned int GetDefaultFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
+    unsigned int GetDefaultInternalFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
+    int GetDefaultTextureInternalFormat(int dataType, int numComponents, bool needInteger, bool needFloat, bool needSRGB);
+    unsigned int GetInternalFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
+
+    void Bind();
+    unsigned int GetMinificationFilterMode(int filterType);
+    unsigned int GetMagnificationFilterMode(int filterType);
+    unsigned int GetWrapSMode(int wrapType);
+    unsigned int GetWrapTMode(int wrapType);
+    unsigned int GetWrapRMode(int wrapType);
+
+    void ActivateTexture(int unit);
+    void DeActivateTexture();
+
 protected:
     unsigned int Handle;    // 纹理对应的句柄
     int NumberOfDimensions;
@@ -66,8 +88,15 @@ protected:
     unsigned int Depth;
     unsigned int Samples;
     bool UseSRGBColorSpace;
+    int m_iDataType;
 
     float MaximumAnisotropicFiltering;
+    bool RequireTextureInteger;
+    bool SupportsTextureInteger;
+    bool RequireTextureFloat;
+    bool SupportsTextureFloat;
+
+    int TextureInternalFormats[VTK_OBJECT + 1][3][5];
 
     unsigned int Target;         // GLenum
     unsigned int Format;         // GLenum
@@ -80,5 +109,9 @@ protected:
     int WrapR;
     int MinificationFilter;
     int MagnificationFilter;
-};
 
+    float MinLOD;
+    float MaxLOD;
+    int BaseLevel;
+    int MaxLevel;
+};
