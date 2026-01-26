@@ -61,12 +61,18 @@ public:
     void CreateTexture();
     void DestroyTexture();
 
-    bool Create1DTexture(int numComps, bool shaderSupportsTextureInt);
-    bool Create2DTexture(unsigned int width, unsigned int height, int numComps, bool shaderSupportsTextureInt);
-    bool Create3DTexture(unsigned int width, unsigned int height, unsigned int depth, int numComps, bool shaderSupportsTextureInt);
+    bool Create1DTextureFromRaw(unsigned int width, int numComps, int dataType, void* data);
+    bool Create2DTextureFromRaw(unsigned int width, unsigned int height, int numComps, int dataType, void* data);
+    bool Create3DTextureFromRaw(unsigned int width, unsigned int height, unsigned int depth, int numComps, int dataType, void* data);
+
     int GetDefaultDataType(int dataType);
+    int GetDataType(int dataType);
+    void SetDataType(unsigned int dataType);
+
     unsigned int GetDefaultFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
     unsigned int GetDefaultInternalFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
+    unsigned int GetFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
+
     int GetDefaultTextureInternalFormat(int dataType, int numComponents, bool needInteger, bool needFloat, bool needSRGB);
     unsigned int GetInternalFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
 

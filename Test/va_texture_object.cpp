@@ -158,42 +158,94 @@ void TextureObject::InitializeTextureInternalFormats()
 #endif
 }
 
-bool TextureObject::Create1DTexture(int numComps, bool shaderSupportsTextureInt)
+unsigned int TextureObject::GetFormat(int dataType, int numComps, bool shaderSupportsTextureInt)
 {
-	GLenum target = GL_TEXTURE_1D;
-	GLenum internalFormat = this->GetInternalFormat(this->m_iDataType, numComps, shaderSupportsTextureInt);
-	GLenum format = this->GetDefaultFormat(this->m_iDataType, numComps, shaderSupportsTextureInt);
-	GLenum type = this->GetDefaultDataType(this->m_iDataType);
-	if (!internalFormat || !format || !type)
+	if (!this->Format)
+	{
+		this->Format = this->GetDefaultFormat(dataType, numComps, shaderSupportsTextureInt);
+	}
+	return this->Format;
+}
+
+bool TextureObject::Create1DTextureFromRaw(unsigned int width, int numComps, int dataType, void* data)
+{
+	this->GetInternalFormat(this->m_iDataType, numComps, false);
+	this->GetFormat(this->m_iDataType, numComps, false);
+	this->GetDataType(this->m_iDataType);
+	if (!this->InternalFormat || !this->Format || !this->Type)
 	{
 		std::cout << "Failed to determine texture parameters." << std::endl;
 		return false;
 	}
 
-	this->Bind();
-	this->CreateTexture();
-
-
+	GLenum target = GL_TEXTURE_1D;
 	this->Target = target;
-	this->Format = format;
-	this->Type = type;
 	this->Components = numComps;
 	// 暂定为1 需要window类传值
 	this->Width = 1;
 	this->Height = 1;
+	this->Depth = 1;
 	this->NumberOfDimensions = 1;
+	this->Bind();
+	this->CreateTexture();
+
+	glTexImage1D(this->Target, 0, this->InternalFormat, static_cast<GLsizei>(this->Width), 0,
+					this->Format, this->Type, static_cast<const GLvoid*>(data));
 	return true;
 }
 
-bool TextureObject::Create2DTexture(unsigned int width, unsigned int height, int numComps, bool shaderSupportsTextureInt)
+bool TextureObject::Create2DTextureFromRaw(unsigned int width, unsigned int height, int numComps, int dataType, void* data)
 {
+	this->GetInternalFormat(this->m_iDataType, numComps, false);
+	this->GetFormat(this->m_iDataType, numComps, false);
+	this->GetDataType(this->m_iDataType);
+	if (!this->InternalFormat || !this->Format || !this->Type)
+	{
+		std::cout << "Failed to determine texture parameters." << std::endl;
+		return false;
+	}
+
 	GLenum target = GL_TEXTURE_2D;
+	this->Target = target;
+	this->Components = numComps;
+	this->Width = width;
+	this->Height = height;
+	this->Depth = 1;
+	this->NumberOfDimensions = 2;
+	this->Bind();
+	this->CreateTexture();
+
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	glTexImage2D(this->Target, 0, this->InternalFormat, static_cast<GLsizei>(this->Width), static_cast<GLsizei>(this->Height), 0,
+							this->Format, this->Type, static_cast<const GLvoid*>(data));
 	return true;
 }
 
-bool TextureObject::Create3DTexture(unsigned int width, unsigned int height, unsigned int depth, int numComps, bool shaderSupportsTextureInt)
+bool TextureObject::Create3DTextureFromRaw(unsigned int width, unsigned int height, unsigned int depth, int numComps, int dataType, void* data)
 {
+	this->GetInternalFormat(this->m_iDataType, numComps, false);
+	this->GetFormat(this->m_iDataType, numComps, false);
+	this->GetDataType(this->m_iDataType);
+	if (!this->InternalFormat || !this->Format || !this->Type)
+	{
+		std::cout << "Failed to determine texture parameters." << std::endl;
+		return false;
+	}
+
 	GLenum target = GL_TEXTURE_3D;
+	this->Target = target;
+	this->Components = numComps;
+	this->Width = width;
+	this->Height = height;
+	this->Depth = depth;
+	this->NumberOfDimensions = 3;
+	this->Bind();
+	this->CreateTexture();
+
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	glTexImage3D(this->Target, 0, this->InternalFormat, static_cast<GLsizei>(this->Width), static_cast<GLsizei>(this->Height), static_cast<GLsizei>(this->Depth),
+					0, this->Format, this->Type, static_cast<const GLvoid*>(data));
+
 	return true;
 }
 
@@ -219,6 +271,23 @@ int TextureObject::GetDefaultDataType(int dataType)
 		return GL_FLOAT;
 	}
 	return 0;
+}
+
+int TextureObject::GetDataType(int dataType)
+{
+	if (!this->Type)
+	{
+		this->Type = this->GetDefaultDataType(dataType);
+	}
+	return this->Type;
+}
+
+void TextureObject::SetDataType(unsigned int dataType)
+{
+	if (this->Type != dataType)
+	{
+		this->Type = dataType;
+	}
 }
 
 // format

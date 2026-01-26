@@ -15,12 +15,13 @@ public:
 	void ComputeVisiblePropBounds(double allBounds[6]);
 	void ComputeCellToPointMatrix(int extents[6]);
 	double* GetBound();
+	void GetScaleAndBias(int scalarType, float* scalarRange, float& scale, float& bias);
+	void SelectTextureFormat(unsigned int& format, unsigned int& internalFormat, int& type,
+		int scalarType, int noOfComponents);
 private:
 	vtkSmartPointer<vtkImageData> m_spImageData;
-	float m_fCellStep[3];
 	double m_dDatasetStepSize[3];
-	float m_fCellSpacing[3];
-
+	
 	double m_dLoadedBounds[6];
 	double m_dLoadedBoundsAA[6];
 	int m_iExtents[6];
@@ -37,7 +38,14 @@ public:
 	vtkNew<vtkMatrix4x4> CellToPointMatrix;
 	float AdjustedTexMin[4];
 	float AdjustedTexMax[4];
+	float Scale[4];
+	float Bias[4];
+	float ScalarRange[4][2];
 
+	float m_fCellSpacing[3];
+	float m_fCellStep[3];
+
+	bool HandleLargeDataTypes;
 	double m_dVolumeGeometry[24];
 };
 

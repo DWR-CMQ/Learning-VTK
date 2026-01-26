@@ -17,7 +17,7 @@ public:
 	void GPURender();
 private:
 	void SetMapperShaderParameters();
-	void SetVolumeShaderParameters();
+	void SetVolumeShaderParameters(int independent, int noOfComponents, vtkMatrix4x4* modelViewMat);
 	void SetLightingShaderParameters();
 	void SetCameraShaderParameters();
 private:

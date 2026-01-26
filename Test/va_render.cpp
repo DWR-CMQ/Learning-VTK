@@ -239,9 +239,33 @@ void Render::SetMapperShaderParameters()
 
 }
 
-void Render::SetVolumeShaderParameters()
+void Render::SetVolumeShaderParameters(int independent, int noOfComponents, vtkMatrix4x4* modelViewMat)
 {
+    const int numInputs = 1;
+    this->m_vecScale.resize(numInputs * 4, 0);
+    this->m_vecBias.resize(numInputs * 4, 0);
+    this->m_vecStep.resize(numInputs * 3, 0);
+    this->m_vecSpacing.resize(numInputs * 3, 0);
+    this->m_vecRange.resize(numInputs * 8, 0);
 
+    int index = 0;
+    // Volume纹理激活
+
+    float tscale[4] = { 1.0, 1.0, 1.0, 1.0 };
+    float tbias[4] = { 0.0, 0.0, 0.0, 0.0 };
+    float(*scalePtr)[4] = &tscale;
+    float(*biasPtr)[4] = &tbias;
+    if (noOfComponents == 1 || noOfComponents == 2)
+    {
+        scalePtr = &m_spVolumePara->Scale;
+        biasPtr = &m_spVolumePara->Bias;
+    }
+    CommonFunction::CopyVector<float, 4>(*scalePtr, this->m_vecScale.data(), index * 4);
+    CommonFunction::CopyVector<float, 4>(*biasPtr, this->m_vecBias.data(), index * 4);
+    CommonFunction::CopyVector<float, 3>(m_spVolumePara->m_fCellStep, this->m_vecStep.data(), index * 3);
+    CommonFunction::CopyVector<float, 3>(m_spVolumePara->m_fCellSpacing, this->m_vecSpacing.data(), index * 3);
+
+    // 激活传输函数纹理
 }
 
 void Render::SetLightingShaderParameters()
