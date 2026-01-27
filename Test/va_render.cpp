@@ -7,7 +7,7 @@
 #include <vtkIdTypeArray.h>
 
 #include "va_common_function.h"
-Render::Render(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera, std::shared_ptr<Window> spWindow)
+VARender::VARender(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera, std::shared_ptr<VAWindow> spWindow)
 {
     m_uiVao = 0;
     m_uiVbo = 0;
@@ -18,7 +18,7 @@ Render::Render(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<
     m_mat4TempMatrix4x4->Identity();
 }
 
-Render::~Render()
+VARender::~VARender()
 {
     glDeleteVertexArrays(1, &m_uiVao);
     glDeleteBuffers(1, &m_uiVbo);
@@ -28,7 +28,7 @@ Render::~Render()
     m_uiEbo = 0;
 }
 
-void Render::Init()
+void VARender::Init()
 {
     if (m_pDrawShader == NULL)
     {
@@ -121,7 +121,7 @@ void Render::Init()
     m_spWindow->GetTiledSizeAndOrigin(this->WindowSize, this->WindowSize + 1, this->WindowLowerLeft, this->WindowLowerLeft + 1);
 }
 
-void Render::InitShaderInput()
+void VARender::InitShaderInput()
 {
     int numVolumes = 1;
     this->m_vecVolMat.resize(numVolumes * 16, 0);
@@ -234,12 +234,12 @@ void Render::InitShaderInput()
     m_pDrawShader->setVec3("in_eyePosObjs", this->m_vecEyePos.data());
 }
 
-void Render::SetMapperShaderParameters()
+void VARender::SetMapperShaderParameters()
 {
 
 }
 
-void Render::SetVolumeShaderParameters(int independent, int noOfComponents, vtkMatrix4x4* modelViewMat)
+void VARender::SetVolumeShaderParameters(int independent, int noOfComponents, vtkMatrix4x4* modelViewMat)
 {
     const int numInputs = 1;
     this->m_vecScale.resize(numInputs * 4, 0);
@@ -268,12 +268,12 @@ void Render::SetVolumeShaderParameters(int independent, int noOfComponents, vtkM
     // 激活传输函数纹理
 }
 
-void Render::SetLightingShaderParameters()
+void VARender::SetLightingShaderParameters()
 {
 
 }
 
-void Render::SetCameraShaderParameters()
+void VARender::SetCameraShaderParameters()
 {
     vtkMatrix4x4* glTransformMatrix;
     vtkMatrix4x4* modelViewMatrix;
@@ -303,7 +303,7 @@ void Render::SetCameraShaderParameters()
     m_pDrawShader->setVec2("in_inverseWindowSize", fvalue2);
 }
 
-void Render::GPURender()
+void VARender::GPURender()
 {
 
 }

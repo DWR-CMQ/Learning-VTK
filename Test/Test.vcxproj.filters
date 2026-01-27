@@ -57,6 +57,9 @@
     <ClCompile Include="va_window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="va_app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="va_mesh_visualizer.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="va_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="va_app.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

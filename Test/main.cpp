@@ -25,8 +25,7 @@
 #include "va_mesh_visualizer.h"
 #include "va_dicom2mesh.h"
 #include "va_volume_visualizer.h"
-#include "va_camera.h"
-#include "va_set_volume_parameter.h"
+#include "va_app.h"
 // Á´½Ó OpenGL ¿â
 #pragma comment(lib, "opengl32.lib")
 
@@ -99,13 +98,8 @@ int main(int argc, char* argv[])
 		std::cerr << "Error: Failed to read DICOM data from " << dicomDirectory << std::endl;
 	}
 
-    vtkSmartPointer<vtkCamera> camera1 = vtkSmartPointer<vtkCamera>::New();
-    std::shared_ptr<SetVolumeParameter> para = std::make_shared<SetVolumeParameter>(imageData);
-    para->Init();
-    double visibleBound[6];
-    para->ComputeVisiblePropBounds(visibleBound);
-    Camera xx(camera1, visibleBound);
-    xx.Init();
+    App app(imageData);
+    app.Init();
 
 	//auto spDicom2Mesh = std::make_shared<Dicom2mesh>();
 	//auto spMesh3D = spDicom2Mesh->DicomToMesh(imageData, 0.0, true, 100.0);

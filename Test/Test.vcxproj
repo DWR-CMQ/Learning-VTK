@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\3dparty\glad.c" />
+    <ClCompile Include="va_app.cpp" />
     <ClCompile Include="va_camera.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="va_color_table.cpp" />
@@ -164,6 +165,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="va_app.h" />
     <ClInclude Include="va_camera.h" />
     <ClInclude Include="va_color_transferfunction.h" />
     <ClInclude Include="va_dicom2mesh.h" />

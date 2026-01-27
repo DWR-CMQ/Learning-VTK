@@ -7,11 +7,11 @@
 #include "va_camera.h"
 #include "va_set_volume_parameter.h"
 #include "va_window.h"
-class Render
+class VARender
 {
 public:
-    Render(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera, std::shared_ptr<Window> spWindow);
-    ~Render();
+	VARender(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera, std::shared_ptr<VAWindow> spWindow);
+    ~VARender();
     void Init();
     void InitShaderInput();
 	void GPURender();
@@ -29,7 +29,7 @@ private:
     vtkSmartPointer<vtkPolyData> BBoxPolyData;
     std::shared_ptr<SetVolumeParameter> m_spVolumePara;
     std::shared_ptr<Camera> m_spCamera;
-	std::shared_ptr<Window> m_spWindow;
+	std::shared_ptr<VAWindow> m_spWindow;
 
 	vtkNew<vtkMatrix4x4> m_mat4TempMatrix4x4;
 	vtkNew<vtkMatrix4x4> m_mat4InverseProjection;
