@@ -1,15 +1,18 @@
 #pragma once
+#include <iostream>
 #include <vtkImageData.h>
 #include <vtkSmartPointer.h>
 #include <vtkMatrix3x3.h>
 #include <vtkMatrix4x4.h>
-#include <vector>
-class SetVolumeParameter
+#include "va_texture_object.h"
+#include "va_volume_property.h"
+class VAVolume
 {
 public:
-	SetVolumeParameter(const vtkSmartPointer<vtkImageData>& imageData);
-	~SetVolumeParameter();
+	VAVolume(const vtkSmartPointer<vtkImageData>& imageData);
+	~VAVolume();
 
+	void LoadVolume();
 	void Init();
 	void ComputeBounds();
 	void ComputeVisiblePropBounds(double allBounds[6]);
@@ -18,10 +21,13 @@ public:
 	void GetScaleAndBias(int scalarType, float* scalarRange, float& scale, float& bias);
 	void SelectTextureFormat(unsigned int& format, unsigned int& internalFormat, int& type,
 		int scalarType, int noOfComponents);
+	std::shared_ptr<VAVolumeProperty> GetVolumeProperty();
 private:
 	vtkSmartPointer<vtkImageData> m_spImageData;
+	std::shared_ptr<TextureObject> m_spVolumeTexture;
+	std::shared_ptr<VAVolumeProperty> m_spVolumeProperty;
 	double m_dDatasetStepSize[3];
-	
+
 	double m_dLoadedBounds[6];
 	double m_dLoadedBoundsAA[6];
 	int m_iExtents[6];

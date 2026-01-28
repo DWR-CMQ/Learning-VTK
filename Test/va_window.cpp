@@ -1,6 +1,6 @@
 #include "va_window.h"
 #include <vtkMath.h>
-
+#include <glad/glad.h>
 std::function<void(float, float, float)> VAWindow::cameraUpdateCallback;
 VAWindow::VAWindow(int width, int height, const char* title, bool fullscreen)
 {

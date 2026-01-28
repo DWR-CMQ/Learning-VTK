@@ -42,9 +42,6 @@
     <ClCompile Include="va_texture_object.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="va_set_volume_paramter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="va_camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -58,6 +55,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="va_app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="va_shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="va_volume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="va_volume_property.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,13 +101,16 @@
     <ClInclude Include="va_render.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="va_set_volume_parameter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="va_window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="va_app.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="va_volume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="va_volume_property.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

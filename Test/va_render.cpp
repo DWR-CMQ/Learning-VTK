@@ -1,21 +1,22 @@
 #include "va_render.h"
+#include <glad/glad.h>
 #include <vtkCellArray.h>
-
 #include <vtkPoints.h>
 #include <vtkDensifyPolyData.h>
 #include <vtkUnsignedIntArray.h>
 #include <vtkIdTypeArray.h>
 
 #include "va_common_function.h"
-VARender::VARender(std::shared_ptr<SetVolumeParameter> spParameter, std::shared_ptr<Camera> spCamera, std::shared_ptr<VAWindow> spWindow)
+VARender::VARender(std::shared_ptr<VAVolume> spVolume, std::shared_ptr<Camera> spCamera)
 {
     m_uiVao = 0;
     m_uiVbo = 0;
     m_uiEbo = 0;
-    m_spVolumePara = spParameter;
+    m_spVolume = spVolume;
     m_spCamera = spCamera;
-    m_spWindow = spWindow;
     m_mat4TempMatrix4x4->Identity();
+    TotalNumberOfLights = 1;
+
 }
 
 VARender::~VARender()
@@ -28,7 +29,7 @@ VARender::~VARender()
     m_uiEbo = 0;
 }
 
-void VARender::Init()
+void VARender::Init(std::shared_ptr<VAWindow> spWindow)
 {
     if (m_pDrawShader == NULL)
     {
@@ -44,7 +45,7 @@ void VARender::Init()
         points->SetDataTypeToDouble();
         for (int i = 0; i < 8; ++i)
         {
-            points->InsertNextPoint(this->m_spVolumePara->m_dVolumeGeometry + i * 3);
+            points->InsertNextPoint(this->m_spVolume->m_dVolumeGeometry + i * 3);
         }
         // 6 faces 12 triangles
         int tris[36] =
@@ -118,7 +119,7 @@ void VARender::Init()
     }
 
     // 其它参数
-    m_spWindow->GetTiledSizeAndOrigin(this->WindowSize, this->WindowSize + 1, this->WindowLowerLeft, this->WindowLowerLeft + 1);
+    spWindow->GetTiledSizeAndOrigin(this->WindowSize, this->WindowSize + 1, this->WindowLowerLeft, this->WindowLowerLeft + 1);
 }
 
 void VARender::InitShaderInput()
@@ -165,7 +166,7 @@ void VARender::InitShaderInput()
             vtkMatrix4x4* volMatrix = this->m_mat4TempMatrix4x4;
             // DeepCopy的参数是source 
             dataToWorld->DeepCopy(volMatrix);
-            texToDataMat->DeepCopy(this->m_spVolumePara->m_mat4TextureToDataset.GetPointer());
+            texToDataMat->DeepCopy(this->m_spVolume->m_mat4TextureToDataset.GetPointer());
 
             // Texture matrices (texture to view)
             // Multiply4x4 => a * b = c
@@ -173,9 +174,9 @@ void VARender::InitShaderInput()
             vtkMatrix4x4::Multiply4x4(wcvc, texToViewMat.GetPointer(), texToViewMat.GetPointer());
 
             CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(texToViewMat.GetPointer(), this->m_vecTexEyeMat.data(), vecOffset);
-            cellToPointMat->DeepCopy(this->m_spVolumePara->CellToPointMatrix.GetPointer());
-            texMin = this->m_spVolumePara->AdjustedTexMin;
-            texMax = this->m_spVolumePara->AdjustedTexMax;
+            cellToPointMat->DeepCopy(this->m_spVolume->CellToPointMatrix.GetPointer());
+            texMin = this->m_spVolume->AdjustedTexMin;
+            texMax = this->m_spVolume->AdjustedTexMax;
         }
 
         // Volume matrices (dataset to world)
@@ -257,15 +258,22 @@ void VARender::SetVolumeShaderParameters(int independent, int noOfComponents, vt
     float(*biasPtr)[4] = &tbias;
     if (noOfComponents == 1 || noOfComponents == 2)
     {
-        scalePtr = &m_spVolumePara->Scale;
-        biasPtr = &m_spVolumePara->Bias;
+        scalePtr = &m_spVolume->Scale;
+        biasPtr = &m_spVolume->Bias;
     }
     CommonFunction::CopyVector<float, 4>(*scalePtr, this->m_vecScale.data(), index * 4);
     CommonFunction::CopyVector<float, 4>(*biasPtr, this->m_vecBias.data(), index * 4);
-    CommonFunction::CopyVector<float, 3>(m_spVolumePara->m_fCellStep, this->m_vecStep.data(), index * 3);
-    CommonFunction::CopyVector<float, 3>(m_spVolumePara->m_fCellSpacing, this->m_vecSpacing.data(), index * 3);
-
+    CommonFunction::CopyVector<float, 3>(m_spVolume->m_fCellStep, this->m_vecStep.data(), index * 3);
+    CommonFunction::CopyVector<float, 3>(m_spVolume->m_fCellSpacing, this->m_vecSpacing.data(), index * 3);
+    // 8 elements stands for [min, max] per 4-components
+    CommonFunction::CopyVector<float, 8>(reinterpret_cast<float*>(this->m_spVolume->ScalarRange), this->m_vecRange.data(), index * 8);
     // 激活传输函数纹理
+
+    m_pDrawShader->setVec4("in_volume_scale", this->m_vecScale.data());
+    m_pDrawShader->setVec4("in_volume_bias", this->m_vecBias.data());
+    m_pDrawShader->setVec4("in_scalarsRange", this->m_vecRange.data());
+    m_pDrawShader->setVec4("in_cellStep", this->m_vecStep.data());
+    m_pDrawShader->setVec4("in_cellSpacing", this->m_vecSpacing.data());
 }
 
 void VARender::SetLightingShaderParameters()

@@ -154,8 +154,10 @@
     <ClCompile Include="va_mesh_visualizer.cpp" />
     <ClCompile Include="va_opacity_transferfunction.cpp" />
     <ClCompile Include="va_render.cpp" />
-    <ClCompile Include="va_set_volume_paramter.cpp" />
+    <ClCompile Include="va_shader.cpp" />
     <ClCompile Include="va_texture_object.cpp" />
+    <ClCompile Include="va_volume.cpp" />
+    <ClCompile Include="va_volume_property.cpp" />
     <ClCompile Include="va_volume_visualizer.cpp" />
     <ClCompile Include="va_window.cpp" />
   </ItemGroup>
@@ -174,9 +176,10 @@
     <ClInclude Include="va_opacity_transferfunction.h" />
     <ClInclude Include="va_color_table.h" />
     <ClInclude Include="va_render.h" />
-    <ClInclude Include="va_set_volume_parameter.h" />
     <ClInclude Include="va_shader.h" />
     <ClInclude Include="va_texture_object.h" />
+    <ClInclude Include="va_volume.h" />
+    <ClInclude Include="va_volume_property.h" />
     <ClInclude Include="va_volume_visualizer.h" />
     <ClInclude Include="va_window.h" />
   </ItemGroup>

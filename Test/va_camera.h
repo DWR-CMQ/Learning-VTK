@@ -3,7 +3,8 @@
 /// 目前采用自定义Camera包裹住vtkCamera
 #include <vtkCamera.h>
 #include <vtkSmartPointer.h>
-#include "va_set_volume_parameter.h"
+#include <vtkMatrix3x3.h>
+#include <vtkMatrix4x4.h>
 #include <iostream>
 class Camera
 {

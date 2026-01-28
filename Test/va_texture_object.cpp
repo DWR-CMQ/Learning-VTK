@@ -1,5 +1,6 @@
 #include "va_texture_object.h"
 #include <iostream>
+#include <glad/glad.h>
 TextureObject::TextureObject(int dataType)
 {
 	m_iDataType = dataType;

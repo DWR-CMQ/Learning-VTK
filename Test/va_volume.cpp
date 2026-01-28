@@ -1,12 +1,15 @@
-#include "va_set_volume_parameter.h"
-#include <vtkMath.h>
+#include "va_volume.h"
 #include <glad/glad.h>
 #include <vtkAbstractMapper.h>
 #include <vtkAbstractArray.h>
 #include <vtkDataArray.h>
-SetVolumeParameter::SetVolumeParameter(const vtkSmartPointer<vtkImageData>& imageData)
+#include <vtkMath.h>
+VAVolume::VAVolume(const vtkSmartPointer<vtkImageData>& imageData)
 {
-	m_spImageData = imageData;
+	this->m_spImageData = imageData;
+	this->m_spVolumeTexture = std::make_shared<TextureObject>(this->m_spImageData->GetScalarType());
+    m_spVolumeProperty = std::make_shared<VAVolumeProperty>();
+
     ComputeBounds();
     Matrix = vtkMatrix4x4::New();
 
@@ -31,28 +34,41 @@ SetVolumeParameter::SetVolumeParameter(const vtkSmartPointer<vtkImageData>& imag
     this->Bias[2] = 0.0f;
     this->Bias[3] = 0.0f;
     this->HandleLargeDataTypes = false;
-
 }
 
-SetVolumeParameter::~SetVolumeParameter()
+VAVolume::~VAVolume()
 {
     // ¾ØÕóÎö¹¹
     this->Matrix->Delete();
     this->Matrix = nullptr;
 }
 
-void SetVolumeParameter::Init()
+void VAVolume::LoadVolume()
 {
-	double origin[3];
-	double spacing[3];
-	vtkMatrix3x3* directionMat = vtkMatrix3x3::New();
-	directionMat->Identity();
-	if (m_spImageData != nullptr)
+	if (this->m_spVolumeTexture == nullptr)
 	{
-		directionMat->DeepCopy(m_spImageData->GetDirectionMatrix()->GetData());
-		m_spImageData->GetOrigin(origin);
-		m_spImageData->GetSpacing(spacing);
+		this->m_spVolumeTexture = std::make_shared<TextureObject>(this->m_spImageData->GetScalarType());
 	}
+
+	int scalarType = this->m_spImageData->GetScalarType();
+	int noOfComponents = this->m_spImageData->GetNumberOfScalarComponents();
+	unsigned int format = this->m_spVolumeTexture->GetDefaultFormat(scalarType, noOfComponents, false);
+	unsigned int internalFormat = this->m_spVolumeTexture->GetDefaultInternalFormat(scalarType, noOfComponents, false);
+	int type = this->m_spVolumeTexture->GetDefaultDataType(scalarType);
+}
+
+void VAVolume::Init()
+{
+    double origin[3];
+    double spacing[3];
+    vtkMatrix3x3* directionMat = vtkMatrix3x3::New();
+    directionMat->Identity();
+    if (m_spImageData != nullptr)
+    {
+        directionMat->DeepCopy(m_spImageData->GetDirectionMatrix()->GetData());
+        m_spImageData->GetOrigin(origin);
+        m_spImageData->GetSpacing(spacing);
+    }
 
     auto stepsize = this->m_dDatasetStepSize;
     vtkMatrix4x4* matrix = this->m_mat4TextureToDataset;
@@ -69,7 +85,7 @@ void SetVolumeParameter::Init()
 
     double blockOrigin[3];
     vtkImageData::TransformContinuousIndexToPhysicalPoint(this->m_iExtents[0], this->m_iExtents[2], this->m_iExtents[4],
-                                        origin, spacing, direction, blockOrigin);
+        origin, spacing, direction, blockOrigin);
     result[3] = blockOrigin[0];
     result[7] = blockOrigin[1];
     result[11] = blockOrigin[2];
@@ -80,7 +96,7 @@ void SetVolumeParameter::Init()
     directionMat->Delete();
 }
 
-void SetVolumeParameter::ComputeBounds()
+void VAVolume::ComputeBounds()
 {
     if (m_spImageData == nullptr)
     {
@@ -96,7 +112,7 @@ void SetVolumeParameter::ComputeBounds()
     m_spImageData->GetExtent(this->m_iExtents);
     m_spImageData->GetOrigin(origin);
     direction = m_spImageData->GetDirectionMatrix()->GetData();
-    
+
     int swapBounds[3];
     swapBounds[0] = (spacing[0] < 0);
     swapBounds[1] = (spacing[1] < 0);
@@ -124,7 +140,7 @@ void SetVolumeParameter::ComputeBounds()
 
         vtkImageData::TransformContinuousIndexToPhysicalPoint(
             ijkCorner[0], ijkCorner[1], ijkCorner[2], origin, spacing, direction, xyz);
-        
+
         if (xyz[0] < xMin)
             xMin = xyz[0];
         if (xyz[0] > xMax)
@@ -159,8 +175,8 @@ void SetVolumeParameter::ComputeBounds()
         origin[1] + static_cast<double>(this->m_iExtents[3 - swapBounds[1]]) * spacing[1];
     this->m_dLoadedBounds[5] =
         origin[2] + static_cast<double>(this->m_iExtents[5 - swapBounds[2]]) * spacing[2];
-    
-    
+
+
     // Update sampling distance
     this->m_dDatasetStepSize[0] = 1.0 / (this->m_dLoadedBounds[1] - this->m_dLoadedBounds[0]);
     this->m_dDatasetStepSize[1] = 1.0 / (this->m_dLoadedBounds[3] - this->m_dLoadedBounds[2]);
@@ -178,7 +194,7 @@ void SetVolumeParameter::ComputeBounds()
     this->m_fCellSpacing[2] = static_cast<float>(spacing[2]);
 }
 
-double* SetVolumeParameter::GetBound()
+double* VAVolume::GetBound()
 {
     int i, n;
     double bbox[24], * fptr;
@@ -248,7 +264,7 @@ double* SetVolumeParameter::GetBound()
     return this->m_dBounds;
 }
 
-void SetVolumeParameter::ComputeVisiblePropBounds(double allBounds[6])
+void VAVolume::ComputeVisiblePropBounds(double allBounds[6])
 {
     int nothingVisible = 1;
     allBounds[0] = allBounds[2] = allBounds[4] = VTK_DOUBLE_MAX;
@@ -287,7 +303,7 @@ void SetVolumeParameter::ComputeVisiblePropBounds(double allBounds[6])
     } // not bogus
 }
 
-void SetVolumeParameter::ComputeCellToPointMatrix(int extents[6])
+void VAVolume::ComputeCellToPointMatrix(int extents[6])
 {
     this->CellToPointMatrix->Identity();
     this->AdjustedTexMin[0] = this->AdjustedTexMin[1] = this->AdjustedTexMin[2] = 0.0f;
@@ -331,7 +347,7 @@ void SetVolumeParameter::ComputeCellToPointMatrix(int extents[6])
     }
 }
 
-void SetVolumeParameter::GetScaleAndBias(int scalarType, float* scalarRange, float& scale, float& bias)
+void VAVolume::GetScaleAndBias(int scalarType, float* scalarRange, float& scale, float& bias)
 {
     scale = 1.0f;
     bias = 0.0f;
@@ -375,7 +391,7 @@ void SetVolumeParameter::GetScaleAndBias(int scalarType, float* scalarRange, flo
     bias = static_cast<float>(0.0 - glRange[0] * scale);
 }
 
-void SetVolumeParameter::SelectTextureFormat(unsigned int& format, unsigned int& internalFormat, int& type, int scalarType, int noOfComponents)
+void VAVolume::SelectTextureFormat(unsigned int& format, unsigned int& internalFormat, int& type, int scalarType, int noOfComponents)
 {
     bool supportsFloat = true;
     this->HandleLargeDataTypes = false;
@@ -513,4 +529,9 @@ void SetVolumeParameter::SelectTextureFormat(unsigned int& format, unsigned int&
     {
         this->GetScaleAndBias(scalarType, this->ScalarRange[n], this->Scale[n], this->Bias[n]);
     }
+}
+
+std::shared_ptr<VAVolumeProperty> VAVolume::GetVolumeProperty()
+{
+    return m_spVolumeProperty;
 }
