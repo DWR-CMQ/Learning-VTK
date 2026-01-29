@@ -15,7 +15,7 @@ public:
 	void Update();
 
 private:
-	VAWindow* m_pVAWindow;
+	std::shared_ptr<VAWindow> m_spVAWindow;
 	std::shared_ptr<VARender> m_spRender;
 	vtkSmartPointer<vtkImageData> m_spImageData;
 	

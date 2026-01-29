@@ -11,6 +11,9 @@ public:
 	void GetTiledSizeAndOrigin(int* usize, int* vsize, int* lowerLeftU, int* lowerLeftV);
 	void NormalizedDisplayToDisplay(double& u, double& v);
 	int* GetSize();
+
+	int GetWindowWidth();
+	int GetWindowHeight();
 private:
 	static std::function<void(float, float, float)> cameraUpdateCallback;
 

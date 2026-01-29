@@ -10,13 +10,18 @@ class VARender
 public:
 	VARender(std::shared_ptr<VAVolume> spVolume, std::shared_ptr<Camera> spCamera);
     ~VARender();
-    void Init(std::shared_ptr<VAWindow> spWindow);
-    void InitShaderInput();
-	void GPURender();
+
+	void GPURender(std::shared_ptr<VAWindow> spWindow);
+    void RenderVolumeGeometry(std::shared_ptr<VAWindow> spWindow);
+	void RenderSingleInput(std::shared_ptr<VAWindow> spWindow);
+	void RendermultipleInputs();
+
+    void BindTransformations(vtkMatrix4x4* modelViewMat);
+	void FinishRendering();
 private:
-	void SetMapperShaderParameters();
+	void SetMapperShaderParameters(int independent, int numComp);
 	void SetVolumeShaderParameters(int independent, int noOfComponents, vtkMatrix4x4* modelViewMat);
-	void SetLightingShaderParameters();
+	void SetLightingShaderParameters(int numberOfSamplers);
 	void SetCameraShaderParameters();
 private:
     unsigned int m_uiVao;
@@ -53,4 +58,7 @@ private:
 
 	int TotalNumberOfLights;
 	bool DefaultLighting;
+
+	float FinalColorWindow;
+	float FinalColorLevel;
 };

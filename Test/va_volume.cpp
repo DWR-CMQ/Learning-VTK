@@ -34,6 +34,7 @@ VAVolume::VAVolume(const vtkSmartPointer<vtkImageData>& imageData)
     this->Bias[2] = 0.0f;
     this->Bias[3] = 0.0f;
     this->HandleLargeDataTypes = false;
+    this->InterpolationType = TextureObject::Linear;
 }
 
 VAVolume::~VAVolume()
@@ -45,6 +46,11 @@ VAVolume::~VAVolume()
 
 void VAVolume::LoadVolume()
 {
+    if (this->m_spImageData != nullptr)
+    {
+        this->m_spImageData->GetExtent(this->FullExtent.GetData());
+    }
+
 	if (this->m_spVolumeTexture == nullptr)
 	{
 		this->m_spVolumeTexture = std::make_shared<TextureObject>(this->m_spImageData->GetScalarType());
@@ -55,9 +61,65 @@ void VAVolume::LoadVolume()
 	unsigned int format = this->m_spVolumeTexture->GetDefaultFormat(scalarType, noOfComponents, false);
 	unsigned int internalFormat = this->m_spVolumeTexture->GetDefaultInternalFormat(scalarType, noOfComponents, false);
 	int type = this->m_spVolumeTexture->GetDefaultDataType(scalarType);
+    this->SelectTextureFormat(format, internalFormat, type, scalarType, noOfComponents);
+
+    this->CreateBlocks(format, internalFormat, type);
+    this->LoadTexture(this->InterpolationType);
 }
 
-void VAVolume::Init()
+VAVolume::Size3 VAVolume::ComputeBlockSize(int* extent)
+{
+    int i = 0;
+    Size3 texSize;
+    while (i < 3)
+    {
+        texSize[i] = extent[2 * i + 1] - extent[2 * i] + 1;
+        ++i;
+    }
+    return texSize;
+}
+
+// 这里使用VTK的同名函数,但是不引入VolumeBlock结构体
+void VAVolume::CreateBlocks(unsigned int format, unsigned int internalFormat, int type)
+{
+    this->FullSize[0] = this->FullExtent[1] - this->FullExtent[0] + 1;
+    this->FullSize[1] = this->FullExtent[3] - this->FullExtent[2] + 1;
+    this->FullSize[2] = this->FullExtent[5] - this->FullExtent[4] + 1;
+
+    int* ext = m_spImageData->GetExtent();
+    TextureSize = this->ComputeBlockSize(ext);
+    this->ComputeBounds();
+    this->UpdateTextureToDataMatrix();
+
+    this->ComputeCellToPointMatrix(this->FullExtent.GetData());
+
+    // Format texture
+    this->m_spVolumeTexture->SetFormat(format);
+    this->m_spVolumeTexture->SetInternalFormat(internalFormat);
+    this->m_spVolumeTexture->SetDataType(type);
+}
+
+void VAVolume::LoadTexture(int interpolation)
+{
+    int const noOfComponents = this->Scalars->GetNumberOfComponents();
+    int scalarType = this->Scalars->GetDataType();
+    int blockExt[6];
+    this->m_spImageData->GetExtent(blockExt);
+    if (!this->HandleLargeDataTypes)
+    {
+        void* dataPtr = m_spImageData->GetScalarPointer();
+        this->m_spVolumeTexture->Create3DTextureFromRaw(TextureSize[0], TextureSize[1], TextureSize[2], noOfComponents, scalarType, dataPtr);
+    }
+    this->m_spVolumeTexture->ActivateTexture(0);
+    this->m_spVolumeTexture->SetWrapSMode(TextureObject::ClampToEdge);
+    this->m_spVolumeTexture->SetWrapTMode(TextureObject::ClampToEdge);
+    this->m_spVolumeTexture->SetWrapRMode(TextureObject::ClampToEdge);
+    this->m_spVolumeTexture->SetMinificationFilterMode(interpolation);
+    this->m_spVolumeTexture->SetMagnificationFilterMode(interpolation);
+    this->m_spVolumeTexture->DeActivateTexture();
+}
+
+void VAVolume::UpdateTextureToDataMatrix()
 {
     double origin[3];
     double spacing[3];
@@ -505,13 +567,12 @@ void VAVolume::SelectTextureFormat(unsigned int& format, unsigned int& internalF
     int ArrayId = -1;
     int ArrayAccessMode = VTK_GET_ARRAY_BY_ID;
     int cellFlag = 0;
-    vtkAbstractArray* abstractScalars = vtkAbstractMapper::GetAbstractScalars(
-        m_spImageData, ScalarMode, ArrayAccessMode, ArrayId, ArrayName, cellFlag);
-    vtkDataArray* scalars = vtkArrayDownCast<vtkDataArray>(abstractScalars);
+    vtkAbstractArray* abstractScalars = vtkAbstractMapper::GetAbstractScalars(m_spImageData, ScalarMode, ArrayAccessMode, ArrayId, ArrayName, cellFlag);
+    this->Scalars = vtkArrayDownCast<vtkDataArray>(abstractScalars);
 
     for (int n = 0; n < noOfComponents; n++)
     {
-        double* range = scalars->GetFiniteRange(n);
+        double* range = this->Scalars->GetFiniteRange(n);
         for (int i = 0; i < 2; ++i)
         {
             this->ScalarRange[n][i] = static_cast<float>(range[i]);
@@ -534,4 +595,9 @@ void VAVolume::SelectTextureFormat(unsigned int& format, unsigned int& internalF
 std::shared_ptr<VAVolumeProperty> VAVolume::GetVolumeProperty()
 {
     return m_spVolumeProperty;
+}
+
+vtkDataArray* VAVolume::GetLoadedScalars()
+{
+    return this->Scalars;
 }

@@ -4,24 +4,36 @@
 #include <vtkSmartPointer.h>
 #include <vtkMatrix3x3.h>
 #include <vtkMatrix4x4.h>
+#include <vtkTuple.h>
 #include "va_texture_object.h"
 #include "va_volume_property.h"
 class VAVolume
 {
+	typedef vtkTuple<int, 6> Size6;
+	typedef vtkTuple<int, 3> Size3;
 public:
 	VAVolume(const vtkSmartPointer<vtkImageData>& imageData);
 	~VAVolume();
 
 	void LoadVolume();
-	void Init();
-	void ComputeBounds();
 	void ComputeVisiblePropBounds(double allBounds[6]);
-	void ComputeCellToPointMatrix(int extents[6]);
 	double* GetBound();
 	void GetScaleAndBias(int scalarType, float* scalarRange, float& scale, float& bias);
+
+	std::shared_ptr<VAVolumeProperty> GetVolumeProperty();
+	vtkDataArray* GetLoadedScalars();
+
+	void CreateBlocks(unsigned int format, unsigned int internalFormat, int type);
+	void LoadTexture(int interpolation);
+
+private:
+	void ComputeCellToPointMatrix(int extents[6]);
+	void UpdateTextureToDataMatrix();
+	void ComputeBounds();
 	void SelectTextureFormat(unsigned int& format, unsigned int& internalFormat, int& type,
 		int scalarType, int noOfComponents);
-	std::shared_ptr<VAVolumeProperty> GetVolumeProperty();
+	Size3 ComputeBlockSize(int* extent);
+
 private:
 	vtkSmartPointer<vtkImageData> m_spImageData;
 	std::shared_ptr<TextureObject> m_spVolumeTexture;
@@ -37,7 +49,12 @@ private:
 	double m_dBounds[6];
 	double m_dCenter[3];
 	vtkMatrix4x4* Matrix;
+	vtkDataArray* Scalars;
 
+	std::vector<Size3> TextureSizes;
+	Size3 TextureSize;
+	Size6 FullExtent;
+	Size3 FullSize;
 public:
 	vtkNew<vtkMatrix4x4> m_mat4TextureToDataset;
 	vtkNew<vtkMatrix4x4> m_mat4TextureToDatasetInv;
@@ -50,6 +67,7 @@ public:
 
 	float m_fCellSpacing[3];
 	float m_fCellStep[3];
+	int InterpolationType;
 
 	bool HandleLargeDataTypes;
 	double m_dVolumeGeometry[24];

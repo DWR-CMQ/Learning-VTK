@@ -461,6 +461,11 @@ unsigned int TextureObject::GetMagnificationFilterMode(int filterType)
 	}
 }
 
+unsigned int TextureObject::SetWrapSMode(int wrapType)
+{
+	return WrapS;
+}
+
 unsigned int TextureObject::GetWrapSMode(int wrapType)
 {
 	switch (wrapType)
@@ -480,9 +485,19 @@ unsigned int TextureObject::GetWrapSMode(int wrapType)
 	}
 }
 
+unsigned int TextureObject::SetWrapTMode(int wrapType)
+{
+	return WrapT;
+}
+
 unsigned int TextureObject::GetWrapTMode(int wrapType)
 {
 	return this->GetWrapSMode(wrapType);
+}
+
+unsigned int TextureObject::SetWrapRMode(int wrapType)
+{
+	return WrapR;
 }
 
 unsigned int TextureObject::GetWrapRMode(int wrapType)
@@ -498,4 +513,30 @@ void TextureObject::ActivateTexture(int unit)
 void TextureObject::DeActivateTexture()
 {
 
+}
+
+void TextureObject::SetInternalFormat(unsigned int glInternalFormat)
+{
+	if (this->InternalFormat != glInternalFormat)
+	{
+		this->InternalFormat = glInternalFormat;
+	}
+}
+
+void TextureObject::SetFormat(unsigned int glFormat)
+{
+	if (this->Format != glFormat)
+	{
+		this->Format = glFormat;
+	}
+}
+
+void TextureObject::SetMinificationFilterMode(int filterType)
+{
+	MinificationFilter = filterType;
+}
+
+void TextureObject::SetMagnificationFilterMode(int filterType)
+{
+	MagnificationFilter = filterType;
 }

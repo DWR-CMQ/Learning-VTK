@@ -15,8 +15,11 @@ VARender::VARender(std::shared_ptr<VAVolume> spVolume, std::shared_ptr<Camera> s
     m_spVolume = spVolume;
     m_spCamera = spCamera;
     m_mat4TempMatrix4x4->Identity();
-    TotalNumberOfLights = 1;
-
+    this->TotalNumberOfLights = 1;
+    this->DefaultLighting = true;
+    
+    this->FinalColorWindow = 1.0;
+    this->FinalColorLevel = 0.5;
 }
 
 VARender::~VARender()
@@ -29,7 +32,7 @@ VARender::~VARender()
     m_uiEbo = 0;
 }
 
-void VARender::Init(std::shared_ptr<VAWindow> spWindow)
+void VARender::RenderVolumeGeometry(std::shared_ptr<VAWindow> spWindow)
 {
     if (m_pDrawShader == NULL)
     {
@@ -122,7 +125,7 @@ void VARender::Init(std::shared_ptr<VAWindow> spWindow)
     spWindow->GetTiledSizeAndOrigin(this->WindowSize, this->WindowSize + 1, this->WindowLowerLeft, this->WindowLowerLeft + 1);
 }
 
-void VARender::InitShaderInput()
+void VARender::BindTransformations(vtkMatrix4x4* modelViewMat)
 {
     int numVolumes = 1;
     this->m_vecVolMat.resize(numVolumes * 16, 0);
@@ -144,10 +147,6 @@ void VARender::InitShaderInput()
     float defaultTexMin[3] = { 0.0f, 0.0f, 0.0f };
     float defaultTexMax[3] = { 1.0f, 1.0f, 1.0f };
     float eyePos[3] = { 0.0f, 0.0f, 0.0f };
-
-    vtkMatrix4x4* wcvc, * vcdc, * wcdc;
-    vtkMatrix3x3* norm;
-    m_spCamera->GetKeyMatrices(wcvc, norm, vcdc, wcdc);
 
     for (int i = 0; i < numVolumes; i++)
     {
@@ -171,7 +170,7 @@ void VARender::InitShaderInput()
             // Texture matrices (texture to view)
             // Multiply4x4 => a * b = c
             vtkMatrix4x4::Multiply4x4(volMatrix, texToDataMat.GetPointer(), texToViewMat.GetPointer());
-            vtkMatrix4x4::Multiply4x4(wcvc, texToViewMat.GetPointer(), texToViewMat.GetPointer());
+            vtkMatrix4x4::Multiply4x4(modelViewMat, texToViewMat.GetPointer(), texToViewMat.GetPointer());
 
             CommonFunction::CopyMatrixToVector<vtkMatrix4x4, 4, 4>(texToViewMat.GetPointer(), this->m_vecTexEyeMat.data(), vecOffset);
             cellToPointMat->DeepCopy(this->m_spVolume->CellToPointMatrix.GetPointer());
@@ -186,7 +185,7 @@ void VARender::InitShaderInput()
         // volume (or the bbox).
         // This multiply may look backwards, but dataToWorld and modelViewMat are
         // both already transposed to send to OpenGL.
-        vtkMatrix4x4::Multiply4x4(dataToWorld.GetPointer(), wcvc, dataToView.GetPointer());
+        vtkMatrix4x4::Multiply4x4(dataToWorld.GetPointer(), modelViewMat, dataToView.GetPointer());
         dataToView->Invert();
         eyePos[0] = dataToView->GetElement(3, 0);
         eyePos[1] = dataToView->GetElement(3, 1);
@@ -235,13 +234,21 @@ void VARender::InitShaderInput()
     m_pDrawShader->setVec3("in_eyePosObjs", this->m_vecEyePos.data());
 }
 
-void VARender::SetMapperShaderParameters()
+void VARender::SetMapperShaderParameters(int independent, int numComp)
 {
-
+    m_pDrawShader->setInt("in_noOfComponents", numComp);
+    // 当体渲染出现更新时,ActualSampleDistance会重新计算,它直接影响步进长度
+    // 不出现更新时,它默认是1.0
+    m_pDrawShader->setInt("in_sampleDistance", 1.0f);
+    m_pDrawShader->setFloat("in_scale", 1.0 / this->FinalColorWindow);
+    m_pDrawShader->setFloat("in_bias", (0.5 - (this->FinalColorLevel / this->FinalColorWindow)));
+    m_pDrawShader->setInt("in_transfer2DYAxis", 0);
 }
 
 void VARender::SetVolumeShaderParameters(int independent, int noOfComponents, vtkMatrix4x4* modelViewMat)
 {
+    this->BindTransformations(modelViewMat);
+
     const int numInputs = 1;
     this->m_vecScale.resize(numInputs * 4, 0);
     this->m_vecBias.resize(numInputs * 4, 0);
@@ -276,9 +283,53 @@ void VARender::SetVolumeShaderParameters(int independent, int noOfComponents, vt
     m_pDrawShader->setVec4("in_cellSpacing", this->m_vecSpacing.data());
 }
 
-void VARender::SetLightingShaderParameters()
+void VARender::SetLightingShaderParameters(int numberOfSamplers)
 {
+    if (m_pDrawShader == NULL || m_spVolume == nullptr)
+    {
+        return;
+    }
+    auto volumeProperty = m_spVolume->GetVolumeProperty();
+    float ambient[4][3];
+    float diffuse[4][3];
+    float specular[4][3];
+    float specularPower[4];
 
+    // 目前numberOfSamplers强制设置为1
+    for (int i = 0; i < numberOfSamplers; i++)
+    {
+        ambient[i][0] = ambient[i][1] = ambient[i][2] = volumeProperty->GetAmbient(i);
+        diffuse[i][0] = diffuse[i][1] = diffuse[i][2] = volumeProperty->GetDiffuse(i);
+        specular[i][0] = specular[i][1] = specular[i][2] = volumeProperty->GetSpecular(i);
+        specularPower[i] = volumeProperty->GetSpecularPower(i);
+    }
+    m_pDrawShader->setVec3("in_ambient", ambient);
+    m_pDrawShader->setVec3("in_diffuse", diffuse);
+    m_pDrawShader->setVec3("in_specular", specular);
+    m_pDrawShader->setVec1("in_shininess", specularPower);
+
+    if ((m_spVolume != nullptr && volumeProperty->GetShade(0)) || this->TotalNumberOfLights == 0)
+    {
+        return;
+    }
+
+    // in_twoSidedLighting参数强行置为1
+    m_pDrawShader->setInt("in_twoSidedLighting", 1);
+
+    // in_lightAmbientColor/in_lightDiffuseColor/in_lightSpecularColor/in_lightDirection强制置为对应的值
+    float lightAmbientColor[3] = { 0.0f,0.0f,0.0f };
+    float lightDiffuseColor[3] = { 1.0f,1.0f,1.0f };
+    float lightSpecularColor[3] = { 1.0f,1.0f,1.0f };
+    float lightDirection[3] = { 0.0f,0.0f,-1.0f };
+    m_pDrawShader->setVec3("in_lightAmbientColor", lightAmbientColor);
+    m_pDrawShader->setVec3("in_lightDiffuseColor", lightDiffuseColor);
+    m_pDrawShader->setVec3("in_lightSpecularColor", lightSpecularColor);
+    m_pDrawShader->setVec3("in_lightDirection", lightDirection);
+    if (this->DefaultLighting)
+    {
+        return;
+    }
+    // 下面还有光照强度/位置/圆锥角的变量 因为上面return 所以暂时不用设置
 }
 
 void VARender::SetCameraShaderParameters()
@@ -311,7 +362,38 @@ void VARender::SetCameraShaderParameters()
     m_pDrawShader->setVec2("in_inverseWindowSize", fvalue2);
 }
 
-void VARender::GPURender()
+void VARender::GPURender(std::shared_ptr<VAWindow> spWindow)
+{
+    if (m_pDrawShader == NULL)
+    {
+        return;
+    }
+    RenderSingleInput(spWindow);
+}
+
+void VARender::RenderSingleInput(std::shared_ptr<VAWindow> spWindow)
+{
+    const int independent = m_spVolume->GetVolumeProperty()->GetIndependentComponents();
+    const int numComp = m_spVolume->GetLoadedScalars()->GetNumberOfComponents();
+
+    const int numSamplers = (independent ? numComp : 1);
+    this->SetMapperShaderParameters(independent, numComp);
+
+    vtkMatrix4x4* wcvc, * vcdc, * wcdc;
+    vtkMatrix3x3* norm;
+    m_spCamera->GetKeyMatrices(wcvc, norm, vcdc, wcdc);
+
+    this->SetVolumeShaderParameters(independent, numComp, wcvc);
+    this->SetLightingShaderParameters(numSamplers);
+    this->SetCameraShaderParameters();
+    this->RenderVolumeGeometry(spWindow);
+}
+
+void VARender::RendermultipleInputs()
+{
+}
+
+void VARender::FinishRendering()
 {
 
 }

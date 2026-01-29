@@ -100,7 +100,7 @@ int main(int argc, char* argv[])
 
     App app(imageData);
     app.Init();
-
+    app.Render();
 	//auto spDicom2Mesh = std::make_shared<Dicom2mesh>();
 	//auto spMesh3D = spDicom2Mesh->DicomToMesh(imageData, 0.0, true, 100.0);
 

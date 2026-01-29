@@ -71,15 +71,25 @@ public:
     unsigned int GetDefaultFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
     unsigned int GetDefaultInternalFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
     unsigned int GetFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
+    void SetFormat(unsigned int glFormat);
 
     int GetDefaultTextureInternalFormat(int dataType, int numComponents, bool needInteger, bool needFloat, bool needSRGB);
     unsigned int GetInternalFormat(int dataType, int numComps, bool shaderSupportsTextureInt);
+    void SetInternalFormat(unsigned int glInternalFormat);
 
     void Bind();
+    void SetMinificationFilterMode(int filterType);
     unsigned int GetMinificationFilterMode(int filterType);
+    void SetMagnificationFilterMode(int filterType);
     unsigned int GetMagnificationFilterMode(int filterType);
+
+    unsigned int SetWrapSMode(int wrapType);
     unsigned int GetWrapSMode(int wrapType);
+
+    unsigned int SetWrapTMode(int wrapType);
     unsigned int GetWrapTMode(int wrapType);
+
+    unsigned int SetWrapRMode(int wrapType);
     unsigned int GetWrapRMode(int wrapType);
 
     void ActivateTexture(int unit);

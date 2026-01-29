@@ -4,7 +4,7 @@ App::App(const vtkSmartPointer<vtkImageData>& imageData)
 {
 	m_spImageData = imageData;
 	m_spVAVolume = std::make_shared<VAVolume>(imageData);
-	m_pVAWindow = new VAWindow(800, 600, "VA", false);
+	m_spVAWindow = std::make_shared<VAWindow>(800, 600, "VA", false);
 }
 
 App::~App()
@@ -14,7 +14,6 @@ App::~App()
 
 void App::Init()
 {
-	m_spVAVolume->Init();
 	double visibleBound[6];
 	m_spVAVolume->ComputeVisiblePropBounds(visibleBound);
 
@@ -30,7 +29,7 @@ void App::Init()
 
 void App::Render()
 {
-
+	m_spRender->GPURender(m_spVAWindow);
 }
 
 void App::Update()

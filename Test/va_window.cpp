@@ -45,6 +45,20 @@ VAWindow::VAWindow(int width, int height, const char* title, bool fullscreen)
     this->TileScale[1] = 1;
 }
 
+VAWindow::~VAWindow()
+{
+}
+
+int VAWindow::GetWindowWidth()
+{
+    return this->m_iWindowWidth;
+}
+
+int VAWindow::GetWindowHeight()
+{
+    return this->m_iWindowHeight;
+}
+
 int* VAWindow::GetSize()
 {
     this->TileSize[0] = this->Size[0] * this->TileScale[0];
