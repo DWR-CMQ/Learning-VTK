@@ -26,6 +26,7 @@
 #include "va_dicom2mesh.h"
 #include "va_volume_visualizer.h"
 #include "va_app.h"
+#include "va_common_function.h"
 // 链接 OpenGL 库
 #pragma comment(lib, "opengl32.lib")
 
@@ -105,7 +106,7 @@ int main(int argc, char* argv[])
 	//auto spMesh3D = spDicom2Mesh->DicomToMesh(imageData, 0.0, true, 100.0);
 
 	auto spRenderWindow = vtkSmartPointer<vtkRenderWindow>::New();
-	spRenderWindow->SetSize(1000, 500);
+	spRenderWindow->SetSize(500, 500);
 
 	auto spVolumeVisa = std::make_shared<VolumeVisualizer>();
 	//auto spMeshVisa = std::make_shared<MeshVisualizer>();
@@ -136,7 +137,7 @@ int main(int argc, char* argv[])
 
 	// 渲染场景并启动交互
 	spRenderWindow->Render();
-    renderWindowInteractor->Start();
+    //renderWindowInteractor->Start();
 
     auto renderColl = spRenderWindow->GetRenderers();
     auto firstRender = renderColl->GetFirstRenderer();
@@ -170,7 +171,6 @@ int main(int argc, char* argv[])
     auto cellStep = internalImpl->StepVec.data();
     auto cellSpacing = internalImpl->SpacingVec.data();
     auto sampleDistance = internalImpl->ActualSampleDistance;
-
     float windowLowerLeftCorner[2];
     internalImpl->ToFloat(internalImpl->WindowLowerLeft, windowLowerLeftCorner);
 
@@ -255,6 +255,9 @@ int main(int argc, char* argv[])
             }
         }
     }
+
+    auto in_scale = 1.0 / internalImpl->Parent->GetFinalColorWindow();
+    auto in_bias = 0.5 - (internalImpl->Parent->GetFinalColorLevel() / internalImpl->Parent->GetFinalColorWindow());
 
 	return EXIT_SUCCESS;
 }

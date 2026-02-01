@@ -33,6 +33,7 @@ public:
     // ------------------------------------------------------------------------
     void setVec2(const std::string& name, const float* value) const;
     void setVec2(const std::string& name, float x, float y) const;
+    void setVec2(const std::string& name, const float(*value)[2]) const;
     // ------------------------------------------------------------------------
     void setVec3(const std::string& name, const float* value) const;
     void setVec3(const std::string& name, float x, float y, float z) const;

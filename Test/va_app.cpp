@@ -4,7 +4,7 @@ App::App(const vtkSmartPointer<vtkImageData>& imageData)
 {
 	m_spImageData = imageData;
 	m_spVAVolume = std::make_shared<VAVolume>(imageData);
-	m_spVAWindow = std::make_shared<VAWindow>(800, 600, "VA", false);
+	m_spVAWindow = std::make_shared<VAWindow>(500, 500, "VA", false);
 }
 
 App::~App()
@@ -22,7 +22,7 @@ void App::Init()
 	m_spCamera->Init();
 
 	m_spRender = std::make_shared<VARender>(m_spVAVolume, m_spCamera);
-
+	m_spRender->Init(m_spVAWindow);
 	m_spVAVolume->LoadVolume();
 }
 

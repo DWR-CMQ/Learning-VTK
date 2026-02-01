@@ -70,7 +70,7 @@ void VolumeVisualizer::DisplayVolume(vtkSmartPointer<vtkRenderWindow> renderWind
 
 	// 创建渲染器并添加体积，设置背景颜色
 	m_spVolumeRenderer->AddVolume(volume);
-	m_spVolumeRenderer->SetViewport(0.0, 0.0, 0.5, 1.0);
+	//m_spVolumeRenderer->SetViewport(0.0, 0.0, 0.5, 1.0);
 	m_spVolumeRenderer->SetBackground(0.1, 0.2, 0.3);
 
 	vtkSmartPointer<vtkCamera> camera = vtkSmartPointer<vtkCamera>::New();

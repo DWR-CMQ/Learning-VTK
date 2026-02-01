@@ -18,14 +18,15 @@ public:
 	void LoadVolume();
 	void ComputeVisiblePropBounds(double allBounds[6]);
 	double* GetBound();
+	int* GetExtent();
 	void GetScaleAndBias(int scalarType, float* scalarRange, float& scale, float& bias);
 
 	std::shared_ptr<VAVolumeProperty> GetVolumeProperty();
 	vtkDataArray* GetLoadedScalars();
+	vtkSmartPointer<vtkImageData> GetImageData();
 
 	void CreateBlocks(unsigned int format, unsigned int internalFormat, int type);
 	void LoadTexture(int interpolation);
-
 private:
 	void ComputeCellToPointMatrix(int extents[6]);
 	void UpdateTextureToDataMatrix();

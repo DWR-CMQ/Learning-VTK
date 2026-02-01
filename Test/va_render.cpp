@@ -20,6 +20,10 @@ VARender::VARender(std::shared_ptr<VAVolume> spVolume, std::shared_ptr<Camera> s
     
     this->FinalColorWindow = 1.0;
     this->FinalColorLevel = 0.5;
+
+    this->AverageIPScalarRange[0] = VTK_FLOAT_MIN;
+    this->AverageIPScalarRange[1] = VTK_FLOAT_MAX;
+    this->ActualSampleDistance = 1.0;
 }
 
 VARender::~VARender()
@@ -32,13 +36,19 @@ VARender::~VARender()
     m_uiEbo = 0;
 }
 
-void VARender::RenderVolumeGeometry(std::shared_ptr<VAWindow> spWindow)
+void VARender::Init(std::shared_ptr<VAWindow> spWindow)
 {
     if (m_pDrawShader == NULL)
     {
         m_pDrawShader = new Shader("shaders//raycast.vs", "shaders//raycast.fs");
     }
 
+    // 其它参数
+    spWindow->GetTiledSizeAndOrigin(this->WindowSize, this->WindowSize + 1, this->WindowLowerLeft, this->WindowLowerLeft + 1);
+}
+
+void VARender::RenderVolumeGeometry()
+{
     vtkNew<vtkPolyData> boxSource;
 
     // 顶点着色器
@@ -120,9 +130,6 @@ void VARender::RenderVolumeGeometry(std::shared_ptr<VAWindow> spWindow)
         glBindBuffer(GL_ARRAY_BUFFER, 0);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     }
-
-    // 其它参数
-    spWindow->GetTiledSizeAndOrigin(this->WindowSize, this->WindowSize + 1, this->WindowLowerLeft, this->WindowLowerLeft + 1);
 }
 
 void VARender::BindTransformations(vtkMatrix4x4* modelViewMat)
@@ -239,7 +246,7 @@ void VARender::SetMapperShaderParameters(int independent, int numComp)
     m_pDrawShader->setInt("in_noOfComponents", numComp);
     // 当体渲染出现更新时,ActualSampleDistance会重新计算,它直接影响步进长度
     // 不出现更新时,它默认是1.0
-    m_pDrawShader->setInt("in_sampleDistance", 1.0f);
+    m_pDrawShader->setFloat("in_sampleDistance", this->ActualSampleDistance);
     m_pDrawShader->setFloat("in_scale", 1.0 / this->FinalColorWindow);
     m_pDrawShader->setFloat("in_bias", (0.5 - (this->FinalColorLevel / this->FinalColorWindow)));
     m_pDrawShader->setInt("in_transfer2DYAxis", 0);
@@ -362,12 +369,36 @@ void VARender::SetCameraShaderParameters()
     m_pDrawShader->setVec2("in_inverseWindowSize", fvalue2);
 }
 
+void VARender::SetAdvancedShaderParameters(int numComp)
+{
+    auto blockExt = m_spVolume->GetExtent();
+    float fvalue3[3];
+    CommonFunction::ToFloat(blockExt[0], blockExt[2], blockExt[4], fvalue3);
+    m_pDrawShader->setVec3("in_textureExtentsMin" , &fvalue3);
+
+    CommonFunction::ToFloat(blockExt[1], blockExt[3], blockExt[5], fvalue3);
+    m_pDrawShader->setVec3("in_textureExtentsMax",  &fvalue3);
+
+    double avgRange[2] = { VTK_FLOAT_MIN , VTK_FLOAT_MAX };
+    float fvalue2[2];
+    //this->GetAverageIPScalarRange(avgRange);
+    if (avgRange[1] < avgRange[0])
+    {
+        double tmp = avgRange[1];
+        avgRange[1] = avgRange[0];
+        avgRange[0] = tmp;
+    }
+    CommonFunction::ToFloat(avgRange[0], avgRange[1], fvalue2);
+    m_pDrawShader->setVec2("in_averageIPRange", &fvalue2);
+}
+
 void VARender::GPURender(std::shared_ptr<VAWindow> spWindow)
 {
     if (m_pDrawShader == NULL)
     {
         return;
     }
+    this->UpdateSamplingDistance();
     RenderSingleInput(spWindow);
 }
 
@@ -386,7 +417,49 @@ void VARender::RenderSingleInput(std::shared_ptr<VAWindow> spWindow)
     this->SetVolumeShaderParameters(independent, numComp, wcvc);
     this->SetLightingShaderParameters(numSamplers);
     this->SetCameraShaderParameters();
-    this->RenderVolumeGeometry(spWindow);
+    this->SetAdvancedShaderParameters(numComp);
+    this->RenderVolumeGeometry();
+}
+
+void VARender::UpdateSamplingDistance()
+{
+    double cellSpacing[3] = { 0.5,0.5,0.5 };
+    if (m_spVolume != nullptr && m_spVolume->GetImageData() != nullptr)
+    {
+        m_spVolume->GetImageData()->GetSpacing(cellSpacing);
+    }
+    else
+    {
+        return;
+    }
+
+    vtkMatrix4x4* worldToDataset = vtkMatrix4x4::New();
+    worldToDataset->Identity();
+    double minWorldSpacing = VTK_DOUBLE_MAX;
+    int i = 0;
+    while (i < 3)
+    {
+        double tmp = worldToDataset->GetElement(0, i);
+        double tmp2 = tmp * tmp;
+        tmp = worldToDataset->GetElement(1, i);
+        tmp2 += tmp * tmp;
+        tmp = worldToDataset->GetElement(2, i);
+        tmp2 += tmp * tmp;
+
+        // We use fabs() in case the spacing is negative.
+        double worldSpacing = fabs(cellSpacing[i] * sqrt(tmp2));
+        if (worldSpacing < minWorldSpacing)
+        {
+            minWorldSpacing = worldSpacing;
+        }
+        ++i;
+    }
+
+    // minWorldSpacing is the optimal sample distance in world space.
+    // To go faster (reduceFactor<1.0), we multiply this distance
+    // by 1/reduceFactor.
+    this->ActualSampleDistance = static_cast<float>(minWorldSpacing);
+    
 }
 
 void VARender::RendermultipleInputs()

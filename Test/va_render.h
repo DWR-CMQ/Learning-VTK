@@ -11,8 +11,9 @@ public:
 	VARender(std::shared_ptr<VAVolume> spVolume, std::shared_ptr<Camera> spCamera);
     ~VARender();
 
+	void Init(std::shared_ptr<VAWindow> spWindow);
 	void GPURender(std::shared_ptr<VAWindow> spWindow);
-    void RenderVolumeGeometry(std::shared_ptr<VAWindow> spWindow);
+    void RenderVolumeGeometry();
 	void RenderSingleInput(std::shared_ptr<VAWindow> spWindow);
 	void RendermultipleInputs();
 
@@ -23,6 +24,8 @@ private:
 	void SetVolumeShaderParameters(int independent, int noOfComponents, vtkMatrix4x4* modelViewMat);
 	void SetLightingShaderParameters(int numberOfSamplers);
 	void SetCameraShaderParameters();
+	void SetAdvancedShaderParameters(int numComp);
+	void UpdateSamplingDistance();
 private:
     unsigned int m_uiVao;
     unsigned int m_uiVbo;
@@ -61,4 +64,7 @@ private:
 
 	float FinalColorWindow;
 	float FinalColorLevel;
+
+	double AverageIPScalarRange[2];
+	float ActualSampleDistance;
 };

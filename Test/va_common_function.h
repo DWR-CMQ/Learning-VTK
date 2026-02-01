@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <iomanip>
 class CommonFunction
 {
 public:
@@ -104,5 +104,22 @@ public:
         {
             dstVec[offset + j] = srcVec[j];
         }
+    }
+
+    template <typename T>
+    static void PrintMatrix(const T* matrix, int rows, int cols, std::string name)
+    {
+        std::cout << name << "(" << rows << "x" << cols << "):\n";
+
+        for (int i = 0; i < rows; ++i)
+        {
+            for (int j = 0; j < cols; ++j)
+            {
+                std::cout << std::setprecision(4)
+                    << matrix[i * cols + j] << " ";
+            }
+            std::cout << "\n";
+        }
+        std::cout << "\n";
     }
 };

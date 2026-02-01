@@ -141,8 +141,8 @@ void VAVolume::UpdateTextureToDataMatrix()
     for (int i = 0; i < 3; i++)
     {
         result[i * 4] = direction[i * 3] / stepsize[0];
-        result[i * 4 + 1] = direction[i * 3 + 1] / stepsize[0];
-        result[i * 4 + 2] = direction[i * 3 + 2] / stepsize[0];
+        result[i * 4 + 1] = direction[i * 3 + 1] / stepsize[1];
+        result[i * 4 + 2] = direction[i * 3 + 2] / stepsize[2];
     }
 
     double blockOrigin[3];
@@ -600,4 +600,14 @@ std::shared_ptr<VAVolumeProperty> VAVolume::GetVolumeProperty()
 vtkDataArray* VAVolume::GetLoadedScalars()
 {
     return this->Scalars;
+}
+
+int* VAVolume::GetExtent()
+{
+    return this->m_iExtents;
+}
+
+vtkSmartPointer<vtkImageData> VAVolume::GetImageData()
+{
+    return this->m_spImageData;
 }

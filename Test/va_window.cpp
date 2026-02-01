@@ -75,10 +75,11 @@ void VAWindow::NormalizedDisplayToDisplay(double& u, double& v)
 
 void VAWindow::GetTiledSizeAndOrigin(int* usize, int* vsize, int* lowerLeftU, int* lowerLeftV)
 {
+    // vport的四个值是根据vtk的输出强制设定为一致的
     double* vport = new double[4];
     vport[0] = 0.0;      
     vport[1] = 0.0;      
-    vport[2] = 0.5;  
+    vport[2] = 1.0;  
     vport[3] = 1.0;  
 
     // if there is no window assume 0 1
