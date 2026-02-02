@@ -157,6 +157,7 @@
     <ClCompile Include="va_shader.cpp" />
     <ClCompile Include="va_texture_object.cpp" />
     <ClCompile Include="va_volume.cpp" />
+    <ClCompile Include="va_volume_input.cpp" />
     <ClCompile Include="va_volume_property.cpp" />
     <ClCompile Include="va_volume_visualizer.cpp" />
     <ClCompile Include="va_window.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="va_shader.h" />
     <ClInclude Include="va_texture_object.h" />
     <ClInclude Include="va_volume.h" />
+    <ClInclude Include="va_volume_input.h" />
     <ClInclude Include="va_volume_property.h" />
     <ClInclude Include="va_volume_visualizer.h" />
     <ClInclude Include="va_window.h" />

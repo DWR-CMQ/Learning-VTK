@@ -14,6 +14,7 @@ public:
 
 	int GetWindowWidth();
 	int GetWindowHeight();
+	void Loop(std::function<void(float)> callback);
 private:
 	static std::function<void(float, float, float)> cameraUpdateCallback;
 
@@ -31,6 +32,8 @@ private:
 	GLFWwindow* m_pVAWindow;
 	bool m_bMouseButtonPressed;
 	double m_dOldCursorX, m_dOldCursorY;
+	float m_fLastTime = 0.0f;
+	float m_fDeltaTime = 0.0f;
 
 	int Size[2];
 	int TileSize[2];

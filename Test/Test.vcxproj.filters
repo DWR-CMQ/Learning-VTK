@@ -66,6 +66,9 @@
     <ClCompile Include="va_volume_property.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="va_volume_input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="va_mesh_visualizer.h">
@@ -111,6 +114,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="va_volume_property.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="va_volume_input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

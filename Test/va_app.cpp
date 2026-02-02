@@ -29,7 +29,11 @@ void App::Init()
 
 void App::Render()
 {
-	m_spRender->GPURender(m_spVAWindow);
+	//m_spRender->GPURender(m_spVAWindow);
+	//m_spVAWindow->Loop([&](float deltaTime)
+	//{
+
+	//});
 }
 
 void App::Update()

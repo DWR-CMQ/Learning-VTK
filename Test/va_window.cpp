@@ -183,3 +183,20 @@ void VAWindow::mouseScrollCallback(GLFWwindow* window, double x_offset, double y
 {
     cameraUpdateCallback(y_offset, 0, 0);
 }
+
+void VAWindow::Loop(std::function<void(float)> callback)
+{
+    while (!glfwWindowShouldClose(m_pVAWindow))
+    {
+        float currentTime = glfwGetTime();
+        m_fDeltaTime = currentTime - m_fLastTime;
+        m_fLastTime = currentTime;
+
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        callback(m_fDeltaTime);
+
+        glfwSwapBuffers(m_pVAWindow);
+        glfwPollEvents();
+    }
+}
