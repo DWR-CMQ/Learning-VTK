@@ -320,12 +320,27 @@ int ColorTransferFunction::RemovePoint(double x)
 	return retVal;
 }
 
-void ColorTransferFunction::SetRange(double, double)
+void ColorTransferFunction::SetRange(double value1, double value2)
 {
+	Range[0] = value1;
+	Range[1] = value2;
 }
 
 void ColorTransferFunction::SetRange(const double rng[2])
 {
+	Range[0] = rng[0];
+	Range[1] = rng[1];
+}
+
+void ColorTransferFunction::GetRange(double value[2])
+{
+	this->GetRange(value);
+}
+
+void ColorTransferFunction::GetRange(double& value1, double& value2)
+{
+	value1 = this->Range[0];
+	value2 = this->Range[1];
 }
 
 void ColorTransferFunction::SortAndUpdateRange()

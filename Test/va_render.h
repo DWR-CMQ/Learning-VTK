@@ -5,8 +5,21 @@
 #include "va_camera.h"
 #include "va_window.h"
 #include "va_volume.h"
+#include "va_volume_input.h"
 class VARender
 {
+public:
+	enum BlendModes
+	{
+		COMPOSITE_BLEND,
+		MAXIMUM_INTENSITY_BLEND,
+		MINIMUM_INTENSITY_BLEND,
+		AVERAGE_INTENSITY_BLEND,
+		ADDITIVE_BLEND,
+		ISOSURFACE_BLEND,
+		SLICE_BLEND
+	};
+
 public:
 	VARender(std::shared_ptr<VAVolume> spVolume, std::shared_ptr<Camera> spCamera);
     ~VARender();
@@ -34,6 +47,7 @@ private:
     Shader* m_pDrawShader = nullptr;
     vtkSmartPointer<vtkPolyData> BBoxPolyData;
     std::shared_ptr<VAVolume> m_spVolume;
+	std::shared_ptr<VolumeInput> m_spVolumeInput;
     std::shared_ptr<Camera> m_spCamera;
 
 	vtkNew<vtkMatrix4x4> m_mat4TempMatrix4x4;
@@ -66,5 +80,6 @@ private:
 	float FinalColorLevel;
 
 	double AverageIPScalarRange[2];
+	int BlendMode;
 	float ActualSampleDistance;
 };

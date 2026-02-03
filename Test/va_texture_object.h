@@ -53,13 +53,13 @@ public:
     };
 
 public:
-    TextureObject(int dataType);
+    TextureObject();
     ~TextureObject();
 
     void InitializeTextureInternalFormats();
     void CreateTexture();
     void DestroyTexture();
-
+    void ReleaseGraphicsResources();
     bool Create1DTextureFromRaw(unsigned int width, int numComps, int dataType, void* data);
     bool Create2DTextureFromRaw(unsigned int width, unsigned int height, int numComps, int dataType, void* data);
     bool Create3DTextureFromRaw(unsigned int width, unsigned int height, unsigned int depth, int numComps, int dataType, void* data);
@@ -94,7 +94,7 @@ public:
 
     void ActivateTexture(int unit);
     void DeActivateTexture();
-
+    void ResetFormatAndType();
 protected:
     unsigned int Handle;    // 纹理对应的句柄
     int NumberOfDimensions;
@@ -103,7 +103,6 @@ protected:
     unsigned int Depth;
     unsigned int Samples;
     bool UseSRGBColorSpace;
-    int m_iDataType;
 
     float MaximumAnisotropicFiltering;
     bool RequireTextureInteger;

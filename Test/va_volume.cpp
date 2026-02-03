@@ -7,7 +7,7 @@
 VAVolume::VAVolume(const vtkSmartPointer<vtkImageData>& imageData)
 {
 	this->m_spImageData = imageData;
-	this->m_spVolumeTexture = std::make_shared<TextureObject>(this->m_spImageData->GetScalarType());
+	this->m_spVolumeTexture = std::make_shared<TextureObject>();
     m_spVolumeProperty = std::make_shared<VAVolumeProperty>();
 
     ComputeBounds();
@@ -53,7 +53,7 @@ void VAVolume::LoadVolume()
 
 	if (this->m_spVolumeTexture == nullptr)
 	{
-		this->m_spVolumeTexture = std::make_shared<TextureObject>(this->m_spImageData->GetScalarType());
+		this->m_spVolumeTexture = std::make_shared<TextureObject>();
 	}
 
 	int scalarType = this->m_spImageData->GetScalarType();

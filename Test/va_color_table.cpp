@@ -6,9 +6,13 @@ ColorTable::ColorTable(int dataWidth, int dataHeight, int dataDepth)
 	m_iHeight = dataHeight;
 	m_iDepth = dataDepth;
 }
-int ColorTable::GetMaximumSupportedTextureWidth(vtkOpenGLRenderWindow* renWin, int idealWidth)
+ColorTable::~ColorTable()
 {
-	if (!this->TextureObject == NULL)
+
+}
+int ColorTable::GetMaximumSupportedTextureWidth(int idealWidth)
+{
+	if (!this->m_pTextureObject == NULL)
 	{
 		std::cout << "vtkTextureObject not initialized!" << std::endl;
 		return -1;
@@ -36,9 +40,49 @@ int ColorTable::GetMaximumSupportedTextureWidth(vtkOpenGLRenderWindow* renWin, i
 	//return maxWidth;
 }
 
-void ColorTable::ReleaseGraphicsResources(vtkWindow* window)
+void ColorTable::ReleaseGraphicsResources()
 {
+	if (this->m_pTextureObject != NULL)
+	{
+		this->m_pTextureObject->ReleaseGraphicsResources();
+		this->m_pTextureObject = nullptr;
+	}
+}
 
+void ColorTable::Update(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue)
+{
+	if (func == NULL)
+	{
+		return;
+	}
+	if (this->m_pTextureObject == nullptr)
+	{
+		this->m_pTextureObject = new TextureObject();
+	}
+
+	if (this->NeedUpdate(func, scalarRange, blendMode, sampleDistance))
+	{
+		int idealW = 1024;
+		int newHeight = 1;
+		this->ComputeIdealTextureSize(func, idealW, newHeight);
+		int const newWidth = this->GetMaximumSupportedTextureWidth(idealW);
+		if (this->Table == NULL || this->TextureWidth != newWidth || this->TextureHeight != newHeight)
+		{
+			this->TextureWidth = newWidth;
+			this->TextureHeight = newHeight;
+			this->AllocateTable();
+		}
+
+		this->InternalUpdate(func, blendMode, sampleDistance, unitDistance, filterValue);
+		this->LastInterpolation = filterValue;
+	}
+
+	if (this->LastInterpolation != filterValue)
+	{
+		this->LastInterpolation = filterValue;
+		this->m_pTextureObject->SetMagnificationFilterMode(filterValue);
+		this->m_pTextureObject->SetMinificationFilterMode(filterValue);
+	}
 }
 
 bool ColorTable::NeedUpdate(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance)
@@ -58,17 +102,23 @@ bool ColorTable::NeedUpdate(ColorTransferFunction* func, double scalarRange[2], 
 
 void ColorTable::InternalUpdate(ColorTransferFunction* func, int blendMode, double sampleDistance, double unitDistance, int filterValue)
 {
+	if (func == nullptr)
+	{
+		return;
+	}
+	func->GetTable(this->LastRange[0], this->LastRange[1], this->TextureWidth, this->Table);
+	
 
 }
 
-void ColorTable::ComputeIdealTextureSize(ColorTransferFunction* func, int& width, int& height, vtkOpenGLRenderWindow* renWin)
+void ColorTable::ComputeIdealTextureSize(ColorTransferFunction* func, int& width, int& height)
 {
 	if (func != NULL)
 	{
 		width = func->EstimateMinNumberOfSamples(this->LastRange[0], this->LastRange[1]);
 		height = 1;
 	}
-	height = height > 1 ? this->GetMaximumSupportedTextureWidth(renWin, height) : 1;
+	height = height > 1 ? this->GetMaximumSupportedTextureWidth(height) : 1;
 }
 
 void ColorTable::AllocateTable()

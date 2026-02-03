@@ -23,7 +23,10 @@ VARender::VARender(std::shared_ptr<VAVolume> spVolume, std::shared_ptr<Camera> s
 
     this->AverageIPScalarRange[0] = VTK_FLOAT_MIN;
     this->AverageIPScalarRange[1] = VTK_FLOAT_MAX;
+    this->BlendMode = VARender::COMPOSITE_BLEND;
     this->ActualSampleDistance = 1.0;
+
+    m_spVolumeInput = std::make_shared<VolumeInput>(spVolume);
 }
 
 VARender::~VARender()
@@ -398,6 +401,9 @@ void VARender::GPURender(std::shared_ptr<VAWindow> spWindow)
     {
         return;
     }
+
+    int uniformIndex = 0;
+    this->m_spVolumeInput->RefreshTransferFunction(uniformIndex, this->BlendMode, this->ActualSampleDistance);
     this->UpdateSamplingDistance();
     RenderSingleInput(spWindow);
 }

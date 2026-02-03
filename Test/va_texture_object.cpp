@@ -1,9 +1,8 @@
 #include "va_texture_object.h"
 #include <iostream>
 #include <glad/glad.h>
-TextureObject::TextureObject(int dataType)
+TextureObject::TextureObject()
 {
-	m_iDataType = dataType;
 	UseSRGBColorSpace = false;
 
 	this->WrapS = Repeat;
@@ -60,7 +59,43 @@ void TextureObject::CreateTexture()
 
 void TextureObject::DestroyTexture()
 {
+	this->DeActivateTexture();
+	if (this->Handle)
+	{
+		GLuint tex = this->Handle;
+		glDeleteTextures(1, &tex);
+	}
+	this->Handle = 0;
+	this->NumberOfDimensions = 0;
+	this->Target = 0;
+	this->Components = 0;
+	this->Width = this->Height = this->Depth = 0;
+	this->ResetFormatAndType();
+}
 
+void TextureObject::ReleaseGraphicsResources()
+{
+	if (this->Handle)
+	{
+		GLuint tex = this->Handle;
+		glDeleteTextures(1, &tex);
+	
+		this->Handle = 0;
+		this->NumberOfDimensions = 0;
+		this->Target = 0;
+		this->InternalFormat = 0;
+		this->Format = 0;
+		this->Type = 0;
+		this->Components = 0;
+		this->Width = this->Height = this->Depth = 0;
+	}
+}
+
+void TextureObject::ResetFormatAndType()
+{
+	this->Format = 0;
+	this->InternalFormat = 0;
+	this->Type = 0;
 }
 
 void TextureObject::InitializeTextureInternalFormats()
@@ -170,9 +205,9 @@ unsigned int TextureObject::GetFormat(int dataType, int numComps, bool shaderSup
 
 bool TextureObject::Create1DTextureFromRaw(unsigned int width, int numComps, int dataType, void* data)
 {
-	this->GetInternalFormat(this->m_iDataType, numComps, false);
-	this->GetFormat(this->m_iDataType, numComps, false);
-	this->GetDataType(this->m_iDataType);
+	this->GetInternalFormat(dataType, numComps, false);
+	this->GetFormat(dataType, numComps, false);
+	this->GetDataType(dataType);
 	if (!this->InternalFormat || !this->Format || !this->Type)
 	{
 		std::cout << "Failed to determine texture parameters." << std::endl;
@@ -197,9 +232,9 @@ bool TextureObject::Create1DTextureFromRaw(unsigned int width, int numComps, int
 
 bool TextureObject::Create2DTextureFromRaw(unsigned int width, unsigned int height, int numComps, int dataType, void* data)
 {
-	this->GetInternalFormat(this->m_iDataType, numComps, false);
-	this->GetFormat(this->m_iDataType, numComps, false);
-	this->GetDataType(this->m_iDataType);
+	this->GetInternalFormat(dataType, numComps, false);
+	this->GetFormat(dataType, numComps, false);
+	this->GetDataType(dataType);
 	if (!this->InternalFormat || !this->Format || !this->Type)
 	{
 		std::cout << "Failed to determine texture parameters." << std::endl;
@@ -224,9 +259,9 @@ bool TextureObject::Create2DTextureFromRaw(unsigned int width, unsigned int heig
 
 bool TextureObject::Create3DTextureFromRaw(unsigned int width, unsigned int height, unsigned int depth, int numComps, int dataType, void* data)
 {
-	this->GetInternalFormat(this->m_iDataType, numComps, false);
-	this->GetFormat(this->m_iDataType, numComps, false);
-	this->GetDataType(this->m_iDataType);
+	this->GetInternalFormat(dataType, numComps, false);
+	this->GetFormat(dataType, numComps, false);
+	this->GetDataType(dataType);
 	if (!this->InternalFormat || !this->Format || !this->Type)
 	{
 		std::cout << "Failed to determine texture parameters." << std::endl;

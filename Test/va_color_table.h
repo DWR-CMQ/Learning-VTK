@@ -5,15 +5,15 @@
 class ColorTable
 {
 public:
-	ColorTable(int dataWidth, int dataHeight, int dataDepth);
+	ColorTable(int dataWidth = 1, int dataHeight = 1, int dataDepth = 1);
 	~ColorTable();
-	int GetMaximumSupportedTextureWidth(vtkOpenGLRenderWindow* renWin, int idealWidth);
-	void ReleaseGraphicsResources(vtkWindow* window);
-
+	int GetMaximumSupportedTextureWidth(int idealWidth);
+	void ReleaseGraphicsResources();
+	void Update(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue);
 protected:
 	virtual bool NeedUpdate(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance);
 	virtual void InternalUpdate(ColorTransferFunction* func, int blendMode, double sampleDistance, double unitDistance, int filterValue);
-	virtual void ComputeIdealTextureSize(ColorTransferFunction* func, int& width, int& height, vtkOpenGLRenderWindow* renWin);
+	virtual void ComputeIdealTextureSize(ColorTransferFunction* func, int& width, int& height);
 	virtual void AllocateTable();
 
 protected:
@@ -23,7 +23,7 @@ protected:
 	int NumberOfColorComponents = 1;
 	int TextureWidth = 1024;
 	int TextureHeight = 1;
-	vtkTextureObject* TextureObject = nullptr;
+	TextureObject* m_pTextureObject = nullptr;
 private:
 	int m_iWidth = 0;
 	int m_iHeight = 0;

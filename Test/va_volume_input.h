@@ -3,7 +3,8 @@
 #include <iostream>
 #include "va_color_transferfunction.h"
 #include "va_opacity_transferfunction.h"
-#include "va_texture_object.h"
+#include "va_color_table.h"
+#include "va_volume.h"
 class VolumeInput
 {
 public:
@@ -14,9 +15,16 @@ public:
 		LA = 2,
 		RGBA = 4
 	};
+
+	enum TFRangeType
+	{
+		SCALAR = 0, // default
+		NATIVE
+	};
+
 	int ComponentMode = INDEPENDENT;
 public:
-	VolumeInput();
+	VolumeInput(std::shared_ptr<VAVolume> spVolume);
 
 	void RefreshTransferFunction(int uniformIndex, int blendMode, float samplingDist);
 	void ForceTransferInit();
@@ -28,6 +36,7 @@ public:
 
 	void InitializeTransferFunction(int index);
 	void CreateTransferFunction1D(int index);
+	void CreateTransferFunction2D(int index);
 
 	void UpdateTransferFunctions(int blendMode, float samplingDist);
 	int UpdateOpacityTransferFunction(unsigned int component, int blendMode, float samplingDist);
@@ -35,10 +44,13 @@ public:
 
 	void ReleaseGraphicsTransfer1D();
 private:
-	std::shared_ptr<ColorTransferFunction> m_spColorTable;
-	std::shared_ptr<OpacityTransferfunction> m_spOpacityTable; 
+	std::shared_ptr<ColorTransferFunction> m_spColorFunc;
+	std::shared_ptr<OpacityTransferfunction> m_spOpacityFunc; 
 
-	std::shared_ptr<TextureObject> m_spColorTableTexture;
-	std::shared_ptr<TextureObject> m_spOpacityTableTexture;
+	std::shared_ptr<ColorTable> m_spColorTable;
+	std::shared_ptr<VAVolume> m_spVolume;
+	bool InitializeTransfer = true;
+	int ColorRangeType = 0;           
+	int ScalarOpacityRangeType = 0;   
 };
 
