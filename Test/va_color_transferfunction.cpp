@@ -91,6 +91,7 @@ ColorTransferFunction::ColorTransferFunction()
 	this->HSVWrap = 1; // By default HSV will be wrap
 
 	this->Scale = VTK_CTF_LINEAR;
+	this->Function = NULL;
 }
 
 ColorTransferFunction::~ColorTransferFunction()

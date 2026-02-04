@@ -13,6 +13,9 @@ VAVolumeProperty::VAVolumeProperty()
         this->Specular[i] = 0.2;
         this->SpecularPower[i] = 10.0;
     }
+    this->m_vecColorTF.clear();
+    this->m_vecOpacityTF.clear();
+    
     this->TransferFunctionMode = VAVolumeProperty::TF_1D;
 }
 
@@ -21,47 +24,43 @@ VAVolumeProperty::~VAVolumeProperty()
 
 }
 
-void VAVolumeProperty::SetColorTF(int index, ColorTransferFunction* function)
+void VAVolumeProperty::SetColorTF(int index, std::shared_ptr<ColorTransferFunction> spFunction)
 {
-    if (this->ColorTF[index] != function)
-    {
-        this->ColorTF[index] = function;
-
-        this->TransferFunctionMode = VAVolumeProperty::TF_1D;
-    }
+    m_vecColorTF.push_back(spFunction);
+    this->TransferFunctionMode = VAVolumeProperty::TF_1D;
+    
 }
 
-ColorTransferFunction* VAVolumeProperty::GetColorTF(int index)
+std::shared_ptr<ColorTransferFunction> VAVolumeProperty::GetColorTF(int index)
 {
-    if (this->ColorTF[index] == nullptr)
+    if (index < 0 || index >= this->m_vecColorTF.size())
     {
-        this->ColorTF[index] = new ColorTransferFunction();
-        this->ColorTF[index]->AddRGBPoint(0, 0.0, 0.0, 0.0);
-        this->ColorTF[index]->AddRGBPoint(1024, 1.0, 1.0, 1.0);
+        auto temp = std::make_shared<ColorTransferFunction>();
+        temp->AddRGBPoint(0, 0.0, 0.0, 0.0);
+        temp->AddRGBPoint(1024, 1.0, 1.0, 1.0);
+        this->m_vecColorTF.push_back(temp);
+        return temp;
     }
-    return this->ColorTF[index];
+    return this->m_vecColorTF[index];
 }
 
-void VAVolumeProperty::SetOpacityTF(int index, OpacityTransferfunction* function)
+void VAVolumeProperty::SetOpacityTF(int index, std::shared_ptr<OpacityTransferfunction> spFunction)
 {
-    if (this->OpacityTF[index] != function)
-    {
-        this->OpacityTF[index] = function;
-
-        this->TransferFunctionMode = VAVolumeProperty::TF_1D;
-    }
+    m_vecOpacityTF.push_back(spFunction);
+    this->TransferFunctionMode = VAVolumeProperty::TF_1D;
 }
 
-OpacityTransferfunction* VAVolumeProperty::GetOpacityTF(int index)
+std::shared_ptr<OpacityTransferfunction> VAVolumeProperty::GetOpacityTF(int index)
 {
-    if (this->OpacityTF[index] == nullptr)
+    if (index < 0 || index >= this->m_vecColorTF.size())
     {
-        this->OpacityTF[index] = new OpacityTransferfunction();
-        this->OpacityTF[index]->AddPoint(0, 1.0);
-        this->OpacityTF[index]->AddPoint(1024, 1.0);
+        auto temp = std::make_shared<OpacityTransferfunction>();
+        temp->AddPoint(0, 1.0);
+        temp->AddPoint(1024, 1.0);
+        this->m_vecOpacityTF.push_back(temp);
+        return temp;
     }
-
-    return this->OpacityTF[index];
+    return this->m_vecOpacityTF[index];
 }
 
 void VAVolumeProperty::SetInterpolationType(int type)

@@ -44,8 +44,6 @@ public:
 
 	void ReleaseGraphicsTransfer1D();
 private:
-	std::shared_ptr<ColorTransferFunction> m_spColorFunc;
-	std::shared_ptr<OpacityTransferfunction> m_spOpacityFunc; 
 
 	std::shared_ptr<ColorTable> m_spColorTable;
 	std::shared_ptr<VAVolume> m_spVolume;

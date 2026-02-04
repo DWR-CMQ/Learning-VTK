@@ -1,5 +1,6 @@
 #include "va_color_table.h"
-
+#include <vtkMath.h>
+#include <glad/glad.h>
 ColorTable::ColorTable(int dataWidth, int dataHeight, int dataDepth)
 {
 	m_iWidth = dataWidth;
@@ -8,36 +9,38 @@ ColorTable::ColorTable(int dataWidth, int dataHeight, int dataDepth)
 }
 ColorTable::~ColorTable()
 {
-
+	delete[] this->Table;
 }
+
 int ColorTable::GetMaximumSupportedTextureWidth(int idealWidth)
 {
-	if (!this->m_pTextureObject == NULL)
+	if (this->m_pTextureObject == NULL)
 	{
 		std::cout << "vtkTextureObject not initialized!" << std::endl;
 		return -1;
 	}
 
 	// Try to match the next power of two.
-	//idealWidth = vtkMath::NearestPowerOfTwo(idealWidth);
-	//int const maxWidth = vtkTextureObject::GetMaximumTextureSize(renWin);
-	//if (maxWidth < 0)
-	//{
-	//	std::cout << "Failed to query max texture size! using default 1024." << std::endl;
-	//	return 1024;
-	//}
+	idealWidth = vtkMath::NearestPowerOfTwo(idealWidth);
+	int maxWidth = -1;
+	glGetIntegerv(GL_MAX_TEXTURE_SIZE, &maxWidth);
+	if (maxWidth < 0)
+	{
+		std::cout << "Failed to query max texture size! using default 1024." << std::endl;
+		return 1024;
+	}
 
-	//if (maxWidth >= idealWidth)
-	//{
-	//	idealWidth = vtkMath::Max(1024, idealWidth);
-	//	return idealWidth;
-	//}
+	if (maxWidth >= idealWidth)
+	{
+		idealWidth = vtkMath::Max(1024, idealWidth);
+		return idealWidth;
+	}
 
-	//std::cout << "This OpenGL implementation does not support the required "
-	//	"texture size of "
-	//	<< idealWidth << ", falling back to maximum allowed, " << maxWidth << "."
-	//	<< "This may cause an incorrect lookup table mapping." << std::endl;
-	//return maxWidth;
+	std::cout << "This OpenGL implementation does not support the required "
+		"texture size of "
+		<< idealWidth << ", falling back to maximum allowed, " << maxWidth << "."
+		<< "This may cause an incorrect lookup table mapping." << std::endl;
+	return maxWidth;
 }
 
 void ColorTable::ReleaseGraphicsResources()
@@ -49,9 +52,9 @@ void ColorTable::ReleaseGraphicsResources()
 	}
 }
 
-void ColorTable::Update(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue)
+void ColorTable::Update(std::shared_ptr<ColorTransferFunction> func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue)
 {
-	if (func == NULL)
+	if (func == nullptr)
 	{
 		return;
 	}
@@ -85,9 +88,9 @@ void ColorTable::Update(ColorTransferFunction* func, double scalarRange[2], int 
 	}
 }
 
-bool ColorTable::NeedUpdate(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance)
+bool ColorTable::NeedUpdate(std::shared_ptr<ColorTransferFunction> func, double scalarRange[2], int blendMode, double sampleDistance)
 {
-	if (func == NULL)
+	if (func == nullptr)
 	{
 		return false;
 	}
@@ -100,18 +103,21 @@ bool ColorTable::NeedUpdate(ColorTransferFunction* func, double scalarRange[2], 
 	return false;
 }
 
-void ColorTable::InternalUpdate(ColorTransferFunction* func, int blendMode, double sampleDistance, double unitDistance, int filterValue)
+void ColorTable::InternalUpdate(std::shared_ptr<ColorTransferFunction> func, int blendMode, double sampleDistance, double unitDistance, int filterValue)
 {
 	if (func == nullptr)
 	{
 		return;
 	}
 	func->GetTable(this->LastRange[0], this->LastRange[1], this->TextureWidth, this->Table);
-	
-
+	this->m_pTextureObject->SetWrapSMode(TextureObject::ClampToEdge);
+	this->m_pTextureObject->SetWrapTMode(TextureObject::ClampToEdge);
+	this->m_pTextureObject->SetMagnificationFilterMode(filterValue);
+	this->m_pTextureObject->SetMinificationFilterMode(filterValue);
+	this->m_pTextureObject->Create2DTextureFromRaw(this->TextureWidth, 1, this->NumberOfColorComponents, VTK_FLOAT, this->Table);
 }
 
-void ColorTable::ComputeIdealTextureSize(ColorTransferFunction* func, int& width, int& height)
+void ColorTable::ComputeIdealTextureSize(std::shared_ptr<ColorTransferFunction> func, int& width, int& height)
 {
 	if (func != NULL)
 	{

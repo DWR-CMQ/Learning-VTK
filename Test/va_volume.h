@@ -21,6 +21,7 @@ public:
 	int* GetExtent();
 	void GetScaleAndBias(int scalarType, float* scalarRange, float& scale, float& bias);
 
+	void SetVolumeProperty(std::shared_ptr<VAVolumeProperty> spVolumeProperty);
 	std::shared_ptr<VAVolumeProperty> GetVolumeProperty();
 	vtkDataArray* GetLoadedScalars();
 	vtkSmartPointer<vtkImageData> GetImageData();

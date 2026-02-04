@@ -592,6 +592,12 @@ void VAVolume::SelectTextureFormat(unsigned int& format, unsigned int& internalF
     }
 }
 
+void VAVolume::SetVolumeProperty(std::shared_ptr<VAVolumeProperty> spVolumeProperty)
+{
+    m_spVolumeProperty.reset();
+    m_spVolumeProperty = spVolumeProperty;
+}
+
 std::shared_ptr<VAVolumeProperty> VAVolume::GetVolumeProperty()
 {
     return m_spVolumeProperty;

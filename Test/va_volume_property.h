@@ -16,11 +16,11 @@ public:
 	int GetShade(int index);
 	int GetShade() { return this->GetShade(0); }
 
-	void SetColorTF(int index, ColorTransferFunction* function);
-	ColorTransferFunction* GetColorTF(int index);
+	void SetColorTF(int index, std::shared_ptr<ColorTransferFunction> spFunction);
+	std::shared_ptr<ColorTransferFunction> GetColorTF(int index);
 
-	void SetOpacityTF(int index, OpacityTransferfunction* function);
-	OpacityTransferfunction* GetOpacityTF(int index);
+	void SetOpacityTF(int index, std::shared_ptr<OpacityTransferfunction> spFunction);
+	std::shared_ptr<OpacityTransferfunction> GetOpacityTF(int index);
 
 	void SetInterpolationType(int type);
 	void SetInterpolationTypeToNearest() { this->SetInterpolationType(VTK_NEAREST_INTERPOLATION); }
@@ -43,8 +43,8 @@ private:
 	double SpecularPower[VTK_MAX_VRCOMP];
 
 	int TransferFunctionMode;
-	ColorTransferFunction* ColorTF[1];
-	OpacityTransferfunction* OpacityTF[1];
+	std::vector<std::shared_ptr<ColorTransferFunction>> m_vecColorTF;
+	std::vector<std::shared_ptr<OpacityTransferfunction>> m_vecOpacityTF;
 	int InterpolationType;
 };
 

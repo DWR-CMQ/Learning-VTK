@@ -1,7 +1,7 @@
 #pragma once
 #include "va_color_transferfunction.h"
 #include "va_texture_object.h"
-#include <vtkOpenGLRenderWindow.h>
+#include <iostream>
 class ColorTable
 {
 public:
@@ -9,11 +9,11 @@ public:
 	~ColorTable();
 	int GetMaximumSupportedTextureWidth(int idealWidth);
 	void ReleaseGraphicsResources();
-	void Update(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue);
+	void Update(std::shared_ptr<ColorTransferFunction> func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue);
 protected:
-	virtual bool NeedUpdate(ColorTransferFunction* func, double scalarRange[2], int blendMode, double sampleDistance);
-	virtual void InternalUpdate(ColorTransferFunction* func, int blendMode, double sampleDistance, double unitDistance, int filterValue);
-	virtual void ComputeIdealTextureSize(ColorTransferFunction* func, int& width, int& height);
+	virtual bool NeedUpdate(std::shared_ptr<ColorTransferFunction> func, double scalarRange[2], int blendMode, double sampleDistance);
+	virtual void InternalUpdate(std::shared_ptr<ColorTransferFunction> func, int blendMode, double sampleDistance, double unitDistance, int filterValue);
+	virtual void ComputeIdealTextureSize(std::shared_ptr<ColorTransferFunction> func, int& width, int& height);
 	virtual void AllocateTable();
 
 protected:

@@ -2,25 +2,8 @@
 
 VolumeInput::VolumeInput(std::shared_ptr<VAVolume> spVolume)
 {
-	m_spColorFunc = std::make_shared<ColorTransferFunction>();
-	m_spOpacityFunc = std::make_shared<OpacityTransferfunction>();
 	m_spVolume = spVolume;
 	m_spColorTable = std::make_shared<ColorTable>();
-
-	m_spColorFunc->AddRGBPoint(-3024, 0.0, 0.0, 0.0);
-	m_spColorFunc->AddRGBPoint(-77, 0.5, 0.2, 0.2);
-	m_spColorFunc->AddRGBPoint(94, 0.5, 0.5, 0.5);
-	m_spColorFunc->AddRGBPoint(179, 0.9, 0.9, 0.9);
-	m_spColorFunc->AddRGBPoint(260, 1.0, 1.0, 1.0);
-	m_spColorFunc->AddRGBPoint(3071, 0.8, 0.7, 0.6);
-
-	// 创建并配置不透明度传递函数，用于设置体积渲染的不透明度
-	m_spOpacityFunc->AddPoint(-3024, 0.0);
-	m_spOpacityFunc->AddPoint(-77, 0.0);
-	m_spOpacityFunc->AddPoint(94, 0.29);
-	m_spOpacityFunc->AddPoint(179, 0.55);
-	m_spOpacityFunc->AddPoint(260, 0.84);
-	m_spOpacityFunc->AddPoint(3071, 0.875);
 }
 
 void VolumeInput::InitializeTransferFunction(int index)
@@ -103,7 +86,7 @@ void VolumeInput::UpdateTransferFunctions(int blendMode, float samplingDist)
 		break;
 	}
 }
-
+;
 int VolumeInput::UpdateOpacityTransferFunction(unsigned int component, int blendMode, float samplingDist)
 {
 	return 1;
