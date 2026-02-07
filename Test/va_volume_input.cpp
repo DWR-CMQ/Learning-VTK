@@ -4,6 +4,7 @@ VolumeInput::VolumeInput(std::shared_ptr<VAVolume> spVolume)
 {
 	m_spVolume = spVolume;
 	m_spColorTable = std::make_shared<ColorTable>();
+	m_spOpacityTable = std::make_shared<OpacityTable>();
 }
 
 void VolumeInput::InitializeTransferFunction(int index)

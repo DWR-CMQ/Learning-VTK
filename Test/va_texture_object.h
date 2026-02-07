@@ -52,6 +52,17 @@ public:
         NumberOfDepthFormats
     };
 
+    enum BlendModes
+    {
+        COMPOSITE_BLEND,
+        MAXIMUM_INTENSITY_BLEND,
+        MINIMUM_INTENSITY_BLEND,
+        AVERAGE_INTENSITY_BLEND,
+        ADDITIVE_BLEND,
+        ISOSURFACE_BLEND,
+        SLICE_BLEND
+    };
+
 public:
     TextureObject();
     ~TextureObject();

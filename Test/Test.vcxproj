@@ -152,6 +152,7 @@
     <ClCompile Include="va_dicom2mesh.cpp" />
     <ClCompile Include="va_common_function.cpp" />
     <ClCompile Include="va_mesh_visualizer.cpp" />
+    <ClCompile Include="va_opacity_table.cpp" />
     <ClCompile Include="va_opacity_transferfunction.cpp" />
     <ClCompile Include="va_render.cpp" />
     <ClCompile Include="va_shader.cpp" />
@@ -174,6 +175,7 @@
     <ClInclude Include="va_dicom2mesh.h" />
     <ClInclude Include="va_common_function.h" />
     <ClInclude Include="va_mesh_visualizer.h" />
+    <ClInclude Include="va_opacity_table.h" />
     <ClInclude Include="va_opacity_transferfunction.h" />
     <ClInclude Include="va_color_table.h" />
     <ClInclude Include="va_render.h" />

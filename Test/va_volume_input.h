@@ -4,6 +4,7 @@
 #include "va_color_transferfunction.h"
 #include "va_opacity_transferfunction.h"
 #include "va_color_table.h"
+#include "va_opacity_table.h"
 #include "va_volume.h"
 class VolumeInput
 {
@@ -46,6 +47,7 @@ public:
 private:
 
 	std::shared_ptr<ColorTable> m_spColorTable;
+	std::shared_ptr<OpacityTable> m_spOpacityTable;
 	std::shared_ptr<VAVolume> m_spVolume;
 	bool InitializeTransfer = true;
 	int ColorRangeType = 0;           
