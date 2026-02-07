@@ -59,6 +59,7 @@ public:
 	void SetRange(double value1, double value2);
 	void SetRange(const double rng[2]);
 	void GetRange(double value[2]);
+	double* GetRange();
 	void GetRange(double& value1, double& value2);
 
 	void SortAndUpdateRange();

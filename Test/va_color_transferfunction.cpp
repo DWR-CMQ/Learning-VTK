@@ -335,7 +335,12 @@ void ColorTransferFunction::SetRange(const double rng[2])
 
 void ColorTransferFunction::GetRange(double value[2])
 {
-	this->GetRange(value);
+	this->GetRange(value[0], value[1]);
+}
+
+double* ColorTransferFunction::GetRange()
+{
+	return this->Range;
 }
 
 void ColorTransferFunction::GetRange(double& value1, double& value2)

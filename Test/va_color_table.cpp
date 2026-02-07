@@ -6,6 +6,7 @@ ColorTable::ColorTable(int dataWidth, int dataHeight, int dataDepth)
 	m_iWidth = dataWidth;
 	m_iHeight = dataHeight;
 	m_iDepth = dataDepth;
+	this->NumberOfColorComponents = 3;
 }
 ColorTable::~ColorTable()
 {
