@@ -333,7 +333,7 @@ void OpacityTransferfunction::GetTable(double xStart, double xEnd, int size, flo
 
 	for (int i = 0; i < size; i++)
 	{
-		*tPtr = static_cast<float>(tmpPtr[i]);
+		*tPtr = static_cast<float>(*tmpPtr);
 		tPtr += stride;
 		tmpPtr++;
 	}
@@ -362,7 +362,7 @@ void OpacityTransferfunction::GetTable(double start, double end, int size, doubl
 
 	for (int i = 0; i < size; i++)
 	{
-		tptr = table + stride + i;
+		tptr = table + stride * i;
 		if (size > 1)
 		{
 			xLoc = xStart + (static_cast<double>(i) / static_cast<double>(size - 1)) * (xEnd - xStart);
