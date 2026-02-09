@@ -896,3 +896,19 @@ double OpacityTransferfunction::GetFirstNonZeroValue()
 	}
 	return x;
 }
+
+void OpacityTransferfunction::GetRange(double value[2])
+{
+	this->GetRange(value[0], value[1]);
+}
+
+double* OpacityTransferfunction::GetRange()
+{
+	return this->Range;
+}
+
+void OpacityTransferfunction::GetRange(double& value1, double& value2)
+{
+	value1 = this->Range[0];
+	value2 = this->Range[1];
+}

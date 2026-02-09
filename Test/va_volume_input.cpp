@@ -90,7 +90,35 @@ void VolumeInput::UpdateTransferFunctions(int blendMode, float samplingDist)
 ;
 int VolumeInput::UpdateOpacityTransferFunction(unsigned int component, int blendMode, float samplingDist)
 {
-	return 1;
+	auto volumeProperty = m_spVolume->GetVolumeProperty();
+	auto opacityTF = volumeProperty->GetOpacityTF(0);
+
+	double componentRange[2];
+	if (opacityTF->GetSize() < 1 || this->ScalarOpacityRangeType == VolumeInput::SCALAR)
+	{
+		for (int i = 0; i < 2; ++i)
+		{
+			componentRange[i] = m_spVolume->ScalarRange[component][i];
+		}
+	}
+	else
+	{
+		opacityTF->GetRange(componentRange);
+	}
+
+	// Add points only if its not being added before
+	if (opacityTF->GetSize() < 1)
+	{
+		opacityTF->AddPoint(componentRange[0], 0.0);
+		opacityTF->AddPoint(componentRange[1], 0.5);
+	}
+
+	int filterVal = volumeProperty->GetInterpolationType() == VTK_LINEAR_INTERPOLATION
+		? TextureObject::Linear
+		: TextureObject::Nearest;
+
+	this->m_spOpacityTable->Update(volumeProperty->GetOpacityTF(component), componentRange, 0, 0, 0, TextureObject::Nearest);
+	return 0;
 }
 
 int VolumeInput::UpdateColorTransferFunction(unsigned int component)

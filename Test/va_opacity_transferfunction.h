@@ -38,6 +38,10 @@ public:
 	double GetValue(double x);
 	void AddSegment(double x1, double y1, double x2, double y2);
 
+	void GetRange(double value[2]);
+	double* GetRange();
+	void GetRange(double& value1, double& value2);
+
 	// 外部给this深拷贝
 	void DeepCopy(OpacityTransferfunction* src);
 	// 外部给this前拷贝
