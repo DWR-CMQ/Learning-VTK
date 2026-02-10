@@ -291,6 +291,8 @@ void VARender::SetVolumeShaderParameters(int independent, int noOfComponents, vt
     m_pDrawShader->setVec4("in_scalarsRange", this->m_vecRange.data());
     m_pDrawShader->setVec4("in_cellStep", this->m_vecStep.data());
     m_pDrawShader->setVec4("in_cellSpacing", this->m_vecSpacing.data());
+
+    m_spVolumeInput->ActivateTransferFunction(m_pDrawShader, this->BlendMode);
 }
 
 void VARender::SetLightingShaderParameters(int numberOfSamplers)

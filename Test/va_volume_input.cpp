@@ -1,5 +1,5 @@
 #include "va_volume_input.h"
-
+#include <vtkDataArray.h>
 VolumeInput::VolumeInput(std::shared_ptr<VAVolume> spVolume)
 {
 	m_spVolume = spVolume;
@@ -46,10 +46,27 @@ void VolumeInput::ForceTransferInit()
 
 }
 
-void VolumeInput::ActivateTransferFunction(int blendMode)
+void VolumeInput::ActivateTransferFunction(Shader* pShader, int blendMode)
 {
-
+	int const transferMode = this->m_spVolume->GetVolumeProperty()->GetTransferFunctionMode();
+	const int numActiveLuts = 1;
+	switch (transferMode)
+	{
+	case VAVolumeProperty::TF_1D:
+		for (int i = 0; i < numActiveLuts; i++)
+		{
+			this->m_spOpacityTable->Activate();
+			this->m_spColorTable->Activate();
+			// º§ªÓŒ∆¿Ì
+		}
+		break;
+	case VAVolumeProperty::TF_2D:
+		break;
+	default:
+		break;
+	}
 }
+
 void VolumeInput::DeactivateTransferFunction(int blendMode)
 {
 

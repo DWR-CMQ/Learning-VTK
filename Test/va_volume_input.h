@@ -6,6 +6,7 @@
 #include "va_color_table.h"
 #include "va_opacity_table.h"
 #include "va_volume.h"
+#include "va_shader.h"
 class VolumeInput
 {
 public:
@@ -30,7 +31,7 @@ public:
 	void RefreshTransferFunction(int uniformIndex, int blendMode, float samplingDist);
 	void ForceTransferInit();
 
-	void ActivateTransferFunction( int blendMode);
+	void ActivateTransferFunction(Shader* pShader, int blendMode);
 	void DeactivateTransferFunction(int blendMode);
 
 	void ReleaseGraphicsResources();

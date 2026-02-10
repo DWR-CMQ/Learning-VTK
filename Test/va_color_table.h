@@ -10,6 +10,8 @@ public:
 	int GetMaximumSupportedTextureWidth(int idealWidth);
 	void ReleaseGraphicsResources();
 	void Update(std::shared_ptr<ColorTransferFunction> func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue);
+	void Activate();
+	void Deactivate();
 protected:
 	virtual bool NeedUpdate(std::shared_ptr<ColorTransferFunction> func, double scalarRange[2], int blendMode, double sampleDistance);
 	virtual void InternalUpdate(std::shared_ptr<ColorTransferFunction> func, int blendMode, double sampleDistance, double unitDistance, int filterValue);

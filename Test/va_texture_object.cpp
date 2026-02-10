@@ -547,7 +547,7 @@ void TextureObject::ActivateTexture(int unit)
 
 void TextureObject::DeActivateTexture()
 {
-
+	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 void TextureObject::SetInternalFormat(unsigned int glInternalFormat)

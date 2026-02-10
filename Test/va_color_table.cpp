@@ -133,3 +133,21 @@ void ColorTable::AllocateTable()
 	delete[] this->Table;
 	this->Table = new float[this->TextureWidth * this->TextureHeight * this->NumberOfColorComponents];
 }
+
+void ColorTable::Activate()
+{
+	if (this->m_pTextureObject == nullptr)
+	{
+		return;
+	}
+	this->m_pTextureObject->ActivateTexture(0);
+}
+
+void ColorTable::Deactivate()
+{
+	if (this->m_pTextureObject == nullptr)
+	{
+		return;
+	}
+	this->m_pTextureObject->DeActivateTexture();
+}

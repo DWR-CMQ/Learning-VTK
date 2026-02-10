@@ -163,3 +163,21 @@ void OpacityTable::AllocateTable()
 	delete[] this->Table;
 	this->Table = new float[this->TextureWidth * this->TextureHeight * this->NumberOfColorComponents];
 }
+
+void OpacityTable::Activate()
+{
+	if (this->m_pTextureObject == nullptr)
+	{
+		return;
+	}
+	this->m_pTextureObject->ActivateTexture(0);
+}
+
+void OpacityTable::Deactivate()
+{
+	if (this->m_pTextureObject == nullptr)
+	{
+		return;
+	}
+	this->m_pTextureObject->DeActivateTexture();
+}
