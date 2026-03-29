@@ -151,3 +151,8 @@ void ColorTable::Deactivate()
 	}
 	this->m_pTextureObject->DeActivateTexture();
 }
+
+unsigned int ColorTable::GetTextureUnit()
+{
+	return this->m_pTextureObject->GetTextureUnit();
+}

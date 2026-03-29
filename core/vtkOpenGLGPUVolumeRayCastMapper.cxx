@@ -711,8 +711,9 @@ void vtkOpenGLGPUVolumeRayCastMapper::vtkInternal::RenderVolumeGeometry(
     glBindVertexArray(this->CubeVAOId);
   }
 
-  glDrawElements(
-    GL_TRIANGLES, this->BBoxPolyData->GetNumberOfCells() * 3, GL_UNSIGNED_INT, nullptr);
+  std::cout << "this->BBoxPolyData->GetNumberOfCells(): " << this->BBoxPolyData->GetNumberOfCells() << std::endl;
+  //glDrawElements(
+  //  GL_TRIANGLES, this->BBoxPolyData->GetNumberOfCells() * 3, GL_UNSIGNED_INT, nullptr);
 
   vtkOpenGLStaticCheckErrorMacro("Error after glDrawElements in"
                                  " RenderVolumeGeometry!");

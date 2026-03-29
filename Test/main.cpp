@@ -124,17 +124,17 @@ int main(int argc, char* argv[])
 	spVolumeRender->ResetCameraClippingRange();
 	//spMeshRender->ResetCameraClippingRange();
 
-	// 创建渲染窗口交互器并设置渲染窗口
-	vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
-	renderWindowInteractor->SetRenderWindow(spRenderWindow);
+	//// 创建渲染窗口交互器并设置渲染窗口
+	//vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor = vtkSmartPointer<vtkRenderWindowInteractor>::New();
+	//renderWindowInteractor->SetRenderWindow(spRenderWindow);
 
-	// 创建交互样式并设置给渲染窗口交互器
-	vtkSmartPointer<vtkInteractorStyleTrackballCamera> style = vtkSmartPointer<vtkInteractorStyleTrackballCamera>::New();
-	renderWindowInteractor->SetInteractorStyle(style);
+	//// 创建交互样式并设置给渲染窗口交互器
+	//vtkSmartPointer<vtkInteractorStyleTrackballCamera> style = vtkSmartPointer<vtkInteractorStyleTrackballCamera>::New();
+	//renderWindowInteractor->SetInteractorStyle(style);
 
-	// 渲染场景并启动交互
+	//// 渲染场景并启动交互
 	//spRenderWindow->Render();
-    //renderWindowInteractor->Start();
+ //   renderWindowInteractor->Start();
 
     App app(imageData);
     app.Init();

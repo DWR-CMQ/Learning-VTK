@@ -57,7 +57,12 @@ void VolumeInput::ActivateTransferFunction(Shader* pShader, int blendMode)
 		{
 			this->m_spOpacityTable->Activate();
 			this->m_spColorTable->Activate();
+
+			auto iOpacityTexUnit = this->m_spOpacityTable->GetTextureUnit();
+			auto iColorTexUnit = this->m_spColorTable->GetTextureUnit();
 			// ¼¤»îÎÆÀí
+			pShader->setInt("in_opacityTransferFunc_0[1]", iOpacityTexUnit);
+			pShader->setInt("in_colorTransferFunc_0[1]", iColorTexUnit);
 		}
 		break;
 	case VAVolumeProperty::TF_2D:

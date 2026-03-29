@@ -28,6 +28,7 @@ public:
 
 	void CreateBlocks(unsigned int format, unsigned int internalFormat, int type);
 	void LoadTexture(int interpolation);
+	std::shared_ptr<TextureObject> m_spVolumeTexture;
 private:
 	void ComputeCellToPointMatrix(int extents[6]);
 	void UpdateTextureToDataMatrix();
@@ -38,7 +39,6 @@ private:
 
 private:
 	vtkSmartPointer<vtkImageData> m_spImageData;
-	std::shared_ptr<TextureObject> m_spVolumeTexture;
 	std::shared_ptr<VAVolumeProperty> m_spVolumeProperty;
 	double m_dDatasetStepSize[3];
 

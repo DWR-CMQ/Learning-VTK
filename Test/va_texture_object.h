@@ -106,6 +106,8 @@ public:
     void ActivateTexture(int unit);
     void DeActivateTexture();
     void ResetFormatAndType();
+
+    unsigned int GetTextureUnit();
 protected:
     unsigned int Handle;    // 纹理对应的句柄
     int NumberOfDimensions;

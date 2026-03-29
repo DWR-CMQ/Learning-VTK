@@ -181,3 +181,8 @@ void OpacityTable::Deactivate()
 	}
 	this->m_pTextureObject->DeActivateTexture();
 }
+
+unsigned int OpacityTable::GetTextureUnit()
+{
+	return this->m_pTextureObject->GetTextureUnit();
+}

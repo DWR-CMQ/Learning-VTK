@@ -19,7 +19,7 @@ VAWindow::VAWindow(int width, int height, const char* title, bool fullscreen)
     m_bMouseButtonPressed = false;
     m_iWindowWidth = width;
     m_iWindowHeight = height;
-    m_pVAWindow = glfwCreateWindow(width, height, "MC", monitor, nullptr);
+    m_pVAWindow = glfwCreateWindow(width, height, title, monitor, nullptr);
     glfwMakeContextCurrent(m_pVAWindow);
 
     if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress)))

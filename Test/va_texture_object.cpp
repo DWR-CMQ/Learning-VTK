@@ -14,6 +14,7 @@ TextureObject::TextureObject()
 	this->MaxLOD = 1000.0f;
 	this->BaseLevel = 0;
 	this->MaxLevel = 0;
+	this->Handle = 0;
 }
 
 TextureObject::~TextureObject()
@@ -574,4 +575,9 @@ void TextureObject::SetMinificationFilterMode(int filterType)
 void TextureObject::SetMagnificationFilterMode(int filterType)
 {
 	MagnificationFilter = filterType;
+}
+
+unsigned int TextureObject::GetTextureUnit()
+{
+	return this->Handle;
 }

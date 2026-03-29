@@ -12,6 +12,7 @@ public:
 	void Update(std::shared_ptr<OpacityTransferfunction> func, double scalarRange[2], int blendMode, double sampleDistance, double unitDistance, int filterValue);
 	void Activate();
 	void Deactivate();
+	unsigned int GetTextureUnit();
 protected:
 	virtual bool NeedUpdate(std::shared_ptr<OpacityTransferfunction> func, double scalarRange[2], int blendMode, double sampleDistance);
 	virtual void InternalUpdate(std::shared_ptr<OpacityTransferfunction> func, int blendMode, double sampleDistance, double unitDistance, int filterValue);

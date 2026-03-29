@@ -129,6 +129,8 @@ void VARender::RenderVolumeGeometry()
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->m_uiEbo);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, polys->GetDataSize() * polys->GetDataTypeSize(), polys->GetVoidPointer(0), GL_STATIC_DRAW);
 
+        glDrawElements(GL_TRIANGLES, this->BBoxPolyData->GetNumberOfCells() * 3, GL_UNSIGNED_INT, nullptr);
+
         glBindVertexArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
@@ -268,6 +270,7 @@ void VARender::SetVolumeShaderParameters(int independent, int noOfComponents, vt
 
     int index = 0;
     // Volume纹理激活
+    m_spVolume->m_spVolumeTexture->ActivateTexture(0);
 
     float tscale[4] = { 1.0, 1.0, 1.0, 1.0 };
     float tbias[4] = { 0.0, 0.0, 0.0, 0.0 };
@@ -285,14 +288,13 @@ void VARender::SetVolumeShaderParameters(int independent, int noOfComponents, vt
     // 8 elements stands for [min, max] per 4-components
     CommonFunction::CopyVector<float, 8>(reinterpret_cast<float*>(this->m_spVolume->ScalarRange), this->m_vecRange.data(), index * 8);
     // 激活传输函数纹理
+    m_spVolumeInput->ActivateTransferFunction(m_pDrawShader, this->BlendMode);
 
     m_pDrawShader->setVec4("in_volume_scale", this->m_vecScale.data());
     m_pDrawShader->setVec4("in_volume_bias", this->m_vecBias.data());
     m_pDrawShader->setVec4("in_scalarsRange", this->m_vecRange.data());
     m_pDrawShader->setVec4("in_cellStep", this->m_vecStep.data());
     m_pDrawShader->setVec4("in_cellSpacing", this->m_vecSpacing.data());
-
-    m_spVolumeInput->ActivateTransferFunction(m_pDrawShader, this->BlendMode);
 }
 
 void VARender::SetLightingShaderParameters(int numberOfSamplers)
